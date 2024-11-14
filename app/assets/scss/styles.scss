@@ -1,0 +1,21 @@
+// html {
+//     scroll-behavior: smooth
+// }
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+.text-stroke {
+  -webkit-text-stroke-color: rgb(var(--color-primary-400) / var(--tw-text-opacity));
+}
+
+.dark-mode .text-stroke {
+  -webkit-text-stroke-color: rgb(var(--color-primary-900) / var(--tw-text-opacity));
+}
+
+@for $i from 0 through 5 {
+  .text-stroke-#{$i} { -webkit-text-stroke-width: #{$i}px }
+}

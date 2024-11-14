@@ -1,0 +1,43 @@
+{
+  "_locale": "en",
+  "title": "Experience",
+  "items": [{
+    "title": "Faculty of communication",
+    "badge": "FCom - UH",
+    "subtitle": "Visual communication designer",
+    "content": "Creation of brand and website for Nexos (TV channel), Ecoescuela and others.",
+    "time": "Sept 2018 - Apr 2020, Cuba",
+    "startAt": "2018-09-01"
+  }, {
+    "title": "Peruvian Cuban Office",
+    "badge": "XAGYO 3",
+    "subtitle": "Visual communication designer",
+    "content": "Creation of visual identity, brand manual, signage and website. Development of a web platform for the management of medical records in the center.",
+    "time": "Dic 2019 - Dic 2022, Peru",
+    "startAt": "2019-12-01"
+  }, {
+    "title": "Latina TV",
+    "subtitle": "Graphic designer",
+    "content": "Creation of animations, bumpers and graphic materials for the tv program 'Mujeres al Mando'.",
+    "time": "Feb 2020 - Mar 2020, Peru",
+    "startAt": "2020-02-01"
+  }, {
+    "title": "Ozone & Life SAC",
+    "subtitle": "Visual communication designer",
+    "content": "Creation of catalogs, leaflets and posters, as well as development of the company's website and virtual store.",
+    "time": "Jan 2020 - Mar 2023, Peru",
+    "startAt": "2020-01-01"
+  }, {
+    "title": "Aurela",
+    "subtitle": "UI designer",
+    "content": "Ecommerce redesign. Creation of animations and graphic materials for digital media.",
+    "time": "Jun 2023 - Sept 2024, Peru",
+    "startAt": "2023-06-01"
+  }, {
+    "title": "Kenku",
+    "subtitle": "UI designer",
+    "content": "Development of website interface and virtual store, creation of animations and graphic materials for digital media.",
+    "time": "Jun 2023 - Sept 2024, Peru",
+    "startAt": "2023-06-01"
+  }]
+}

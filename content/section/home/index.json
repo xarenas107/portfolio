@@ -1,0 +1,34 @@
+{
+  "id": "home",
+  "order": 1,
+  "image": "/header.jpg",
+  "icon": "i-heroicons:home",
+  "name": "Xavier",
+  "portfolio": [
+    {
+      "title": "LinkedIn",
+      "icon": "i-fa6-brands:linkedin-in",
+      "href": "https://www.linkedin.com/in/xarenas"
+    },
+    {
+        "title": "Behance",
+        "icon": "i-fa6-brands:behance",
+        "href": "https://www.behance.net/xavierarenas"
+    },
+    {
+        "title": "Github",
+        "icon": "i-fa6-brands:github",
+        "href": "https://www.github.com/xarenas107"
+    }],
+    "contact": [{
+      "title": "Whatsapp",
+      "icon": "i-fa6-brands:whatsapp",
+      "href": "https://wa.me/+34675333315"
+    },
+    {
+        "title": "Email",
+        "icon": "i-material-symbols:mail-outline",
+        "href": "mailto:xarenas107@gmail.com"
+    }
+  ]
+}
