@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v1.0.4
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.0.3...v1.0.4)
+
+### 🩹 Fixes
+
+- Force `lang` es for missing hyphens ([84db1da](https://github.com/xarenas107/portfolio/commit/84db1da))
+- Solve rare bg-color difference ([51677f2](https://github.com/xarenas107/portfolio/commit/51677f2))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](http://github.com/xarenas107))
+
 ## v1.0.3
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.0.2...v1.0.3)
