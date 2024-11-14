@@ -3,7 +3,7 @@ client-only()
     template(#fallback)
         u-skeleton(class='w-8 h-8 rounded-lg bg-slate-300/50 dark:bg-slate-700/50')
     
-    u-popover(:items="items" mode='hover')
+    u-popover(:items="items")
         u-button(:ui :label='active?.title' :aria-label="t('color.option', 2)" variant='ghost' color='primary' icon="i-heroicons-outline:color-swatch" class='w-full' ref='element')
 
         template(#panel) 
@@ -17,7 +17,7 @@ type Props = {
 
 const props = defineProps<Props>()
 
-const { locales, t, locale } = useI18n()
+const { t } = useI18n()
 const app = useAppConfig()
 
 const ui = {
