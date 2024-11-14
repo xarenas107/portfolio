@@ -7,8 +7,7 @@ div(class='relative overflow-visible w-full lg:order-1 lg:max-w-lg lg:h-[60dvh] 
 
             nuxt-img(src='/hero/human.png' class='absolute rounded-lg lg:rounded-b-full bottom-0 right-0 grow object-cover max-w-full h-[50dvh] sm:h-[60dvh] lg:h-[90dvh] z-10' key="image" 
             loading='eager' cover)
-    
-    
+
     //- Shadow gradient
     u-lazy(:transition='{ name: "transition-fade" }' class='w-full h-full pointer-events-none')
         div(class='drop-shadow-xl saturate-200 backdrop-blur-md blur-3xl opacity-70')

@@ -1,6 +1,6 @@
 <template lang="pug">
 div(class='overflow-clip bg-primary-500 dark:bg-primary-600 min-h-dvh flex flex-col relative')
-  div(class='h-[20dvh] w-full bg-slate-50/95 dark:bg-slate-900/90')
+  div(class='h-[20dvh] w-full bg-slate-50 dark:bg-slate-900 opacity-[93%] dark:opacity-[92%]')
   u-container(:ui='ui.container' class='h-full w-full overflow-clip')
     section-title(:class='ui.title' class="scroll-slide-animation" hyphens) {{  data?.title }}
     
