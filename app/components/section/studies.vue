@@ -1,11 +1,13 @@
 <template lang="pug">
-div(class='overflow-clip bg-primary-500 dark:bg-primary-600 min-h-dvh flex flex-col relative')
-  div(class='h-[20dvh] w-full bg-slate-50 dark:bg-slate-900 opacity-[93%] dark:opacity-[92%]')
-  u-container(:ui='ui.container' class='h-full w-full overflow-clip')
-    section-title(:class='ui.title' class="scroll-slide-animation" hyphens) {{  data?.title }}
+div(class='overflow-clip min-h-dvh flex flex-col relative')
+  div(class='h-[20dvh] w-full bg-primary-100/20 dark:bg-primary-900/20')
+
+  div(class='w-full bg-primary-500 dark:bg-primary-600')
+    u-container(:ui='ui.container' class='h-full w-full overflow-clip')
+      section-title(:class='ui.title' class="scroll-slide-animation" hyphens) {{  data?.title }}
     
 
-  div(class='flex flex-col w-full h-full py-24 grow')
+  div(class='flex flex-col w-full h-full py-24 grow bg-primary-500 dark:bg-primary-600 ')
       div(class='px-4 sm:px-6 lg:px-8 gap-8 max-w-7xl mx-auto w-full motion-reduce:pb-24 motion-reduce:overflow-auto grow')
 
         client-only
