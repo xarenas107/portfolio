@@ -1,5 +1,5 @@
 <template lang="pug">
-h1( :class='[{ "hyphens-auto": hyphens }, classes]')
+h1( :class='[{ "hyphens-auto": hyphens }, classes]' lang='es')
   slot
   u-icon(v-if='icon' :name='icon')
 </template>
