@@ -1,8 +1,7 @@
 <template lang="pug">
 div(class='relative overflow-visible w-full lg:order-1 lg:max-w-lg lg:h-[60dvh] lg:max-h-dvh parallax-container' ref='image')
     u-lazy(:transition='{ name: "transition-grow-y" }' :dealy='100' class='w-full h-full pointer-events-none')
-        div(key='bg-hero' class='w-full h-full min-h-[30dvh] sm:min-h-[40dvh] rounded-lg bg-primary-500 dark:bg-primary-600 relative overflow-visible z-20  lg:rounded-b-[50%]')
-            //- bg-gradient(class='mix-blend-multiply')
+        div(key='bg-hero' class='w-full h-full min-h-[30dvh] sm:min-h-[40dvh] rounded-lg bg-primary-500 dark:bg-primary-600 relative overflow-visible z-20  lg:rounded-b-[50dvh]')
 
             nuxt-img(src='/hero/human-shadow.png' class='absolute rounded-lg lg:rounded-b-full bottom-0 right-0 grow object-cover max-w-full h-[50dvh] sm:h-[60dvh] lg:h-[90dvh] z-10 blend-multiply opacity-70' loading='eager' key="image:shadow" cover)
 
@@ -39,8 +38,8 @@ const on = {
         const { offsetX, offsetY } = event
         
         const move = {
-            x:  Math.round((width / 2) - offsetX) * state.smooth ,
-            y:  Math.round((height / 2) - offsetY) * -state.smooth,
+            x: Math.round((width / 2) - offsetX) * state.smooth,
+            y: Math.round((height / 2) - offsetY) * state.smooth,
             z: 0
         }
 
