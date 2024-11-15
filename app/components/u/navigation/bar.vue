@@ -26,11 +26,12 @@ nav(v-if='active' class="bg-slate-100 dark:bg-slate-900 border-slate-200 dark:bo
 
         slot(name='left' :menu)
         
-      div(class="absolute inset-y-0 right-0 items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 hidden md:flex")
+      div(class="absolute inset-y-0 right-0 items-center gap-1.5 pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 hidden md:flex")
 
         div(v-if='!slot.right' class='flex gap-1.5 sm:flex')
-          u-color-select
+          u-share-button
           u-language-select
+          u-color-select
           u-theme-toggle
   
 
@@ -45,7 +46,7 @@ nav(v-if='active' class="bg-slate-100 dark:bg-slate-900 border-slate-200 dark:bo
         div(class="flex items-center justify-between")
           u-button(@click="toggle()" color="gray" variant="ghost" icon="i-heroicons-outline:x" class="relative inline-flex items-center justify-center rounded-md p-2 text-slate-700 dark:text-slate-300 hover:text-slate-900 hover:dark:text-slate-100 hover:bg-slate-400/50 hover:dark:bg-slate-600/50 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-slate-600/50 dark:focus:ring-slate-300/50" aria-controls="mobile-menu")
       
-
+          u-share-button(class='p-2')
       div(class='flex flex-col gap-8 grow')
 
         div(class='flex flex-col gap-4')
@@ -59,8 +60,8 @@ nav(v-if='active' class="bg-slate-100 dark:bg-slate-900 border-slate-200 dark:bo
           
           div(class='flex flex-col flex-wrap gap-1 grow w-full place-content-between')
             u-language-select(class='grow')
-            u-theme-toggle(show-label)
             u-color-select(show-label)
+            u-theme-toggle(show-label)
 
 </template>
 
