@@ -10,8 +10,8 @@ div(class='bg-primary-100/20 dark:bg-primary-900/20 max-w-full overflow-clip fle
                         div(:class='ui.text.base' class="flex flex-col gap-2")
                             h1(class='uppercase font-display font-extrabold text-5xl max-w-prose sm:text-6xl lg:text-6xl') {{ t('greetings.hi') }}
                             //- h1 {{ data.lastName }}
-                            h3(:class='ui.text.base' class='font-bold text-4xl lg:text-4xl text-balance') 
-                                span(class='opacity-80') {{ t('presentation', { name: user.data?.name }) }} 
+                            h3(:class='ui.text.base' class='font-bold text-4xl lg:text-4xl text-balance')
+                                span(class='opacity-80') {{ t('presentation', { name: user.data?.name }) }}
                                 strong(class='text-primary-500 dark:text-primary-600') {{ user.data?.job }}
                                     //- span(class='flex gap-1 flex-col w-max reveal-animation')
                                         span(v-for='job in data?.job') {{ job }}
@@ -28,17 +28,13 @@ div(class='bg-primary-100/20 dark:bg-primary-900/20 max-w-full overflow-clip fle
                                 u-link-action(v-for='item, key in user.data?.contact' v-bind='item' :key)
 
                             u-link-action(:title='user.data?.location' icon='i-material-symbols:location-on-outline')
-
-
-
-     
 </template>
 
 <script lang="ts" setup>
 const { t } = useI18n()
 
-const transition = { 
-    name: 'transition-fade-t' 
+const transition = {
+	name: 'transition-fade-t'
 }
 
 const greetings = useGreetings()
@@ -48,22 +44,22 @@ onMounted(() => show.value = true)
 const user = useUser()
 
 const ui = {
-    text: {
-        base: 'text-slate-700 dark:text-slate-100',
-    },
+	text: {
+		base: 'text-slate-700 dark:text-slate-100'
+	}
 }
 </script>
 
 <style lang="scss" scoped>
 @keyframes scale-up {
-    from { 
+    from {
         background-size: 100%;
-        clip-path: inset(0 0 0 0%) 
+        clip-path: inset(0 0 0 0%)
     }
-    to { 
+    to {
         background-origin: right;
         background-size: 110%;
-        clip-path: inset(0 0 0 100%) 
+        clip-path: inset(0 0 0 100%)
     }
 }
 
@@ -90,5 +86,4 @@ const ui = {
         animation: reveal 5s cubic-bezier(.9,.01,.01,.9) infinite;
     }
 }
-
 </style>

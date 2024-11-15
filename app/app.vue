@@ -1,6 +1,6 @@
 <template lang="pug">
 nuxt-route-announcer
-nuxt-layout 
+nuxt-layout
 	u-navigation-bar(:active='!!route.meta.navbar')
 		template(#avatar v-if='route.meta.navbar === "back"')
 			u-navigation-button-back

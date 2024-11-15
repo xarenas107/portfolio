@@ -7,17 +7,17 @@ div(class='infinite-slider flex')
 
 <script lang='ts' generic="T extends unknown"setup>
 type Props = {
-  stop?: boolean
+	stop?: boolean
 }
 
 const props = defineProps<Props>()
 
 const items = defineModel<T[]>('items', { default: () => [] })
 const state = computed(() => props.stop ? 'paused' : 'running')
-const time = computed(() => `${ items.value.length * 2 }s`)
+const time = computed(() => `${items.value.length * 2}s`)
 </script>
 
-<style lang='scss' >
+<style lang='scss'>
 @keyframes scroll {
 	from { transform: translateX(-100%) }
 	to { transform: translateX(-200%) }

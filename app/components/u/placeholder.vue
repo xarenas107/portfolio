@@ -1,5 +1,5 @@
 <template lang='pug'>
-div(class='relative overflow-hidden placeholder') 
+div(class='relative overflow-hidden placeholder')
     transition(v-bind='transition')
         svg(v-if='pending && !disabled' :class='classes' class='absolute inset-0 h-full w-full motion-safe:animate-pulse' fill='none')
             defs
@@ -14,40 +14,40 @@ div(class='relative overflow-hidden placeholder')
 import type { TransitionProps } from 'vue'
 
 type Props = {
-    pending?: boolean
-    contentClass?: string
-    transition?: TransitionProps | string
-    disabled?: boolean
-    ui?: {
-        svg?: {
-            base?: string
-            opacity?: string | number
-        }
-    }
+	pending?: boolean
+	contentClass?: string
+	transition?: TransitionProps | string
+	disabled?: boolean
+	ui?: {
+		svg?: {
+			base?: string
+			opacity?: string | number
+		}
+	}
 }
 
 const props = withDefaults(defineProps<Props>(), {
-    pending: () => true,
-    contentClass: () => 'z-10',
-    ui: () => ({}),
+	pending: () => true,
+	contentClass: () => 'z-10',
+	ui: () => ({})
 })
 
 const transition = computed(() => {
-    const { transition } = props
-    if (!transition) return { disabled: true }
-    return typeof transition === 'string' ? { name: transition } : transition
+	const { transition } = props
+	if (!transition) return { disabled: true }
+	return typeof transition === 'string' ? { name: transition } : transition
 })
 
 const classes = computed(() => {
-    const { 
-        opacity = 30, 
-        base = 'bg-slate-500 stroke-primary-600 dark:bg-slate-500 dark:stroke-primary-400'
-    } = props.ui?.svg || {}
+	const {
+		opacity = 30,
+		base = 'bg-slate-500 stroke-primary-600 dark:bg-slate-500 dark:stroke-primary-400'
+	} = props.ui?.svg || {}
 
-    return [{ 
-        "animate-none": !props.pending,
-        [`opacity-${ opacity }`]: opacity,
-    }, base]
+	return [{
+		'animate-none': !props.pending,
+		[`opacity-${opacity}`]: opacity
+	}, base]
 })
 </script>
 

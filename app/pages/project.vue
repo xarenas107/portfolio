@@ -4,8 +4,8 @@ nuxt-page
 
 <script lang="ts" setup>
 definePageMeta({
-    redirect: '/project/:id()',
-    navbar: 'back',
+	redirect: '/project/:id()',
+	navbar: 'back'
 })
 </script>
 

@@ -13,7 +13,7 @@ export const useHashRoute = (options: Options = {}) => {
 			const is = value?.startsWith('#')
 			const hash = value ? is ? value : `#${value}` : value
 			router.replace({ ...route, hash })
-		},
+		}
 	})
 
 	onNuxtReady(() => {

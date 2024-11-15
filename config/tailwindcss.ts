@@ -21,7 +21,7 @@ export default <NuxtConfig['tailwindcss']>{
 				// 	}
 				// },
 				aspectRatio: {
-					square: '1/1',
+					square: '1/1'
 				},
 				fontSize: {
 					'10xl': '10rem',
@@ -36,10 +36,10 @@ export default <NuxtConfig['tailwindcss']>{
 				// 	'2xl': '2520px',
 				// },
 				fontFamily: {
-					'sans': ['Inter', 'Proxima Nova', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-					'display': ['Poppins', 'Proxima Nova', 'ui-sans-serif', 'system-ui', 'sans-serif']
-				},
-			},
-		},
-	},
+					sans: ['Inter', 'Proxima Nova', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+					display: ['Poppins', 'Proxima Nova', 'ui-sans-serif', 'system-ui', 'sans-serif']
+				}
+			}
+		}
+	}
 }

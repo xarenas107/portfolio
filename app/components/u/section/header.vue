@@ -4,7 +4,7 @@ h5(:class='`font-${weight} uppercase text-sm sm:text-md`') {{ title }}
 
 <script lang='ts' setup>
 type Props = {
-	title?: string,
+	title?: string
 	weight?: string
 }
 withDefaults(defineProps<Props>(), {

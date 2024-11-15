@@ -14,28 +14,27 @@ div(class='min-h-[60dvh] relative overflow-clip bg-slate-100 dark:bg-slate-900 p
 
 <script lang="ts" setup>
 type Content = {
-  title: string
-  items: {
-    title: string
-    content: string[]
-  }[]
+	title: string
+	items: {
+		title: string
+		content: string[]
+	}[]
 }
 
 const theme = useTheme()
 const { data, status } = useFetchContent<Content>('section/skills', {
-  default: () => ({
-    title: '',
-    items: []
-  })
+	default: () => ({
+		title: '',
+		items: []
+	})
 })
 
 const ui = {
-  title: 'text-primary-600 dark:text-primary-500 motion-safe:opacity-10 px-4 sm:px-6 lg:px-8 m-auto max-w-7xl',
-  container: {
-    base: 'grid grid-rows-1 grid-cols-1 sm:grid-rows-2 sm:grid-cols-2 lg:grid-rows-3 lg:grid-cols-3 gap-16 pt-8 sm:pt-12 md:pt-20 lg:pt-24 xl:pt-32 z-20 lg:m-auto',
-  },
+	title: 'text-primary-600 dark:text-primary-500 motion-safe:opacity-10 px-4 sm:px-6 lg:px-8 m-auto max-w-7xl',
+	container: {
+		base: 'grid grid-rows-1 grid-cols-1 sm:grid-rows-2 sm:grid-cols-2 lg:grid-rows-3 lg:grid-cols-3 gap-16 pt-8 sm:pt-12 md:pt-20 lg:pt-24 xl:pt-32 z-20 lg:m-auto'
+	}
 }
-
 </script>
 
 <style lang="scss" scoped>
@@ -54,26 +53,26 @@ const ui = {
 }
 
 @keyframes fade {
-  from { 
+  from {
     transform: translateY(20dvh);
-    opacity: 0 
+    opacity: 0
   }
-  40%, 70% {  
+  40%, 70% {
     transform: translateY(0dvw);
-    opacity: 100% 
+    opacity: 100%
   }
-  to { 
+  to {
     transform: translateY(-20h);
-    opacity: 0 
+    opacity: 0
   }
 }
 
 @keyframes fade-out {
-  to { 
-    opacity: 0 
+  to {
+    opacity: 0
   }
 }
-  
+
 @media (prefers-reduced-motion: no-preference) {
   .scale-down-animation {
     transform-origin: left top;
@@ -104,6 +103,6 @@ const ui = {
       grid-column-start: #{$i};
       grid-row-start: #{$i};
     }
-  } 
+  }
 }
 </style>

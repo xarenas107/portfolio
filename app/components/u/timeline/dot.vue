@@ -4,9 +4,9 @@ div(:class="`w-${radio} h-${radio} aspect-square rounded-full relative`")
 
 <script lang='ts' setup>
 type Props = {
-    radio?: number
+	radio?: number
 }
 withDefaults(defineProps<Props>(), {
-    radio: 2
+	radio: 2
 })
 </script>

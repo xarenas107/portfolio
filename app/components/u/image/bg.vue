@@ -8,20 +8,20 @@ transition(v-bind='transition')
 import type { TransitionProps } from 'vue'
 
 type Props = {
-    src?: string
-    class?: string
-    transition?: TransitionProps
-    delay?: number | string
+	src?: string
+	class?: string
+	transition?: TransitionProps
+	delay?: number | string
 }
 
 const props = withDefaults(defineProps<Props>(), {
-    class: () => 'bg-no-repeat bg-cover bg-center',
+	class: () => 'bg-no-repeat bg-cover bg-center'
 })
 
 const style = computed(() => `background-image: url(${props.src})`)
 const show = shallowRef(false)
 onMounted(() => {
-    setTimeout(() => show.value = true, Number.parseInt(`${ props.delay }`))
+	setTimeout(() => show.value = true, Number.parseInt(`${props.delay}`))
 })
 </script>
 

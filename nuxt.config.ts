@@ -26,7 +26,7 @@ async function defineNuxtConfig(input: InputConfig<NuxtConfig, ConfigLayerMeta>)
 					configFile: entry.name,
 					omit$Keys: true,
 					// @ts-expect-error Unknown nuxt option key
-					defaults: input[key],
+					defaults: input[key]
 				})
 
 				options[key] = config
@@ -36,7 +36,7 @@ async function defineNuxtConfig(input: InputConfig<NuxtConfig, ConfigLayerMeta>)
 
 	return {
 		...input,
-		...options,
+		...options
 	}
 }
 
@@ -50,12 +50,12 @@ export default defineNuxtConfig({
 		'nuxt-seo-utils',
 		'@nuxthub/core'
 	],
+	imports: {
+		dirs: ['./stores']
+	},
 	devtools: { enabled: false },
 	future: {
-		compatibilityVersion: 4,
+		compatibilityVersion: 4
 	},
-	compatibilityDate: '2024-04-03',
-	imports: {
-		dirs: ["./stores"],
-	}
+	compatibilityDate: '2024-04-03'
 })

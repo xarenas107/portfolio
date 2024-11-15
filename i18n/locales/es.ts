@@ -3,7 +3,7 @@ export default defineI18nLocale(async () => {
 		portfolio: 'Portafolio | Portafolios',
 		app: {
 			name: '@:portfolio',
-			description: 'Curriculum Vitae',
+			description: 'Curriculum Vitae'
 		},
 		greetings: {
 			hi: '¡Hola!',
@@ -11,7 +11,7 @@ export default defineI18nLocale(async () => {
 			afternoon: '¡Buenas tardes!',
 			evening: '¡Buenas noches!'
 		},
-		presentation: "Mi nombre es { name } y soy { job }",
+		presentation: 'Mi nombre es { name } y soy { job }',
 		theme: {
 			name: 'Tema | Temas',
 			light: 'Claro',
@@ -24,11 +24,11 @@ export default defineI18nLocale(async () => {
 			select: 'Selecciona un @.lower:language.name'
 		},
 		search: {
-			empty: 'No se encontraron datos',
+			empty: 'No se encontraron datos'
 		},
 		navigation: {
 			name: 'Navegación | Navigaciones',
-			settings:   'Configuración | Configuraciones'
+			settings: 'Configuración | Configuraciones'
 		},
 		option: {
 			name: 'Opción | Opciones'
@@ -36,13 +36,13 @@ export default defineI18nLocale(async () => {
 		color: {
 			name: 'Color | Colores',
 			option: '@:option.name de color',
-			blue: 'Azul', 
-			red: 'Rojo', 
-			orange: 'Naranja', 
-			yellow: 'Amarillo', 
-			emerald: 'Verde esmeralda', 
-			sky: 'Azul cielo', 
-			violet: 'Violeta', 
+			blue: 'Azul',
+			red: 'Rojo',
+			orange: 'Naranja',
+			yellow: 'Amarillo',
+			emerald: 'Verde esmeralda',
+			sky: 'Azul cielo',
+			violet: 'Violeta',
 			rose: 'Rosa',
 			indigo: 'Índigo'
 		},

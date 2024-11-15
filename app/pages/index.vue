@@ -10,22 +10,22 @@ section-footer
 
 <script lang="ts" setup>
 definePageMeta({
-    navbar: true,
-    keepalive: true,
+	navbar: true,
+	keepalive: true
 })
 
 const hash = useHashRoute()
 const section = ref(null)
 
 const intersect = [
-    (entries: IntersectionObserverEntry[]) => {
-        entries.forEach(({ isIntersecting, target }) => {
-            if (isIntersecting) hash.value = target.id
-        })
-}, {
-    rootMargin: '10%',
-    threshold: .75
-}]
+	(entries: IntersectionObserverEntry[]) => {
+		entries.forEach(({ isIntersecting, target }) => {
+			if (isIntersecting) hash.value = target.id
+		})
+	}, {
+		rootMargin: '10%',
+		threshold: 0.75
+	}]
 </script>
 
 <style lang="scss">

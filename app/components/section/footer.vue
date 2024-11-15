@@ -14,20 +14,19 @@ div(class='bg-primary-500 dark:bg-primary-600')
 
             div(class='flex gap-y-3 gap-x-6 flex-wrap')
                 u-link-action(v-for='item, key in user.data?.contact' v-bind='item' :ui='ui.link')
-        
 </template>
 
 <script lang="ts" setup>
 const user = useUser()
 
 const ui = {
-    favicon: { 
-        base: 'fill-primary-300 dark:fill-primary-900', 
-        highlight: 'fill-primary-50 dark:fill-primary-200'
-    },
-    link: {
-        text: 'text-base text-slate-100 dark:text-slate-100 hover:text-primary-200 dark:hover:text-primary-300'
-    }
+	favicon: {
+		base: 'fill-primary-300 dark:fill-primary-900',
+		highlight: 'fill-primary-50 dark:fill-primary-200'
+	},
+	link: {
+		text: 'text-base text-slate-100 dark:text-slate-100 hover:text-primary-200 dark:hover:text-primary-300'
+	}
 }
 </script>
 

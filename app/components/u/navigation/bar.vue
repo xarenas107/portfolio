@@ -10,22 +10,22 @@ nav(v-if='active' class="bg-slate-100 dark:bg-slate-900 border-slate-200 dark:bo
             span(class="sr-only") {{ t('menu.sr') }}
 
             //- icon menu
-            u-icon(class='w-6 h-6' :name='menu ? "i-heroicons-outline:x": "i-heroicons-outline:menu-alt-2"')
+            u-icon(class='w-6 h-6' :name='menu ? "i-heroicons-outline:x": "i-heroicons-solid:menu-alt-2"')
 
       div(class="flex flex-1 items-center sm:items-stretch sm:justify-start")
         div(v-if='!slot.left' class='flex gap-6')
           div(v-if='!slot.avatar' class="hidden shrink-0 xl:flex")
-            lazy-favicon(class="h-8 w-auto") 
+            lazy-favicon(class="h-8 w-auto")
             //- nuxt-img(class="h-8 w-auto" src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=500" alt="brand")
 
           slot(name='avatar')
 
           div(class="hidden lg:flex")
             div(class="flex gap-1.5")
-              u-navigation-link(v-for='{ to, icon, label, id, active } in navigation.data' @click='navigate(id)' :active :icon :label :aria-current='active') 
+              u-navigation-link(v-for='{ to, icon, label, id, active } in navigation.data' @click='navigate(id)' :active :icon :label :aria-current='active')
 
         slot(name='left' :menu)
-        
+
       div(class="absolute inset-y-0 right-0 items-center gap-1.5 pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 hidden md:flex")
 
         div(v-if='!slot.right' class='flex gap-1.5 sm:flex')
@@ -33,19 +33,18 @@ nav(v-if='active' class="bg-slate-100 dark:bg-slate-900 border-slate-200 dark:bo
           u-language-select
           u-color-select
           u-theme-toggle
-  
 
         slot(name='rigth' :menu)
 
     slot(:menu :reveal :top)
 
-  //- Mobile menu, show/hide based on menu state 
+  //- Mobile menu, show/hide based on menu state
   u-slideover(v-model='menu' id='mobile-menu' side='top' class='lg:hidden')
     u-card(:ui='ui.card')
       template(#header)
         div(class="flex items-center justify-between")
           u-button(@click="toggle()" color="gray" variant="ghost" icon="i-heroicons-outline:x" class="relative inline-flex items-center justify-center rounded-md p-2 text-slate-700 dark:text-slate-300 hover:text-slate-900 hover:dark:text-slate-100 hover:bg-slate-400/50 hover:dark:bg-slate-600/50 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-slate-600/50 dark:focus:ring-slate-300/50" aria-controls="mobile-menu")
-      
+
           u-share-button(class='p-2')
       div(class='flex flex-col gap-8 grow')
 
@@ -57,18 +56,17 @@ nav(v-if='active' class="bg-slate-100 dark:bg-slate-900 border-slate-200 dark:bo
 
         div(class='flex flex-col gap-4 grow md:hidden')
           h6(class='text-slate-700 dark:text-slate-100 text-bold text-sm') {{ t('navigation.settings', 2) }}
-          
+
           div(class='flex flex-col flex-wrap gap-1 grow w-full place-content-between')
             u-language-select(class='grow')
             u-color-select(show-label)
             u-theme-toggle(show-label)
-
 </template>
 
 <script setup lang="ts">
 type Props = {
-  active?: boolean
-  sticky?: boolean
+	active?: boolean
+	sticky?: boolean
 }
 
 const slot = useSlots()
@@ -86,42 +84,42 @@ const reveal = shallowRef(true)
 
 const toggle = () => menu.value = !menu.value
 const navigate = (value: string) => {
-  hash.value = value
-  menu.value = false
-  reveal.value = true
+	hash.value = value
+	menu.value = false
+	reveal.value = true
 
-  const element  = document.querySelector(`#${value}`)
-  element?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+	const element = document.querySelector(`#${value}`)
+	element?.scrollIntoView({ behavior: 'smooth', block: 'start' })
 }
 
 const recolor = () => {
-  // Remove opacity on scroll top
-  classes.value = window.scrollY === 0 
-    ? 'bg-opacity-0 dark:bg-opacity-0' 
-    : 'bg-opacity-95 dark:bg-opacity-90 border-b backdrop-blur'  
+	// Remove opacity on scroll top
+	classes.value = window.scrollY === 0
+		? 'bg-opacity-0 dark:bg-opacity-0'
+		: 'bg-opacity-95 dark:bg-opacity-90 border-b backdrop-blur'
 }
 
 const hide = () => {
-  reveal.value = window.scrollY < 500 || top.value > window.scrollY
-  top.value = window.scrollY
+	reveal.value = window.scrollY < 500 || top.value > window.scrollY
+	top.value = window.scrollY
 }
 
 useEventListener('scroll', () => {
-  recolor()
-  hide()
+	recolor()
+	hide()
 })
 
 const ui = {
-  card: { 
-    body: { 
-      base: 'flex-1' 
-    }, 
-    ring: '', 
-    divide: 'divide-y divide-slate-100 dark:divide-slate-700' 
-  },
-  container: {
-    base: 'mx-auto max-w-7xl px-2 sm:px-6 lg:px-8'
-  }
+	card: {
+		body: {
+			base: 'flex-1'
+		},
+		ring: '',
+		divide: 'divide-y divide-slate-100 dark:divide-slate-700'
+	},
+	container: {
+		base: 'mx-auto max-w-7xl px-2 sm:px-6 lg:px-8'
+	}
 }
 
 onMounted(recolor)

@@ -27,12 +27,7 @@ export default defineAppConfig({
 		selectMenu: {
 			default: {
 				color: 'primary'
-			}	
-		},
-		// divider: {
-		// 	border: {
-		// 		base: 'flex border-slate-700 dark:border-primary-300',
-		// 	}
-		// }	
-	},
+			}
+		}
+	}
 })

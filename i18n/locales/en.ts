@@ -3,7 +3,7 @@ export default defineI18nLocale(async (locale) => {
 		portfolio: 'Portfolio | Portfolios',
 		app: {
 			name: '@:portfolio',
-			description: 'Curriculum Vitae',
+			description: 'Curriculum Vitae'
 		},
 		greetings: {
 			hi: 'Hi there!',
@@ -11,7 +11,7 @@ export default defineI18nLocale(async (locale) => {
 			afternoon: 'Good afternoon!',
 			evening: 'Good evening!'
 		},
-		presentation: "My name is { name } and I'm a { job }",
+		presentation: 'My name is { name } and I\'m a { job }',
 		theme: {
 			name: 'Theme | Themes',
 			light: 'Light',
@@ -24,11 +24,11 @@ export default defineI18nLocale(async (locale) => {
 			select: 'Select your @.lower:language.name'
 		},
 		search: {
-			empty: 'No data found',
+			empty: 'No data found'
 		},
 		navigation: {
 			name: 'Navigation | Navigations',
-			settings:   'Setting | Settings'
+			settings: 'Setting | Settings'
 		},
 		option: {
 			name: 'Option | Options'
@@ -36,13 +36,13 @@ export default defineI18nLocale(async (locale) => {
 		color: {
 			name: 'Color | Colors',
 			option: 'Color @.lower:option.name',
-			blue: 'Blue', 
-			red: 'Red', 
-			orange: 'Orange', 
-			yellow: 'Yellow', 
-			emerald: 'Green emerald', 
-			sky: 'Blue sky', 
-			violet: 'Violet', 
+			blue: 'Blue',
+			red: 'Red',
+			orange: 'Orange',
+			yellow: 'Yellow',
+			emerald: 'Green emerald',
+			sky: 'Blue sky',
+			violet: 'Violet',
 			rose: 'Rose',
 			indigo: 'Indigo'
 		},

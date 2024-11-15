@@ -6,8 +6,8 @@ h1( :class='[{ "hyphens-auto": hyphens }, classes]' lang='es')
 
 <script lang="ts" setup>
 type Props = {
-  hyphens?: boolean
-  icon?: string
+	hyphens?: boolean
+	icon?: string
 }
 
 defineProps<Props>()

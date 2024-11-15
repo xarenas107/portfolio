@@ -5,29 +5,29 @@ export default <NuxtConfig['i18n']>{
 	strategy: 'no_prefix',
 	defaultLocale: 'en',
 	lazy: true,
-    locales: [
+	locales: [
 		{
 			name: 'English',
 			code: 'en',
 			language: 'en',
 			file: 'en.ts',
-			isCatchallLocale: true,
+			isCatchallLocale: true
 		},
 		{
 			name: 'Español',
 			code: 'es',
 			language: 'es',
-			file: 'es.ts',
-		},
+			file: 'es.ts'
+		}
 	],
 	langDir: 'locales',
 	compilation: {
-		escapeHtml: true,
+		escapeHtml: true
 	},
 	detectBrowserLanguage: {
 		fallbackLocale: 'en',
 		useCookie: true,
 		cookieKey: 'locale',
-		redirectOn: 'root',
-	},
+		redirectOn: 'root'
+	}
 }

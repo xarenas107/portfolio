@@ -6,8 +6,8 @@ client-only
 
 <script setup lang="ts">
 type Props = {
-    to?: string
-    disabled?: boolean
+	to?: string
+	disabled?: boolean
 }
 
 const props = defineProps<Props>()
@@ -16,11 +16,10 @@ const target = computed(() => !!document.querySelector(`[data-teleport="${props.
 
 const active = shallowRef(false)
 const enable = [onMounted, onActivated]
-enable.forEach(callback => callback(() => active.value = true ))
+enable.forEach(callback => callback(() => active.value = true))
 
-const disable = [onBeforeUnmount ,onDeactivated]
+const disable = [onBeforeUnmount, onDeactivated]
 disable.forEach(callback => callback(() => active.value = false))
 </script>
 
 <style lang="scss" scoped></style>
-    

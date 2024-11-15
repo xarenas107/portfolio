@@ -11,46 +11,46 @@ div(class='overflow-clip bg-primary-500 dark:bg-primary-600 relative flex min-h-
 
 <script lang="ts" setup>
 type Content = {
-  title: string
-  items: {
-    title: string
-    badge: string
-    subtitle: string
-    content: string
-    time: string
-    startAt: string
-  }[]
+	title: string
+	items: {
+		title: string
+		badge: string
+		subtitle: string
+		content: string
+		time: string
+		startAt: string
+	}[]
 }
 
 const getTime = (value: string) => new Date(value).getTime()
 
 const { data, status } = useFetchContent<Content>('section/experiences', {
-  callback: data => {
-    data.items.sort((a, b) =>  getTime(b.startAt) - getTime(a.startAt))
-    return data
-  },
-  default: () => ({
-    title: '',
-    items: []
-  })
+	callback: (data) => {
+		data.items.sort((a, b) => getTime(b.startAt) - getTime(a.startAt))
+		return data
+	},
+	default: () => ({
+		title: '',
+		items: []
+	})
 })
 
 const width = computed(() => {
-  const size = data.value?.items.length || 0
-  const length = 25 * (2*size)
-  return `${length}rem`
+	const size = data.value?.items.length || 0
+	const length = 25 * (2 * size)
+	return `${length}rem`
 })
 const { pending } = useStatus(status)
 
 const ui = {
-  title: 'text-slate-100 dark:text-slate-900 -mb-2 sm:-mb-4 md:-mb-4 lg:-mb-6 xl:-mb-6',
-  container: {
-    base: 'flex flex-col gap-16',
-  },
-  timeline: {
-    divider: 'border-slate-700 dark:border-slate-300',
-    text: 'text-slate-900 dark:text-slate-100',
-  }
+	title: 'text-slate-100 dark:text-slate-900 -mb-2 sm:-mb-4 md:-mb-4 lg:-mb-6 xl:-mb-6',
+	container: {
+		base: 'flex flex-col gap-16'
+	},
+	timeline: {
+		divider: 'border-slate-700 dark:border-slate-300',
+		text: 'text-slate-900 dark:text-slate-100'
+	}
 }
 </script>
 
@@ -71,7 +71,7 @@ const ui = {
     top: 20dvh;
   }
 }
-  
+
 @media (prefers-reduced-motion: no-preference) {
   .scroll-slide-animation {
     animation: slide-from-start ease-in-out both;
