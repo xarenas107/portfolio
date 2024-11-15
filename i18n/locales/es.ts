@@ -62,6 +62,9 @@ export default defineI18nLocale(async () => {
 			certificates: 'Certificados',
 			skills: 'Skills',
 			studies: 'Estudios'
+		},
+		share: {
+			name: 'Compartir'
 		}
 	}
 })
