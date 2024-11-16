@@ -20,7 +20,7 @@ u-lazy(:class='[{ grow }]' :disabled='!lazy' class="flex w-max min-w-fit max-w-f
                 u-timeline-dot(:class='ui.dot' class='z-40')
             u-divider(:ui='styles.divider' :orientation class='grow')
 
-        div(class='flex flex-col gap-4 text-balance max-w-sm' :class='[ui.container, styles.spacing, styles.size, { "-order-1": alternate && reverse }]')
+        div(class='flex flex-col gap-4 text-balance max-w-xs sm:max-w-sm' :class='[ui.container, styles.spacing, styles.size, { "-order-1": alternate && reverse }]')
             div(class='flex flex-col gap-0')
                 div(v-if='title' class='flex gap-4')
                     h3(class="text-xl opacity-80 font-bold" :class='ui.text') {{ title }}
