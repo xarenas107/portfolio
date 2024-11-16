@@ -1,7 +1,7 @@
 export default defineEventHandler(async (event) => {
 	const { color = 'black' } = getQuery(event)
 
-	const regex = /^([0-9a-f]{3}){1,2}$/i
+	const regex = /^(?:[0-9a-f]{3}){1,2}$/i
 	const value = regex.test(`${color}`) ? `#${color}` : color
 
 	const svg = `

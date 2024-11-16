@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1443 1598" style="enable-background:new 0 0 1443 1598;">
 	<style type="text/css">
 		.bg{ fill:none }
-		.fill{ fill:none }
+		.fill{ fill:black }
 	</style>
 	<rect class="bg" width="1443" height="1598"/>
 	<path class="fill" d="M857.4,436.6v286.8H586.2V155H163.7v1288h1115.5V436.6H857.4z M1133.2,1297H309.8V301h130.4v860.5h146V869.5 h271.2v292.1h146V582.7h129.8V1297L1133.2,1297z"/>
