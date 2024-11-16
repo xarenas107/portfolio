@@ -11,6 +11,7 @@ const { origin } = useRequestURL()
 const app = useAppConfig()
 
 const title = () => app.author.name
+const isDev = import.meta.dev
 
 useSeoMeta({
 	title,
@@ -36,7 +37,12 @@ const meta = computed(() => {
 			...(head.value?.meta || [])
 		],
 		link: [
-			...(head.value?.link || [])
+			...(head.value?.link || []),
+			{
+				rel: 'icon',
+				type: 'image/svg+xml',
+				href: `/icons/favicon - ${isDev ? 'dev' : 'adaptative'}.svg`
+			}
 		]
 	}
 })
