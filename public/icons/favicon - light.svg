@@ -1,9 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1443 1598" style="enable-background:new 0 0 1443 1598;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 53.2" style="enable-background:new 0 0 48 53.2;">
 	<style type="text/css">
 		.bg{ fill:none }
 		.fill{ fill:black }
-	</style>
-	<rect class="bg" width="1443" height="1598"/>
-	<path class="fill" d="M857.4,436.6v286.8H586.2V155H163.7v1288h1115.5V436.6H857.4z M1133.2,1297H309.8V301h130.4v860.5h146V869.5 h271.2v292.1h146V582.7h129.8V1297L1133.2,1297z"/>
 
+	</style>
+	<rect class="bg" width="48" height="53.2"/>
+	<rect class="fill" x="15.8" y="18.8" width="16.7" height="16.7" transform="translate(-12.1 25) rotate(-45)"/>
+	<rect class="fill" x="27.6" y="30.6" width="16.9" height="16.9" transform="translate(-17.1 37) rotate(-45)"/>
+	<rect class="fill" x="27.6" y="6.8" width="16.9" height="16.9" transform="translate(-.2 30) rotate(-45)"/>
+	<polygon class="fill" points="12 3.3 22.4 13.8 10.4 25.7 0 15.2 12 3.3"/>
+	<polygon class="fill" points="10.5 28.6 22.4 40.5 11.9 51 0 39 10.5 28.6"/>
 </svg>

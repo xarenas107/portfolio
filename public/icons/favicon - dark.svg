@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1443 1598" style="enable-background:new 0 0 1443 1598;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 53.2" style="enable-background:new 0 0 48 53.2;">
 	<style type="text/css">
 		.bg{ fill:none }
 		.fill{ fill:white }
+
 	</style>
-	<rect class="bg" width="1443" height="1598"/>
-	
+	<rect class="bg" width="48" height="53.2"/>
 	<rect class="fill" x="15.8" y="18.8" width="16.7" height="16.7" transform="translate(-12.1 25) rotate(-45)"/>
 	<rect class="fill" x="27.6" y="30.6" width="16.9" height="16.9" transform="translate(-17.1 37) rotate(-45)"/>
 	<rect class="fill" x="27.6" y="6.8" width="16.9" height="16.9" transform="translate(-.2 30) rotate(-45)"/>

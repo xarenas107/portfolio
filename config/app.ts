@@ -13,15 +13,19 @@ export default <NuxtConfig['app']>{
 	},
 	meta: [
 		{ name: 'description', content: 'Curriculum Vitae' }
-	]
-	// $development: {
-	// 	head: {
-	// 		link: [{ rel: 'icon', type: 'image/svg+xml', href: '/icons/favicon - dev.svg' }]
-	// 	}
-	// }
-	// $production: {
-	// 	head: {
-	// 		link: [{ rel: 'icon', type: 'image/svg+xml', href: '/icons/favicon - adaptative.svg' }]
-	// 	}
-	// }
+	],
+	$development: {
+		head: {
+			link: [{ rel: 'icon', type: 'image/svg+xml', href: '/icons/favicon - dev.svg' }]
+		}
+	},
+	$production: {
+		head: {
+			link: [
+				{ rel: 'icon', type: 'image/svg+xml', href: '/icons/favicon - adaptative.svg' },
+				{ rel: 'icon', type: 'image/svg+xml', href: '/icons/favicon - light.svg', media: '(prefers-color-scheme: light)' },
+				{ rel: 'icon', type: 'image/svg+xml', href: '/icons/favicon - dark.svg', media: '(prefers-color-scheme: dark)' }
+			]
+		}
+	}
 }
