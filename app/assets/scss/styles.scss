@@ -20,7 +20,24 @@
   .text-stroke-#{$i} { -webkit-text-stroke-width: #{$i}px }
 }
 
-.min-h-dvh {
+.min-h-dvh, .min-h-svh {
   will-change: min-height;
   transition: min-height ease .2s;
 }
+
+// html {
+//   overflow: hidden;
+//   width: 100%;
+// }
+
+// body {
+//   height: 100%;
+//   width: 100%;
+//   left: 0;
+//   top: 0;
+//   right: 0;
+//   bottom: 0;
+//   position: fixed;
+//   overflow-y: scroll;
+//   -webkit-overflow-scrolling: touch;
+// }

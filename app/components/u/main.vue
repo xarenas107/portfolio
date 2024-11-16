@@ -1,5 +1,5 @@
 <template lang='pug'>
-main(class="min-h-dvh w-full")
+main(class="min-h-svh w-full")
     slot
 </template>
 

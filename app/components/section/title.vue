@@ -12,7 +12,7 @@ type Props = {
 
 defineProps<Props>()
 
-const classes = 'text-balance flex gap-2 font-display tracking-tight uppercase font-extrabold text-6xl sm:text-7xl md:text-8xl lg:text-10xl xl:text-10xl'
+const classes = 'text-balance flex gap-2 font-display tracking-tight uppercase font-black text-6xl sm:text-7xl md:text-8xl lg:text-10xl xl:text-10xl'
 </script>
 
 <style lang='scss' scoped>

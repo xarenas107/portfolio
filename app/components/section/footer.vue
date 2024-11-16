@@ -5,8 +5,8 @@ div(class='bg-primary-500 dark:bg-primary-600')
             favicon(:ui='ui.favicon' class='w-10')
 
             div(class='flex flex-col')
-                h5(class='text-2xl font-bold tracking-wide text-primary-100 grow') {{ user.data?.name }}
-                h6(class='text-base font-base text-primary-100/80 grow') {{ user.data?.job }}
+                h5(class='text-3xl font-black font-display tracking-wide text-primary-100 grow') {{ user.data?.name }}
+                h6(class='text-base font-semibold text-primary-100/80 grow') {{ user.data?.job }}
 
         div(class='flex gap-y-3 gap-x-6 flex-col')
             div(class='flex gap-y-3 gap-x-6 flex-wrap')

@@ -43,7 +43,7 @@ const width = computed(() => {
 const { pending } = useStatus(status)
 
 const ui = {
-	title: 'text-slate-100 dark:text-slate-900 -mb-2 sm:-mb-4 md:-mb-4 lg:-mb-6 xl:-mb-6',
+	title: 'text-slate-100 dark:text-slate-900 -mb-3 sm:-mb-4 md:-mb-5 lg:-mb-8 xl:-mb-8',
 	container: {
 		base: 'flex flex-col gap-16'
 	},
