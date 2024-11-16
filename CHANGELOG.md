@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.1.2
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.1.1...v1.1.2)
+
+### 🏡 Chore
+
+- Use `Sofia Sans` instead of `Poppins` as font-display ([5b5f7fe](https://github.com/xarenas107/portfolio/commit/5b5f7fe))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](http://github.com/xarenas107))
+
 ## v1.1.1
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.1.0...v1.1.1)
