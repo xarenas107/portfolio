@@ -1,10 +1,10 @@
 export default defineNuxtPlugin(() => {
 	const app = useAppConfig()
-	const cookie = useCookie('color', { default: () => app.ui.primary })
+	const storage = useLocalStorage('color', () => app.ui.primary)
 
-	app.ui.primary = cookie.value || app.ui.primary
+	app.ui.primary = storage.value || app.ui.primary
 
 	watch(() => app.ui.primary, (value) => {
-		if (cookie.value !== value) cookie.value = value
+		if (storage.value !== value) storage.value = value
 	})
 })
