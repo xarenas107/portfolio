@@ -1,12 +1,12 @@
 <template lang="pug">
-div(class='overflow-clip bg-primary-500 dark:bg-primary-600 relative flex min-h-dvh flex-col')
-  div(class='h-[20dvh] w-full bg-primary-500 dark:bg-primary-600')
-  u-container(:ui='ui.container' class='h-full w-full')
-    section-title(:class='ui.title' class="scroll-slide-animation" hyphens) {{  data?.title }}
+div(class='overflow-clip bg-primary-500 dark:bg-primary-600 relative flex motion-safe:min-h-dvh flex-col')
+	div(class='h-[20dvh] w-full bg-primary-500 dark:bg-primary-600')
+	u-container(:ui='ui.container' class='h-full w-full')
+		section-title(:class='ui.title' class="scroll-slide-animation" hyphens) {{  data?.title }}
 
-  div(class='flex flex-col w-full bg-slate-100 dark:bg-slate-900 h-full min-h-dvh py-24 grow')
-    div(class='px-4 sm:px-6 lg:px-8 gap-8 max-w-7xl mx-auto w-full motion-reduce:pb-24 motion-reduce:overflow-auto grow')
-      u-timeline(:ui='ui.timeline' alternate reverse :items='data?.items' :pending orientation='horizontal' data-allow-mismatch='class' class='scroll-slide-animation-reverse w-dynamic motion-safe:min-w-[300dvw]')
+	div(class='flex flex-col w-full bg-slate-100 dark:bg-slate-900 h-full motion-safe:min-h-dvh py-24 grow')
+		//- div(class='px-4 sm:px-6 lg:px-8 gap-8 max-w-7xl mx-auto w-full motion-reduce:overflow-auto grow scroll-hidden')
+		u-timeline(:ui='ui.timeline' alternate reverse :items='data?.items' :pending orientation='horizontal' data-allow-mismatch='class' class='scroll-slide-animation-reverse motion-safe:w-[var(--width)] px-4 sm:px-6 lg:px-8 motion-reduce:max-w-7xl mx-auto' :style='`--width: ${width}rem`')
 </template>
 
 <script lang="ts" setup>
@@ -37,8 +37,8 @@ const { data, status } = useFetchContent<Content>('section/experiences', {
 
 const width = computed(() => {
 	const size = data.value?.items.length || 0
-	const length = 25 * (2 * size)
-	return `${length}rem`
+	const length = 25 * (8 + size)
+	return length
 })
 const { pending } = useStatus(status)
 
@@ -66,9 +66,7 @@ const ui = {
     transform: translate(80%);
   }
   to {
-    transform: translate(-60%);
-    position: sticky;
-    top: 20dvh;
+    transform: translate(-45%);
   }
 }
 
@@ -76,17 +74,15 @@ const ui = {
   .scroll-slide-animation {
     animation: slide-from-start ease-in-out both;
     animation-timeline: view();
-    animation-range: 0dvh 80dvh;
+    animation-range: 0svh 80svh;
   }
 
   .scroll-slide-animation-reverse {
-    animation: slide-from-end cubic-bezier(.73,.8,.4,1) both;
+	animation: slide-from-end cubic-bezier(.12,.48,.72,1) both;
     animation-timeline: view();
-    animation-range: 0dvh 160dvh;
+    animation-range: 0svh 160svh;
+	position: sticky;
+    top: 20svh;
   }
-}
-
-.w-dynamic {
-  width: v-bind(width)
 }
 </style>

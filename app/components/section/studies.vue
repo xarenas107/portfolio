@@ -1,19 +1,20 @@
 <template lang="pug">
 div(class='overflow-clip min-h-dvh flex flex-col relative')
-  div(class='h-[20dvh] w-full bg-primary-100/20 dark:bg-primary-900/20')
+	div(class='h-[20dvh] w-full bg-primary-100/20 dark:bg-primary-900/20')
 
-  div(class='w-full bg-primary-500 dark:bg-primary-600')
-    u-container(:ui='ui.container' class='h-full w-full overflow-clip')
-      section-title(:class='ui.title' class="scroll-slide-animation" hyphens) {{  data?.title }}
+	div(class='w-full bg-primary-500 dark:bg-primary-600')
+		u-container(:ui='ui.container' class='h-full w-full overflow-clip')
+			section-title(:class='ui.title' class="scroll-slide-animation" hyphens) {{  data?.title }}
 
-  div(class='flex flex-col w-full h-full py-24 grow bg-primary-500 dark:bg-primary-600 ')
-      div(class='px-4 sm:px-6 lg:px-8 gap-8 max-w-7xl mx-auto w-full motion-reduce:pb-24 motion-reduce:overflow-auto grow')
+	div(class='flex flex-col w-full h-full py-24 grow bg-primary-500 dark:bg-primary-600 ')
+		div(class='px-4 sm:px-6 lg:px-8 gap-8 max-w-7xl mx-auto w-full motion-reduce:pb-24 motion-reduce:overflow-auto grow')
 
-        client-only
-          template(#fallback)
-            u-timeline(:ui='ui.timeline' class='animate-pulse' pending)
+			client-only
+				template(#fallback)
+					//- class='animate-pulse'
+					u-timeline(:ui='ui.timeline' pending)
 
-          u-timeline(:orientation :ui='ui.timeline' :alternate='!mobile || md ' :reverse='!mobile || md' :items='data?.items' :pending class='scroll-slide-reverse-animation')
+				u-timeline(:orientation :ui='ui.timeline' :alternate='!mobile || md ' :reverse='!mobile || md' :items='data?.items' :pending class='scroll-slide-reverse-animation')
 </template>
 
 <script lang="ts" setup>
@@ -77,13 +78,11 @@ const ui = {
 
 @keyframes slide-from-end {
   from {
-    perspective: 500px;
-    transform: translate(80%);
+    opacity: 0;
+    transform: translateY(80%);
   }
   to {
-    transform: translate(0%);
-    // position: sticky;
-    // top: 20dvh;
+    transform: translateY(0%);
   }
 }
 

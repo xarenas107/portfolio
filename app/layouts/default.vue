@@ -36,7 +36,6 @@ const meta = computed(() => {
 			...(head.value?.meta || [])
 		],
 		link: [
-			{ rel: 'icon', type: 'image/png', href: '/icons/maskable-icon-512x512.png' },
 			...(head.value?.link || [])
 		]
 	}

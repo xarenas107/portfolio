@@ -1,5 +1,5 @@
 <template lang='pug'>
-ol(class="relative w-full flex group" :class='[ui.base, { "flex-col": !horizontal, "items-center": !horizontal && alternate }]')
+ol(class="relative w-full flex group h-fit motion-reduce:overflow-auto scroll-hidden snap-x snap-mandatory" :class='[ui.base, { "flex-col": !horizontal, "items-center": !horizontal && alternate }]')
     slot(v-if='slot.default' v-for='item, index in data' :item :index :orientation :alternate :lazy)
 
     u-timeline-item(
@@ -15,7 +15,7 @@ ol(class="relative w-full flex group" :class='[ui.base, { "flex-col": !horizonta
         :orientation
         :alternate
         :lazy
-        class='timeline-item'
+        class='timeline-item snap-center'
         )
 </template>
 
@@ -63,7 +63,7 @@ const percents = computed(() => {
 
 	const size = Math.floor(progress / segment)
 	const rest = progress % segment
-	const percents = Array.from({ length: props.items.length })
+	const percents = Array.from<number>({ length: props.items.length })
 	percents.fill(0)
 
 	for (let i = 0; i < size; i++) percents[i] = 100

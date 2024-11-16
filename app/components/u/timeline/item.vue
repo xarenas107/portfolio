@@ -20,16 +20,16 @@ u-lazy(:class='[{ grow }]' :disabled='!lazy' class="flex w-max min-w-fit max-w-f
                 u-timeline-dot(:class='ui.dot' class='z-40')
             u-divider(:ui='styles.divider' :orientation class='grow')
 
-        div(class='flex flex-col gap-4' :class='[ui.container, styles.spacing, styles.size, { "-order-1": alternate && reverse }]')
-            div(class='flex flex-col gap-0 max-w-prose')
+        div(class='flex flex-col gap-4 text-balance max-w-sm' :class='[ui.container, styles.spacing, styles.size, { "-order-1": alternate && reverse }]')
+            div(class='flex flex-col gap-0')
                 div(v-if='title' class='flex gap-4')
                     h3(class="text-xl opacity-80 font-bold" :class='ui.text') {{ title }}
-                    u-badge(v-if='badge' :label='badge' :ui='ui.badge' size='md' class='h-fit')
+                    u-badge(v-if='badge' :label='badge' :ui='ui.badge' size='md' class='h-fit text-nowrap')
 
                 h4(v-if='subtitle' class="text-base font-semibold" :class='ui.text') {{ subtitle }}
 
-            div(class='flex flex-col gap-4 max-w-prose')
-                p(v-if='content' :class='ui.text' class='text-base max-w-[40ch] text-balance') {{ content }}
+            div(class='flex flex-col gap-4')
+                p(v-if='content' :class='ui.text' class='text-base') {{ content }}
                 time(class="text-sm opacity-50 uppercase" :class='ui.text')  {{ time }}
 </template>
 
@@ -69,7 +69,7 @@ const props = withDefaults(defineProps<Props>(), {
 	})
 })
 
-const progress = defineModel('progress', { default: () => 0 })
+const progress = defineModel('progress', { default: 0 })
 const horizontal = computed(() => props.orientation === 'horizontal')
 const styles = computed(() => {
 	const alternate = props.alternate ? '-alternate' : ''

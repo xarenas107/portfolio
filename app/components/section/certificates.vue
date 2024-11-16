@@ -1,13 +1,13 @@
 <template lang="pug">
 div(class='py-24 min-h-dvh bg-primary-500 dark:bg-primary-600 relative overflow-clip')
   u-container(:ui='ui.container')
-    section-title(:class='ui.title' class="scroll-fade-animation z-40" hyphens) {{ data?.title }}
+    section-title(:class='ui.title' class="scroll-fade-animation z-40 px-4 sm:px-6 lg:px-8" hyphens) {{ data?.title }}
 
-    u-infinite-slider(:items='data?.items' ref='infinite-slider' class='scale-down-animation')
+    u-infinite-slider(:items='data?.items' ref='infinite-slider' class='scale-down-animation flex gap-4')
       template(#default='props')
-        u-card-group(v-bind='props' :ui='ui.card' class='z-20 mr-4')
+        u-card-group(v-bind='props' :ui='ui.card' class='z-20 motion-reduce:px-4 motion-reduce:sm:px-6 motion-reduce:lg:px-8')
           template(#item='{ item, props, index }')
-            u-card(v-bind='props' class='flex h-full flex-col justify-between cursor-default min-w-80' as='li')
+            u-card(v-bind='props' class='flex h-full flex-col justify-between cursor-default min-w-80 snap-center' as='li')
               template(#header)
                 div(class='flex flex-col gap-4 justify-between')
                   div(class='flex gap-4 justify-between items-start')
@@ -25,7 +25,7 @@ div(class='py-24 min-h-dvh bg-primary-500 dark:bg-primary-600 relative overflow-
                   u-icon(name='heroicons-outline:clock' class='w-5 h-5')
                   time(class='uppercase text-xs') {{ item.time  }}
 
-              nuxt-img(v-if='item.image' :src='item.image' class='-z-20 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-5 w-[10rem] rounded-lg overflow-clip dark:invert')
+              nuxt-img(v-if='item.image' :src='item.image' class='-z-20 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-5 w-[10rem] rounded-lg overflow-clip dark:invert pointer-events-none')
 </template>
 
 <script lang="ts" setup>
@@ -58,8 +58,8 @@ const ui = {
 		after: `after:bg-primary-200 dark:after:bg-primary-200`
 	},
 	container: {
-		base: 'flex flex-col gap-16'
-		// padding: 'px-0 sm:px-0 lg:px-0',
+		base: 'flex flex-col gap-16',
+		padding: 'px-0 sm:px-0 lg:px-0'
 		// constrained: "max-w-full",
 	},
 	badge: {
@@ -76,7 +76,7 @@ const ui = {
 <style lang="scss" scoped>
 @keyframes fade {
   from {
-    transform: translateY(50dvh);
+    transform: translateY(50svh);
     -webkit-text-stroke-width: 1px;
     color: transparent;
     opacity: 0;
@@ -110,12 +110,12 @@ const ui = {
   .scroll-fade-animation {
     animation: fade ease-out both;
     animation-timeline: view();
-    animation-range: 0dvh 80dvh;
+    animation-range: 0svh 80svh;
   }
   .scroll-slide-animation {
     animation: slide-from-end linear both;
     animation-timeline: view();
-    animation-range: 20dvh 100dvh;
+    animation-range: 20svh 100svh;
   }
   .scale-down-animation {
     transform-origin: left top;
