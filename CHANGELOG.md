@@ -1,6 +1,37 @@
 # Changelog
 
 
+## v1.1.0
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.0.4...v1.1.0)
+
+### 🚀 Enhancements
+
+- Add better display  methods ([1ab304f](https://github.com/xarenas107/portfolio/commit/1ab304f))
+- Add `share` function ([be77895](https://github.com/xarenas107/portfolio/commit/be77895))
+- Animate full screen height sections ([fe6cc77](https://github.com/xarenas107/portfolio/commit/fe6cc77))
+- Add ``scroll-hidden` css class utility ([72cb1e4](https://github.com/xarenas107/portfolio/commit/72cb1e4))
+
+### 🩹 Fixes
+
+- Solve missing `reduced-motion` support in certain cases ([04e4672](https://github.com/xarenas107/portfolio/commit/04e4672))
+- Solve favicon display based on environment ([5a1e8de](https://github.com/xarenas107/portfolio/commit/5a1e8de))
+
+### 💅 Refactors
+
+- Remove un-nused utils ([e6df5f8](https://github.com/xarenas107/portfolio/commit/e6df5f8))
+- Better code with `eslint` ([2c9651f](https://github.com/xarenas107/portfolio/commit/2c9651f))
+
+### 🏡 Chore
+
+- Update locale packages ([4e7053e](https://github.com/xarenas107/portfolio/commit/4e7053e))
+- **node:** Update packages ([728fdc2](https://github.com/xarenas107/portfolio/commit/728fdc2))
+- Eslint format ([80c15c5](https://github.com/xarenas107/portfolio/commit/80c15c5))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](http://github.com/xarenas107))
+
 ## v1.0.4
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.0.3...v1.0.4)
