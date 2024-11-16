@@ -41,3 +41,11 @@
         background-color: rgba(var(--color-gray-600));
     }
 }
+
+.scroll-hidden::-webkit-scrollbar {
+    width: 0;
+
+    &:horizontal {
+        height: 0;
+    }  
+}
