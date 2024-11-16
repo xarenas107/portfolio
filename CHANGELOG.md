@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v1.1.1
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.1.0...v1.1.1)
+
+### 🩹 Fixes
+
+- Solve favicon display based on environment ([01903db](https://github.com/xarenas107/portfolio/commit/01903db))
+- Solve wrong height changes on small devices ([5c0a81c](https://github.com/xarenas107/portfolio/commit/5c0a81c))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](http://github.com/xarenas107))
+
 ## v1.1.0
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.0.4...v1.1.0)
