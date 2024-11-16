@@ -1,6 +1,6 @@
 <template lang="pug">
 div(class='bg-primary-100/20 dark:bg-primary-900/20 max-w-full overflow-clip flex lg:items-center')
-    u-container(class="flex h-full w-full flex-col lg:flex-row lg:items-center gap-8 lg:gap-16 overflow-visible py-32 min-h-dvh relative")
+    u-container(class="flex h-full w-full flex-col lg:flex-row lg:items-center gap-8 lg:gap-16 overflow-visible py-32 min-h-svh relative")
         hero-image
         //- img(src='/api/favicon')
         div(class='flex flex-col gap-8 items-start grow z-20 basis-3/4')

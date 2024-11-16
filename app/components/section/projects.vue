@@ -1,12 +1,12 @@
 <template lang='pug'>
-div(class='bg-slate-100 dark:bg-slate-900 w-full py-24 min-h-dvh flex flex-col gap-10 relative overflow-clip')
+div(class='bg-slate-100 dark:bg-slate-900 w-full py-24 min-h-svh flex flex-col gap-10 relative overflow-clip')
 
   div(class='flex px-4 sm:px-6 lg:px-8 gap-8 max-w-7xl m-auto scroll-slide-animation')
     //- section-title(:class='ui.title' class='scroll-fade-animation') {{  data?.title }}
     section-title(v-for='index in 6' class='text-stroke text-primary-500' :class='{ "text-stroke-1 text-transparent": index % 2 }') {{ data?.title }}
 
   u-container(:ui='ui.container')
-    //- div(class="grid grid-cols-2 md:grid-cols-4 gap-4 w-full min-h-[80dvh] z-20")
+    //- div(class="grid grid-cols-2 md:grid-cols-4 gap-4 w-full min-h-[80svh] z-20")
       div(v-for='group in groups' class="flex flex-col gap-4")
         nuxt-link(v-for='{ grow, order, id, image } in group' @click.native='open(id)' class="h-auto max-w-full rounded-lg cursor-pointer" :style='`flex-grow: ${grow}; order: ${order}`')
           nuxt-img(v-if='image' :src='image' :class="{ 'placeholder-active': active === id }" class="rounded-lg object-cover h-full" )
@@ -14,7 +14,7 @@ div(class='bg-slate-100 dark:bg-slate-900 w-full py-24 min-h-dvh flex flex-col g
 
     u-card-group(class='z-20 mr-4' :ui='ui.card')
       template(#default='{ containerClass, childClass }')
-        div(class="grid grid-cols-2 md:grid-cols-4 gap-4 w-full min-h-dvh z-20")
+        div(class="grid grid-cols-2 md:grid-cols-4 gap-4 w-full min-h-svh z-20")
           div(v-for='group in groups' class="flex flex-col gap-4")
             //- div(v-for='{ grow, order, id, image } in group' )
             nuxt-link(v-for='{ grow, order, id, image } in group' @click.native='open(id)' :class='containerClass' class="h-auto max-w-full rounded-lg cursor-pointer" :style='`flex-grow: ${grow}; order: ${order}`')
@@ -27,10 +27,11 @@ div(class='bg-slate-100 dark:bg-slate-900 w-full py-24 min-h-dvh flex flex-col g
 type Content = {
 	title: string
 	items: {
-		id?: number
+		id: number
 		title: string
 		subtitle: string
 		badge?: string
+		image?: string
 		paragraphs: {
 			image?: string
 			text: string
@@ -109,7 +110,7 @@ onMounted(() => {
 <style lang='scss' scoped>
 @keyframes slide-from-end {
   from {
-    // font-size: 60dvh;
+    // font-size: 60svh;
     transform: translateX(-100%);
   }
   to {

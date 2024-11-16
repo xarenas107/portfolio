@@ -1,6 +1,6 @@
 <template lang="pug">
-div(class='min-h-[60dvh] relative overflow-clip bg-slate-100 dark:bg-slate-900 py-24')
-  div(class='fade-exit-animation motion-safe:sticky motion-safe:top-[30dvh]')
+div(class='min-h-[60svh] relative overflow-clip bg-slate-100 dark:bg-slate-900 py-24')
+  div(class='fade-exit-animation motion-safe:sticky motion-safe:top-[30svh]')
     section-title(:class='ui.title' class='origin-left scale-down-animation' hyphens) {{  data?.title }}
 
   u-container(:ui='ui.container' as='ul')
@@ -54,7 +54,7 @@ const ui = {
 
 @keyframes fade {
   from {
-    transform: translateY(20dvh);
+    transform: translateY(20svh);
     opacity: 0
   }
   40%, 70% {
@@ -78,17 +78,17 @@ const ui = {
     transform-origin: left top;
     animation: scale-down ease-out both;
     animation-timeline: view();
-    animation-range: 0 60dvh;
+    animation-range: 0 60svh;
   }
   .scroll-fade-animation {
     animation: fade ease both;
     animation-timeline: view();
-    animation-range: 20dvh 100dvh;
+    animation-range: 20svh 100svh;
   }
   .scroll-rainbow-animation {
     animation: rainbow ease-in both;
     animation-timeline: view();
-    animation-range: 100dvh 110dvh;
+    animation-range: 100svh 110svh;
   }
   .fade-exit-animation {
     animation: fade-out ease forwards;

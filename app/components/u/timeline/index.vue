@@ -103,17 +103,4 @@ const ui = computed(() => {
 </script>
 
 <style lang='scss' scoped>
-// @keyframes reveal {
-//   from {
-//     opacity: 0;
-//   }
-// }
-
-// @media (prefers-reduced-motion: no-preference) {
-//   .scroll-reveal-animation {
-//     animation: reveal ease-in-out forwards;
-//     animation-timeline: view();
-//     animation-range:20dvh 60dvh;
-//   }
-// }
 </style>

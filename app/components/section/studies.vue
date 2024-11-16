@@ -1,6 +1,6 @@
 <template lang="pug">
-div(class='overflow-clip min-h-dvh flex flex-col relative')
-	div(class='h-[20dvh] w-full bg-primary-100/20 dark:bg-primary-900/20')
+div(class='overflow-clip min-h-svh flex flex-col relative')
+	div(class='h-[20svh] w-full bg-primary-100/20 dark:bg-primary-900/20')
 
 	div(class='w-full bg-primary-500 dark:bg-primary-600')
 		u-container(:ui='ui.container' class='h-full w-full overflow-clip')
@@ -90,13 +90,13 @@ const ui = {
   .scroll-slide-animation {
     animation: slide-from-start ease-in-out forwards;
     animation-timeline: view();
-    animation-range: 0dvh 80dvh;
+    animation-range: 0svh 80svh;
   }
 
   .scroll-slide-reverse-animation {
     animation: slide-from-end ease-in-out both;
     animation-timeline: view();
-    animation-range: 0dvh 60dvh;
+    animation-range: 0svh 60svh;
   }
 }
 </style>

@@ -1,5 +1,5 @@
 <template lang="pug">
-div(class='py-24 min-h-dvh bg-primary-500 dark:bg-primary-600 relative overflow-clip')
+div(class='py-24 min-h-svh bg-primary-500 dark:bg-primary-600 relative overflow-clip')
   u-container(:ui='ui.container')
     section-title(:class='ui.title' class="scroll-fade-animation z-40 px-4 sm:px-6 lg:px-8" hyphens) {{ data?.title }}
 
