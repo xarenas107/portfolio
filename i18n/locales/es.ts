@@ -44,7 +44,8 @@ export default defineI18nLocale(async () => {
 			sky: 'Azul cielo',
 			violet: 'Violeta',
 			rose: 'Rosa',
-			indigo: 'Índigo'
+			indigo: 'Índigo',
+			slate: 'Pizarra'
 		},
 		menu: {
 			sr: 'Abrir el menú principal'
