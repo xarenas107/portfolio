@@ -11,9 +11,9 @@ div(class='relative overflow-visible w-full lg:order-1 lg:max-w-lg lg:h-[60svh] 
     //- Shadow gradient
     u-lazy(:transition='{ name: "transition-fade" }' class='w-full h-full pointer-events-none')
         div(class='drop-shadow-xl saturate-200 backdrop-blur-md blur-3xl opacity-70')
-            div(class='bg-primary-500/30 aspect-square w-[32rem] absolute top-0 left-0 -translate-x-[20%] -translate-y-[120%] rounded-full skew-y-16')
-            div(class='bg-slate-600/70 aspect-square w-[24rem] absolute top-[50%] right-0 translate-x-[15%] -translate-y-[120%] rounded-full -skew-x-12')
-            div(class='bg-slate-300/20 aspect-square w-[24rem] absolute top-full translate-x-[20%] -translate-y-[70%] rounded-full skew-x-16')
+            div(class='bg-primary-500/40 aspect-square w-[32rem] absolute top-0 left-0 -translate-x-[20%] -translate-y-[120%] rounded-full skew-y-16')
+            div(class='bg-primary-600/60 aspect-square w-[24rem] absolute top-[50%] right-0 translate-x-[15%] -translate-y-[120%] rounded-full -skew-x-12')
+            div(class='bg-primary-300/20 aspect-square w-[24rem] absolute top-full translate-x-[20%] -translate-y-[70%] rounded-full skew-x-16')
 </template>
 
 <script lang="ts" setup>

@@ -4,7 +4,7 @@ div(class='overflow-clip bg-primary-500 dark:bg-primary-600 relative flex motion
 	u-container(:ui='ui.container' class='h-full w-full')
 		section-title(:class='ui.title' class="scroll-slide-animation" hyphens) {{  data?.title }}
 
-	div(class='flex flex-col w-full bg-slate-100 dark:bg-slate-900 h-full motion-safe:min-h-lvh py-24 grow')
+	div(class='flex flex-col w-full bg-slate-100 dark:bg-slate-950 h-full motion-safe:min-h-lvh py-24 grow')
 		//- div(class='px-4 sm:px-6 lg:px-8 gap-8 max-w-7xl mx-auto w-full motion-reduce:overflow-auto grow scroll-hidden')
 		u-timeline(:ui='ui.timeline' alternate reverse :items='data?.items' :pending orientation='horizontal' data-allow-mismatch='class' class='scroll-slide-animation-reverse motion-safe:w-[var(--width)] px-4 sm:px-6 lg:px-8 motion-reduce:max-w-7xl mx-auto' :style='`--width: ${width}rem`')
 </template>
@@ -43,7 +43,7 @@ const width = computed(() => {
 const { pending } = useStatus(status)
 
 const ui = {
-	title: 'text-slate-100 dark:text-slate-900 -mb-3 sm:-mb-4 md:-mb-5 lg:-mb-8 xl:-mb-8',
+	title: 'text-slate-100 dark:text-slate-950 -mb-2 md:-mb-6 lg:-mb-8',
 	container: {
 		base: 'flex flex-col gap-16'
 	},

@@ -1,12 +1,12 @@
 <template lang="pug">
-div(class='min-h-[60svh] relative overflow-clip bg-slate-100 dark:bg-slate-900 py-24')
+div(class='min-h-[60svh] relative overflow-clip bg-slate-100 dark:bg-slate-950 py-24')
   div(class='fade-exit-animation motion-safe:sticky motion-safe:top-[30svh]')
     section-title(:class='ui.title' class='origin-left scale-down-animation' hyphens) {{  data?.title }}
 
   u-container(:ui='ui.container' as='ul')
     li(v-for='item, index in data?.items' :class='`scroll-fade-animation lg:grid-start-${index + 1}`')
       div(class='flex flex-col gap-4 align-start')
-        h2(class="font-extrabold text-4xl sm:text-4xl md:text-3xl lg:text-5xl xl:text-6xl text-primary-600 dark:text-primary-500 hyphens-auto break-words sm:break-normal") {{  item.title  }}
+        h3(class="font-bold uppercase font-display text-4xl sm:text-4xl md:text-3xl lg:text-5xl xl:text-6xl text-primary-600 dark:text-primary-500 hyphens-auto break-words sm:break-normal") {{  item.title  }}
 
         div(class='group flex flex-wrap gap-2 max-w-[48ch]')
           p(class='text-base text-balance text-slate-700 dark:text-slate-300') {{ item?.content?.join(', ') }}

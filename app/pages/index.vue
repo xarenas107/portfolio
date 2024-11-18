@@ -32,4 +32,5 @@ const intersect = [
 @use '@/assets/scss/styles';
 @use '@/assets/scss/transition';
 @use '@/assets/scss/scrollbar';
+@use '@/assets/scss/fonts';
 </style>

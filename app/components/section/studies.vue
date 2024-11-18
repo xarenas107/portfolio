@@ -14,7 +14,7 @@ div(class='overflow-clip min-h-svh flex flex-col relative')
 					//- class='animate-pulse'
 					u-timeline(:ui='ui.timeline' pending)
 
-				u-timeline(:orientation :ui='ui.timeline' :alternate='!mobile || md ' :reverse='!mobile || md' :items='data?.items' :pending class='scroll-slide-reverse-animation')
+				u-timeline(:orientation :ui='ui.timeline' :alternate='!mobile || md' :reverse='!mobile || md' :items='data?.items' :pending class='scroll-slide-reverse-animation')
 </template>
 
 <script lang="ts" setup>
@@ -52,7 +52,7 @@ const { data, status } = useFetchContent<Content>('section/studies', {
 const { pending } = useStatus(status)
 
 const ui = {
-	title: 'text-slate-50/95 dark:text-slate-900/90 -mt-3 sm:-mt-4 md:-mt-4 lg:-mt-6 xl:-mt-8',
+	title: 'text-slate-50/95 dark:text-slate-950/90 -mt-1 md:-mt-5 lg:-mt-6',
 	container: {
 		base: 'flex flex-col gap-16'
 		// padding: 'px-4 sm:px-6 lg:px-8 lg:pr-0',
@@ -60,9 +60,9 @@ const ui = {
 	},
 	timeline: {
 		base: 'lg:min-w-[100dvw]',
-		divider: 'border-slate-100 dark:border-slate-300',
+		divider: 'border-primary-100 dark:border-primary-200',
 		dot: {
-			base: 'bg-slate-100 dark:bg-slate-300'
+			base: 'bg-primary-100 dark:bg-primary-200'
 		},
 		text: 'text-primary-100 dark:text-primary-100'
 	}

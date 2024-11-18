@@ -1,5 +1,5 @@
 <template lang="pug">
-nav(v-if='active' class="bg-slate-100 dark:bg-slate-900 border-slate-200 dark:border-slate-800 fixed w-full top-0 z-50 transition-transform" :class='[classes, { "-translate-y-full": sticky && !reveal }]')
+nav(v-if='active' class="bg-slate-100 dark:bg-slate-950 border-slate-300 dark:border-slate-800 fixed w-full top-0 z-50 transition-transform" :class='[classes, { "-translate-y-full": sticky && !reveal }]')
 
   div(:class="ui.container.base")
     div(class="relative flex h-16 items-center justify-between gap-1.5")
@@ -59,8 +59,8 @@ nav(v-if='active' class="bg-slate-100 dark:bg-slate-900 border-slate-200 dark:bo
 
           div(class='flex flex-col flex-wrap gap-1 grow w-full place-content-between')
             u-language-select(class='grow')
-            u-color-select(show-label)
-            u-theme-toggle(show-label)
+            u-color-select(show-label class='grow')
+            u-theme-toggle(show-label class='grow')
 </template>
 
 <script setup lang="ts">

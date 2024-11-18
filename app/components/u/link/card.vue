@@ -21,7 +21,7 @@ const show = 'hidden sm:block'
 const iclass = 'h-5 w-8 display-hidden'
 
 const lclass = computed(() => {
-	const color = 'bg-slate-900 text-slate-200 dark:bg-slate-200 dark:text-slate-700'
+	const color = 'bg-slate-950 text-slate-200 dark:bg-slate-200 dark:text-slate-700'
 	if (props.href) return `${color} bg-primary-900 text-primary-200 dark:hover:bg-primary-200 dark:hover:text-primary-700`
 	return color
 })

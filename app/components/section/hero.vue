@@ -8,8 +8,8 @@ div(class='bg-primary-100/20 dark:bg-primary-900/20 max-w-full overflow-clip fle
                 div(class='flex flex-col md:flex-row lg:flex-col gap-8 grow')
                     div(class='flex flex-col gap-4 max-w-sm sm:max-w-md lg:max-w-xl')
                         div(:class='ui.text.base' class="flex flex-col gap-4")
-                            h1(class='font-display font-black text-5xl max-w-prose sm:text-6xl lg:text-7xl') {{ t('greetings.hi') }} {{ t('presentation', { name: user.data?.name }) }}
-                                strong(class='text-primary-500 dark:text-primary-600') {{ user.data?.job }}
+                            h1(class='font-display uppercase font-bold text-5xl max-w-prose sm:text-6xl lg:text-7xl') {{ t('greetings.hi') }} {{ t('presentation', { name: user.data?.name }) }}
+                                strong(class='text-primary-500 font-black dark:text-primary-600') {{ user.data?.job }}
 
                         p(:class='ui.text.base' class='opacity-70 text-base text-balance') {{ user.data?.description }}
 

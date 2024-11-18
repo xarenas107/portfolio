@@ -32,7 +32,7 @@ const ui = {
 	}
 }
 
-const colors = ['blue', 'orange', 'yellow', 'emerald', 'indigo', 'rose']
+const colors = ['slate', 'orange', 'yellow', 'emerald', 'indigo', 'rose']
 
 const items = computed(() => {
 	return [...colors].map(color => ({

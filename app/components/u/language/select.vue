@@ -1,9 +1,9 @@
 <template lang='pug'>
 client-only()
     template(#fallback)
-        u-skeleton(class='min-w-32 h-8 rounded-lg bg-slate-300/50 dark:bg-slate-700/50')
+        u-skeleton(class='min-w-32 h-8 rounded-lg bg-slate-300/50 dark:bg-slate-700/50 w-full')
 
-    u-select-menu(:model-value='locale' @update:model-value='update' :options='locales' :ui :aria-label="t('language.option', 2)" :placeholder='t("language.select")' icon='i-heroicons:language' value-attribute="code" option-attribute="name" class='min-w-32' variant='none' ref='element')
+    u-select-menu(:model-value='locale' @update:model-value='update' :options='locales' :ui :aria-label="t('language.option', 2)" :placeholder='t("language.select")' icon='i-heroicons:language' value-attribute="code" option-attribute="name" class='min-w-32 w-full' variant='none' ref='element')
         template(#empty) {{ t('search.empty') }}
 
         //- template(#option='{ option }')

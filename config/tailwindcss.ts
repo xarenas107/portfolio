@@ -36,8 +36,8 @@ export default <NuxtConfig['tailwindcss']>{
 				// 	'2xl': '2520px',
 				// },
 				fontFamily: {
-					sans: ['Inter', 'Proxima Nova', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-					display: ['Sofia Sans', 'Proxima Nova', 'ui-sans-serif', 'system-ui', 'sans-serif']
+					sans: ['Plus Jakarta Sans', 'Inter', 'Proxima Nova', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+					display: ['Khand', 'ui-sans-serif', 'system-ui', 'sans-serif']
 				}
 			}
 		}
