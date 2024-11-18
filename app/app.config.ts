@@ -5,7 +5,7 @@ export default defineAppConfig({
 	version: module.version,
 	author: module.author,
 	ui: {
-		primary: 'blue',
+		primary: 'slate',
 		badge: {
 			rounded: 'rounded-full',
 			color: {

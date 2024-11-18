@@ -1,6 +1,6 @@
 export default defineNuxtPlugin(() => {
 	const app = useAppConfig()
-	const storage = useLocalStorage('color', () => app.ui.primary)
+	const storage = useLocalStorage('color', () => 'rose')
 
 	app.ui.primary = storage.value || app.ui.primary
 
