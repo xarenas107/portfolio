@@ -1,6 +1,25 @@
 # Changelog
 
 
+## v1.1.7
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.1.5...v1.1.7)
+
+### 💅 Refactors
+
+- Remove un-nused meta tags ([2446e6c](https://github.com/xarenas107/portfolio/commit/2446e6c))
+
+### 🏡 Chore
+
+- Set default primary color as `slate` ([1eea584](https://github.com/xarenas107/portfolio/commit/1eea584))
+- **i18n:** Update locales ([c692de2](https://github.com/xarenas107/portfolio/commit/c692de2))
+- **font:** Use new font kit ([b0b9442](https://github.com/xarenas107/portfolio/commit/b0b9442))
+- **release:** V1.1.5 ([c045098](https://github.com/xarenas107/portfolio/commit/c045098))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](http://github.com/xarenas107))
+
 ## v1.1.5
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.1.2...v1.1.5)
