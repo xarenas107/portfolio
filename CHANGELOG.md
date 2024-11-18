@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v1.1.5
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.1.2...v1.1.5)
+
+### 🏡 Chore
+
+- **release:** V1.1.3 ([7f30581](https://github.com/xarenas107/portfolio/commit/7f30581))
+- **release:** V1.1.4 ([63b1488](https://github.com/xarenas107/portfolio/commit/63b1488))
+- Set default primary color as `slate` ([1eea584](https://github.com/xarenas107/portfolio/commit/1eea584))
+- **i18n:** Update locales ([c692de2](https://github.com/xarenas107/portfolio/commit/c692de2))
+- **font:** Use new font kit ([b0b9442](https://github.com/xarenas107/portfolio/commit/b0b9442))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](http://github.com/xarenas107))
+
 ## v1.1.4
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.1.3...v1.1.4)
