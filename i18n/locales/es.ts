@@ -1,5 +1,7 @@
 export default defineI18nLocale(async () => {
 	return {
+		im: 'Soy',
+		itsme: 'Este soy yo',
 		portfolio: 'Portafolio | Portafolios',
 		app: {
 			name: '@:portfolio',
