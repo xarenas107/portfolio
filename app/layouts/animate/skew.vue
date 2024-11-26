@@ -23,7 +23,7 @@ const state: State = {
 	ease: 0.75
 }
 
-const update = () => {
+const update = (event: Event) => {
 	if (state.pause || reduceMotion.value === 'reduce') return
 
 	const diff = state?.scroll - window.scrollY
@@ -49,7 +49,9 @@ const update = () => {
 	// element.style.transform = `${element.style.transform} translate3d(0, ${-state.current}px, 0)`
 }
 
-useEventListener('scroll', update)
+useEventListener('scroll', update, {
+	passive: true
+})
 
 onBeforeUpdate(() => {
 	state.pause = true
