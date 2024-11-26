@@ -22,7 +22,8 @@ nav(v-if='active' class="bg-slate-100 dark:bg-slate-950 border-slate-300 dark:bo
 
           div(class="hidden lg:flex")
             div(class="flex gap-1.5")
-              u-navigation-link(v-for='{ to, icon, label, id, active } in navigation.data' @click='navigate(id)' :active :icon :label :aria-current='active')
+              u-tooltip(v-for='{ to, icon, label, id, active, shortcut }, index in navigation.data'  :text="label" :shortcuts="shortcut" :prevent='active')
+                u-navigation-link(@click='navigate(id)' :active :icon :label :aria-current='active' :shortcut)
 
         slot(name='left' :menu)
 

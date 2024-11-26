@@ -21,13 +21,14 @@ export default () => {
 
 	const links = computed(() => {
 		const items = new Set(data.value)
-		return Array.from(items)?.map(({ id, icon, title }) => {
+		return Array.from(items)?.map(({ id, icon, title }, index) => {
 			return {
 				id,
 				icon,
 				label: title,
 				to: `/#${id}`,
-				active: hash.value === `#${id}`
+				active: hash.value === `#${id}`,
+				shortcut: ['Shift', `F${index + 1}`]
 			}
 		})
 	})

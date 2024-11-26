@@ -4,7 +4,7 @@ client-only
     u-skeleton(class='min-w-28 h-8 rounded-lg bg-slate-300/50 dark:bg-slate-700/50')
 
   a(@click='click' :href :aria-current :class='[state]' class="rounded-lg px-3 py-2 flex gap-1.5 text-sm font-medium cursor-pointer")
-    u-icon(v-if='icon' :name='icon' class='w-5 h-5 flex-shrink-0 relative')
+    u-icon(v-if='icon' :name='icon' class='w-5 h-5 flex-shrink-0 relative' ref='link')
     span(v-if='label') {{ label }}
 </template>
 
@@ -18,6 +18,7 @@ type Props = {
 	label?: string
 	active?: boolean
 	ariaCurrent?: 'page' | 'step' | 'location' | 'date' | 'time' | boolean
+	shortcut?: string[]
 }
 
 const emit = defineEmits<Emit>()
@@ -33,6 +34,22 @@ const state = computed(() => {
 })
 
 const click = (event: MouseEvent) => emit('click', event)
+
+const element = useTemplateRef('link')
+
+const { current } = useMagicKeys({
+	passive: false,
+	onEventFired(event) {
+		if (props.active) return
+
+		const is = props.shortcut?.every(value => current.has(value.toLowerCase()))
+		if (is && event.type === 'keydown') {
+			event.preventDefault()
+			const link = element.value?.$el as HTMLButtonElement
+			link?.click()
+		}
+	}
+})
 </script>
 
 <style scoped>
