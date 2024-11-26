@@ -1,11 +1,11 @@
 <template lang="pug">
-section-hero(v-intersect='intersect' ref='section')#home
-section-studies(v-intersect='intersect' ref='section')#studies
-section-certificates(v-intersect='intersect' ref='section')#certificates
-section-experiences(v-intersect='intersect' ref='section')#experience
-section-skills(v-intersect='intersect' ref='section')#skills
-//- section-projects
-section-footer
+beta-section-hero(v-intersect='intersect' ref='section')#home
+beta-section-studies(v-intersect='intersect' ref='section')#studies
+beta-section-certificates(v-intersect='intersect' ref='section')#certificates
+beta-section-experiences(v-intersect='intersect' ref='section')#experience
+beta-section-skills(v-intersect='intersect' ref='section')#skills
+//- beta-section-projects
+beta-section-footer
 </template>
 
 <script lang="ts" setup>
@@ -20,7 +20,10 @@ const section = ref(null)
 const intersect = [
 	(entries: IntersectionObserverEntry[]) => {
 		entries.forEach(({ isIntersecting, target }) => {
-			if (isIntersecting) hash.value = target.id
+			if (isIntersecting) {
+				hash.value = target.id
+				// target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+			}
 		})
 	}, {
 		rootMargin: '10%',
