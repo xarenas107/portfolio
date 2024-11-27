@@ -1,5 +1,5 @@
 <template lang="pug">
-div(class='relative overflow-visible w-full lg:order-1 lg:max-w-lg lg:h-[60svh] lg:max-h-svh parallax-container' ref='image')
+div(class='relative overflow-visible w-full lg:max-w-lg lg:h-[60svh] lg:max-h-svh parallax-container' ref='image')
     u-lazy(:transition='{ name: "transition-grow-y" }' :dealy='100' class='w-full h-full pointer-events-none')
         div(key='bg-hero' class='w-full h-full min-h-[30svh] sm:min-h-[40svh] rounded-lg bg-primary-500 dark:bg-primary-600 relative overflow-visible z-20  lg:rounded-b-[50svh]')
 

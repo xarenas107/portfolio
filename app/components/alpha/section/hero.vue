@@ -1,7 +1,7 @@
 <template lang="pug">
 div(class='bg-primary-100/20 dark:bg-primary-900/20 max-w-full overflow-clip flex lg:items-center min-h-svh')
     u-container(class="flex h-full w-full flex-col lg:flex-row lg:items-center gap-8 lg:gap-16 overflow-visible py-32 relative")
-        hero-image
+        hero-image(class='lg:order-1')
         //- img(src='/api/favicon')
         div(class='flex flex-col gap-8 items-start grow z-20 basis-3/4')
             u-lazy(:delay='500' :transition class='grow flex w-full')
