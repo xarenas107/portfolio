@@ -44,17 +44,19 @@ const meta = computed(() => {
 useHead(meta)
 
 // use dynamic favicon color
-const tailwind = useTailwind()
-const dark = usePreferredDark()
-const href = computed(() => {
-	const colors = tailwind.theme.colors as Record<string, Record<number, string>>
-	const variant = dark.value ? 600 : 500
-	const color = colors[app.ui.primary]?.[variant]?.replace('#', '')
+if (!import.meta.dev) {
+	const tailwind = useTailwind()
+	const dark = usePreferredDark()
+	const href = computed(() => {
+		const colors = tailwind.theme.colors as Record<string, Record<number, string>>
+		const variant = dark.value ? 600 : 500
+		const color = colors[app.ui.primary]?.[variant]?.replace('#', '')
 
-	return `/api/favicon?color=${color}&mode=${dark.value ? 'dark' : 'light'}`
-})
+		return `/api/favicon?color=${color}&mode=${dark.value ? 'dark' : 'light'}`
+	})
 
-useFavicon(href)
+	useFavicon(href)
+}
 </script>
 
 <style scoped>
