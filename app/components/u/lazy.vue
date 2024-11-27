@@ -1,16 +1,16 @@
 <template lang='pug'>
 component(v-intersect='intersect' :is)
-  transition(v-bind='transition')
-    slot(v-if='intersected')
+	transition(v-bind='options')
+		slot(v-if='intersected')
 </template>
 
 <script lang='ts' setup>
 import type { TransitionProps } from 'vue'
 
 type Props = {
-	transition?: Omit<TransitionProps, 'css'>
+	transition?: Omit<TransitionProps, 'css'> | string
 	disabled?: boolean
-	delay?: number
+	delay?: number | string
 	once?: boolean
 	margin?: string
 	threshold?: number | number[]
@@ -32,7 +32,7 @@ const intersect = [
 		entries.forEach(({ isIntersecting }) => {
 			setTimeout(() => {
 				intersected.value = isIntersecting
-			}, props.delay)
+			}, Number(props.delay))
 		})
 	}, {
 		rootMargin: props.margin,
@@ -40,7 +40,7 @@ const intersect = [
 		once: props.once
 	}]
 
-const transition = computed(() => {
+const options = computed(() => {
 	const { transition, disabled } = props
 	if (!transition || disabled) return { css: false }
 	return typeof transition === 'string' ? { name: transition } : transition
