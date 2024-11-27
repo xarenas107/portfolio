@@ -1,5 +1,5 @@
 export default defineEventHandler(async (event) => {
-	const { color = 'black' } = getQuery(event)
+	const { color = 'orange', mode = 'light' } = getQuery(event)
 
 	const regex = /^(?:[0-9a-f]{3}){1,2}$/i
 	const value = regex.test(`${color}`) ? `#${color}` : color
@@ -8,7 +8,7 @@ export default defineEventHandler(async (event) => {
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 53.2" style="enable-background:new 0 0 48 53.2;">
       <style type="text/css">
         .bg{ fill:none }
-        .fill{ fill:black }
+        .fill{ fill:${mode === 'dark' ? 'white' : 'black'} }
         .accent{ fill:${value}
       </style>
       <rect class="bg" width="48" height="53.2"/>
