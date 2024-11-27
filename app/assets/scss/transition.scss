@@ -38,10 +38,9 @@
         &-grow {
             &-y {
                 &-enter-active, &-leave-active { 
-                    transform-origin: center;
-                    transition: transform .2s ease, opacity .2s 
+                    transition: max-height .25s cubic-bezier(.15,.75,.5,1)
                 }
-                &-enter-from, &-leave-to { transform: scaleY(0) }
+                &-enter-from, &-leave-to { max-height: 0 }
             }
             &-r {
                 &-enter-active, &-leave-active { 
