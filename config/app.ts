@@ -4,7 +4,7 @@ export default <NuxtConfig['app']>{
 	head: {
 		link: [
 			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico', sizes: '48x48', media: '(prefers-color-scheme: light)' },
-			{ rel: 'icon', type: 'image/x-icon', href: '/favicon - dark.ico', sizes: '48x48', media: '(prefers-color-scheme: dark)' },
+			{ rel: 'icon', type: 'image/x-icon', href: '/favicon-dark.ico', sizes: '48x48', media: '(prefers-color-scheme: dark)' },
 
 			// Preconnect and load font types
 			{ rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: true },
