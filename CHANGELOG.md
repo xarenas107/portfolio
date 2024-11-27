@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.3.1
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.3.0...v1.3.1)
+
+### 🩹 Fixes
+
+- Remove space on favicon name ([4be55d0](https://github.com/xarenas107/portfolio/commit/4be55d0))
+
+### ❤️ Contributors
+
+- Xavier <xarenas107@gmail.com>
+
 ## v1.3.0
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.1.7...v1.3.0)
