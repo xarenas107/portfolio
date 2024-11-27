@@ -1,6 +1,40 @@
 # Changelog
 
 
+## v1.2.0
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.1.7...v1.2.0)
+
+### 🚀 Enhancements
+
+- Add navigation shortcuts ([6d6c7be](https://github.com/xarenas107/portfolio/commit/6d6c7be))
+- Font adjust with optical sizing ([4a18c60](https://github.com/xarenas107/portfolio/commit/4a18c60))
+- Add transition component ([235c326](https://github.com/xarenas107/portfolio/commit/235c326))
+- Add `scroll-snap` layout ([c3d458a](https://github.com/xarenas107/portfolio/commit/c3d458a))
+
+### 🩹 Fixes
+
+- **lazy:** Solve possible bugs ([817d2ef](https://github.com/xarenas107/portfolio/commit/817d2ef))
+- Solve wrong favicon display in certain cases ([5691f02](https://github.com/xarenas107/portfolio/commit/5691f02))
+
+### 💅 Refactors
+
+- Remove unnused functions ([e510711](https://github.com/xarenas107/portfolio/commit/e510711))
+
+### 🏡 Chore
+
+- **locale:** Update packages ([c4e32b8](https://github.com/xarenas107/portfolio/commit/c4e32b8))
+- Set default color as `orange` ([3653dae](https://github.com/xarenas107/portfolio/commit/3653dae))
+- Set beta sections as default ([0b33184](https://github.com/xarenas107/portfolio/commit/0b33184))
+- Set layout animation `skew` listener as passive ([9c7d796](https://github.com/xarenas107/portfolio/commit/9c7d796))
+- Transition grow property change to scale ([d03e099](https://github.com/xarenas107/portfolio/commit/d03e099))
+- Use `beta` version ([cfc2568](https://github.com/xarenas107/portfolio/commit/cfc2568))
+- **node:** Update dependences ([bd2ca57](https://github.com/xarenas107/portfolio/commit/bd2ca57))
+
+### ❤️ Contributors
+
+- Xavier <xarenas107@gmail.com>
+
 ## v1.1.7
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.1.5...v1.1.7)
