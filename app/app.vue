@@ -11,8 +11,6 @@ nuxt-layout
 
 <script lang="ts" setup>
 const route = useRoute()
-const router = useRouter()
-const { t } = useI18n()
 </script>
 
 <style lang='scss'>
