@@ -34,18 +34,18 @@
     "@nuxthub/core": "^0.8.7",
     "@nuxtjs/i18n": "^9.1.0",
     "@vue/language-plugin-pug": "^2.1.10",
-    "@vueuse/nuxt": "^11.2.0",
+    "@vueuse/nuxt": "^12.0.0",
     "nuxt": "^3.13.2",
-    "nuxt-seo-utils": "^5.0.2",
+    "nuxt-seo-utils": "^6.0.3",
     "three": "^0.170.0",
     "un": "^0.0.0",
     "vite-plugin-glsl": "^1.3.0",
     "vue": "^3.5.13",
-    "vue-router": "latest"
+    "vue-router": "^4.5.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.2.0",
-    "@nuxt/eslint-config": "^0.7.0",
+    "@nuxt/eslint-config": "^0.7.2",
     "changelogen": "^0.5.7",
     "eslint": "^9.15.0",
     "pug": "^3.0.3",
