@@ -42,6 +42,7 @@ async function defineNuxtConfig(input: InputConfig<NuxtConfig, ConfigLayerMeta>)
 
 export default defineNuxtConfig({
 	modules: [
+		'@nuxt/devtools',
 		'@nuxt/ui',
 		'@vueuse/nuxt',
 		'@nuxt/image',
@@ -53,7 +54,12 @@ export default defineNuxtConfig({
 	imports: {
 		dirs: ['./stores']
 	},
-	devtools: { enabled: false },
+	devtools: {
+		enabled: true,
+		vscode: {
+			enabled: true
+		}
+	},
 	future: {
 		compatibilityVersion: 4
 	},
