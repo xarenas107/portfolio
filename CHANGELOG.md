@@ -1,6 +1,28 @@
 # Changelog
 
 
+## v1.5.0
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.4.0...v1.5.0)
+
+### 🚀 Enhancements
+
+- **scroll:** Navigate with arrow keys ([01725ce](https://github.com/xarenas107/portfolio/commit/01725ce))
+- **hero:** Add tooltip animation ([6cb6a8b](https://github.com/xarenas107/portfolio/commit/6cb6a8b))
+- **seo:** Use dynamic icon for preview card ([0b4d182](https://github.com/xarenas107/portfolio/commit/0b4d182))
+
+### 🩹 Fixes
+
+- Solve unnexpected text overflow in certain breakpoints ([8182fdf](https://github.com/xarenas107/portfolio/commit/8182fdf))
+
+### 🏡 Chore
+
+- Enable devtools ([b8947ad](https://github.com/xarenas107/portfolio/commit/b8947ad))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](http://github.com/xarenas107))
+
 ## v1.4.0
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.3.1...v1.4.0)
