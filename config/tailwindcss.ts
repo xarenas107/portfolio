@@ -38,6 +38,15 @@ export default <NuxtConfig['tailwindcss']>{
 				fontFamily: {
 					sans: ['Plus Jakarta Sans', 'Inter', 'Proxima Nova', 'ui-sans-serif', 'system-ui', 'sans-serif'],
 					display: ['Khand', 'ui-sans-serif', 'system-ui', 'sans-serif']
+				},
+				keyframes: {
+					float: {
+						'0%, 100%': { transform: 'translateY(0)' },
+						'50%': { transform: 'translateY(-10px)' }
+					}
+				},
+				animation: {
+					float: 'float 3s ease-in-out infinite'
 				}
 			}
 		}
