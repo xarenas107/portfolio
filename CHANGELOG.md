@@ -1,6 +1,28 @@
 # Changelog
 
 
+## v1.4.0
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.3.1...v1.4.0)
+
+### 🚀 Enhancements
+
+- Use dynamic favicon color ([e117d0b](https://github.com/xarenas107/portfolio/commit/e117d0b))
+- **transition:** Expose `idle` state ([3829fa8](https://github.com/xarenas107/portfolio/commit/3829fa8))
+
+### 🩹 Fixes
+
+- **content:** Solve wrong case in certain cases ([d09858d](https://github.com/xarenas107/portfolio/commit/d09858d))
+- **heading:** Solve strange spacing before animation start in lg devices ([330ef46](https://github.com/xarenas107/portfolio/commit/330ef46))
+
+### 🏡 Chore
+
+- Avoid dynamic favicon on `dev` env ([c69b911](https://github.com/xarenas107/portfolio/commit/c69b911))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](http://github.com/xarenas107))
+
 ## v1.3.1
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.3.0...v1.3.1)
