@@ -42,6 +42,7 @@ const style = computed(() => {
 const state = reactive({
 	active: false,
 	pending: false,
+	idle: true,
 	done: false
 })
 const active = defineModel({ default: false })
@@ -62,6 +63,7 @@ const parseTimeout = (timeout?: string | number) => {
 
 const reveal = () => {
 	state.pending = true
+	state.idle = false
 
 	const timeout = parseTimeout(props.duration) + 100
 	setTimeout(() => {
