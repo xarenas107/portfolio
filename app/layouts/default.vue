@@ -1,5 +1,4 @@
 <template lang='pug'>
-//- color-scheme
 div(class='bg-slate-100 dark:bg-slate-950')
     slot
 </template>
@@ -7,24 +6,40 @@ div(class='bg-slate-100 dark:bg-slate-950')
 <script setup lang="ts">
 const { t, locale } = useI18n()
 const head = useLocaleHead()
-const { origin } = useRequestURL()
 const app = useAppConfig()
+const tailwind = useTailwind()
+const dark = usePreferredDark()
+// const { origin } = useRequestURL()
 
 const title = () => app.author.name
 
+const color = computed(() => {
+	const colors = tailwind.theme.colors as Record<string, Record<number, string>>
+	const variant = dark.value ? 600 : 500
+	return colors[app.ui.primary]?.[variant]
+})
+
+const href = computed(() => {
+	const hex = color.value?.replace('#', '')
+	return `/api/favicon?color=${hex}&mode=${dark.value ? 'dark' : 'light'}`
+})
+
 useSeoMeta({
 	title,
+	// titleTemplate: () => title(),
 	description: () => t('app.description'),
-	ogTitle: title,
-	ogDescription: () => t('app.description'),
-	ogImage: `${origin}/icons/favicon%20-%20adaptative.svg`,
+	themeColor: () => color.value,
+	ogImage: () => href.value,
+	// ogImage: () => '/hero/human.png',
 	ogImageAlt: title,
 	ogLocale: locale,
 	ogLocaleAlternate: 'en',
+	author: title,
 	twitterTitle: title,
 	twitterDescription: () => t('app.description'),
-	twitterImage: `${origin}/icons/favicon%20-%20adaptative.svg`,
-	twitterCard: 'summary'
+	twitterImage: () => href.value,
+	// twitterImage: () => '/hero/human.png',
+	twitterCard: 'player'
 })
 
 const meta = computed(() => {
@@ -36,6 +51,7 @@ const meta = computed(() => {
 			...(head.value?.meta || [])
 		],
 		link: [
+			{ rel: 'icon', type: 'image/png', href: '/icons/favicon.png' },
 			...(head.value?.link || [])
 		]
 	}
@@ -44,19 +60,7 @@ const meta = computed(() => {
 useHead(meta)
 
 // use dynamic favicon color
-if (!import.meta.dev) {
-	const tailwind = useTailwind()
-	const dark = usePreferredDark()
-	const href = computed(() => {
-		const colors = tailwind.theme.colors as Record<string, Record<number, string>>
-		const variant = dark.value ? 600 : 500
-		const color = colors[app.ui.primary]?.[variant]?.replace('#', '')
-
-		return `/api/favicon?color=${color}&mode=${dark.value ? 'dark' : 'light'}`
-	})
-
-	useFavicon(href)
-}
+if (!import.meta.dev) useFavicon(href)
 </script>
 
 <style scoped>
