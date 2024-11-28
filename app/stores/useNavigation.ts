@@ -43,6 +43,16 @@ export default () => {
 			const element = document.querySelector(`#${value}`)
 			element?.scrollIntoView({ behavior: 'smooth', block: 'start' })
 		},
+		next: () => {
+			const index = links.value.findIndex(({ active }) => active)
+			const next = links.value.at(index + 1 < links.value.length ? index + 1 : -1)
+			actions.go(next?.id)
+		},
+		prev: () => {
+			const index = links.value.findIndex(({ active }) => active)
+			const prev = links.value.at(index === 0 ? 0 : index - 1)
+			actions.go(prev?.id)
+		},
 		execute
 	}
 

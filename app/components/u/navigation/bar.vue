@@ -110,6 +110,19 @@ useEventListener('scroll', () => {
 	hide()
 })
 
+const { current } = useMagicKeys({
+	passive: false,
+	onEventFired(event) {
+		const keys = ['arrowdown', 'arrowup']
+		const is = keys?.some(value => current.has(value))
+
+		if (!is || current.size !== 1) return
+		event.preventDefault()
+		if (current.has('arrowdown')) navigation.next()
+		else navigation.prev()
+	}
+})
+
 const ui = {
 	card: {
 		body: {
