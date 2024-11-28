@@ -11,19 +11,19 @@ div(class='bg-primary-100/20 dark:bg-primary-900/20 max-w-full overflow-clip fle
 						h6(:class='ui.text.base' class='font-display uppercase font-bold text-2xl max-w-prose sm:text-4xl lg:text-6xl leading-4 text-nowrap') {{ greetings }}
 						u-divider(v-bind='props' :ui='ui.divider' size='md')
 
-			u-transition(delay='.5s' active-class='origin-bottom' before-enter-class="max-h-0" enter-class='max-h-48' duration='.5s' timing-function="ease-in-out")
+			u-transition(delay='.5s' active-class='origin-bottom' before-enter-class="max-h-0" enter-class='max-h-48 sm:max-h-64 lg:max-h-full' duration='.5s' timing-function="ease-in-out")
 					template(#default='{ state, ...props }')
 						span(v-bind='props' class='w-full h-full bg-primary-500 dark:bg-primary-600 grow lg:hidden')
 
-							u-transition(delay='1.65s' before-enter-class="rotate-x-90" active-class="origin-bottom" duration='.5s' timing-function="ease-out")
+							u-transition(delay='1.65s' before-enter-class="rotate-x-90" active-class="origin-bottom" duration='.5s' timing-function="ease-in-out")
 								template(#default='{ state, ...props }')
 									beta-hero-image(v-bind='props' class='lg:order-1')
 
-			div(class='flex flex-col gap-4 lg:gap-8 grow w-full')
-				div(:class='ui.text.base' class="font-display uppercase font-bold text-6xl sm:text-8xl md:text-9xl lg:text-10xl xl:text-10xl")
+			div(class='flex flex-col gap-x-4 lg:gap-8 grow w-full')
+				div(:class='ui.text.base' class="font-display uppercase font-bold text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-10xl")
 					u-transition(delay='1s' before-enter-class="max-w-0" enter-class='max-w-full' duration='1s' timing-function="ease-in-out")
 						template(#default='{ state, ...props }')
-							div(class='flex flex-wrap place-content-center place-items-center gap-x-3 transition-all duration-200' :class='[state.idle ? "sm:gap-x-3" : "sm:gap-x-6"]')
+							div(class='flex place-content-center place-items-center gap-x-3 transition-all duration-200' :class='[state.idle ? "sm:gap-x-3" : "sm:gap-x-4 md:gap-x-4"]')
 								h1 {{  t('im') }}
 								h1(class='lg:order-1') {{ user.data?.name }},
 
@@ -35,23 +35,23 @@ div(class='bg-primary-100/20 dark:bg-primary-900/20 max-w-full overflow-clip fle
 
 					u-transition(delay='1s' before-enter-class="max-w-0" enter-class='max-w-full' duration='1s' timing-function="ease-in-out")
 						template(#default='{ state, ...props }')
-							div(class='flex flex-wrap sm:flex-nowrap place-content-center gap-x-3 sm:gap-x-6 hyphens-auto place-items-center')
-								div(v-for='word, index in user.data?.job?.split(" ")' class='flex place-content-center place-items-center text-nowrap w-full sm:w-auto')
-									h1(class='shrink') {{ word }}
-									span(v-bind='props' class='grow lg:bg-primary-500 dark:lg:bg-primary-600 lg:-order-1 h-font sm:hidden')
+							div(class='flex flex-wrap sm:flex-nowrap place-content-center gap-x-3 sm:gap-x-4 md:gap-x-6 hyphens-auto place-items-center transition-all duration-200')
+								div(v-for='word, index in user.data?.job?.split(" ")' class='flex place-content-center place-items-center text-nowrap w-full gap-x-3 sm:gap-x-4 md:gap-x-6 sm:w-auto')
+									h1 {{ word }}
+									span(v-bind='props' class='grow bg-primary-500 dark:bg-primary-600 lg:-order-1 h-font sm:hidden')
 
-								span(v-bind='props' class='hidden sm:block shrink grow lg:bg-primary-500 dark:lg:bg-primary-600 lg:-order-1 h-font')
+								span(v-bind='props' class='hidden sm:block shrink grow sm:bg-primary-500 dark:sm:bg-primary-600 lg:-order-1 h-font')
 
 			u-transition(delay='.25s' before-enter-class="opacity-0 translate-y-10" duration='.5s' timing-function="ease-out")
 				template(#default='{ state, ...props }')
 					div(class='flex flex-col md:flex-row gap-6 justify-center')
-						p(v-bind='props' :class='ui.text.base' class='text-base text-slate-700 dark:text-slate-200 text-balance max-w-sm lg:max-w-lg delay-[1s] sm:delay-0') {{ user.data?.description }}
+						p(v-bind='props' :class='ui.text.base' class='text-base text-slate-700 dark:text-slate-200 text-balance max-w-sm lg:max-w-lg delay-[1s] md:delay-0') {{ user.data?.description }}
 
 						u-transition(delay='1s' before-enter-class="max-w-0" enter-class='max-w-full' duration='1s' timing-function="ease-in-out")
 							template(#default='{ state, ...props }')
-								span(v-bind='props' class='hidden lg:inline-block grow')
+								span(v-bind='props' class='hidden md:inline-block grow')
 
-						div(v-bind='props' class='flex gap-y-3 gap-x-6 flex-col max-w-sm delay-[1.2s] sm:delay-0')
+						div(v-bind='props' class='flex gap-y-3 gap-x-6 flex-col max-w-sm delay-[1.2s] md:delay-0')
 							div(class='flex gap-y-3 gap-x-6 flex-wrap')
 								u-link-action(v-for='item in user.data?.portfolio' v-bind='item')
 								u-link-action(v-for='item, key in user.data?.contact' v-bind='item' :key)
