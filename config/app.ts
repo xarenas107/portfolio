@@ -16,12 +16,12 @@ export default <NuxtConfig['app']>{
 	],
 	$development: {
 		head: {
-			link: [{ rel: 'icon', type: 'image/svg+xml', href: '/icons/favicon - dev.svg' }]
+			link: [{ rel: 'icon', type: 'image/svg+xml', href: '/icons/favicon-dev.svg' }]
 		}
 	},
 	$production: {
 		head: {
-			link: [{ rel: 'icon', type: 'image/svg+xml', href: '/icons/favicon - adaptative.svg' }]
+			link: [{ rel: 'icon', type: 'image/svg+xml', href: '/icons/favicon-adaptative.svg' }]
 		}
 	}
 }
