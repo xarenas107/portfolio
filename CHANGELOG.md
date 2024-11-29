@@ -1,6 +1,32 @@
 # Changelog
 
 
+## v1.6.0
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.5.0...v1.6.0)
+
+### 🚀 Enhancements
+
+- **hero:** Add arrow indicator ([843ae6b](https://github.com/xarenas107/portfolio/commit/843ae6b))
+
+### 🩹 Fixes
+
+- Add missing `alt` attribute for several images ([be60eab](https://github.com/xarenas107/portfolio/commit/be60eab))
+- Remove space for image src ([4f88756](https://github.com/xarenas107/portfolio/commit/4f88756))
+
+### 💅 Refactors
+
+- Remove old code ([392cb9a](https://github.com/xarenas107/portfolio/commit/392cb9a))
+
+### 🏡 Chore
+
+- **node:** Update dependences ([cfc2400](https://github.com/xarenas107/portfolio/commit/cfc2400))
+- Remove `vite-plugin-glsl` dependence ([59bb0af](https://github.com/xarenas107/portfolio/commit/59bb0af))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](http://github.com/xarenas107))
+
 ## v1.5.0
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.4.0...v1.5.0)
