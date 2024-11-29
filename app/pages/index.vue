@@ -20,10 +20,7 @@ const section = ref(null)
 const intersect = [
 	(entries: IntersectionObserverEntry[]) => {
 		entries.forEach(({ isIntersecting, target }) => {
-			if (isIntersecting) {
-				hash.value = target.id
-				// target.scrollIntoView({ behavior: 'smooth', block: 'start' })
-			}
+			if (isIntersecting) hash.value = target.id
 		})
 	}, {
 		rootMargin: '10%',
