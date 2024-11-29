@@ -3,6 +3,8 @@ div(class='bg-primary-100/20 dark:bg-primary-900/20 max-w-full overflow-clip fle
 	u-lazy(class='w-full')
 		u-container(class="flex h-full w-full flex-col gap-4 overflow-visible py-32 relative")
 			//- bg-gradient(class='fixed top-0 left-0 w-full h-full mix-blend-multiply dark:mix-blend-screen opacity-80')
+			div(class='w-full absolute bottom-0 left-0 flex items-center justify-center pointer-events-none')
+				u-icon(name='i-heroicons:arrow-small-down-solid' class="w-8 h-8 motion-safe:animate-bounce")
 
 			u-transition(delay='1s' before-enter-class="max-w-0" enter-class='max-w-full' duration='.75s' timing-function="ease-in-out")
 				template(#default='{ state, ...props }')
