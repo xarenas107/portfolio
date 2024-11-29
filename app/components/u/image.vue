@@ -2,7 +2,7 @@
 u-placeholder(:class :content-class :ui='ui.placeholder' :pending :transition)
     template(#default='props')
         transition(v-bind='transition')
-            nuxt-img(v-if='data' v-bind='props' :src='data' @load='show' format="webp" loading='lazy')
+            nuxt-img(v-if='data' v-bind='props' :src='data' @load='show' :alt format="webp" loading='lazy')
 </template>
 
 <script lang='ts' setup>
@@ -10,6 +10,7 @@ import type { TransitionProps } from 'vue'
 
 type Props = {
 	src?: string
+	alt?: string
 	class?: string
 	contentClass?: string
 	transition?: TransitionProps
@@ -27,6 +28,7 @@ const props = withDefaults(defineProps<Props>(), {
 	transition: () => ({ name: 'transition-fade' }),
 	src: () => '/',
 	ui: () => ({
+		alt: () => '',
 		placeholder: {
 			svg: {
 				base: 'bg-primary-400 dark:bg-primary-400 stroke-primary-600 dark:stroke-primary-200'

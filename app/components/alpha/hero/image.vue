@@ -3,9 +3,9 @@ div(class='relative overflow-visible w-full lg:max-w-lg lg:h-[60svh] lg:max-h-sv
     u-lazy(:transition='{ name: "transition-grow-y" }' :dealy='100' class='w-full h-full pointer-events-none')
         div(key='bg-hero' class='w-full h-full min-h-[30svh] sm:min-h-[40svh] rounded-lg bg-primary-500 dark:bg-primary-600 relative overflow-visible z-20  lg:rounded-b-[50svh]')
 
-            nuxt-img(src='/hero/human-shadow.png' class='absolute rounded-lg lg:rounded-b-full bottom-0 right-0 grow object-cover max-w-full h-[50svh] sm:h-[60svh] lg:h-[90svh] z-10 blend-multiply opacity-70' loading='eager' key="image:shadow" cover)
+            nuxt-img(src='/hero/human-shadow.png' alt='shadow' class='absolute rounded-lg lg:rounded-b-full bottom-0 right-0 grow object-cover max-w-full h-[50svh] sm:h-[60svh] lg:h-[90svh] z-10 blend-multiply opacity-70' loading='eager' key="image:shadow" cover)
 
-            nuxt-img(src='/hero/human.png' class='absolute rounded-lg lg:rounded-b-full bottom-0 right-0 grow object-cover max-w-full h-[50svh] sm:h-[60svh] lg:h-[90svh] z-10' key="image"
+            nuxt-img(src='/hero/human.png' alt='person' class='absolute rounded-lg lg:rounded-b-full bottom-0 right-0 grow object-cover max-w-full h-[50svh] sm:h-[60svh] lg:h-[90svh] z-10' key="image"
             loading='eager' cover)
 
     //- Shadow gradient

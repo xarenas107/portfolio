@@ -1,6 +1,6 @@
 <template lang="pug">
 u-container(class="min-h-svh py-24 flex flex-col gap-8 lg:gap-16 relative")
-    nuxt-img(src='https://mir-s3-cdn-cf.behance.net/project_modules/1400/3cac49141461249.66731ef195704.jpg' class="aspect-[10/4] w-full rounded-lg placeholder-active object-cover" )
+    nuxt-img(src='https://mir-s3-cdn-cf.behance.net/project_modules/1400/3cac49141461249.66731ef195704.jpg' alt='' class="aspect-[10/4] w-full rounded-lg placeholder-active object-cover" )
     //- u-placeholder(class='aspect-w-12 aspect-h-4 w-full rounded-lg placeholder-active')
 
     div(class='flex flex-col gap-8 text-base')

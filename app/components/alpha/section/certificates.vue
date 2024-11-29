@@ -25,7 +25,7 @@ div(class='py-24 min-h-svh bg-primary-500 dark:bg-primary-600 relative overflow-
                   u-icon(name='heroicons-outline:clock' class='w-5 h-5')
                   time(class='uppercase text-xs') {{ item.time  }}
 
-              nuxt-img(v-if='item.image' :src='item.image' class='-z-20 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-5 w-[10rem] rounded-lg overflow-clip dark:invert pointer-events-none')
+              nuxt-img(v-if='item.image' :src='item.image' :alt='item.provider' class='-z-20 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-5 w-[10rem] rounded-lg overflow-clip dark:invert pointer-events-none')
 </template>
 
 <script lang="ts" setup>
