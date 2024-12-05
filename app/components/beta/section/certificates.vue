@@ -7,7 +7,7 @@ div(class='py-24 min-h-svh bg-primary-500 dark:bg-primary-600 relative overflow-
       template(#default='props')
         u-card-group(v-bind='props' :ui='ui.card' class='z-20 motion-reduce:px-4 motion-reduce:sm:px-6 motion-reduce:lg:px-8')
           template(#item='{ item, props, index }')
-            u-card(v-bind='props' class='flex h-full flex-col justify-between cursor-default min-w-80 snap-center' as='li')
+            u-card(v-bind='props' class='flex h-full flex-col justify-between cursor-default w-80 max-w-fit snap-center' as='li')
               template(#header)
                 div(class='flex flex-col gap-4 justify-between')
                   div(class='flex gap-4 justify-between items-start')

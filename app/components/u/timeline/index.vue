@@ -1,5 +1,5 @@
 <template lang='pug'>
-ol(class="relative w-full flex group h-fit motion-reduce:overflow-auto scroll-hidden snap-x snap-mandatory" :class='[ui.base, { "flex-col": !horizontal, "items-center": !horizontal && alternate }]')
+ol(class="w-full flex group h-fit motion-reduce:overflow-auto scroll-hidden snap-x snap-mandatory" :class='[ui.base, { "flex-col": !horizontal, "items-center": !horizontal && alternate }]')
     slot(v-if='slot.default' v-for='item, index in data' :item :index :orientation :alternate :lazy)
 
     u-timeline-item(
