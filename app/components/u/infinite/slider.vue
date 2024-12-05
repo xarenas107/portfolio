@@ -39,7 +39,7 @@ const time = computed(() => `${items.value.length * 5}s`)
 <style lang='scss'>
 @keyframes scroll {
 	from { transform: translateX(-100%) }
-	to { transform: translateX(-200%) }
+	to { transform: translateX(calc(-200% - 10px)) }
 }
 
 @media (prefers-reduced-motion: no-preference) {
