@@ -21,7 +21,7 @@ div(class='py-24 min-h-svh bg-primary-500 dark:bg-primary-600 relative overflow-
                         u-icon(name='i-heroicons-outline:external-link' class='w-4 h-4')
 
               template(#footer)
-                div(class='flex gap-2 text-slate-200 dark:text-primary-300 items-center')
+                div(class='flex gap-2 text-primary-100 dark:text-primary-200 items-center')
                   u-icon(name='heroicons-outline:clock' class='w-5 h-5')
                   time(class='uppercase text-xs') {{ item.time  }}
 
@@ -66,7 +66,7 @@ const ui = {
 		base: `w-fit h-fit text-nowrap gap-2`,
 		color: {
 			primary: {
-				outline: `ring-1 ring-inset text-primary-300 hover:text-primary-100 dark:text-primary-300 dark:hover:text-primary-100 ring-primary-300 hover:ring-primary-100  dark:ring-primary-300 dark:hover:ring-primary-100 `
+				outline: `ring-1 ring-inset text-primary-200 hover:text-primary-100 dark:text-primary-200 dark:hover:text-primary-100 ring-primary-200 hover:ring-primary-100  dark:ring-primary-200 dark:hover:ring-primary-100 `
 			}
 		}
 	}

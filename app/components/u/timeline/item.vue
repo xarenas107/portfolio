@@ -26,11 +26,11 @@ u-lazy(:class='[{ grow }]' :disabled='!lazy' class="flex w-max min-w-fit max-w-f
                     h3(class="text-xl font-bold" :class='ui.text') {{ title }}
                     u-badge(v-if='badge' :label='badge' :ui='ui.badge' size='md' class='h-fit text-nowrap')
 
-                h4(v-if='subtitle' class="text-base font-semibold opacity-80" :class='ui.text') {{ subtitle }}
+                h4(v-if='subtitle' class="text-base font-semibold opacity-90" :class='ui.text') {{ subtitle }}
 
             div(class='flex flex-col gap-4')
                 p(v-if='content' :class='ui.text' class='text-base') {{ content }}
-                time(class="text-sm opacity-60 uppercase" :class='ui.text')  {{ time }}
+                time(class="text-sm opacity-80 uppercase" :class='ui.text')  {{ time }}
 </template>
 
 <script lang='ts' setup>
