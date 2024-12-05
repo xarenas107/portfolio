@@ -7,7 +7,7 @@ div(class='overflow-clip min-h-svh flex flex-col relative')
 			section-title(:class='ui.title' class="scroll-slide-animation" hyphens) {{  data?.title }}
 
 	div(class='flex flex-col w-full h-full py-24 grow bg-primary-500 dark:bg-primary-600 ')
-		div(class='px-4 sm:px-6 lg:px-8 gap-8 max-w-7xl mx-auto w-full motion-reduce:pb-24 motion-reduce:overflow-auto grow')
+		div(class='px-4 sm:px-6 lg:px-8 gap-8 max-w-7xl mx-auto w-full motion-reduce:pb-24 grow')
 
 			client-only
 				template(#fallback)

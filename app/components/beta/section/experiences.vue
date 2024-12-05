@@ -4,9 +4,11 @@ div(class='overflow-clip bg-primary-500 dark:bg-primary-600 relative flex motion
 	u-container(:ui='ui.container' class='h-full w-full')
 		section-title(:class='ui.title' class="scroll-slide-animation" hyphens) {{  data?.title }}
 
-	div(class='flex flex-col w-full bg-slate-100 dark:bg-slate-950 h-full motion-safe:min-h-lvh py-24 grow')
+	div(class='relative flex w-full bg-slate-100 dark:bg-slate-950 h-full motion-safe:min-h-[150svh] py-24 grow motion-reduce:overflow-auto scroll-hidden')
 		//- div(class='px-4 sm:px-6 lg:px-8 gap-8 max-w-7xl mx-auto w-full motion-reduce:overflow-auto grow scroll-hidden')
-		u-timeline(:ui='ui.timeline' alternate reverse :items='data?.items' :pending orientation='horizontal' data-allow-mismatch='class' class='scroll-slide-animation-reverse motion-safe:w-[var(--width)] px-4 sm:px-6 lg:px-8 motion-reduce:max-w-7xl mx-auto' :style='`--width: ${width}rem`')
+		div(class='px-4 sm:px-6 motion-reduce:pr-0 motion-reduce:sm:pr-0 motion-reduce:lg:pr-0 lg:px-8 gap-8 motion-reduce:max-w-7xl mx-auto w-full grow')
+			u-timeline(:ui='ui.timeline' alternate reverse :items='data?.items' :pending orientation='horizontal' data-allow-mismatch='class' class='scroll-slide-animation-reverse motion-safe:top-[30svh] motion-safe:sticky w-[var(--width)]' :style='`--width: ${width}rem`')
+		//- u-divider(class='motion-safe:hidden shrink w-96 absolute right-0 top-[50%] -translate-y-[50%]')
 </template>
 
 <script lang="ts" setup>
@@ -80,9 +82,7 @@ const ui = {
   .scroll-slide-animation-reverse {
 	animation: slide-from-end cubic-bezier(.12,.48,.72,1) both;
     animation-timeline: view();
-    animation-range: 0svh 160svh;
-	position: sticky;
-    top: 20svh;
+    animation-range: 0svh 180svh;
   }
 }
 </style>
