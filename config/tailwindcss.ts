@@ -37,7 +37,8 @@ export default <NuxtConfig['tailwindcss']>{
 				// },
 				fontFamily: {
 					sans: ['Plus Jakarta Sans', 'Inter', 'Proxima Nova', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-					display: ['Khand', 'ui-sans-serif', 'system-ui', 'sans-serif']
+					display: ['Khand', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+					superdisplay: ['Viva Kaiva', 'ui-sans-serif', 'system-ui', 'sans-serif']
 				},
 				keyframes: {
 					float: {
