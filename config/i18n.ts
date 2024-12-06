@@ -2,6 +2,7 @@ import type { NuxtConfig } from '@nuxt/schema'
 
 export default <NuxtConfig['i18n']>{
 	baseUrl: process.env.NUXT_PUBLIC_SITE_URL,
+	experimental: { typedOptionsAndMessages: "all" },
 	strategy: 'no_prefix',
 	defaultLocale: 'en',
 	lazy: true,
