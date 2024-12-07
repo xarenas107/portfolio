@@ -1,6 +1,34 @@
 # Changelog
 
 
+## v1.7.0
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.6.0...v1.7.0)
+
+### 🚀 Enhancements
+
+- **ui:** Add `superdisplay` font ([9e9d6af](https://github.com/xarenas107/portfolio/commit/9e9d6af))
+
+### 🩹 Fixes
+
+- **ui:** Increase contrast ([b88978e](https://github.com/xarenas107/portfolio/commit/b88978e))
+- **color:** Solve wrong color accent display ([bd1df89](https://github.com/xarenas107/portfolio/commit/bd1df89))
+- Solve wrong width for animation purpouses ([8893576](https://github.com/xarenas107/portfolio/commit/8893576))
+- **slider:** Solve animation lag before loop start ([7e15492](https://github.com/xarenas107/portfolio/commit/7e15492))
+- Solve missing component ([62829cf](https://github.com/xarenas107/portfolio/commit/62829cf))
+
+### 🏡 Chore
+
+- Improve `reduced-motion` support ([71f8c4d](https://github.com/xarenas107/portfolio/commit/71f8c4d))
+- **node:** Update dependences ([b80ba48](https://github.com/xarenas107/portfolio/commit/b80ba48))
+- **i18n:** Enable typed messages ([3b9638d](https://github.com/xarenas107/portfolio/commit/3b9638d))
+- **node:** Update dependences ([6db247f](https://github.com/xarenas107/portfolio/commit/6db247f))
+- **node:** Update dependences ([ecbcf5c](https://github.com/xarenas107/portfolio/commit/ecbcf5c))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](http://github.com/xarenas107))
+
 ## v1.6.0
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.5.0...v1.6.0)
