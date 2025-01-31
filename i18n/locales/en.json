@@ -1,0 +1,131 @@
+{
+	"im": "I'm",
+	"itsme": "This is me",
+	"portfolio": "Portfolio | Portfolios",
+	"presentation": "My name is { name } and I'm a { job }",
+	"app": {
+		"description": "Curriculum Vitae",
+		"name": "@:portfolio"
+	},
+	"back": {
+		"name": "Back",
+		"sr": "Return to previous page"
+	},
+	"color": {
+		"blue": "Blue",
+		"emerald": "Green emerald",
+		"indigo": "Indigo",
+		"name": "Color | Colors",
+		"option": "Color @.lower:option.name",
+		"orange": "Orange",
+		"red": "Red",
+		"rose": "Rose",
+		"sky": "Blue sky",
+		"slate": "Slate",
+		"violet": "Violet",
+		"yellow": "Yellow"
+	},
+	"greetings": {
+		"afternoon": "Good afternoon!",
+		"evening": "Good evening!",
+		"hi": "Hi there!",
+		"moorning": "Good moorning!"
+	},
+	"language": {
+		"name": "Language | Languages",
+		"option": "Language @.lower:option.name",
+		"select": "Select your @.lower:language.name"
+	},
+	"menu": {
+		"sr": "Open main menu"
+	},
+	"navigation": {
+		"name": "Navigation | Navigations",
+		"settings": "Setting | Settings"
+	},
+	"option": {
+		"name": "Option | Options"
+	},
+	"project": {
+		"accessibility": "Accessibility",
+		"finding": "Finding | Findings",
+		"frustration": "Frustration | Frustations",
+		"goal": "Goal | Goals",
+		"length": "Length | Length",
+		"location": "Location | Locations",
+		"name": "Project | Projects",
+		"painPoint": "Pain point | Pain points",
+		"parameter": "Parameter | Parameters",
+		"participant": "Participant | Participants",
+		"product": "Product | Products",
+		"research": "Research",
+		"sitemap": "Sitemap | Sitemaps",
+		"summary": "Summary",
+		"time": "Time",
+		"design": {
+			"name": "Starting the design",
+			"wireframe": "Digital wireframes",
+			"prototype": {
+				"high": "High-fidelity prototype",
+				"low": "Low-fidelity prototype",
+				"usability": {
+					"study": {
+						"name": "Usability study",
+						"type": "Study type"
+					}
+				}
+			}
+		},
+		"overview": {
+			"duration": "@:project.name duration",
+			"goal": "The @.lower:project.goal",
+			"name": "@:project.name overview",
+			"problem": "The problem",
+			"product": "The product",
+			"responsability": "Responsability | Responsabilities",
+			"role": "My role"
+		},
+		"user": {
+			"age": "Age | Ages",
+			"education": "Education | Educations",
+			"family": "Family | Families",
+			"hometown": "Hometown",
+			"job": "Job | Jobs",
+			"name": "Understanding the user",
+			"research": "User @.lower:project.research",
+			"statement": "Problem statement",
+			"journey": {
+				"action": "Action | Actions",
+				"emotion": "Emotion | Emotions",
+				"name": "User journey map",
+				"opportunities": "Improvement opportunities",
+				"task": "Task list"
+			},
+			"persona": {
+				"name": "User persona"
+			}
+		}
+	},
+	"search": {
+		"empty": "No data found"
+	},
+	"section": {
+		"certificates": "Certificates",
+		"experience": "Experience",
+		"home": "Home",
+		"skills": "Skills",
+		"studies": "Studies"
+	},
+	"share": {
+		"name": "Share"
+	},
+	"state": {
+		"loading": "Loading"
+	},
+	"theme": {
+		"dark": "Dark",
+		"light": "Light",
+		"name": "Theme | Themes",
+		"system": "System"
+	}
+}

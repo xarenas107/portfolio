@@ -2,7 +2,7 @@ import type { NuxtConfig } from '@nuxt/schema'
 
 export default <NuxtConfig['i18n']>{
 	baseUrl: process.env.NUXT_PUBLIC_SITE_URL,
-	experimental: { typedOptionsAndMessages: "all" },
+	experimental: { typedOptionsAndMessages: 'all' },
 	strategy: 'no_prefix',
 	defaultLocale: 'en',
 	lazy: true,
@@ -11,14 +11,14 @@ export default <NuxtConfig['i18n']>{
 			name: 'English',
 			code: 'en',
 			language: 'en',
-			file: 'en.ts',
+			file: 'en.json',
 			isCatchallLocale: true
 		},
 		{
 			name: 'Español',
 			code: 'es',
 			language: 'es',
-			file: 'es.ts'
+			file: 'es.json'
 		}
 	],
 	langDir: 'locales',
