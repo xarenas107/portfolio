@@ -1,0 +1,10 @@
+{
+  "_locale": "en",
+  "title": "Projects",
+  "items": [{
+    "id": "karat",
+    "title": "Karat",
+    "description": "Sales app for a karate's school",
+    "image": ""
+  }]
+}

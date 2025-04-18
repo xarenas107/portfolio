@@ -38,7 +38,7 @@ const user = useUser()
 
 const ui = {
 	text: {
-		base: 'text-slate-700 dark:text-slate-100'
+		base: 'text-neutral-700 dark:text-neutral-100'
 	}
 }
 </script>

@@ -9,7 +9,10 @@ export default <NuxtConfig['app']>{
 			// Preconnect and load font types
 			{ rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: true },
 			{ rel: 'preconnect', href: 'https://fonts.googleapis.com' }
-		]
+		],
+		rootAttrs: {
+			class: 'bg-(--ui-bg)'
+		}
 	},
 	meta: [
 		{ name: 'description', content: 'Curriculum Vitae' }

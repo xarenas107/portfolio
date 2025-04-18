@@ -1,9 +1,9 @@
 <template lang='pug'>
 client-only()
     template(#fallback)
-        u-skeleton(class='w-8 h-8 rounded-lg bg-slate-300/50 dark:bg-slate-700/50')
+        u-skeleton(class='w-8 h-8 aspect-square rounded-lg bg-neutral-300/50 dark:bg-neutral-700/50')
 
-    u-button(@click='toggle' :ui :label :class :aria-label='t("share.name")' icon='i-heroicons-outline:share' variant='ghost')
+    u-button(@click='toggle' :label :class :aria-label='t("share.name")' icon='i-heroicons-outline:share' variant='ghost' color='neutral' size='lg' class='aspect-square')
 </template>
 
 <script lang='ts' setup>
@@ -29,14 +29,6 @@ const toggle = () => {
 		title: user.data?.name,
 		text: user.data?.job
 	})
-}
-
-const ui = {
-	color: {
-		primary: {
-			ghost: 'text-slate-900 dark:text-slate-300 hover:bg-slate-300/50 dark:hover:bg-slate-700/50 hover:text-slate-900 dark:hover:text-slate-100'
-		}
-	}
 }
 </script>
 

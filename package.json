@@ -30,26 +30,26 @@
   "dependencies": {
     "@nuxt/content": "^2.13.4",
     "@nuxt/image": "^1.8.1",
-    "@nuxt/ui": "^2.19.2",
+    "@nuxt/ui": "^3.0.2",
     "@nuxthub/core": "^0.8.7",
     "@nuxtjs/i18n": "^9.1.1",
     "@vue/language-plugin-pug": "^2.1.10",
-    "@vueuse/nuxt": "^12.0.0",
-    "nuxt": "^3.14.1592",
+    "@vueuse/nuxt": "^13.1.0",
+    "nuxt": "^3.16.2",
     "nuxt-seo-utils": "^6.0.4",
     "un": "^0.0.0",
     "vue": "^3.5.13",
     "vue-router": "^4.5.0"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3.2.0",
-    "@nuxt/devtools": "^1.6.3",
+    "@eslint/eslintrc": "^3.3.1",
+    "@nuxt/devtools": "^1.7.0",
     "@nuxt/eslint-config": "^0.7.2",
     "changelogen": "^0.5.7",
-    "eslint": "^9.16.0",
+    "eslint": "^9.24.0",
     "pug": "^3.0.3",
-    "sass": "^1.82.0",
-    "sass-embedded": "^1.82.0",
+    "sass": "^1.86.3",
+    "sass-embedded": "^1.86.3",
     "unconfig": "^0.6.0"
   }
 }

@@ -1,12 +1,12 @@
 <template lang="pug">
-div(class='bg-slate-100 dark:bg-slate-950 border-t border-slate-300 dark:border-slate-800')
+div(class='bg-neutral-100 dark:bg-neutral-950 border-t border-neutral-300 dark:border-neutral-800')
     u-container(class='py-12 flex flex-col sm:flex-row flex-wrap gap-8 sm:justify-between w-full')
         div(class='flex gap-x-6 gap-y-3 flex-wrap')
             favicon(:ui='ui.favicon' class='w-10')
 
             div(class='flex flex-col')
-                h5(class='text-2xl font-black text-slate-900 dark:text-slate-200 grow') {{ user.data?.name }}
-                h6(class='text-base font-semibold text-slate-900/60 dark:text-slate-200/80 grow') {{ user.data?.job }}
+                h5(class='text-2xl font-black text-neutral-900 dark:text-neutral-200 grow') {{ user.data?.name }}
+                h6(class='text-base font-semibold text-neutral-900/60 dark:text-neutral-200/80 grow') {{ user.data?.job }}
 
         div(class='flex gap-y-3 gap-x-6 flex-col')
             div(class='flex gap-y-3 gap-x-6 flex-wrap')
@@ -25,7 +25,7 @@ const ui = {
 		// highlight: 'fill-primary-50 dark:fill-primary-200'
 	},
 	link: {
-		// text: 'text-base text-slate-900 dark:text-slate-200 hover:text-primary-500 dark:hover:text-primary-500'
+		// text: 'text-base text-neutral-900 dark:text-neutral-200 hover:text-primary-500 dark:hover:text-primary-500'
 	}
 }
 </script>

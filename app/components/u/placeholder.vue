@@ -41,7 +41,7 @@ const transition = computed(() => {
 const classes = computed(() => {
 	const {
 		opacity = 30,
-		base = 'bg-slate-500 stroke-primary-600 dark:bg-slate-500 dark:stroke-primary-400'
+		base = 'bg-neutral-500 stroke-primary-600 dark:bg-neutral-500 dark:stroke-primary-400'
 	} = props.ui?.svg || {}
 
 	return [{

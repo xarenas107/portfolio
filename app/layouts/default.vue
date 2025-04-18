@@ -1,5 +1,5 @@
 <template lang='pug'>
-div(class='bg-slate-100 dark:bg-slate-950')
+div(class='bg-neutral-100 dark:bg-neutral-950')
     slot
 </template>
 
@@ -15,12 +15,13 @@ const title = () => app.author.name
 
 const color = computed(() => {
 	const colors = tailwind.theme.colors as Record<string, Record<number, string>>
-	const variant = dark.value ? 600 : 500
-	return colors[app.ui.primary]?.[variant]
+	const { primary } = app.ui.colors
+	const variant = dark.value ? 400 : 500
+	return colors[primary]?.[variant]
 })
 
 const href = computed(() => {
-	const hex = color.value?.replace('#', '')
+	const hex = color.value?.replace(/[#%]/g, '')
 	return `/api/favicon?color=${hex}&mode=${dark.value ? 'dark' : 'light'}`
 })
 

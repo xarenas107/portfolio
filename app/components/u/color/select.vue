@@ -1,19 +1,20 @@
 <template lang='pug'>
 client-only()
     template(#fallback)
-        u-skeleton(class='w-8 h-8 rounded-lg bg-slate-300/50 dark:bg-slate-700/50')
+        u-skeleton(class='w-8 h-8 aspect-square rounded-lg bg-neutral-300/50 dark:bg-neutral-700/50')
 
-    u-popover(:items="items")
-        u-button(:ui :label='active?.title' :aria-label="t('color.option', 2)" variant='ghost' color='primary' icon="i-heroicons-outline:color-swatch" class='w-full' ref='element')
+    u-popover(:items)
+        u-button(:label='active?.title' :aria-label="t('color.option', 2)" variant='ghost' color='primary' size="lg" icon="i-heroicons-outline:color-swatch" :class='{ "aspect-square": square }')
 
-        template(#panel)
-            div(class='flex flex-wrap gap-1.5 p-2 max-w-28 w-max')
-                u-color-button(v-for='item in items' @change='toggle' :color='item.color' :active='item.active')
+        template(#content)
+            div(class='flex flex-wrap gap-1.5 p-2 max-w-28 w-max' ref='element')
+                u-color-button(v-for='item in items' @change='toggle' :color='item.color' :active='item.active') {{ item }}
 </template>
 
 <script lang='ts' setup>
 type Props = {
 	showLabel?: boolean
+	square?: boolean
 }
 
 const props = defineProps<Props>()
@@ -36,7 +37,7 @@ const colors = ['slate', 'orange', 'yellow', 'emerald', 'indigo', 'rose']
 
 const items = computed(() => {
 	return [...colors].map(color => ({
-		active: app.ui.primary === color,
+		active: app.ui.colors.primary === color,
 		title: t(`color.${color}`),
 		color
 	}))
@@ -50,11 +51,11 @@ const active = computed(() => {
 
 const target = useTemplateRef('element')
 const toggle = (value: string) => {
-	if (app.ui.primary === value) return
+	if (app.ui.colors.primary === value) return
 
-	const element = target.value?.$el
+	const element = target.value
 	useRadialTransition(element, () => {
-		app.ui.primary = value
+		app.ui.colors.primary = value
 	})
 }
 </script>

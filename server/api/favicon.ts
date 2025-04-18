@@ -2,8 +2,11 @@ export default defineEventHandler(async (event) => {
 	const { color = 'orange', mode = 'light' } = getQuery(event)
 
 	const regex = /^(?:[0-9a-f]{3}){1,2}$/i
-	const value = regex.test(`${color}`) ? `#${color}` : color
+  const scheme = `${color}`?.replaceAll('%', ' ').trim()
+	const value = regex.test(`${scheme}`) ? `#${scheme}` : scheme
 
+  console.log(value)
+   
 	const svg = `
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 53.2" style="enable-background:new 0 0 48 53.2;">
       <style type="text/css">

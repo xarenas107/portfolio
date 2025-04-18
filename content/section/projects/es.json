@@ -1,0 +1,10 @@
+{
+  "_locale": "es",
+  "title": "Proyectos",
+  "items": [{
+    "id": "karat",
+    "title": "Karat",
+    "description": "Applicaciónn de ventas para una escuela de karate",
+    "image": ""
+  }]
+}

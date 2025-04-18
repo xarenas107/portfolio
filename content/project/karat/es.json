@@ -1,0 +1,50 @@
+{
+  "_locale": "es",
+  "title": "Certificados",
+  "items": [{
+    "image": "/brands/google.png",
+    "title": "Certificado de Diseño Profesional UX",
+    "credentials": [
+      "https://www.coursera.org/account/accomplishments/verify/E9NEM8EVLXG7", 
+      "https://www.coursera.org/account/accomplishments/verify/QU45KL2JGT8G",
+      "https://www.coursera.org/account/accomplishments/verify/E35GUSDPSWPH",
+      "https://www.coursera.org/account/accomplishments/verify/QSYSM9KVPE3V",
+      "https://www.coursera.org/account/accomplishments/verify/7YFU687DHTT9",
+      "https://www.coursera.org/account/accomplishments/verify/JH2S3YSDVHBF",
+      "https://www.coursera.org/account/accomplishments/verify/KUE73DQM3334"
+    ],
+    "provider": "Google",
+    "time": "May 2024",
+    "endAt": "2024-05-01"
+  },
+  {
+    "image": "",
+    "title": "Introducción al diseño de experiencia de usuario",
+    "credentials": "",
+    "provider": "Instituto Tecnológico de Georgia",
+    "time": "Nov 2022",
+    "endAt": "2020-11-01"
+  },
+  {
+    "image": "/brands/domestika.png",
+    "title": "Introducción a la programación en JavaScript",
+    "credentials": ["https://www.domestika.org/es/certificates/17591f8eb98cadc75ea09629764a7947"],
+    "provider": "Domestika",
+    "time": "Oct 2020",
+    "endAt": "2020-10-10"
+  },{
+    "image": "/brands/domestika.png",
+    "title": "Estructura web con CSS Grid, FLexbox y otras técnicas modernas",
+    "credentials": ["https://www.domestika.org/es/certificates/7e237811a0278356aafe249c5525ebe2"],
+    "provider": "Domestika",
+    "time": "Oct 2020",
+    "endAt": "2020-10-01"
+  }, {
+    "image": "/brands/domestika.png",
+    "title": "Introducción al desarrollo web responsive con HTML y CSS",
+    "credentials": ["https://www.domestika.org/es/certificates/94770f9f6fec8bad13da5af7322d79f7"],
+    "provider": "Domestika",
+    "time": "May 2020",
+    "endAt": "2020-05-01"
+  }]
+}

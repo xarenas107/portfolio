@@ -1,5 +1,5 @@
 <template lang='pug'>
-div(class='bg-slate-100 dark:bg-slate-900 w-full py-24 min-h-svh flex flex-col gap-10 relative overflow-clip')
+div(class='bg-neutral-100 dark:bg-neutral-900 w-full py-24 min-h-svh flex flex-col gap-10 relative overflow-clip')
 
   div(class='flex px-4 sm:px-6 lg:px-8 gap-8 max-w-7xl m-auto scroll-slide-animation')
     //- section-title(:class='ui.title' class='scroll-fade-animation') {{  data?.title }}
@@ -91,7 +91,7 @@ const ui = {
 	},
 	card: {
 		base: 'bg-primary-400 dark:bg-primary-600',
-		child: `bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300`,
+		child: `bg-neutral-200 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300`,
 		before: `before:bg-primary-800 dark:before:bg-primary-100`,
 		after: `after:bg-primary-600 dark:after:bg-primary-300`
 	}

@@ -6,7 +6,7 @@ u-container(class="min-h-svh py-24 flex flex-col gap-16 lg:gap-24 relative")
 			nuxt-img(v-if='image' :src='image' :alt='title' class="object-cover w-full h-full absolute top-0 left-0 placeholder-active")
 			//- u-placeholder(class='aspect-w-12 aspect-h-4 w-full rounded-lg placeholder-active')
 
-			section-title(class='z-20 relative text-slate-100 dark:text-slate-950 -ml-6 -mb-9 sm:-ml-8 sm:-mb-14 max-w-prose') {{ title }}
+			section-title(class='z-20 relative text-neutral-100 dark:text-neutral-950 -ml-6 -mb-9 sm:-ml-8 sm:-mb-14 max-w-prose') {{ title }}
 		h4(class="text-base sm:text-lg max-w-sm lg:max-w-lg text-balance") {{ description }}
 
 	//- Project overview
@@ -24,7 +24,7 @@ u-container(class="min-h-svh py-24 flex flex-col gap-16 lg:gap-24 relative")
 			h4(class='text-2xl lg:text-4xl font-semibold flex items-center') {{ t('project.painPoint', 2) }}
 
 			div(class='grid lg:grid-cols-2 gap-4 grow')
-				u-card(v-for='[title, content] in user?.painPoints' name='project-section-card' class='ring-1 bg-slate-200')
+				u-card(v-for='[title, content] in user?.painPoints' name='project-section-card' class='ring-1 bg-neutral-200')
 					div(class='flex flex-col gap-2 max-w-prose')
 						h4(class='text-xl lg:text-2xl font-semibold flex items-center') {{  title }}
 						p(class='text-base opacity-80 text-balance') {{ content }}
@@ -33,17 +33,17 @@ u-container(class="min-h-svh py-24 flex flex-col gap-16 lg:gap-24 relative")
 		article(class='flex flex-col gap-10')
 			div(class='flex flex-col gap-4')
 				h4(class='text-2xl lg:text-4xl font-semibold flex items-center') {{ t('project.user.persona.name') }}
-				u-card(class='ring-1  bg-slate-200')
+				u-card(class='ring-1  bg-neutral-200')
 					template(#header)
 						nuxt-layout(name='project-section-persona' :item='user?.persona' class='sm:col-span-2 lg:col-span-3 ')
 
 					div(class='grid grid-cols-auto sm:grid-cols-2 lg:grid-cols-3 gap-4')
-						nuxt-layout(name='project-section-card' :title="t('project.user.statement')" :content='user?.persona?.statement' class='sm:col-span-2 lg:col-auto bg-slate-300 dark:bg-slate-800')
-						nuxt-layout(name='project-section-card' :title="t('project.goal', 2)" class='bg-slate-300 dark:bg-slate-800')
+						nuxt-layout(name='project-section-card' :title="t('project.user.statement')" :content='user?.persona?.statement' class='sm:col-span-2 lg:col-auto bg-neutral-300 dark:bg-neutral-800')
+						nuxt-layout(name='project-section-card' :title="t('project.goal', 2)" class='bg-neutral-300 dark:bg-neutral-800')
 							ul(class='list-disc text-base opacity-80 list-inside flex flex-col gap-2 text-balance')
 								li(v-for='item in user?.persona?.goals') {{ item }}
 
-						nuxt-layout(name='project-section-card' :title="t('project.frustration', 2)" class='bg-slate-300 dark:bg-slate-800')
+						nuxt-layout(name='project-section-card' :title="t('project.frustration', 2)" class='bg-neutral-300 dark:bg-neutral-800')
 							ul(class='list-disc text-base opacity-80 list-inside flex flex-col gap-2 text-balance')
 								li(v-for='item in user?.persona?.frustrations') {{ item }}
 
@@ -57,19 +57,19 @@ u-container(class="min-h-svh py-24 flex flex-col gap-16 lg:gap-24 relative")
 
 		div(class='overflow-auto snap-x snap-mandatory')
 			table(class='text-sm table-auto flex flex-col w-max lg:w-auto max-w-7xl')
-				thead(class='border-b py-2 border-slate-400 dark:border-slate-600')
+				thead(class='border-b py-2 border-neutral-400 dark:border-neutral-600')
 					tr(class="gap-2 text-left grid grid-cols-6")
 						th(class='snap-start snap-always') {{  t('project.user.journey.action') }}
 						th(v-for="item in user?.persona?.journey?.map?.action" class='snap-start') {{ item }}
 
 				tbody(class='opacity-80 font-sans')
-					tr(class="gap-2 py-2 border-b border-slate-400 dark:border-slate-600 grid grid-cols-6")
+					tr(class="gap-2 py-2 border-b border-neutral-400 dark:border-neutral-600 grid grid-cols-6")
 						td {{  t('project.user.journey.task') }}
 						td(v-for="tasks in user?.persona?.journey?.map?.task" class='list-decimal list-inside gap-1 text-balance')
 							ul(class='list-decimal list-inside')
 								li(class='list-item' v-for='task in tasks') {{ task }}
 
-					tr(class="gap-2 py-2 border-b border-slate-400 dark:border-slate-600 grid grid-cols-6")
+					tr(class="gap-2 py-2 border-b border-neutral-400 dark:border-neutral-600 grid grid-cols-6")
 						td {{  t('project.user.journey.emotion', 2) }}
 						td(v-for="emotions in user?.persona?.journey?.map?.emotion" class='gap-1 text-balance')
 							p(v-for='emotion in emotions') {{ emotion }}
@@ -89,7 +89,7 @@ u-container(class="min-h-svh py-24 flex flex-col gap-16 lg:gap-24 relative")
 					p(class='opacity-80 w-full text-base max-w-md overflow-ellips line-clamp-3 grow') {{ item?.content }}
 
 					div(class='flex flex-auto gap-4 shrink grow-0')
-						div(v-for='image in item?.images' class='h-auto cursor-default snap-center grow p-0 rounded-lg overflow-clip ring-1 ring-slate-400 dark:ring-slate-600')
+						div(v-for='image in item?.images' class='h-auto cursor-default snap-center grow p-0 rounded-lg overflow-clip ring-1 ring-neutral-400 dark:ring-neutral-600')
 							nuxt-img(:src='`/project/${id}${image}`' class='pointer-events-none h-full')
 </template>
 

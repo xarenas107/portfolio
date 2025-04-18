@@ -1,11 +1,12 @@
 <template lang="pug">
-client-only
-  template(#fallback)
-    u-skeleton(class='min-w-28 h-8 rounded-lg bg-slate-300/50 dark:bg-slate-700/50')
+div
+	client-only
+		template(#fallback)
+			u-skeleton(class='min-w-28 h-8 rounded-lg bg-neutral-300/50 dark:bg-neutral-700/50')
 
-  a(@click='click' :href :aria-current :class='[state]' class="rounded-lg px-3 py-2 flex gap-1.5 text-sm font-medium cursor-pointer")
-    u-icon(v-if='icon' :name='icon' class='w-5 h-5 flex-shrink-0 relative' ref='link')
-    span(v-if='label') {{ label }}
+		a(@click='click' :href :aria-current :class='[state]' class="rounded-lg px-3 py-2 flex gap-1.5 text-sm font-medium cursor-pointer")
+			u-icon(v-if='icon' :name='icon' class='w-5 h-5 flex-shrink-0 relative' ref='link')
+			span(v-if='text') {{ text }}
 </template>
 
 <script setup lang="ts">
@@ -15,10 +16,10 @@ type Emit = {
 type Props = {
 	href?: string
 	icon?: string
-	label?: string
+	text?: string
 	active?: boolean
 	ariaCurrent?: 'page' | 'step' | 'location' | 'date' | 'time' | boolean
-	shortcut?: string[]
+	kbds?: string[]
 }
 
 const emit = defineEmits<Emit>()
@@ -29,8 +30,8 @@ const props = withDefaults(defineProps<Props>(), {
 
 const state = computed(() => {
 	return props.active
-		? 'bg-primary-200/50 text-primary-600 hover:text-primary-700 dark:text-primary-300 dark:hover:text-primary-200 hover:bg-primary-300/50 dark:bg-primary-600/50 hover:dark:bg-primary-500/50'
-		: 'text-slate-700 dark:text-slate-300 hover:text-slate-900 hover:dark:text-slate-100 hover:bg-slate-300/50 hover:dark:bg-slate-700/50'
+		? 'bg-primary-500/10 dark:bg-primary-400/10 text-primary-500 dark:text-primary-400 hover:bg-primary-500/20 hover:dark:bg-primary-500/20'
+		: 'text-neutral-600 dark:text-neutral-300 hover:text-neutral-700 hover:dark:text-neutral-200 hover:bg-neutral-500/10 hover:dark:bg-neutral-400/10'
 })
 
 const click = (event: MouseEvent) => emit('click', event)
@@ -42,7 +43,7 @@ const { current } = useMagicKeys({
 	onEventFired(event) {
 		if (props.active) return
 
-		const is = props.shortcut?.every(value => current.has(value.toLowerCase()))
+		const is = props.kbds?.every(value => current.has(value.toLowerCase()))
 		if (is && event.type === 'keydown') {
 			event.preventDefault()
 			const link = element.value?.$el as HTMLButtonElement

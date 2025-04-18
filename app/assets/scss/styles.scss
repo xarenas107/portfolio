@@ -9,11 +9,12 @@
 }
 
 .text-stroke {
-  -webkit-text-stroke-color: rgb(var(--color-primary-400) / var(--tw-text-opacity));
+  paint-order: stroke fill;
+  -webkit-text-stroke-color: rgb(var(--color-primary-100) / var(--tw-text-opacity));
 }
 
 .dark-mode .text-stroke {
-  -webkit-text-stroke-color: rgb(var(--color-primary-900) / var(--tw-text-opacity));
+  -webkit-text-stroke-color: rgb(var(--color-primary-300) / var(--tw-text-opacity));
 }
 
 @for $i from 0 through 5 {

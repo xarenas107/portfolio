@@ -25,7 +25,7 @@ withDefaults(defineProps<Props>(), {
 const ui = {
 	card: {
 		background: 'bg-transparent dark:bg-transparent',
-		ring: 'ring-1 ring-slate-400 dark:ring-slate-600'
+		ring: 'ring-1 ring-neutral-400 dark:ring-neutral-600'
 	}
 }
 </script>

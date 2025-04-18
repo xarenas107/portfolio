@@ -1,5 +1,5 @@
 <template lang="pug">
-div(class='min-h-[60svh] relative overflow-clip bg-slate-100 dark:bg-slate-950 py-24')
+div(class='min-h-[60svh] relative overflow-clip bg-neutral-100 dark:bg-neutral-950 py-24')
   div(class='fade-exit-animation motion-safe:sticky motion-safe:top-[30svh]')
     section-title(:class='ui.title' class='origin-left scale-down-animation' hyphens) {{  data?.title }}
 
@@ -9,7 +9,7 @@ div(class='min-h-[60svh] relative overflow-clip bg-slate-100 dark:bg-slate-950 p
         h3(class="font-bold uppercase font-display text-4xl sm:text-4xl md:text-3xl lg:text-5xl xl:text-6xl text-primary-600 dark:text-primary-500 hyphens-auto break-words sm:break-normal") {{  item.title  }}
 
         div(class='group flex flex-wrap gap-2 max-w-[48ch]')
-          p(class='text-base text-balance text-slate-700 dark:text-slate-300') {{ item?.content?.join(', ') }}
+          p(class='text-base text-balance text-neutral-700 dark:text-neutral-300') {{ item?.content?.join(', ') }}
 </template>
 
 <script lang="ts" setup>

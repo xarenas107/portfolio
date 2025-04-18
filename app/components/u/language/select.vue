@@ -1,33 +1,23 @@
 <template lang='pug'>
 client-only()
-    template(#fallback)
-        u-skeleton(class='min-w-32 h-8 rounded-lg bg-slate-300/50 dark:bg-slate-700/50 w-full')
+	template(#fallback)
+		u-skeleton(class='min-w-32 h-8 rounded-lg bg-neutral-300/50 dark:bg-neutral-700/50 w-full')
 
-    u-select-menu(:model-value='locale' @update:model-value='update' :options='locales' :ui :aria-label="t('language.option', 2)" :placeholder='t("language.select")' icon='i-heroicons:language' value-attribute="code" option-attribute="name" class='min-w-32 w-full' variant='none' ref='element')
-        template(#empty) {{ t('search.empty') }}
+	u-select-menu(:model-value='locale' @update:model-value='update' :items='locales' :aria-label="t('language.option', 2)" :placeholder='t("language.select")' icon='i-heroicons:language' label-key="name" value-key="code" class='min-w-32 w-full' size='lg' variant='ghost')
+		template(#empty) {{ t('search.empty') }}
 
-        //- template(#option='{ option }')
-        //-     span(@click="event => click(event, option.code)") {{ option.name }}
+		template(#leading)
+			div(ref='element')
+				u-icon(name='i-heroicons:language' size='xl' class='shrink-0 text-(--ui-text-dimmed) w-5 h-5')
 </template>
 
 <script lang='ts' setup>
 const { t, locales, locale, getLocaleMessage, setLocale, setLocaleCookie } = useI18n()
 
-const ui = {
-	icon: {
-		base: 'text-slate-700 dark:text-slate-300'
-	},
-	color: {
-		white: {
-			none: 'hover:bg-slate-300/50 hover:dark:bg-slate-700/50 text-slate-700 dark:text-slate-300 hover:text-slate-900 hover:dark:text-slate-100'
-		}
-	}
-}
-
 const target = useTemplateRef('element')
 
 const update = async (value: typeof locale['value']) => {
-	const element = target.value?.$el.nextSibling
+	const element = target.value
 
 	useRadialTransition(element, async () => {
 		const messages = getLocaleMessage(value)

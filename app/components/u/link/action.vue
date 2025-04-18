@@ -18,7 +18,7 @@ const props = defineProps<Props>()
 
 const classes = computed(() => {
 	const {
-		text = 'text-base text-slate-700 dark:text-slate-100 hover:text-primary-600 dark:hover:text-primary-500'
+		text = 'text-base text-neutral-700 dark:text-neutral-100 hover:text-primary-600 dark:hover:text-primary-500'
 	} = props.ui || {}
 
 	if (props.disabled || !props.href) return 'opacity-50 pointer-events-none'

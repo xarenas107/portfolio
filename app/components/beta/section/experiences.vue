@@ -4,11 +4,10 @@ div(class='overflow-clip bg-primary-500 dark:bg-primary-600 relative flex motion
 	u-container(:ui='ui.container' class='h-full w-full')
 		section-title(:class='ui.title' class="scroll-slide-animation" hyphens) {{  data?.title }}
 
-	div(class='relative flex w-full bg-slate-100 dark:bg-slate-950 h-full motion-safe:min-h-[150svh] py-24 grow motion-reduce:overflow-auto scroll-hidden')
+	div(class='relative flex w-full bg-neutral-100 dark:bg-neutral-950 h-full motion-safe:min-h-[150svh] py-24 grow motion-reduce:overflow-auto scroll-hidden')
 		//- div(class='px-4 sm:px-6 lg:px-8 gap-8 max-w-7xl mx-auto w-full motion-reduce:overflow-auto grow scroll-hidden')
 		div(class='px-4 sm:px-6 motion-reduce:pr-0 motion-reduce:sm:pr-0 motion-reduce:lg:pr-0 lg:px-8 gap-8 motion-reduce:max-w-7xl mx-auto w-full grow')
 			u-timeline(:ui='ui.timeline' alternate reverse :items='data?.items' :pending orientation='horizontal' data-allow-mismatch='class' class='scroll-slide-animation-reverse motion-safe:top-[30svh] motion-safe:sticky motion-safe:min-w-[var(--width)]' :style='`--width: ${width}rem`')
-		//- u-divider(class='motion-safe:hidden shrink w-96 absolute right-0 top-[50%] -translate-y-[50%]')
 </template>
 
 <script lang="ts" setup>
@@ -45,13 +44,16 @@ const width = computed(() => {
 const { pending } = useStatus(status)
 
 const ui = {
-	title: 'text-slate-100 dark:text-slate-950 -mb-2 md:-mb-6 lg:-mb-8',
+	title: 'text-neutral-100 dark:text-neutral-950 -mb-2 md:-mb-3 lg:-mb-4',
 	container: {
 		base: 'flex flex-col gap-16'
 	},
 	timeline: {
-		divider: 'border-slate-700 dark:border-slate-300',
-		text: 'text-slate-900 dark:text-slate-100'
+		divider: 'border-neutral-600 dark:border-neutral-400',
+		text: 'text-neutral-900 dark:text-neutral-100',
+		badge: {
+			base: 'text-primary-500 dark:text-primary-400 bg-primary-400/20 dark:bg-primary-500/20',
+		}
 	}
 }
 </script>

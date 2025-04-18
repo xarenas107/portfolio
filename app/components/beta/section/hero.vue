@@ -11,7 +11,7 @@ div(class='bg-primary-100/20 dark:bg-primary-900/20 max-w-full overflow-clip fle
 					div(class='flex justify-center gap-4 transition-all duration-200')
 						//- h6(:class='ui.text.base' class='font-display uppercase font-bold text-2xl max-w-prose sm:text-4xl lg:text-6xl leading-4 text-nowrap') {{ t('greetings.hi') }}
 						h6(:class='ui.text.base' class='font-display uppercase font-bold text-2xl max-w-prose sm:text-4xl lg:text-6xl leading-4 text-nowrap') {{ greetings }}
-						u-divider(v-bind='props' :ui='ui.divider' size='md')
+						u-separator(v-bind='props' color="primary" )
 
 			u-transition(delay='.5s' active-class='origin-bottom' before-enter-class="max-h-0" enter-class='max-h-48 sm:max-h-64 lg:max-h-full' duration='.5s' timing-function="ease-in-out")
 					template(#default='{ state, ...props }')
@@ -47,7 +47,7 @@ div(class='bg-primary-100/20 dark:bg-primary-900/20 max-w-full overflow-clip fle
 			u-transition(delay='.25s' before-enter-class="opacity-0 translate-y-10" duration='.5s' timing-function="ease-out")
 				template(#default='{ state, ...props }')
 					div(class='flex flex-col md:flex-row gap-6 justify-center')
-						p(v-bind='props' :class='ui.text.base' class='text-base text-slate-700 dark:text-slate-200 text-balance max-w-sm lg:max-w-lg delay-[1s] md:delay-0') {{ user.data?.description }}
+						p(v-bind='props' :class='ui.text.base' class='text-base text-neutral-700 dark:text-neutral-200 text-balance max-w-sm lg:max-w-lg delay-[1s] md:delay-0') {{ user.data?.description }}
 
 						u-transition(delay='1s' before-enter-class="max-w-0" enter-class='max-w-full' duration='1s' timing-function="ease-in-out")
 							template(#default='{ state, ...props }')
@@ -75,13 +75,8 @@ const user = useUser()
 
 const ui = {
 	text: {
-		base: 'text-slate-900 dark:text-slate-100'
+		base: 'text-neutral-900 dark:text-neutral-100'
 	},
-	divider: {
-		border: {
-			base: 'border-primary-200 dark:border-primary-800'
-		}
-	}
 }
 </script>
 

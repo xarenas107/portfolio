@@ -52,7 +52,7 @@ const { data, status } = useFetchContent<Content>('section/studies', {
 const { pending } = useStatus(status)
 
 const ui = {
-	title: 'text-slate-50/95 dark:text-slate-950/90 -mt-1 md:-mt-5 lg:-mt-6',
+	title: 'text-neutral-50/95 dark:text-neutral-950/90 -mt-1 md:-mt-5 lg:-mt-6',
 	container: {
 		base: 'flex flex-col gap-16'
 		// padding: 'px-4 sm:px-6 lg:px-8 lg:pr-0',

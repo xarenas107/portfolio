@@ -34,19 +34,20 @@ const update = (event: Event) => {
 
 	if (element) {
 		element.style.transform = `skewY(${speed}deg)`
-		element.style.transition = 'transform ease-out .2s'
+		element.style.filter = `blur(${Math.abs(speed)}px)`
+		element.style.transition = 'ease-out .2s'
+		element.style.transitionProperty = 'transform filter'
 	}
 
 	state.scroll = window.scrollY
 
 	if (state.timer) clearTimeout(state.timer)
 	state.timer = setTimeout(() => {
-		if (element) element.style.transform = 'skewY(0deg)'
+		if (element) {
+			element.style.transform = 'skewY(0deg)'
+			element.style.filter = 'blur(0px)'
+		}
 	}, 150)
-
-	// Smooth scroll
-	// state.current = state.current * (1 - state.ease) + state.scroll * state.ease
-	// element.style.transform = `${element.style.transform} translate3d(0, ${-state.current}px, 0)`
 }
 
 useEventListener('scroll', update, {

@@ -16,7 +16,7 @@ type Props = {
 withDefaults(defineProps<Props>(), {
 	ui: () => ({
 		text: {
-			base: 'text-slate-900 dark:text-slate-200'
+			base: 'text-neutral-900 dark:text-neutral-200'
 		}
 	})
 })

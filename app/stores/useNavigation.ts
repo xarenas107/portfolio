@@ -25,10 +25,10 @@ export default () => {
 			return {
 				id,
 				icon,
-				label: title,
+				text: title,
 				to: `/#${id}`,
 				active: hash.value === `#${id}`,
-				shortcut: ['Shift', `F${index + 1}`]
+				kbds: ['Shift', `F${index + 1}`]
 			}
 		})
 	})

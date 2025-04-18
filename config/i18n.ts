@@ -21,6 +21,9 @@ export default <NuxtConfig['i18n']>{
 			file: 'es.json'
 		}
 	],
+	bundle: {
+		optimizeTranslationDirective: false
+	},
 	langDir: 'locales',
 	compilation: {
 		escapeHtml: true

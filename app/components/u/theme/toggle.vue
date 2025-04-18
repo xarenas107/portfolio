@@ -1,15 +1,16 @@
 <template lang='pug'>
 client-only()
     template(#fallback)
-        u-skeleton(class='w-8 h-8 rounded-lg bg-slate-300/50 dark:bg-slate-700/50')
+        u-skeleton(class='w-8 h-8 aspect-square rounded-lg bg-neutral-300/50 dark:bg-neutral-700/50')
 
-    u-button(@click='toggle' :ui :icon='active?.icon' :label='active?.title' :aria-label='t("theme.name")' variant='ghost')
+    u-button(@click='toggle' :icon='active?.icon' :label='active?.title' :aria-label='t("theme.name")' variant='ghost' color='neutral' size="lg" :class='{ "aspect-square": square }')
 </template>
 
 <script lang='ts' setup>
 type Props = {
 	type?: 'button'
 	showLabel?: boolean
+	square?: boolean
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -41,14 +42,6 @@ const active = computed(() => {
 })
 
 const { next } = useCycleList(['dark', 'light'], { initialValue: mode.value })
-
-const ui = {
-	color: {
-		primary: {
-			ghost: 'text-slate-900 dark:text-slate-300 hover:bg-slate-300/50 dark:hover:bg-slate-700/50 hover:text-slate-900 dark:hover:text-slate-100'
-		}
-	}
-}
 </script>
 
 <style lang='scss' scoped>

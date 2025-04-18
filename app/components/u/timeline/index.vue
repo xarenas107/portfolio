@@ -81,7 +81,7 @@ const data = computed(() => {
 })
 
 const ui = computed(() => {
-	const { dot } = props.ui
+	const { dot, badge } = props.ui || {}
 	return {
 		base: props.ui.base,
 		item: {
@@ -89,12 +89,8 @@ const ui = computed(() => {
 			text: props.ui?.text,
 			dot,
 			badge: {
-				color: {
-					primary: {
-						solid: 'text-primary-100 dark:text-primary-100 bg-primary-400 dark:bg-primary-500'
-					}
-				},
-				...props.ui?.badge || {}
+				base: 'text-primary-50 dark:text-primary-50 bg-primary-400 dark:bg-primary-500',
+				...badge || {}
 			},
 			container: 'fade-bottom-animation'
 		}
