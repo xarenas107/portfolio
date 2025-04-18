@@ -10,11 +10,11 @@
 
 .text-stroke {
   paint-order: stroke fill;
-  -webkit-text-stroke-color: rgb(var(--color-primary-100) / var(--tw-text-opacity));
+  -webkit-text-stroke-color: var(--ui-color-primary-100);
 }
 
 .dark-mode .text-stroke {
-  -webkit-text-stroke-color: rgb(var(--color-primary-300) / var(--tw-text-opacity));
+  -webkit-text-stroke-color: var(--ui-color-primary-300);
 }
 
 @for $i from 0 through 5 {

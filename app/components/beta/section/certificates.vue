@@ -67,7 +67,7 @@ const ui = {
 <style lang="scss" scoped>
 @keyframes fade {
   from {
-    transform: translateY(50svh);
+    transform: translateY(40svh);
     -webkit-text-stroke-width: 1px;
     color: transparent;
     opacity: 0;
@@ -82,7 +82,8 @@ const ui = {
 
 @keyframes rotate-3d {
   from {
-    transform: rotate3d(1,0,0, -5deg) translateX(-20%) scale(4) perspective(550px);
+    color: transparent;
+    transform: rotate3d(1,0,0, -5deg) translate(-50%,-100%) scale(4) perspective(550px);
   }
 
   80% {
@@ -101,7 +102,7 @@ const ui = {
 
 @keyframes scale-down {
   from {
-    color: rgb(var(--color-primary-600));
+    color: var(--ui-color-primary-600);
     transform: translate(-50dvw) scale(3);
   }
 }
@@ -112,7 +113,7 @@ const ui = {
     transform-style: preserve-3d;
     animation: rotate-3d ease-out both;
     animation-timeline: view();
-    animation-range: 0svh 80svh;
+    animation-range: -40svh 80svh;
   }
   .scroll-slide-animation {
     animation: slide-from-end linear both;
