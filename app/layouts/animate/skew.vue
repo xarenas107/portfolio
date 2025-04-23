@@ -1,5 +1,5 @@
 <template lang="pug">
-u-main(ref='main')
+u-main(ref='main' class='skew-y-(--skew) transition-(--transition-property) duration-200 ease-out')
     slot
 </template>
 
@@ -33,10 +33,14 @@ const update = (event: Event) => {
 	const element = main.value?.$el as HTMLElement
 
 	if (element) {
-		element.style.transform = `skewY(${speed}deg)`
-		element.style.filter = `blur(${Math.abs(speed)}px)`
-		element.style.transition = 'ease-out .2s'
-		element.style.transitionProperty = 'transform filter'
+		// element.style.transform = `skewY(${speed}deg)`
+		element.style.setProperty('--skew', `${speed}deg`)
+		element.style.setProperty('filter', `blur(${Math.abs(speed) / 2}px)`)
+		// element.style.transition = 'ease-out .2s'
+		// element.style.setProperty('--transition-duration', `.2s`)
+		// element.style.setProperty('--transition-timing-function', `ease-out`)
+		// element.style.transitionProperty = 'transform filter'
+		element.style.setProperty('--transition-porperty', 'transform filter')
 	}
 
 	state.scroll = window.scrollY
@@ -44,8 +48,9 @@ const update = (event: Event) => {
 	if (state.timer) clearTimeout(state.timer)
 	state.timer = setTimeout(() => {
 		if (element) {
-			element.style.transform = 'skewY(0deg)'
-			element.style.filter = 'blur(0px)'
+			// element.style.transform = 'skewY(0deg)'
+			element.style.removeProperty('--skew')
+			element.style.removeProperty('filter')
 		}
 	}, 150)
 }

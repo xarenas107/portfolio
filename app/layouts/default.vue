@@ -1,5 +1,5 @@
 <template lang='pug'>
-div(class='bg-neutral-100 dark:bg-neutral-950')
+div(class='bg-neutral-50 dark:bg-neutral-950')
     slot
 </template>
 
