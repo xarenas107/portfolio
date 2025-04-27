@@ -1,6 +1,12 @@
-// html {
-//     scroll-behavior: smooth
-// }
+@use './scrollbar';
+@use './transition';
+// @use './fonts';
+
+$text-variations: "default", "muted", "inverted", "dimmed", "toned", "highlighted";
+$bg-variations: "default", "muted", "inverted", "elevated" ,"accented";
+$border-variations: "default", "muted", "inverted", "accented";
+$colors: "primary", "secondary", "success", "info", "warning", "error";
+$types: "text", "bg", "border";
 
 ::view-transition-old(root),
 ::view-transition-new(root) {
@@ -8,37 +14,47 @@
   mix-blend-mode: normal;
 }
 
-.text-stroke {
-  paint-order: stroke fill;
-  -webkit-text-stroke-color: var(--ui-color-primary-100);
+@layer base {
+  // Ui text utility clases
+  .text {
+    @each $variation in $text-variations {
+      &-#{$variation} { 
+        color: if($variation == "default", var(--ui-text), var(--ui-text-#{ $variation })) 
+      }
+    }
+  }
+  
+  // Ui bg utility clases
+  .bg {
+    @each $variation in $bg-variations {
+      &-#{$variation} { 
+        background-color: if($variation == "default", var(--ui-bg), var(--ui-bg-#{ $variation })) 
+      }
+    }
+  }
+  
+  // Ui border utility clases
+  .border {
+    @each $variation in $border-variations {
+      &-#{$variation} { 
+        border-color: if($variation == "default", var(--ui-border), var(--ui-border-#{ $variation })) 
+      }
+    }
+  }
+
+  @each $color in $colors {
+    .text-#{$color} { 
+      color: var(--ui-#{ $color })
+    }
+
+    .bg-#{$color} { 
+      background-color: var(--ui-#{ $color })
+    }
+
+    .border-#{$color} { 
+      border-color: var(--ui-#{ $color })
+    }
+  }
+
+
 }
-
-.dark-mode .text-stroke {
-  -webkit-text-stroke-color: var(--ui-color-primary-300);
-}
-
-@for $i from 0 through 5 {
-  .text-stroke-#{$i} { -webkit-text-stroke-width: #{$i}px }
-}
-
-.min-h-dvh, .min-h-svh {
-  will-change: min-height;
-  transition: min-height ease .2s;
-}
-
-// html {
-//   overflow: hidden;
-//   width: 100%;
-// }
-
-// body {
-//   height: 100%;
-//   width: 100%;
-//   left: 0;
-//   top: 0;
-//   right: 0;
-//   bottom: 0;
-//   position: fixed;
-//   overflow-y: scroll;
-//   -webkit-overflow-scrolling: touch;
-// }

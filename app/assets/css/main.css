@@ -1,5 +1,26 @@
+@import './fonts';
 @import "tailwindcss";
 @import "@nuxt/ui";
+
+:root {
+	/* Background */
+	--ui-bg: var(--color-neutral-50);
+
+	@variant dark {
+		--ui-bg: var(--color-neutral-950)
+	}
+}
+
+@layer base {
+	.ring {
+		--tw-ring-color: var(--ui-border);
+	}
+
+	body {
+		max-height: 100dvh;
+		overflow: overlay;
+	}
+}
 
 @theme {
 	/* Font family */
@@ -14,12 +35,40 @@
 	--text-13xl: 16rem;
 	--text-14xl: 18rem;
 
-
 	/* Animation */
 	--animate-float: float 3s ease-in-out infinite;
 
-	@keyframes float {
-		0%, 100% { transform: translateY(0) }
-		50% { transform: translateY(-10px) }
+	/* Shadow */
+	--shadow-smooth: 
+		356px 404px 215px 0px --alpha(var(--ui-color-neutral-950) / 1%), 
+		200px 227px 182px 0px --alpha(var(--ui-color-neutral-950) / 4%), 
+		89px 101px 135px 0px --alpha(var(--ui-color-neutral-950) / 8%), 
+		22px 25px 74px 0px --alpha(var(--ui-color-neutral-950) / 10%);
+}
+
+@layer utilities {
+	.text-stroke {
+		-moz-text-stroke: var(--tw-text-stroke-width, 1px) var(--tw-text-stroke-color, var(--ui-text));
+		-webkit-text-stroke: var(--tw-text-stroke-width, 1px) var(--tw-text-stroke-color, var(--ui-text));
+		/* text-stroke: var(--tw-text-stroke-width, 1px) var(--tw-text-stroke-color, var(--ui-border)); */
 	}
+}
+
+@utility text-stroke-* {
+	--tw-text-stroke-width: --value('thin', 'thick', 'medium', 'unset');
+	--tw-text-stroke-width: --value(integer, [integer])px;
+	--tw-text-stroke-color: --value(--color-*, [--color-*], [color], 'currentColor', [*]);
+}
+
+@utility paint-order-* {
+	paint-order: --value('stroke', 'fill', 'markers');
+}
+
+/* @utility bg-elevated {
+	background-color: color-mix(var(--bg-elevated), --modifier(ratio));
+} */
+
+@keyframes float {
+	0%, 100% { transform: translateY(0) }
+	50% { transform: translateY(-10px) }
 }
