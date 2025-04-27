@@ -26,7 +26,7 @@ const href = computed(() => {
 
 useSeoMeta({
 	title,
-	// titleTemplate: () => title(),
+	titleTemplate: `${ app.name } - ${ app.author.name }`,
 	description: () => t('app.description'),
 	themeColor: () => color.value,
 	ogImage: () => href.value,
