@@ -1,5 +1,5 @@
 <template lang="pug">
-div(class='py-24 min-h-svh bg-primary-500 dark:bg-primary-600 relative overflow-clip place-content-center')
+div(class='py-24 min-h-svh bg-(--ui-primary) relative overflow-clip place-content-center')
   u-container(class='flex flex-col gap-16')
     section-title(:class='ui.title' class="scroll-fade-animation z-40" hyphens) {{ data?.title }}
 
@@ -10,22 +10,22 @@ div(class='py-24 min-h-svh bg-primary-500 dark:bg-primary-600 relative overflow-
             u-card(v-bind='props' class='flex h-full flex-col justify-between cursor-default w-80 max-w-fit snap-center' as='li' variant='solid')
               template(#header)
                 div(class='flex flex-col gap-4 justify-between')
-                  div(class='flex gap-4 justify-between items-start')
+                  div(class='flex flex-col gap-2 justify-between items-start')
                     h5(class='font-extrabold text-lg') {{ item?.title }}
+                    span(class=' text-xs text-nowrap') {{ item?.provider }}
 
                   div(class='flex gap-2 group flex-wrap')
-                    u-badge(:label='item?.provider' size='md' variant='outline' class='w-fit h-fit text-nowrap bg-primary-400 text-primary-50 dark:text-primary-50 dark:bg-primary-500')
-
                     u-link(v-for='to, index in item.credentials' :to)
                       u-badge(:ui='ui.badge' size='md' variant='outline') {{ index ? `No. ${ index + 1 }` : "Credential" }}
                         u-icon(name='i-heroicons-outline:external-link' class='w-4 h-4')
 
               template(#footer)
-                div(class='flex gap-2 text-primary-100 dark:text-primary-200 items-center')
+                div(class='flex gap-2 text-primary-100 dark:text-primary-50/80 items-center')
                   u-icon(name='heroicons-outline:clock' class='w-5 h-5')
                   time(class='uppercase text-xs') {{ item.time  }}
 
-              nuxt-img(v-if='item.image' :src='item.image' :alt='item.provider' class='-z-20 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-5 w-[10rem] rounded-lg overflow-clip pointer-events-none')
+
+              nuxt-img(v-if='item.image' :src='item.image' :alt='item.provider' class='-z-20 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-10 w-[10rem] rounded-lg overflow-clip pointer-events-none invert')
 </template>
 
 <script lang="ts" setup>
@@ -50,11 +50,11 @@ const { data, status } = useFetchContent<Content>('section/certificates', {
 })
 
 const ui = {
-	title: 'text-primary-100 dark:text-primary-100 text-stroke',
+	title: 'text-primary-100 dark:text-primary-50',
 	card: {
     border: 'px',
-		base: 'bg-primary-400 dark:bg-primary-500',
-		child: 'bg-primary-500 dark:bg-primary-600 text-primary-100 dark:text-primary-200',
+		base: 'bg-primary-400 dark:bg-primary-300 p-px',
+		child: 'bg-(--ui-primary) text-primary-100 dark:text-primary-50',
 		before: `before:bg-primary-200 dark:before:bg-primary-100`,
 		after: `after:bg-primary-200 dark:after:bg-primary-100`
 	},
@@ -68,13 +68,13 @@ const ui = {
 @keyframes fade {
   from {
     transform: translateY(40svh);
-    -webkit-text-stroke-width: 1px;
+    // -webkit-text-stroke-width: 1px;
     color: transparent;
     opacity: 0;
   }
   50% {
     transform: translateY(0);
-    -webkit-text-stroke-width: 2px;
+    // -webkit-text-stroke-width: 2px;
     color: transparent;
     opacity: 1;
   }

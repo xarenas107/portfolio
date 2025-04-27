@@ -1,8 +1,7 @@
 <template lang='pug'>
-u-placeholder(:class :content-class :ui='ui.placeholder' :pending :transition)
-    template(#default='props')
-        transition(v-bind='transition')
-            nuxt-img(v-if='data' v-bind='props' :src='data' @load='show' :alt format="webp" loading='lazy')
+u-placeholder(v-if='pending' :class :ui='ui.placeholder' :pending)
+div(v-else :class class='overflow-hidden ring ring-neutral-400 ring-inset dark:ring-neutral-600')
+	img(@load='show' :class='contentClass' :src='data' :alt loading='lazy')
 </template>
 
 <script lang='ts' setup>
@@ -47,13 +46,13 @@ const { data, execute } = useLazyAsyncData(props.src, async () => {
 	immediate: false
 })
 
-const transition = computed(() => {
-	const { transition } = props
-	if (!transition) return undefined
-	return typeof transition === 'string' ? { name: transition } : transition
-})
+// const transition = computed(() => {
+// 	const { transition } = props
+// 	if (!transition) return undefined
+// 	return typeof transition === 'string' ? { name: transition } : transition
+// })
 
-onMounted(() => nextTick(execute))
+onMounted(() => execute())
 
 const pending = shallowRef(true)
 const show = () => pending.value = false

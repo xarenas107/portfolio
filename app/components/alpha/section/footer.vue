@@ -1,5 +1,5 @@
 <template lang="pug">
-div(class='bg-neutral-100 dark:bg-neutral-950 border-t border-neutral-300 dark:border-neutral-800')
+div(class='bg-(--ui-bg) border-t border-neutral-300 dark:border-neutral-800')
     u-container(class='py-12 flex flex-col sm:flex-row flex-wrap gap-8 sm:justify-between w-full')
         div(class='flex gap-x-6 gap-y-3 flex-wrap')
             favicon(:ui='ui.favicon' class='w-10')

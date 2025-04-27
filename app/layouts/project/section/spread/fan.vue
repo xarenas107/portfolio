@@ -1,6 +1,6 @@
 <template lang="pug">
-div(class='flex w-full content-stretch z-10 relative rounded-lg h-50 sm:h-90 md:h-100 lg:h-120 justify-center bg-neutral-200 dark:bg-neutral-900 gap-8')
-	u-image(v-for='image in images' v-bind='image' class='rounded-lg shadow-smooth h-full max-w-3xs absolute origin-bottom spread-animation')
+div(class='flex w-full content-stretch z-10 relative rounded-lg h-50 sm:h-90 md:h-100 lg:h-120 justify-center bg-elevated gap-8')
+	u-image(v-for='image in images' v-bind='image' class='rounded-lg shadow-smooth h-full max-w-3xs absolute origin-bottom outline outline-(--ui-border) spread-animation')
 
 </template>
 <script lang="ts" setup>
@@ -24,6 +24,10 @@ const style = computed(() => ({
 }))
 
 const images = computed(() => {
+	const total = props.src.length || 0
+	const half = total / 2
+	const round = Math.floor(half)
+
 	return props.src.map((src = '', index = 0) => {
 		const shade = 900 - index * 100
 		
@@ -31,15 +35,17 @@ const images = computed(() => {
 		const delta = props.detail ? -1 : 0
 		const order = index + delta
 
-		const deltaR =  (detail ? 0 : order) + 2
-		const rotation = -4 * (props.src.length / 2 - deltaR)
-
-		const deltaT =  (props.detail && index === 0 ? -100 : 0) + 40
-		const translate =  -12 * (props.src.length / 2 - index) + deltaT
+		const angle = 45
+		const beta = props.detail && index === 0 ? 1 : index
+		const rotation = angle / total * (beta - round)
+		
+		const percent = 40
+		const alpha =  props.detail ? index === 0 ? -100 + percent : percent : 0
+		const translate =  -12 * (half - index) + alpha
 
 		return {
 			id: index,
-			class: ['bg-(--color) aspect-(--aspect) basis-(--basis) z-(--order) rotate-(--rotate) translate-x-(--translate-x) light:contrast-(--opacity) dark:brightness-(--opacity)',{
+			class: ['bg-(--color) aspect-(--aspect) basis-(--basis) z-(--order) rotate-(--rotate) translate-x-(--translate-x) light:contrast-(--tw-opacity) dark:brightness-(--tw-opacity)',{
 				'bg-neutral-900 mx-0': desktop.value && detail,
 			}],
 			style: { 
@@ -47,7 +53,7 @@ const images = computed(() => {
 				"--color": `var(--color-neutral-${ shade }, var(--color-neutral-50))`,
 				"--rotate": `${ rotation }deg`,
 				"--translate-x":`${ translate }%`,
-				"--opacity": detail ? '100%' : `${ 100 - order * 100 / props.src.length }%`,
+				"--tw-opacity": detail ? '100%' : `${ 100 - order * 100 / props.src.length }%`,
 				...style.value,
 			},
 			alt: '',

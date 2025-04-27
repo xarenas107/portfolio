@@ -1,35 +1,37 @@
 <template lang='pug'>
 u-lazy(:class='[{ grow }]' :disabled='!lazy' class="flex w-max min-w-fit max-w-full" as='li')
-    div(:class='[{ grow }, styles.column]' class="grid")
-        div(v-if='alternate' :class='[styles.size, { "order-1": alternate && reverse }]')
-        div(class='flex shrink justify-center items-center relative' :class='horizontal ?  "row-auto" : "col-span-1 flex-col"')
-            u-separator(
-                v-if='progress > 0'
-                :class='horizontal ? "left-0 divider" : "mt-4 top-0 divider-vertical"'
-                :style='`--progress: ${progress}%`'
-                :orientation
+	div(:class='[{ grow }, styles.column]' class="grid")
+		div(v-if='alternate' :class='[styles.size, { "order-1": alternate && reverse }]')
+		div(class='flex shrink justify-center items-center relative' :class='horizontal ?  "row-auto" : "col-span-1 flex-col"')
+			u-separator(
+				v-if='progress > 0'
+				:class='horizontal ? "left-0 divider" : "mt-4 top-0 divider-vertical"'
+				:style='`--progress: ${progress}%`'
+				:orientation
 				:ui='styles.divider'
-                class='absolute grow z-20'
-                )
+				class='absolute grow z-20'
+				)
 
-            u-separator(:orientation :class='[{ "invisible": lineStart }, horizontal ? "hidden" : "h-4" ]' :ui='styles.divider')
+			u-separator(:orientation :class='[{ "invisible": lineStart }, horizontal ? "hidden" : "h-4" ]' :ui='styles.divider')
 
-            div(class='relative')
-                span(v-if='highlight' class='motion-safe:animate-ping absolute inline-flex h-full w-full rounded-full' :class='ui.dot')
-                u-timeline-dot(:class='ui.dot' class='z-40')
-            u-separator(:ui='styles.divider' :orientation)
+			div(class='relative')
+				span(v-if='active' class='motion-safe:animate-ping absolute inline-flex h-full w-full rounded-full' :class='ui.dot')
+				u-timeline-dot(:class='ui.dot' class='z-40')
+			u-separator(:ui='styles.divider' :orientation)
 
-        div(class='flex flex-col gap-4 text-balance max-w-xs sm:max-w-sm' :class='[ui.container, styles.spacing, styles.size, { "-order-1": alternate && reverse }]')
-            div(class='flex flex-col gap-0')
-                div(v-if='title' class='flex items-center gap-4')
-                    h3(class="text-xl font-bold" :class='ui.text') {{ title }}
-                    u-badge(v-if='badge' :label='badge' :ui='ui.badge' size='md' class='h-fit text-nowrap')
+		div(class='flex flex-col gap-4 text-balance max-w-xs sm:max-w-sm' :class='[ui.container, styles.spacing, styles.size, { "-order-1": alternate && reverse }]')
+			div(class='flex flex-col gap-0')
+				div(v-if='title' class='flex gap-4')
+					div
+						h3(class="text-xl font-bold text-balance w-auto" :class='ui.text') {{ title }}
+					div(class='grow')
+						u-badge(v-if='badge' :label='badge' :ui='ui.badge' size='md' variant='subtle' class='h-fit text-nowrap')
 
-                h4(v-if='subtitle' class="text-base font-semibold opacity-90" :class='ui.text') {{ subtitle }}
+				h4(v-if='subtitle' class="text-base font-semibold opacity-80" :class='ui.text') {{ subtitle }}
 
-            div(class='flex flex-col gap-4')
-                p(v-if='content' :class='ui.text' class='text-base') {{ content }}
-                time(class="text-sm opacity-80 uppercase" :class='ui.text')  {{ time }}
+			div(class='flex flex-col gap-4')
+				p(v-if='content' :class='ui.text' class='text-base opacity-80') {{ content }}
+				time(class="text-sm opacity-60 uppercase" :class='ui.text')  {{ time }}
 </template>
 
 <script lang='ts' setup>
@@ -40,7 +42,7 @@ type Props = {
 	badge?: string
 	content?: string
 	time?: string
-	highlight?: boolean
+	active?: boolean
 	ui?: {
 		text?: string
 		badge?: Record<string, unknown>
@@ -63,7 +65,7 @@ type Props = {
 
 const props = withDefaults(defineProps<Props>(), {
 	ui: () => ({
-		text: 'text-neutral-900 dark:text-neutral-100',
+		text: 'text-default',
 		dot: {}
 	})
 })
@@ -89,7 +91,7 @@ const ui = computed(() => {
 	const {
 		progress: _progress = 'border-primary-600 dark:border-primary-400',
 		dot = {},
-		text = 'text-neutral-900 dark:text-primary-100'
+		text = 'text-primary-50'
 	} = props.ui
 
 	const {
@@ -101,7 +103,7 @@ const ui = computed(() => {
 		text,
 		dot: progress.value === 0 ? base : active,
 		badge: {
-			base: 'text-primary-800 dark:text-primary-600 bg-primary-400 dark:bg-primary-300',
+			base: 'text-primary-800 dark:text-primary-600 bg-primary-400/50 dark:bg-primary-400/50',
 			...props.ui?.badge || {}
 		},
 		progress: {

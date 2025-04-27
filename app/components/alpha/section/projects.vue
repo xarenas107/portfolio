@@ -1,5 +1,5 @@
 <template lang='pug'>
-div(class='bg-neutral-100 dark:bg-neutral-900 w-full py-24 min-h-svh flex flex-col gap-10 relative overflow-clip')
+div(class='bg-(--ui-bg) w-full py-24 min-h-svh flex flex-col gap-10 relative overflow-clip')
 
   div(class='flex px-4 sm:px-6 lg:px-8 gap-8 max-w-7xl m-auto scroll-slide-animation')
     //- section-title(:class='ui.title' class='scroll-fade-animation') {{  data?.title }}

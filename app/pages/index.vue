@@ -5,9 +5,9 @@ beta-section-certificates(v-intersect='intersect' ref='section')#certificates
 beta-section-experiences(v-intersect='intersect' ref='section')#experience
 beta-section-skills(v-intersect='intersect' ref='section')#skills
 
-div(class='relative w-full min-h-[200svh] flex items-center justify-center overflow-clip motion-reduce:hidden py-24 opacity-animation')
-	div(class="scale-animation rounded-full bg-primary-100/80 dark:bg-primary-900/80 p-8 aspect-square")
-		div(class="h-4 w-4 mask-animation mask-favicon bg-primary-500 dark:bg-primary-600 rounded-full relative")
+div(class='relative w-full min-h-[200svh] flex items-center justify-center overflow-clip motion-reduce:hidden py-24 bg-default')
+	div(class="scale-animation rounded-full bg-(--ui-primary)/10 p-8 aspect-square")
+		div(class="h-4 w-4 mask-animation bg-elevated rounded-full relative")
 
 beta-section-projects(v-intersect='intersect' ref='section')#projects
 beta-section-footer
@@ -46,7 +46,7 @@ const intersect = [
 }
 
 @keyframes opacity {
-	from { background: transparent }
+	from { background: var(--bg-neutral-500) }
 }
 
 @media (prefers-reduced-motion: no-preference) {

@@ -24,8 +24,8 @@ const props = withDefaults(defineProps<Props>(), {
 
 const state = computed(() => {
 	return props.active
-		? 'bg-primary-200/50 hover:bg-primary-300/50 dark:bg-primary-600/50 hover:dark:bg-primary-500/50'
-		: 'hover:bg-neutral-300/50 hover:dark:bg-neutral-700/50'
+		? 'bg-(--ui-primary)/10 hover:bg-(--ui-primary)/20'
+		: 'hover:bg-(--ui-text)/10'
 })
 
 const toggle = (value: string, event: MouseEvent) => emit('change', value, event)

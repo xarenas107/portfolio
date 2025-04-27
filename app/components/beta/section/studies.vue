@@ -1,17 +1,16 @@
 <template lang="pug">
 div(class='overflow-clip min-h-svh flex flex-col relative')
-	div(class='h-[20svh] w-full bg-primary-100/20 dark:bg-primary-900/20')
+	div(class='h-[20svh] w-full bg-gradient-to-b from-primary-100/20 to-(--ui-bg) dark:from-primary-900/20')
 
-	div(class='w-full bg-primary-500 dark:bg-primary-600 overflow-clip')
-		u-container(class='p-0 overflow-clip')
-			section-title(:class='ui.title' class="scroll-slide-animation" hyphens) {{  data?.title }}
+	div(class='w-full bg-(--ui-primary) overflow-clip')
+		u-container(class='overflow-clip')
+			section-title(class="text-(--ui-bg) -mt-1 md:-mt-2 scroll-slide-animation" hyphens) {{ data?.title }}
 
-	div(class='flex flex-col w-full h-full py-24 grow bg-primary-500 dark:bg-primary-600 ')
+	div(class='flex flex-col w-full h-full py-24 grow bg-(--ui-primary) ')
 		div(class='px-4 sm:px-6 lg:px-8 gap-8 max-w-7xl mx-auto w-full motion-reduce:pb-24 grow')
 
 			client-only
 				template(#fallback)
-					//- class='animate-pulse'
 					u-timeline(:ui='ui.timeline' pending)
 
 				u-timeline(:orientation :ui='ui.timeline' :alternate='!mobile || md' :reverse='!mobile || md' :items='data?.items' :pending class='scroll-slide-reverse-animation')
@@ -25,7 +24,7 @@ type Content = {
 		subtitle: string
 		badge: string
 		time: string
-		highlight?: boolean
+		active?: boolean
 		startAt: string
 	}[]
 }
@@ -37,9 +36,6 @@ const orientation = computed(() => mobile.value ? 'vertical' : 'horizontal')
 const { data, status } = useFetchContent<Content>('section/studies', {
 	callback: (data) => {
 		data.items.sort((a, b) => getTime(b.startAt) - getTime(a.startAt))
-
-		const first = data.items[0]
-		if (first) first.highlight = true
 		return data
 	},
 	pick: ['title', 'items'],
@@ -52,14 +48,16 @@ const { data, status } = useFetchContent<Content>('section/studies', {
 const { pending } = useStatus(status)
 
 const ui = {
-	title: 'text-neutral-50/95 dark:text-neutral-950/90 -mt-1 md:-mt-2',
 	timeline: {
 		base: 'lg:min-w-[100dvw]',
-		divider: 'border-primary-100 dark:border-primary-200',
+		divider: 'border-primary-300 dark:border-primary-200',
 		dot: {
 			base: 'bg-primary-100 dark:bg-primary-200'
 		},
-		text: 'text-primary-100 dark:text-primary-100'
+		badge: {
+			base: 'text-primary-100 dark:text-primary-50 bg-primary-400/20 dark:bg-primary-300/20 ring ring-primary-100/25 dark:ring-primary-50/25',
+		},
+		// text: 'text-primary-100 dark:text-primary-200'
 	}
 }
 </script>

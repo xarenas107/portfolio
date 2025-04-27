@@ -1,5 +1,5 @@
 <template lang='pug'>
-div(class='bg-neutral-50 dark:bg-neutral-950')
+div(class='bg-default')
     slot
 </template>
 
@@ -9,9 +9,8 @@ const head = useLocaleHead()
 const app = useAppConfig()
 const tailwind = useTailwind()
 const dark = usePreferredDark()
-// const { origin } = useRequestURL()
 
-const title = () => app.author.name
+const title = () => app.name
 
 const color = computed(() => {
 	const colors = tailwind.theme.colors as Record<string, Record<number, string>>
@@ -35,7 +34,7 @@ useSeoMeta({
 	ogImageAlt: title,
 	ogLocale: locale,
 	ogLocaleAlternate: 'en',
-	author: title,
+	author: app.author.name,
 	twitterTitle: title,
 	twitterDescription: () => t('app.description'),
 	twitterImage: () => href.value,

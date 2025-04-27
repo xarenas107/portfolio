@@ -1,26 +1,27 @@
 <template lang='pug'>
-div(class='bg-primary-500 dark:bg-primary-600 w-full py-24 min-h-svh flex flex-col gap-10 relative overflow-clip')
+div(class='bg-elevated w-full py-24 min-h-svh flex flex-col gap-16 relative overflow-clip')
 
 	div(class='flex px-4 sm:px-6 lg:px-8 gap-8 max-w-7xl m-auto scroll-slide-animation')
-		section-title(v-for='index in 6' class='text-stroke' :class='index % 2 ? "text-stroke-2 text-primary-400 dark:text-primary-500" : ui.title') {{ data?.title }}
+		section-title(v-for='index in 6' :class='index % 2 ? "text-stroke paint-order-stroke text-(--ui-bg-elevated)" : ui.title') {{ data?.title }}
 
 	u-container(:ui='ui.container')
-		u-card-group(class='z-20 mr-4' :ui='ui.card')
+		u-card-group(class='z-20 mr-4 w-full' :ui='ui.card')
 			template(#default='{ containerClass, childClass }')
-				div(class="grid grid-cols-2 md:grid-cols-4 gap-4 w-full min-h-svh z-20")
-					div(v-for='group in groups' class="flex flex-col gap-4")
-						//- div(v-for='{ grow, order, id, image } in group' )
-						nuxt-link(v-for='{ grow, order, id, image } in group' @click.native='open(id)' :class='containerClass' class="h-auto max-w-full rounded-lg cursor-pointer" :style='`flex-grow: ${grow}; order: ${order}`')
-							//- div(:class='childClass' class='flex f-full flex-col justify-between cursor-pointer' as='li')
-							u-image-bg(v-if='image' :src='image' :class="[{ 'placeholder-active': active?.id === id }, childClass]" class="rounded-lg h-full bg-cover hover:bg-100%" )
-							u-placeholder(v-else :ui='ui.placeholder' :class="[{ 'placeholder-active': active?.id === id }, childClass]" class="rounded-lg")
+				div(class="grid grid-cols-2 md:grid-cols-4 auto-cols-auto grid-flow-row-dense auto-rows-auto gap-4")
+
+					nuxt-link(v-for='{ id, image, title, description } in items' @click.native='open(id)' :class='containerClass' class="h-auto max-w-full rounded-lg cursor-pointer relative")
+						nuxt-img(:src='image' :class="[childClass]" class='object-cover rounded-lg bg-accented')
+						
+						div(class='absolute z-20 top-0 left-0 w-[100%] h-[100%] p-4 bg-(--ui-bg-accented)/70 backdrop-blur-xs')
+							h4(class='text-highlighted') {{ title }}
+							p(class='text-default') {{ description }}
 </template>
 
 <script lang='ts' setup>
 type Project = {
 	id: number
 	title: string
-	subtitle: string
+	description: string
 	image?: string
 }
 
@@ -43,26 +44,27 @@ defineProps<Props>()
 
 const size = computed(() => Math.round((data.value?.items.length ?? 0) / 4))
 const grows = [8, 12, 10, 12, 6]
-const groups = computed(() => {
-	const items = data.value?.items ?? []
-	const list = [...items].map((item, index) => {
-		const place = index + 1
-		const group = place <= size.value ? 1 : place <= (size.value * 2) ? 2 : place <= (size.value * 3) ? 3 : 4
-		const grow = grows.at(index % 5) || 4
-		const order = place
-		return { ...item, group, grow, order }
-	})
 
-	const map = new Map<number, Item[]>()
+// const groups = computed(() => {
+// 	const items = data.value?.items ?? []
+// 	const list = [...items].map((item, index) => {
+// 		const place = index + 1
+// 		const group = place <= size.value ? 1 : place <= (size.value * 2) ? 2 : place <= (size.value * 3) ? 3 : 4
+// 		const grow = grows.at(index % 5) || 4
+// 		const order = place
+// 		return { ...item, group, grow, order }
+// 	})
 
-	list.forEach((item, index) => {
-		const collection = map.get(item.group)
-		if (!collection) map.set(item.group, [item])
-		else collection.push(item)
-	})
+// 	const map = new Map<number, Item[]>()
 
-	return Array.from(map.values())
-})
+// 	list.forEach((item, index) => {
+// 		const collection = map.get(item.group)
+// 		if (!collection) map.set(item.group, [item])
+// 		else collection.push(item)
+// 	})
+
+// 	return Array.from(map.values())
+// })
 
 const key = 'project:active'
 const active = useState<Partial<Project> | undefined>(key)
@@ -74,22 +76,53 @@ const { data, status } = useFetchContent<Content>('section/projects', {
 	})
 })
 
+const items = computed(() => {
+	const items = data.value?.items ?? []
+	return [...items].map((item, index) => {
+		const place = index + 1
+		const group = place <= size.value ? 1 : place <= (size.value * 2) ? 2 : place <= (size.value * 3) ? 3 : 4
+		const grow = grows.at(index % 5) || 4
+		const order = place
+		return { ...item, group, grow, order }
+	})
+})
+
+const row = computed(() => {
+	const result = items.value.length / 4 
+	const rest = items.value.length & 4 
+
+	const map = new Map< number,string>()
+	items.value.forEach( (item, index) => {
+		const key = index + 1
+		
+		if (index === 0) map.set(index, '--row: span 3')
+		if (key % 2 === 0) map.set(index, '--row: span 2')
+		if (key % 4 === 0) map.set(index, '--row: span 3')
+	})
+
+	return map
+})
+
+// const rows = computed(() => Math.ceil(items.value.length / 4))
+// const rows = computed(() => `repeat(${ Math.ceil(items.value.length / 4) }, minmax(0, 1fr))`)
+
 const ui = {
-	title: 'text-primary-100 dark:text-primary-100',
+	title: 'text-(--ui-primary)',
 	container: {
 		base: 'h-full w-full'
 	},
 	placeholder: {
 		svg: {
 			// base: 'bg-primary-400 stroke-primary-600 dark:bg-primary-100 dark:stroke-primary-400',
-			base: 'stroke-primary-600 dark:stroke-primary-400 bg-primary-400 dark:bg-primary-600'
+			base: 'dark:stroke-default bg-accented'
 		}
 	},
 	card: {
-		base: 'bg-primary-400 dark:bg-primary-600',
-		child: `bg-neutral-200 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300`,
-		before: `before:bg-primary-800 dark:before:bg-primary-100`,
-		after: `after:bg-primary-600 dark:after:bg-primary-300`
+		border: 'px',
+		base: 'bg-(--ui-border) p-px',
+		child: 'text-neutral-950 dark:text-neutral-50',
+		before: `before:bg-neutral-900 dark:before:bg-neutral-100`,
+		after: `after:bg-neutral-900 dark:after:bg-neutral-100`
 	}
 }
 

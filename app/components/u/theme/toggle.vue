@@ -3,7 +3,7 @@ client-only()
     template(#fallback)
         u-skeleton(class='w-8 h-8 aspect-square rounded-lg bg-neutral-300/50 dark:bg-neutral-700/50')
 
-    u-button(@click='toggle' :icon='active?.icon' :label='active?.title' :aria-label='t("theme.name")' variant='ghost' color='neutral' size="lg" :class='{ "aspect-square": square }')
+    u-button(@click='toggle' :icon='active?.icon' :label='active?.title' :aria-label='t("theme.name")' variant='ghost' color='neutral' size="lg" :class='[{ "aspect-square": square }, "hover:bg-neutral-500/10 hover:dark:bg-neutral-400/10"]')
 </template>
 
 <script lang='ts' setup>

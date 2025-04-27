@@ -16,8 +16,8 @@ const props = defineProps<Props>()
 
 const ui = computed(() => {
 	const {
-		base = 'fill-neutral-700 dark:fill-neutral-300',
-		highlight = 'fill-primary-500 dark:fill-primary-600'
+		base = 'fill-(--ui-bg-inverted)',
+		highlight = 'fill-(--ui-primary)'
 	} = props.ui || {}
 
 	return { base, highlight }

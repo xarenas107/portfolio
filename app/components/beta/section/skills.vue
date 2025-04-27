@@ -1,15 +1,15 @@
 <template lang="pug">
-div(class='min-h-[60svh] relative overflow-clip bg-neutral-100 dark:bg-neutral-950 py-24')
+div(class='min-h-[60svh] relative overflow-clip bg-(--ui-bg) py-24')
   div(class='fade-exit-animation motion-safe:sticky motion-safe:top-[30svh]')
     section-title(:class='ui.title' class='origin-left scale-down-animation' hyphens) {{  data?.title }}
 
   u-container(as='ul' class='grid grid-rows-1 grid-cols-1 sm:grid-rows-2 sm:grid-cols-2 lg:grid-rows-3 lg:grid-cols-3 gap-16 pt-8 sm:pt-12 md:pt-20 lg:pt-24 xl:pt-32 z-20 lg:m-auto')
     li(v-for='item, index in data?.items' :class='`scroll-fade-animation lg:grid-start-${index + 1}`')
       div(class='flex flex-col gap-4 align-start')
-        h3(class="font-bold uppercase font-display text-4xl sm:text-4xl md:text-3xl lg:text-5xl xl:text-6xl text-primary-600 dark:text-primary-500 hyphens-auto break-words sm:break-normal") {{  item.title  }}
+        h3(class="font-bold uppercase font-display text-4xl sm:text-4xl md:text-3xl lg:text-5xl xl:text-6xl text-(--ui-primary) hyphens-auto break-words sm:break-normal") {{  item.title  }}
 
         div(class='group flex flex-wrap gap-2 max-w-[48ch]')
-          p(class='text-base text-balance text-neutral-900 dark:text-neutral-100') {{ item?.content?.join(', ') }}
+          p(class='text-base text-balance text-(ui-text)') {{ item?.content?.join(', ') }}
 </template>
 
 <script lang="ts" setup>
@@ -29,21 +29,22 @@ const { data, status } = useFetchContent<Content>('section/skills', {
 })
 
 const ui = {
-	title: 'text-primary-600 dark:text-primary-500 motion-safe:opacity-10 px-4 sm:px-6 lg:px-8 m-auto max-w-7xl',
+	title: 'text-(--ui-primary) motion-safe:opacity-10 px-4 sm:px-6 lg:px-8 m-auto max-w-7xl',
 }
 </script>
 
 <style lang="scss" scoped>
 @keyframes scale-down {
   from {
-    color: var(--ui-color-primary-600);
+    color: var(--ui-primary);
     transform: rotate3d(1,0,0, -5deg) translateX(-50%) scale(4) perspective(550px);
     opacity: 100%;
   }
-
+  50% {
+    opacity: 100%;
+  }
   80% {
     transform: scale(1);
-    opacity: 100%;
   }
 }
 

@@ -1,17 +1,16 @@
 <template lang="pug">
-nav(v-if='active' class="border-neutral-300 dark:border-neutral-800 fixed w-full top-0 z-50 transition-transform" :class='[classes, { "-translate-y-full": sticky && !reveal }]')
+nav(v-if='active' class="border-neutral-300 dark:border-neutral-800 fixed w-full top-0 z-50 transition-transform bg-(--ui-bg)/80" :class='[classes, { "-translate-y-full": sticky && !reveal }]')
 
 	div(:class="ui.container")
 		div(class="relative flex h-16 items-center justify-between gap-1.5")
 			div(class="inset-y-0 left-0 flex items-center lg:hidden")
 
 			//- Mobile menu, show/hide based on menu state
-			u-drawer(v-model:open='menu' id='mobile-menu' direction='top' class='lg:hidden' should-scale-background set-background-color-on-scale)
+			u-drawer(v-model:open='menu' id='mobile-menu' direction='top' class='lg:hidden' should-scale-background :set-background-color-on-scale='false')
 				template(#header)
 					div(class="flex items-center justify-between")
+						u-share-button
 						u-button(v-bind='ui.button' @click="toggle()" icon="i-heroicons-outline:x" aria-controls="mobile-menu" color="neutral" size='lg' variant="ghost")
-
-						u-share-button(class='p-2')
 
 				template(#body)
 					div(class='flex flex-col gap-8 grow')
@@ -32,12 +31,21 @@ nav(v-if='active' class="border-neutral-300 dark:border-neutral-800 fixed w-full
 								u-theme-toggle(show-label class='grow')
 
 				//- Mobile menu button
-				u-button(v-bind='ui.button' :aria-expanded="menu" type="button" color="neutral" size='lg' aria-controls="mobile-menu" variant='ghost')
-					span(class="absolute -inset-0.5")
-					span(class="sr-only") {{ t('menu.sr') }}
+				u-button(
+					:aria-expanded="menu" 
+					:aria-label='t("menu.sr")' 
+					:icon='menu ? "i-heroicons-outline:x": "i-heroicons-solid:menu-alt-2"'
+					color="neutral" 
+					aria-controls="mobile-menu" 
+					class="aspect-square hover:bg-neutral-500/10 hover:dark:bg-neutral-400/10"
+					variant='ghost' 
+					size='lg' 
+					)
+					//- span(class="absolute -inset-0.5")
+					//- span(class="sr-only") {{ t('menu.sr') }}
 
 					//- icon menu
-					u-icon(class='w-6 h-6' :name='menu ? "i-heroicons-outline:x": "i-heroicons-solid:menu-alt-2"')
+					//- u-icon(class='w-6 h-6' :name='menu ? "i-heroicons-outline:x": "i-heroicons-solid:menu-alt-2"')
 
 			div(class="flex flex-1 items-center sm:items-stretch sm:justify-start")
 				div(v-if='!slot.left' class='flex gap-6')
@@ -84,7 +92,7 @@ defineProps<Props>()
 const navigation = useNavigation()
 
 const menu = defineModel('menu', { default: () => false })
-const classes = shallowRef('bg-opacity-95 dark:bg-opacity-90 border-b backdrop-blur bg-neutral-100')
+const classes = shallowRef('border-b backdrop-blur')
 const top = shallowRef(0)
 const reveal = shallowRef(true)
 
@@ -101,8 +109,8 @@ const navigate = (value: string) => {
 const recolor = () => {
 	// Remove opacity on scroll top
 	classes.value = window.scrollY === 0
-		? 'bg-opacity-0 dark:bg-opacity-0'
-		: 'bg-opacity-95 dark:bg-opacity-90 border-b backdrop-blur bg-neutral-100/80 dark:bg-neutral-950/80'
+		? 'bg-transparent'
+		: 'border-b backdrop-blur'
 }
 
 const hide = () => {
@@ -137,6 +145,10 @@ const ui = {
 		color: 'neutral'
 	}
 }
+
+watchThrottled(desktop, value => {
+	if (value) menu.value = false
+},{ throttle: 100 })
 
 onMounted(recolor)
 </script>

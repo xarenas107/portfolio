@@ -33,13 +33,7 @@ const update = (event: Event) => {
 	const element = main.value?.$el as HTMLElement
 
 	if (element) {
-		// element.style.transform = `skewY(${speed}deg)`
 		element.style.setProperty('--skew', `${speed}deg`)
-		element.style.setProperty('filter', `blur(${Math.abs(speed) / 2}px)`)
-		// element.style.transition = 'ease-out .2s'
-		// element.style.setProperty('--transition-duration', `.2s`)
-		// element.style.setProperty('--transition-timing-function', `ease-out`)
-		// element.style.transitionProperty = 'transform filter'
 		element.style.setProperty('--transition-porperty', 'transform filter')
 	}
 
@@ -47,11 +41,7 @@ const update = (event: Event) => {
 
 	if (state.timer) clearTimeout(state.timer)
 	state.timer = setTimeout(() => {
-		if (element) {
-			// element.style.transform = 'skewY(0deg)'
-			element.style.removeProperty('--skew')
-			element.style.removeProperty('filter')
-		}
+		if (element) element.style.removeProperty('--skew')
 	}, 150)
 }
 
@@ -62,7 +52,10 @@ useEventListener('scroll', update, {
 onBeforeUpdate(() => {
 	state.pause = true
 })
-onUpdated(() => state.pause = false)
+
+onUpdated(() => {
+	setTimeout(() => state.pause = false, 300)
+})
 
 onMounted(() => {
 	state.scroll = window.scrollY

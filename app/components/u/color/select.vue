@@ -21,18 +21,6 @@ const props = defineProps<Props>()
 
 const { t } = useI18n()
 const app = useAppConfig()
-
-const ui = {
-	icon: {
-		base: 'text-primary-600 dark:text-primary-600 hover:text-primary-700 hover:dark:text-primary-300'
-	},
-	color: {
-		primary: {
-			ghost: 'hover:bg-primary-300/50 hover:dark:bg-primary-600/50 text-primary-700 dark:text-primary-300 hover:text-primary-900 hover:dark:text-primary-100'
-		}
-	}
-}
-
 const colors = ['slate', 'orange', 'yellow', 'emerald', 'indigo', 'rose']
 
 const items = computed(() => {

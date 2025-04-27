@@ -7,11 +7,12 @@ ol(class="w-full flex group h-fit motion-reduce:overflow-auto scroll-hidden snap
         v-for='item, index in data'
         v-bind='item'
         v-model:progress="percents[index]"
-        :key='index' :ui='ui.item'
+        :key='index' 
+		:ui='ui.item'
         :line-start='index === 0'
         :grow='index + 1 >= items.length'
         :reverse='!(index % 2)'
-        :highlight="item?.highlight"
+        :active="item?.active"
         :orientation
         :alternate
         :lazy
@@ -23,6 +24,7 @@ ol(class="w-full flex group h-fit motion-reduce:overflow-auto scroll-hidden snap
 type Item = {
 	title?: string
 	subtitle?: string
+	active?: boolean
 	badge?: string
 	time?: string
 	content?: string
@@ -89,7 +91,7 @@ const ui = computed(() => {
 			text: props.ui?.text,
 			dot,
 			badge: {
-				base: 'text-primary-50 dark:text-primary-50 bg-primary-400 dark:bg-primary-500',
+				base: 'text-primary-50 bg-primary-400/50 dark:bg-primary-500/50',
 				...badge || {}
 			},
 			container: 'fade-bottom-animation'

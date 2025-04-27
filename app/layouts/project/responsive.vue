@@ -1,6 +1,6 @@
 <template lang="pug">
 div(class='flex items-stretch w-full content-between z-10 relative rounded-lg gap-4')
-	nuxt-img(v-for='image in images' v-bind='image' class='rounded-lg grow h-full object-cover object-top' loading='lazy')
+	nuxt-img(v-for='image in images' v-bind='image' class='rounded-lg grow h-full object-cover object-top ring' loading='lazy')
 
 </template>
 <script lang="ts" setup>
@@ -48,7 +48,7 @@ const images = computed(() => {
 
 @keyframes slide-up {
     from {
-		transform: translateY(20dvh);
+		transform: translateY(20dvh) scale(1.2);
 		box-shadow: 0 0 transparent;
     }
 }
@@ -61,7 +61,6 @@ const images = computed(() => {
     animation-range: entry;
   }
   .slide-up-animation {
-	// transform-origin: center;
     animation: slide-up ease-in both;
     animation-timeline: view();
     animation-range: 20dvh 40dvh;

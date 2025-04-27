@@ -1,5 +1,5 @@
 <template lang="pug">
-nuxt-layout(v-bind='data' :name :pending) {{ t('project.overview.name') }}
+nuxt-layout(v-bind='options' :pending)
 </template>
 
 <script lang="ts" setup>
@@ -12,10 +12,13 @@ type Project = {
 	subtitle?: string
 	image?: string
 	layout: string
+	cover?: string
+	items?: {}[]
 }
 
 definePageMeta({
-	navbar: 'back'
+	navbar: 'back',
+	// keepalive: true
 })
 
 const { t } = useI18n()
@@ -25,11 +28,15 @@ const { data, status } = useFetchContent<Project>(`project/${route.query.id}`, {
 		title: '',
 		layout: 'case-study',
 		items: []
-	})
+	}),
 })
 
-const name = computed(() => {
-	return `project-${data.value?.layout}` as LayoutKey
+const options = computed(() => {
+	const { title, description, items, layout, cover } = data.value || {}
+	return {
+		name: `project-${layout}` as LayoutKey,
+		title, description, items, cover
+	}
 })
 
 const { pending } = useStatus(status)
