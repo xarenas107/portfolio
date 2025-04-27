@@ -1,23 +1,18 @@
 {
-  "id": "karat",
+  "id": "timer",
   "layout": "base",
-  "title": "Karat",
-  "cover": "/project/karat/cover.png",
+  "title": "",
+  "cover": "/project/timer/cover.png",
   "items": [
     {
       "name": "project-section-spread-fan",
-      "detail": true,
       "aspect-ratio": "194/420",
-      "cover": "./karat/cover.png",
+      "cover": "./timer/cover.png",
       "alt": "",
       "src": [
-        "/project/karat/app/1.png",
-        "/project/karat/app/2.png", 
-        "/project/karat/app/3.png", 
-        "/project/karat/app/4.png", 
-        "/project/karat/app/5.png", 
-        "/project/karat/app/6.png", 
-        "/project/karat/app/7.png"
+        "/project/timer/app/1.png",
+        "/project/timer/app/2.png", 
+        "/project/timer/app/3.png"
       ]
     }, {
       "name": "project-section-paragraph",
