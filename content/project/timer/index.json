@@ -15,21 +15,8 @@
         "/project/timer/app/3.png"
       ]
     }, {
-      "name": "project-section-paragraph",
-      "description": "El cliente es dueño de una escuela de karate ubicada en Lima, Perú, que cuenta con una tienda de equipamiento deportivo y ofrecen una amplia gama de productos. Karat se dirige a los clientes deportistas y personas interesadas en las artes marciales que necesitan comprar equipamiento de karate."
-    }, {
-      "name": "project-responsive",
-      "detail": true,
-      "aspect-ratio": ["520/290", "134/290"],
-      "alt": "",
-      "src": [
-        "/project/karat/responsive/1.png",
-        "/project/karat/responsive/2.png"
-      ]
-    }, {
       "name": "project-color",
-      "description": "La gama cromática surge de los colores identitarios de la marca.",
-      "palette": ["#C53B3B", "#E0E1EC"]
+      "palette": ["#36C2FE", "#E8ECF0", "#FF8C9A"]
     }
   ]
 }
