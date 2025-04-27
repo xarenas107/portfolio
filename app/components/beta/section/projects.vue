@@ -7,14 +7,15 @@ div(class='bg-elevated w-full py-24 min-h-svh flex flex-col gap-16 relative over
 	u-container(:ui='ui.container')
 		u-card-group(class='z-20 mr-4 w-full' :ui='ui.card')
 			template(#default='{ containerClass, childClass }')
-				div(class="grid grid-cols-2 md:grid-cols-4 auto-cols-auto grid-flow-row-dense auto-rows-auto gap-4")
+				div(class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 auto-cols-auto grid-flow-row-dense auto-rows-auto gap-4")
 
-					nuxt-link(v-for='{ id, image, title, description } in items' @click.native='open(id)' :class='containerClass' class="h-auto max-w-full rounded-lg cursor-pointer relative")
+					nuxt-link(v-for='{ id, image, title, description } in items' @click.native='open(id)' :class='containerClass' class="h-auto max-w-full rounded-lg cursor-pointer relative group/item")
 						nuxt-img(:src='image' :class="[childClass]" class='object-cover rounded-lg bg-accented')
 						
-						div(class='absolute z-20 top-0 left-0 w-[100%] h-[100%] p-4 bg-(--ui-bg-accented)/70 backdrop-blur-xs')
-							h4(class='text-highlighted') {{ title }}
-							p(class='text-default') {{ description }}
+						div(class='absolute z-20 top-0 left-0 w-[100%] h-[100%] p-4 bg-(--ui-bg-accented)/70 place-content-end-safe opacity-0 group-hover/item:opacity-100 rounded-lg border backdrop-blur-xs transition-all duration-400 ease-out')
+							div(class='flex flex-col gap-2 opacity-0 translate-y-24 group-hover/item:translate-y-0 group-hover/item:opacity-100 transition-transform duration-400 ease-out')
+								h4(class='text-default font-bold max-w-prose text-balance line-clamp-2 truncate') {{ title }}
+								h6(class='text-sm text-toned max-w-prose text-balance line-clamp-4 truncate') {{ description }}
 </template>
 
 <script lang='ts' setup>
