@@ -6,7 +6,7 @@ nav(v-if='active' class="border-neutral-300 dark:border-neutral-800 fixed w-full
 			div(class="inset-y-0 left-0 flex items-center lg:hidden")
 
 			//- Mobile menu, show/hide based on menu state
-			u-drawer(v-model:open='menu' id='mobile-menu' direction='top' class='lg:hidden' should-scale-background :set-background-color-on-scale='false')
+			u-drawer(v-model:open='menu' id='mobile-menu' direction='top' class='lg:hidden !rounded-b-none' no-body-styles)
 				template(#header)
 					div(class="flex items-center justify-between")
 						u-share-button
@@ -91,7 +91,7 @@ defineProps<Props>()
 
 const navigation = useNavigation()
 
-const menu = defineModel('menu', { default: () => false })
+const menu = defineModel('open', { default: false })
 const classes = shallowRef('border-b backdrop-blur')
 const top = shallowRef(0)
 const reveal = shallowRef(true)

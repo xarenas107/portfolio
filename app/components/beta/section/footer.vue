@@ -1,6 +1,6 @@
 <template lang="pug">
 div(class='bg-elevated border-t border-accented')
-    u-container(class='py-12 flex flex-col sm:flex-row flex-wrap gap-8 sm:justify-between w-full')
+    u-container(v-bind='options' class='py-12 flex flex-col sm:flex-row flex-wrap gap-8 sm:justify-between w-full')
         div(class='flex gap-x-6 gap-y-3 flex-wrap')
             favicon(class='w-10')
 
@@ -17,6 +17,18 @@ div(class='bg-elevated border-t border-accented')
 </template>
 
 <script lang="ts" setup>
+type Props = {
+	scaleDown?: boolean
+}
+const props = defineProps<Props>()
+
+const options = computed(() => {
+	const base = 'transition-transform duration-200 ease-out'
+
+	return {
+		class: props.scaleDown ? `scale-90 ${ base }` : base
+	}
+})
 const user = useUser()
 </script>
 

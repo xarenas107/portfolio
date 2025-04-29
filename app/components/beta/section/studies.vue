@@ -3,11 +3,11 @@ div(class='overflow-clip min-h-svh flex flex-col relative')
 	div(class='h-[20svh] w-full bg-gradient-to-b from-primary-100/20 to-(--ui-bg) dark:from-primary-900/20')
 
 	div(class='w-full bg-(--ui-primary) overflow-clip')
-		u-container(class='overflow-clip')
+		u-container(v-bind='options' class='overflow-clip')
 			section-title(class="text-(--ui-bg) -mt-1 md:-mt-2 scroll-slide-animation" hyphens) {{ data?.title }}
 
-	div(class='flex flex-col w-full h-full py-24 grow bg-(--ui-primary) ')
-		div(class='px-4 sm:px-6 lg:px-8 gap-8 max-w-7xl mx-auto w-full motion-reduce:pb-24 grow')
+	div(class='flex flex-col w-full h-full py-24 grow bg-(--ui-primary)')
+		div(v-bind='options' class='px-4 sm:px-6 lg:px-8 gap-8 max-w-7xl mx-auto w-full motion-reduce:pb-24 grow')
 
 			client-only
 				template(#fallback)
@@ -28,6 +28,20 @@ type Content = {
 		startAt: string
 	}[]
 }
+
+type Props = {
+	scaleDown?: boolean
+}
+
+const props = defineProps<Props>()
+
+const options = computed(() => {
+	const base = 'transition-transform duration-200 ease-out'
+
+	return {
+		class: props.scaleDown ? `scale-90 ${ base }` : base
+	}
+})
 
 const { mobile, md } = useDisplay()
 const getTime = (value: string) => new Date(value).getTime()

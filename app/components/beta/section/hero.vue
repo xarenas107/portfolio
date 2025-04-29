@@ -1,7 +1,7 @@
 <template lang="pug">
 div(class='bg-primary-100/20 dark:bg-primary-900/20 max-w-full overflow-clip flex items-center min-h-svh')
 	u-lazy(class='w-full')
-		u-container(class="flex h-full w-full flex-col gap-4 overflow-visible py-16 pb-24 sm:py-32 relative")
+		u-container(v-bind='options' class="flex h-full w-full flex-col gap-4 overflow-visible py-16 pb-24 sm:py-32 relative")
 
 			u-transition(delay='1s' before-enter-class="max-w-0" enter-class='max-w-full' duration='.75s' timing-function="ease-in-out")
 				template(#default='{ state, ...props }')
@@ -60,6 +60,20 @@ div(class='bg-primary-100/20 dark:bg-primary-900/20 max-w-full overflow-clip fle
 </template>
 
 <script lang="ts" setup>
+type Props = {
+	scaleDown?: boolean
+}
+
+const props = defineProps<Props>()
+
+const options = computed(() => {
+	const base = 'transition-transform duration-200 ease-out'
+
+	return {
+		class: props.scaleDown ? `scale-90 ${ base }` : base
+	}
+})
+
 const { t } = useI18n()
 
 const transition = {

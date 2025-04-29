@@ -1,6 +1,6 @@
 <template lang="pug">
 div(class='py-24 min-h-svh bg-(--ui-primary) relative overflow-clip place-content-center')
-  u-container(class='flex flex-col gap-16')
+  u-container(v-bind='options' class='flex flex-col gap-16')
     section-title(:class='ui.title' class="scroll-fade-animation z-40" hyphens) {{ data?.title }}
 
     u-infinite-slider(:items='data?.items' ref='infinite-slider' class='flex gap-4')
@@ -41,6 +41,19 @@ type Content = {
 		class?: string
 	}[]
 }
+
+type Props = {
+	scaleDown?: boolean
+}
+const props = defineProps<Props>()
+
+const options = computed(() => {
+	const base = 'transition-transform duration-200 ease-out'
+
+	return {
+		class: props.scaleDown ? `scale-90 ${ base }` : base
+	}
+})
 
 const { data, status } = useFetchContent<Content>('section/certificates', {
 	default: () => ({

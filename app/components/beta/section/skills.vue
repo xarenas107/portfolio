@@ -1,9 +1,9 @@
 <template lang="pug">
 div(class='min-h-[60svh] relative overflow-clip bg-(--ui-bg) py-24')
   div(class='fade-exit-animation motion-safe:sticky motion-safe:top-[30svh]')
-    section-title(:class='ui.title' class='origin-left scale-down-animation' hyphens) {{  data?.title }}
+    section-title(v-bind='options' :class='ui.title' class='origin-left scale-down-animation' hyphens) {{  data?.title }}
 
-  u-container(as='ul' class='grid grid-rows-1 grid-cols-1 sm:grid-rows-2 sm:grid-cols-2 lg:grid-rows-3 lg:grid-cols-3 gap-16 pt-8 sm:pt-12 md:pt-20 lg:pt-24 xl:pt-32 z-20 lg:m-auto')
+  u-container(v-bind='options' as='ul' class='grid grid-rows-1 grid-cols-1 sm:grid-rows-2 sm:grid-cols-2 lg:grid-rows-3 lg:grid-cols-3 gap-16 pt-8 sm:pt-12 md:pt-20 lg:pt-24 xl:pt-32 z-20 lg:m-auto')
     li(v-for='item, index in data?.items' :class='`scroll-fade-animation lg:grid-start-${index + 1}`')
       div(class='flex flex-col gap-4 align-start')
         h3(class="font-bold uppercase font-display text-4xl sm:text-4xl md:text-3xl lg:text-5xl xl:text-6xl text-(--ui-primary) hyphens-auto break-words sm:break-normal") {{  item.title  }}
@@ -20,6 +20,20 @@ type Content = {
 		content: string[]
 	}[]
 }
+
+type Props = {
+	scaleDown?: boolean
+}
+
+const props = defineProps<Props>()
+
+const options = computed(() => {
+	const base = 'transition-transform duration-200 ease-out'
+
+	return {
+		class: props.scaleDown ? `scale-90 ${ base }` : base
+	}
+})
 
 const { data, status } = useFetchContent<Content>('section/skills', {
 	default: () => ({

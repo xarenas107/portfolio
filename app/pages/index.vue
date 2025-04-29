@@ -1,16 +1,16 @@
 <template lang="pug">
-beta-section-hero(v-intersect='intersect' ref='section')#home
-beta-section-studies(v-intersect='intersect' ref='section')#studies
-beta-section-certificates(v-intersect='intersect' ref='section')#certificates
-beta-section-experiences(v-intersect='intersect' ref='section')#experience
-beta-section-skills(v-intersect='intersect' ref='section')#skills
+beta-section-hero(v-intersect='intersect' :scale-down ref='section')#home
+beta-section-studies(v-intersect='intersect' :scale-down ref='section')#studies
+beta-section-certificates(v-intersect='intersect' :scale-down ref='section')#certificates
+beta-section-experiences(v-intersect='intersect' :scale-down ref='section')#experience
+beta-section-skills(v-intersect='intersect' :scale-down ref='section')#skills
 
 div(class='relative w-full min-h-[200svh] flex items-center justify-center overflow-clip motion-reduce:hidden py-24 bg-default')
 	div(class="scale-animation rounded-full bg-(--ui-bg-elevated)/50 p-8 aspect-square")
 		div(class="h-4 w-4 mask-animation bg-elevated rounded-full relative")
 
-beta-section-projects(v-intersect='intersect' ref='section')#projects
-beta-section-footer
+beta-section-projects(v-intersect='intersect' :scale-down ref='section')#projects
+beta-section-footer(:scale-down)
 </template>
 
 <script lang="ts" setup>
@@ -18,6 +18,11 @@ definePageMeta({
 	navbar: true,
 	keepalive: true
 })
+
+type Props = {
+	scaleDown?: boolean
+}
+defineProps<Props>()
 
 const hash = useHashRoute()
 const section = ref(null)
