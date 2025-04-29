@@ -8,6 +8,17 @@ export default defineAppConfig({
 		colors: {
 			primary: 'zinc',
 			neutral: 'slate'
-		}
+		},
+		drawer: {
+			compoundVariants: [
+			  {
+				direction: 'top',
+				inset: false,
+				class: {
+				  content: 'inset-x-0 top-0 rounded-b-none'
+				}
+			  },
+			]
+		  }
 	},
 })
