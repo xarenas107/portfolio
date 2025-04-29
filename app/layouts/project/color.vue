@@ -4,7 +4,7 @@ div(class='flex flex-col items-stretch w-full content-between z-10 relative roun
 
 	div(class='flex flex-wrap gap-8 sm:max-h-48 lg:max-h-64')
 		u-card(v-for='color, index in palette' class='basis-36 sm:max-w-48 lg:max-w-64 h-full grow content-end slide-up-animation' variant='outline' :style='{ "--ui-color": `${color}`, "--translate": index }')
-			div(class='aspect-square w-full flex flex-col justify-end rounded-lg ring ring-inset bg-(--ui-color) overflow-hidden')
+			div(class='aspect-square w-full flex flex-col justify-end rounded-md ring ring-inset bg-(--ui-color) overflow-hidden')
 				span(class='text-10xl font-bold font-display leading-24 -ml-2 -indent-0.5 text-pretty text-(--ui-bg) text-stroke text-stroke-(--ui-border)') {{ index + 1 }}
 			
 			template(#footer)

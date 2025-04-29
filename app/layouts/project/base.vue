@@ -12,7 +12,10 @@ u-container(class="min-h-svh py-24 flex flex-col gap-16 lg:gap-24 relative ")
 				u-icon(name='i-svg-spinners:180-ring-with-bg' size='2xl' class='w-12 h-12 animate-spin') 
 				span(class='animate-pulse') {{ t('state.loading') }}...
 
-		nuxt-layout(v-for='item in items' v-bind='item')
+
+		u-transition(delay='.1s' before-enter-class="opacity-0" duration='.25s' timing-function="ease-out")
+			template(#default='{ state, ...props }')
+				nuxt-layout(v-for='item in items' v-bind='{ ...props, ...item }')
 </template>
 
 <script lang="ts" setup>
