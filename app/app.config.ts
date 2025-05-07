@@ -11,14 +11,21 @@ export default defineAppConfig({
 		},
 		drawer: {
 			compoundVariants: [
-			  {
-				direction: 'top',
-				inset: false,
-				class: {
-				  content: 'inset-x-0 top-0 rounded-b-none'
+				{
+					direction: 'top',
+					inset: false,
+					class: {
+						content: 'inset-x-0 top-0 rounded-b-none'
+					}
+				},
+				{
+					direction: 'bottom',
+					inset: false,
+					class: {
+						content: 'inset-x-0 bottom-0 rounded-t-none'
+					}
 				}
-			  },
 			]
-		  }
-	},
+		}
+	}
 })

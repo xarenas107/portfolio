@@ -13,12 +13,11 @@ type Props = {
 
 withDefaults(defineProps<Props>(), {
 })
-
 </script>
 
 <style lang="scss" scoped>
-@keyframes text { 
-	from { background-size: 0 } 
+@keyframes text {
+	from { background-size: 0 }
 	to { background-size: 100% }
 }
 

@@ -6,6 +6,10 @@ u-main(ref='main' class='skew-y-(--skew) transition-(--transition-property) dura
 <script lang="ts" setup>
 import type { ComponentPublicInstance } from 'vue'
 
+type Emit = {
+	(event: 'scroll', value: Event): void
+}
+
 type State = {
 	scroll: number
 	timer?: NodeJS.Timeout
@@ -13,6 +17,8 @@ type State = {
 	current: number
 	ease: number
 }
+
+const emit = defineEmits<Emit>()
 
 const reduceMotion = usePreferredReducedMotion()
 const main = useTemplateRef<ComponentPublicInstance>('main')
@@ -43,6 +49,8 @@ const update = (event: Event) => {
 	state.timer = setTimeout(() => {
 		if (element) element.style.removeProperty('--skew')
 	}, 150)
+
+	emit('scroll', event)
 }
 
 useEventListener('scroll', update, {

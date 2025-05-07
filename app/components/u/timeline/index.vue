@@ -1,34 +1,42 @@
 <template lang='pug'>
 ol(class="w-full flex group h-fit motion-reduce:overflow-auto scroll-hidden snap-x snap-mandatory" :class='[ui.base, { "flex-col": !horizontal, "items-center": !horizontal && alternate }]')
-    slot(v-if='slot.default' v-for='item, index in data' :item :index :orientation :alternate :lazy)
+	slot(v-if='slot.default' v-for='item, index in data' :item :index :orientation :alternate :lazy)
 
-    u-timeline-item(
-        v-else
-        v-for='item, index in data'
-        v-bind='item'
-        v-model:progress="percents[index]"
-        :key='index' 
+	u-timeline-item(
+		v-else
+		v-for='item, index in data'
+		:title='item[titleKey]'
+		:subtitle='item[subtitleKey]'
+		:badge='item[badgeKey]'
+		:active='item?.active'
+		:content='item[contentKey]'
+		:startAt='item.startAt'
+		:endAt='item.endAt'
+		:location="item[locationKey]"
+		v-model:progress="percents[index]"
+		:key='index'
 		:ui='ui.item'
-        :line-start='index === 0'
-        :grow='index + 1 >= items.length'
-        :reverse='!(index % 2)'
-        :active="item?.active"
-        :orientation
-        :alternate
-        :lazy
-        class='timeline-item snap-center'
-        )
+		:line-start='index === 0'
+		:grow='index + 1 >= items.length'
+		:reverse='!(index % 2)'
+		:orientation
+		:alternate
+		:lazy
+		class='timeline-item snap-center'
+		)
 </template>
 
 <script lang='ts' setup>
-type Item = {
+type Item<T = any> = {
 	title?: string
 	subtitle?: string
 	active?: boolean
 	badge?: string
 	time?: string
 	content?: string
-	highlight?: boolean
+	location?: string
+} & {
+	[key: string]: T
 }
 
 type Props = {
@@ -36,6 +44,11 @@ type Props = {
 	alternate?: boolean
 	reverse?: boolean
 	items?: Item[]
+	badgeKey?: string
+	titleKey?: string
+	subtitleKey?: string
+	contentKey?: string
+	locationKey?: string
 	pending?: boolean
 	lazy?: boolean
 	progress?: number
@@ -54,6 +67,11 @@ type Props = {
 const slot = useSlots()
 const props = withDefaults(defineProps<Props>(), {
 	orientation: () => 'horizontal',
+	badgeKey: () => 'badge',
+	titleKey: () => 'title',
+	subtitleKey: () => 'subtitle',
+	contentKey: () => 'content',
+	locationKey: () => 'location',
 	items: () => [],
 	ui: () => ({}),
 	progress: () => 0

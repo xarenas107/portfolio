@@ -38,7 +38,8 @@ const intersect = [
 		rootMargin: props.margin,
 		threshold: props.threshold,
 		once: props.once
-	}]
+	}
+]
 
 const options = computed(() => {
 	const { transition, disabled } = props
@@ -46,7 +47,3 @@ const options = computed(() => {
 	return typeof transition === 'string' ? { name: transition } : transition
 })
 </script>
-
-<style lang='scss' scoped>
-// @use '@/assets/scss/transition';
-</style>

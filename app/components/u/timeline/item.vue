@@ -31,7 +31,13 @@ u-lazy(:class='[{ grow }]' :disabled='!lazy' class="flex w-max min-w-fit max-w-f
 
 			div(class='flex flex-col gap-4')
 				p(v-if='content' :class='ui.text' class='text-base opacity-80') {{ content }}
-				time(class="text-sm opacity-60 uppercase" :class='ui.text')  {{ time }}
+
+				div(class='text-sm opacity-60 uppercase gap-2')
+					nuxt-time(:datetime='startAt' v-bind='timeProps')
+					span(v-if='active || endAt' v-text='" - "')
+					span(v-if='active') {{  t('time.now') }}
+					nuxt-time(v-else-if='endAt' :datetime='endAt' v-bind='timeProps')
+					span(v-if='location') {{ `, ${location}` }}
 </template>
 
 <script lang='ts' setup>
@@ -42,6 +48,10 @@ type Props = {
 	badge?: string
 	content?: string
 	time?: string
+	timeProps?: Intl.DateTimeFormatOptions
+	startAt?: string | number | Date
+	endAt?: string | number | Date
+	location?: string
 	active?: boolean
 	ui?: {
 		text?: string
@@ -55,7 +65,6 @@ type Props = {
 		progress?: string
 	}
 	pending?: boolean
-
 	orientation?: 'vertical' | 'horizontal'
 	alternate?: boolean
 	lineStart?: boolean
@@ -67,9 +76,15 @@ const props = withDefaults(defineProps<Props>(), {
 	ui: () => ({
 		text: 'text-default',
 		dot: {}
+	}),
+	startAt: () => Date.now(),
+	timeProps: () => ({
+		year: 'numeric',
+		month: 'short'
 	})
 })
 
+const { t } = useI18n()
 const progress = defineModel('progress', { default: 0 })
 const horizontal = computed(() => props.orientation === 'horizontal')
 const styles = computed(() => {

@@ -12,6 +12,7 @@ u-app(:locale)
 
 <script lang="ts" setup>
 import * as locales from '@nuxt/ui/locale'
+
 const { locale: current } = useI18n()
 
 const locale = computed(() => locales[current.value])
@@ -22,7 +23,4 @@ const menu = shallowRef(false)
 
 <style lang='scss'>
 @use '@/assets/scss/styles';
-// @use '@/assets/scss/transition';
-// @use '@/assets/scss/scrollbar';
-// @use '@/assets/scss/fonts';
 </style>
