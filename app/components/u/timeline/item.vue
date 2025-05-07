@@ -33,10 +33,10 @@ u-lazy(:class='[{ grow }]' :disabled='!lazy' class="flex w-max min-w-fit max-w-f
 				p(v-if='content' :class='ui.text' class='text-base opacity-80') {{ content }}
 
 				div(class='text-sm opacity-60 uppercase gap-2')
-					nuxt-time(:datetime='startAt' v-bind='timeProps')
+					nuxt-time(:datetime='startAt' v-bind='options')
 					span(v-if='active || endAt' v-text='" - "')
 					span(v-if='active') {{  t('time.now') }}
-					nuxt-time(v-else-if='endAt' :datetime='endAt' v-bind='timeProps')
+					nuxt-time(v-else-if='endAt' :datetime='endAt' v-bind='options')
 					span(v-if='location') {{ `, ${location}` }}
 </template>
 
@@ -84,7 +84,7 @@ const props = withDefaults(defineProps<Props>(), {
 	})
 })
 
-const { t } = useI18n()
+const { t, locale } = useI18n()
 const progress = defineModel('progress', { default: 0 })
 const horizontal = computed(() => props.orientation === 'horizontal')
 const styles = computed(() => {
@@ -99,6 +99,13 @@ const styles = computed(() => {
 		spacing: horizontal.value ? 'mr-10' : 'mb-10',
 		column: horizontal.value ? `flex-col grid-rows-timeline${alternate} gap-6` : `grid-cols-timeline${alternate} grid-flow-col-dense gap-6`,
 		animation: 'fade-bottom-animation'
+	}
+})
+
+const options = computed(() => {
+	return {
+		locale: locale.value,
+		...props.timeProps
 	}
 })
 

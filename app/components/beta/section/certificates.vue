@@ -22,7 +22,7 @@ div(class='py-24 min-h-svh bg-(--ui-primary) relative overflow-clip place-conten
               template(#footer)
                 div(v-if='item.endAt' class='flex gap-2 text-primary-100 dark:text-primary-50/80 items-center')
                   u-icon(name='heroicons-outline:clock' class='w-5 h-5')
-                  nuxt-time(:datetime="item.endAt" class='uppercase text-xs' month='long' year='numeric')
+                  nuxt-time(:datetime="item.endAt" :locale class='uppercase text-xs' month='long' year='numeric')
 
               nuxt-img(v-if='item.image' :src='item.image' :alt='item.provider' class='-z-20 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-10 w-[10rem] rounded-lg overflow-clip pointer-events-none invert')
 </template>
@@ -46,7 +46,7 @@ type Props = {
 }
 const props = defineProps<Props>()
 
-const { t } = useI18n()
+const { t, locale } = useI18n()
 const options = computed(() => {
 	const base = 'transition-transform duration-200 ease-out'
 
