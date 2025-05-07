@@ -23,6 +23,10 @@
 }
 
 @theme {
+	/* Breakpoints */
+	--breakpoint-mobile: 0rem;
+	--breakpoint-desktop: 64rem;
+
 	/* Font family */
 	--font-sans: 'Plus Jakarta Sans', 'Inter', 'Proxima Nova', 'ui-sans-serif', 'system-ui', 'sans-serif';
 	--font-display: 'Khand', 'ui-sans-serif', 'system-ui', 'sans-serif';
@@ -63,6 +67,15 @@
 @utility paint-order-* {
 	paint-order: --value('stroke', 'fill', 'markers');
 }
+
+@utility view-transition-name-* {
+	view-transition-name: --value([*]);
+}
+
+@utility contain-* {
+	contain: --value('none', 'size', 'layout', 'paint', 'strict');
+}
+
 
 /* @utility bg-elevated {
 	background-color: color-mix(var(--bg-elevated), --modifier(ratio));
