@@ -25,6 +25,9 @@
 		"violet": "Violet",
 		"yellow": "Yellow"
 	},
+	"time": {
+		"now": "Now"
+	},
 	"greetings": {
 		"afternoon": "Good afternoon!",
 		"evening": "Good evening!",
@@ -114,7 +117,8 @@
 		"experience": "Experience",
 		"home": "Home",
 		"skills": "Skills",
-		"studies": "Studies"
+		"studies": "Studies",
+		"projects": "Projects"
 	},
 	"share": {
 		"name": "Share"

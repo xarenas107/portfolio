@@ -48,6 +48,9 @@
 		"indigo": "Índigo",
 		"slate": "Pizarra"
 	},
+	"time": {
+		"now": "Ahora"
+	},
 	"menu": {
 		"sr": "Abrir el menú principal"
 	},
@@ -63,7 +66,8 @@
 		"experience": "Experience",
 		"certificates": "Certificados",
 		"skills": "Skills",
-		"studies": "Estudios"
+		"studies": "Estudios",
+		"projects": "Proyectos"
 	},
 	"share": {
 		"name": "Compartir"
