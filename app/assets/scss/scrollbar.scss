@@ -1,16 +1,26 @@
 @layer utilities {
+    * {
+        // scrollbar-gutter: stable;
+        scrollbar-width: none
+    }
+
     *::-webkit-scrollbar {
-        width: .5rem;
+        width: .6rem;
 
         &-thumb {
             border-radius: 1rem;
-            transition: border ease-in-out .2s;
             background-color: var(--ui-bg-accented);
-            border: .125rem solid var(--ui-bg);
+            border: solid var(--ui-bg);
+            border-width: .2rem ;
 
             &:hover {
                 background-color: var(--ui-bg-inverted);
-                border: thin solid var(--ui-bg);
+                border-width: thin;
+            }
+
+            &, &:hover {
+                transition: 0.2s ease;
+                transition-property: background-color, border-width;
             }
         }
 
@@ -19,12 +29,18 @@
         }  
 
         &-track {
-            background-color: var(--ui-bg);
+            background-color: transparent;
 
             &-track:horizontal {
                 border-radius: 1rem;
             }
         }
+
+        &-button {
+            width: 0;
+            height: 0;
+            display: none;
+          }
     }
 
     .scroll-hidden::-webkit-scrollbar {
