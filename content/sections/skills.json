@@ -1,0 +1,11 @@
+{
+	"id": "skills",
+	"order": 5,
+	"icon": "i-heroicons-outline:wrench-screwdriver",
+	"en": {
+		"title": "Skills"
+	},
+	"es": {
+		"title": "Habilidades"
+	}
+}

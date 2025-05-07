@@ -2,11 +2,25 @@
 div(class='overflow-clip bg-(--ui-primary) relative flex motion-safe:min-h-svh flex-col')
 	div(class='h-[20svh] w-full bg-(--ui-primary)')
 	u-container(v-bind='options' class='h-full w-full')
-		section-title(:class='ui.title' class="scroll-slide-animation" hyphens) {{  data?.title }}
+		section-title(:class='ui.title' class="scroll-slide-animation" hyphens) {{  t('section.experience', 2) }}
 
 	div(class='relative flex w-full bg-default h-full motion-safe:min-h-[150svh] py-24 grow motion-reduce:overflow-auto scroll-hidden')
 		div(v-bind='options' class='px-4 sm:px-6 motion-reduce:pr-0 motion-reduce:sm:pr-0 motion-reduce:lg:pr-0 lg:px-8 gap-8 motion-reduce:max-w-7xl mx-auto w-full grow')
-			u-timeline(:ui='ui.timeline' alternate reverse :items='data?.items' :pending orientation='horizontal' data-allow-mismatch='class' class='scroll-slide-animation-reverse motion-safe:top-[30svh] motion-safe:sticky motion-safe:min-w-[var(--width)]' :style='`--width: ${width}rem`')
+			u-timeline(
+				:ui='ui.timeline'
+				:items='data'
+				:pending
+				content-key="description"
+				badge-key="abbreviation"
+				title-key="provider"
+				subtitle-key="job"
+				orientation='horizontal'
+				data-allow-mismatch='class'
+				class='scroll-slide-animation-reverse motion-safe:top-[30svh] motion-safe:sticky motion-safe:min-w-[var(--width)]' :style='`--width: ${width}rem`'
+				alternate
+				reverse
+				lazy
+				)
 </template>
 
 <script lang="ts" setup>
@@ -28,33 +42,25 @@ type Props = {
 
 const props = defineProps<Props>()
 
+const { t } = useI18n()
+
 const options = computed(() => {
 	const base = 'transition-transform duration-200 ease-out'
 
 	return {
-		class: props.scaleDown ? `scale-90 ${ base }` : base
+		class: props.scaleDown ? `scale-90 ${base}` : base
 	}
 })
 
 const getTime = (value: string) => new Date(value).getTime()
 
-const { data, status } = useFetchContent<Content>('section/experiences', {
-	callback: (data) => {
-		data.items.sort((a, b) => getTime(b.startAt) - getTime(a.startAt))
-		return data
-	},
-	default: () => ({
-		title: '',
-		items: []
-	})
-})
+const { data, pending } = useExperiences()
 
 const width = computed(() => {
-	const size = data.value?.items.length || 0
+	const size = data.value?.length || 0
 	const length = 25 * (8 + size)
 	return length
 })
-const { pending } = useStatus(status)
 
 const ui = {
 	title: 'text-(--ui-bg) -mb-2 md:-mb-3 lg:-mb-4',
@@ -65,7 +71,7 @@ const ui = {
 		divider: 'border',
 		text: 'text-highlighted',
 		badge: {
-			base: 'text-(--ui-primary) bg-(--ui-primary)/20',
+			base: 'text-(--ui-primary) bg-(--ui-primary)/20'
 		}
 	}
 }

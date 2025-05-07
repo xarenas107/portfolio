@@ -4,7 +4,7 @@ div(class='overflow-clip min-h-svh flex flex-col relative')
 
 	div(class='w-full bg-(--ui-primary) overflow-clip')
 		u-container(v-bind='options' class='overflow-clip')
-			section-title(class="text-(--ui-bg) -mt-1 md:-mt-2 scroll-slide-animation" hyphens) {{ data?.title }}
+			section-title(class="text-(--ui-bg) -mt-1 md:-mt-2 scroll-slide-animation" hyphens) {{ t('section.studies') }}
 
 	div(class='flex flex-col w-full h-full py-24 grow bg-(--ui-primary)')
 		div(v-bind='options' class='px-4 sm:px-6 lg:px-8 gap-8 max-w-7xl mx-auto w-full motion-reduce:pb-24 grow')
@@ -13,33 +13,34 @@ div(class='overflow-clip min-h-svh flex flex-col relative')
 				template(#fallback)
 					u-timeline(:ui='ui.timeline' pending)
 
-				u-timeline(:orientation :ui='ui.timeline' :alternate='!mobile || md' :reverse='!mobile || md' :items='data?.items' :pending class='scroll-slide-reverse-animation')
+				u-timeline(
+					:orientation
+					:ui='ui.timeline'
+					:alternate='!mobile || md'
+					:reverse='!mobile || md'
+					:items='data'
+					:pending
+					class='scroll-slide-reverse-animation'
+					subtitle-key='provider'
+					badge-key='type'
+					time-key='startAt'
+					lazy
+					)
 </template>
 
 <script lang="ts" setup>
-type Content = {
-	title: string
-	items: {
-		title: string
-		subtitle: string
-		badge: string
-		time: string
-		active?: boolean
-		startAt: string
-	}[]
-}
-
 type Props = {
 	scaleDown?: boolean
 }
 
 const props = defineProps<Props>()
+const { t } = useI18n()
 
 const options = computed(() => {
 	const base = 'transition-transform duration-200 ease-out'
 
 	return {
-		class: props.scaleDown ? `scale-90 ${ base }` : base
+		class: props.scaleDown ? `scale-90 ${base}` : base
 	}
 })
 
@@ -47,19 +48,7 @@ const { mobile, md } = useDisplay()
 const getTime = (value: string) => new Date(value).getTime()
 
 const orientation = computed(() => mobile.value ? 'vertical' : 'horizontal')
-const { data, status } = useFetchContent<Content>('section/studies', {
-	callback: (data) => {
-		data.items.sort((a, b) => getTime(b.startAt) - getTime(a.startAt))
-		return data
-	},
-	pick: ['title', 'items'],
-	default: () => ({
-		title: '',
-		items: []
-	})
-})
-
-const { pending } = useStatus(status)
+const { data, pending } = useStudies()
 
 const ui = {
 	timeline: {
@@ -69,8 +58,8 @@ const ui = {
 			base: 'bg-primary-100 dark:bg-primary-200'
 		},
 		badge: {
-			base: 'text-primary-100 dark:text-primary-50 bg-primary-400/20 dark:bg-primary-300/20 ring ring-primary-100/25 dark:ring-primary-50/25',
-		},
+			base: 'text-primary-100 dark:text-primary-50 bg-primary-400/20 dark:bg-primary-300/20 ring ring-primary-100/25 dark:ring-primary-50/25'
+		}
 		// text: 'text-primary-100 dark:text-primary-200'
 	}
 }

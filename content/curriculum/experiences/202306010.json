@@ -1,0 +1,15 @@
+{
+   "en": {
+      "job": "UI designer",
+      "description": "Development of website interface and virtual store, creation of animations and graphic materials for digital media.",
+      "location": "Peru"
+   },
+   "es": {
+      "job": "Diseñador UI",
+      "description": "Desarrollo de interfaz de sitio web y tienda virtual, creación de animaciones y materiales gráficos para soportes digitales.",
+      "location": "Perú"
+   },
+   "provider": "Kenku",
+   "startAt": "2023-06-10",
+    "endAt": "2024-09-01"
+  }

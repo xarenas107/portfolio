@@ -3,7 +3,7 @@ import colors from 'tailwindcss/colors'
 
 export default () => {
 	// reactive(config)
-	return reactive({ 
+	return reactive({
 		theme: { colors }
-	 })
+	})
 }

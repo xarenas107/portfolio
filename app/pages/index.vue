@@ -1,8 +1,8 @@
 <template lang="pug">
-beta-section-hero(v-intersect='intersect' :scale-down ref='section')#home
+beta-section-home(v-intersect='intersect' :scale-down ref='section')#home
 beta-section-studies(v-intersect='intersect' :scale-down ref='section')#studies
 beta-section-certificates(v-intersect='intersect' :scale-down ref='section')#certificates
-beta-section-experiences(v-intersect='intersect' :scale-down ref='section')#experience
+beta-section-experiences(v-intersect='intersect' :scale-down ref='section')#experiences
 beta-section-skills(v-intersect='intersect' :scale-down ref='section')#skills
 
 div(class='relative w-full min-h-[200svh] flex items-center justify-center overflow-clip motion-reduce:hidden py-24 bg-default')
@@ -16,12 +16,15 @@ beta-section-footer(:scale-down)
 <script lang="ts" setup>
 definePageMeta({
 	navbar: true,
-	keepalive: true
+	keepalive: true,
+	viewTransition: false
 })
 
 type Props = {
 	scaleDown?: boolean
 }
+
+await new Promise(resolve => setTimeout(resolve, 10))
 defineProps<Props>()
 
 const hash = useHashRoute()

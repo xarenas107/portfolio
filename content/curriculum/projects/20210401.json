@@ -1,0 +1,28 @@
+{
+	"cover": "/project/timer/cover.png",
+	"layout": "project-base",
+	"en": {
+		"title": "Time mobile app",
+		"description": "UI Design for an Adobe creative challenge."
+	},
+	"es": {
+		"title": "Aplicación de temporizador para móviles",
+  		"description": "Diseño de interfaz de usuario para un desafío creativo de Adobe."
+	},
+	"sections": [
+		{
+			"name": "project-section-spread",
+			"detail": "reverse",
+			"aspect-ratio": "195/420",
+			"alt": "",
+			"src": [
+				"/project/timer/app/1.png",
+				"/project/timer/app/2.png", 
+				"/project/timer/app/3.png"
+			]
+		}, {
+			"name": "project-color",
+			"palette": ["#36C2FE", "#E8ECF0", "#FF8C9A"]
+		}
+  ]
+}

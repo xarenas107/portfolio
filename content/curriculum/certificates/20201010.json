@@ -1,0 +1,14 @@
+{
+	"en": {
+		"title": "Introduction to JavaScript programming",
+		"credentials": ["https://www.domestika.org/en/certificates/17591f8eb98cadc75ea09629764a7947"]
+	},
+	"es": {
+		"title": "Introducción a la programación en JavaScript",
+		"credentials": ["https://www.domestika.org/es/certificates/17591f8eb98cadc75ea09629764a7947"]
+	},
+	"provider": "Domestika",
+	"image": "/brands/domestika.png",
+	"startAt": "2020-10-10",
+	"endAt": "2020-10-10"
+}

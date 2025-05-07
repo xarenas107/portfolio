@@ -1,0 +1,35 @@
+{
+	"name": "Xavier",
+	"en": {
+		"description": "Graduated as a graphic designer in 2018 from the Higher Institute of Design of the University of Havana (ISDi) and currently studying the master's degree in UX-UI in Barcelona",
+		"job": "UX-UI Designer",
+		"location": "Barcelona, Spain"
+	},
+	"es": {
+		"description": "Graduado de diseño gráfico en 2018 del Instituto Superior de Diseño de la Universidad de la Habana(ISDi) y actualmente realizando el máster en UX-UI en Barcelona",
+		"job": "Diseñador UX-UI",
+		"location": "Barcelona, España"
+	},
+	"portfolio": [{
+			"title": "LinkedIn",
+			"icon": "i-fa6-brands:linkedin-in",
+			"href": "https://www.linkedin.com/in/xarenas"
+		},{
+			"title": "Behance",
+			"icon": "i-fa6-brands:behance",
+			"href": "https://www.behance.net/xavierarenas"
+		},{
+			"title": "Github",
+			"icon": "i-fa6-brands:github",
+			"href": "https://www.github.com/xarenas107"
+		}],
+	"contact": [{
+			"title": "Whatsapp",
+			"icon": "i-fa6-brands:whatsapp",
+			"href": "https://wa.me/+34675333315"
+		},{
+			"title": "Email",
+			"icon": "i-material-symbols:mail-outline",
+			"href": "mailto:xarenas107@gmail.com"
+		}]
+}

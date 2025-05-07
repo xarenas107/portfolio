@@ -1,0 +1,16 @@
+{
+	"en": {
+		"title": "UX/UI Design",
+		"provider": "Higher School of Design (ESDi)",
+		"type": "Master",
+		"location": "España"
+	},
+	"es": {
+		"title": "Diseño UX/UI ",
+		"provider": "Escuela Superior de Diseño (ESDi)",
+		"type": "Maestría",
+		"location": "Spain"
+	},
+	"startAt": "2024-10-01",
+	"active": true
+}

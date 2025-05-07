@@ -1,0 +1,10 @@
+{
+	"en": {
+		"title": "Technologies",
+		"content": ["Figma", "Photoshop", "Illustrator", "Indesign", "Fresco", "After Effects", "Premier", "XD", "Javascript", "Typescript", "MongoDB", "NodeJs", "CSS", "SCSS", "HTML5", "Pug", "Vue", "Nuxt"]
+	},
+	"es": {
+		"title": "Tecnologías",
+		"content": ["Figma", "Photoshop", "Illustrator", "Indesign", "Fresco", "After Effects", "Premier", "XD", "Javascript", "Typescript", "MongoDB", "NodeJs", "CSS", "SCSS", "HTML5", "Pug", "Vue", "Nuxt"]
+	}
+}

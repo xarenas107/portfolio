@@ -1,0 +1,11 @@
+{
+	"id": "certificates",
+	"order": 3,
+	"icon": "i-heroicons-outline:badge-check",
+	"en": {
+		"title": "Certificates"
+	},
+	"es": {
+		"title": "Certificados"
+	}
+}

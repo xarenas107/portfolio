@@ -1,0 +1,16 @@
+{
+	"en": {
+		"title": "UX/UI Design",
+		"provider": "San Ignacio of Loyola Institute (ISIL) ",
+		"type": "Graduate",
+		"location": "Peru"
+	},
+	"es": {
+		"title": "Diseño UX/UI ",
+		"provider": "Institute San Ignacio de Loyola (ISIL) ",
+		"type": "Postgrado",
+		"location": "Perú"
+	},
+	"startAt": "2020-02-01",
+	"endAt": "2020-05-01"
+}

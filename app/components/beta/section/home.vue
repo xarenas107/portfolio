@@ -1,7 +1,7 @@
 <template lang="pug">
 div(class='bg-primary-100/20 dark:bg-primary-900/20 max-w-full overflow-clip flex items-center min-h-svh')
-	u-lazy(class='w-full')
-		u-container(v-bind='options' class="flex h-full w-full flex-col gap-4 overflow-visible py-16 pb-24 sm:py-32 relative")
+	u-lazy(class='w-full min-h-svh lg:min-h-auto')
+		u-container(v-bind='options' class="flex h-full w-full flex-col gap-4 overflow-visible py-16 pb-24 lg:py-32 relative")
 
 			u-transition(delay='1s' before-enter-class="max-w-0" enter-class='max-w-full' duration='.75s' timing-function="ease-in-out")
 				template(#default='{ state, ...props }')
@@ -23,7 +23,7 @@ div(class='bg-primary-100/20 dark:bg-primary-900/20 max-w-full overflow-clip fle
 						template(#default='{ state, ...props }')
 							div(class='flex place-content-center place-items-center gap-x-3 transition-all duration-200' :class='[state.idle ? "sm:gap-x-3" : "sm:gap-x-4 md:gap-x-4"]')
 								h1 {{  t('im') }}
-								h1(class='lg:order-1') {{ user.data?.name }},
+								h1(class='lg:order-1') {{ data?.name }},
 
 								span(v-bind='props' class='h-font grow bg-(--ui-primary) rounded-(--ui-radius)')
 
@@ -34,7 +34,7 @@ div(class='bg-primary-100/20 dark:bg-primary-900/20 max-w-full overflow-clip fle
 					u-transition(delay='1s' before-enter-class="max-w-0" enter-class='max-w-full' duration='1s' timing-function="ease-in-out")
 						template(#default='{ state, ...props }')
 							div(class='flex flex-wrap sm:flex-nowrap place-content-center gap-x-3 sm:gap-x-4 md:gap-x-6 hyphens-auto place-items-center transition-all duration-200')
-								div(v-for='word, index in user.data?.job?.split(" ")' class='flex place-content-center place-items-center text-nowrap w-full gap-x-3 sm:gap-x-4 md:gap-x-6 sm:w-auto')
+								div(v-for='word, index in data?.job?.split(" ")' class='flex place-content-center place-items-center text-nowrap w-full gap-x-3 sm:gap-x-4 md:gap-x-6 sm:w-auto')
 									h1 {{ word }}
 									span(v-bind='props' class='grow lg:-order-1 h-font sm:hidden bg-(--ui-primary) rounded-(--ui-radius)')
 
@@ -43,7 +43,7 @@ div(class='bg-primary-100/20 dark:bg-primary-900/20 max-w-full overflow-clip fle
 			u-transition(delay='.25s' before-enter-class="opacity-0 translate-y-10" duration='.5s' timing-function="ease-out")
 				template(#default='{ state, ...props }')
 					div(class='flex flex-col md:flex-row gap-6 justify-center')
-						p(v-bind='props' class='text-base text-default text-balance max-w-sm lg:max-w-lg delay-[1s] md:delay-0') {{ user.data?.description }}
+						p(v-bind='props' class='text-base text-default text-balance max-w-sm lg:max-w-lg delay-[1s] md:delay-0') {{ data?.description }}
 
 						u-transition(delay='1s' before-enter-class="max-w-0" enter-class='max-w-full' duration='1s' timing-function="ease-in-out")
 							template(#default='{ state, ...props }')
@@ -51,11 +51,11 @@ div(class='bg-primary-100/20 dark:bg-primary-900/20 max-w-full overflow-clip fle
 
 						div(v-bind='props' class='flex gap-y-3 gap-x-6 flex-col max-w-sm delay-[1.2s] md:delay-0')
 							div(class='flex gap-y-3 gap-x-6 flex-wrap')
-								u-link-action(v-for='item in user.data?.portfolio' v-bind='item')
-								u-link-action(v-for='item, key in user.data?.contact' v-bind='item' :key)
-								u-link-action(:title='user.data?.location' icon='i-material-symbols:location-on-outline')
+								u-link-action(v-for='item in data?.portfolio' v-bind='item')
+								u-link-action(v-for='item, key in data?.contact' v-bind='item' :key)
+								u-link-action(:title='data?.location' icon='i-material-symbols:location-on-outline')
 
-			div(class='w-full bottom-0 absolute left-0 items-center justify-center pointer-events-none flex') 
+			div(class='w-full bottom-0 absolute left-0 items-center justify-center pointer-events-none flex')
 				u-icon(name='i-heroicons:arrow-small-down-solid' class="w-8 h-8 motion-safe:animate-bounce")
 </template>
 
@@ -70,7 +70,7 @@ const options = computed(() => {
 	const base = 'transition-transform duration-200 ease-out'
 
 	return {
-		class: props.scaleDown ? `scale-90 ${ base }` : base
+		class: props.scaleDown ? `scale-90 ${base}` : base
 	}
 })
 
@@ -84,7 +84,7 @@ const greetings = useGreetings()
 const show = shallowRef(false)
 onMounted(() => show.value = true)
 
-const user = useUser()
+const { data } = useUser()
 </script>
 
 <style lang="scss" scoped>

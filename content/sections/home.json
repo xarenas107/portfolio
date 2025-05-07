@@ -1,0 +1,11 @@
+{
+	"id": "home",
+	"order": 1,
+	"icon": "i-heroicons:home",
+	"en": {
+		"title": "Home"
+	},
+	"es": {
+		"title": "Inicio"
+	}
+}

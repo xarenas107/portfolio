@@ -1,0 +1,16 @@
+{
+   "en": {
+      "job": "Product designer",
+      "description": "User interface development for the Cupra Lunar Rebel and ui redesign of front panels on Seat/Cupra models.",
+      "location": "Peru"
+   },
+   "es": {
+      "job": "Product designer",
+      "description": "Desarrollo de interfaz de usuario para el Cupra Lunar Rebel, rediseño de interfaces de paneles frontales en Seat/Cupra.",
+      "location": "Perú"
+   },
+   "provider": "North",
+   "startAt": "2025-02-20",
+   "endAt": "2025-05-20",
+   "active": true
+}

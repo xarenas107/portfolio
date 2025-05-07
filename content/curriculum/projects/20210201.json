@@ -1,0 +1,54 @@
+{
+	"title": "Karat",
+	"cover": "/project/20210201/cover.png",
+	"layout": "project-base",
+	"en": {
+		"description": "Sales app for a karate's school"
+	},
+	"es": {
+		"description": "Aplicación de ventas para una escuela de karate"
+	},
+	"sections": [
+		{
+		  "name": "project-section-spread-fan",
+		  "detail": true,
+		  "aspect-ratio": "194/420",
+		  "alt": "",
+		  "src": [
+			"/project/20210201/app/1.png",
+			"/project/20210201/app/2.png",
+			"/project/20210201/app/3.png",
+			"/project/20210201/app/4.png",
+			"/project/20210201/app/5.png",
+			"/project/20210201/app/6.png",
+			"/project/20210201/app/7.png"
+		  ]
+		}, {
+		  "name": "project-section-paragraph",
+		  "es": {
+			"description": "El cliente es dueño de una escuela de karate ubicada en Lima, Perú, que cuenta con una tienda de equipamiento deportivo y ofrecen una amplia gama de productos. Karat se dirige a los clientes deportistas y personas interesadas en las artes marciales que necesitan comprar equipamiento de karate."
+		  },
+		  "en": {
+			"description": "The client owns a karate school located in Lima, Peru, with a sports equipment store and a wide range of products. Karat targets athletes and people interested in martial arts who need to purchase karate equipment."
+		  }
+		}, {
+		  "name": "project-responsive",
+		  "detail": true,
+		  "aspect-ratio": ["520/290", "134/290"],
+		  "alt": "",
+		  "src": [
+			"/project/20210201/responsive/1.png",
+			"/project/20210201/responsive/2.png"
+		  ]
+		}, {
+		  "name": "project-color",
+		  "palette": ["#C53B3B", "#E0E1EC"],
+		  "es": {
+			"description": "La gama cromática surge de los colores identitarios de la marca."
+		  },
+		  "en": {
+			"description": "The color range arises from the brand's identity colors."
+		  }
+		}
+	]
+}

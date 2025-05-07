@@ -1,0 +1,11 @@
+{
+	"id": "projects",
+	"order": 6,
+	"icon": "i-heroicons:paint-brush",
+	"en": {
+		"title": "Projects"
+	},
+	"es": {
+		"title": "Proyectos"
+	}
+}

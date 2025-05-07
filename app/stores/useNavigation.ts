@@ -1,34 +1,38 @@
 export default () => {
-	const { locale } = useI18n()
+	const { locale, localeCodes } = useI18n()
 	const hash = useHashRoute()
-	const { data, execute, status } = useLazyAsyncData('navigation:links', async () => {
-		const pick = ['id', 'icon', 'order', 'title']
-		const response = await queryContent('section').locale('').only(pick).sort({ order: 1 }).find()
+
+	const key = 'sections'
+	const fields = ['stem', 'id', 'title', 'icon', 'order'] as const
+
+	const { data, execute, status } = useLazyAsyncData(key, async () => {
+		const response = await queryCollection(key)
+			.order('order', 'ASC')
+			.select(...fields, locale.value)
+			.all()
 
 		for (const route of response) {
-			const path = `section/${route.id}`
-			const { title } = await queryContent(path).locale(locale.value).only('title').findOne() ?? {}
-			route.title = title
+			Object.assign(route, { ...route, ...route[locale.value] ?? {} })
+			localeCodes.value.forEach(code => delete route[code])
 		}
-
 		return response
 	}, {
-		server: false,
-		dedupe: 'defer',
 		default: () => [],
 		watch: [locale]
 	})
 
 	const links = computed(() => {
 		const items = new Set(data.value)
-		return Array.from(items)?.map(({ id, icon, title }, index) => {
+		return Array.from(items)?.map(({ id, stem, icon, title }, index) => {
+			const identifier = stem.split('/').at(-1) ?? id
+
 			return {
-				id,
 				icon,
 				text: title,
 				to: `/#${id}`,
-				active: hash.value === `#${id}`,
-				kbds: ['Shift', `F${index + 1}`]
+				active: hash.value === `#${identifier}`,
+				kbds: ['Shift', `F${index + 1}`],
+				id: identifier
 			}
 		})
 	})
@@ -46,19 +50,19 @@ export default () => {
 		next: () => {
 			const index = links.value.findIndex(({ active }) => active)
 			const next = links.value.at(index + 1 < links.value.length ? index + 1 : -1)
-			actions.go(next?.id)
+			if (next) actions.go(next?.id)
 		},
 		prev: () => {
 			const index = links.value.findIndex(({ active }) => active)
 			const prev = links.value.at(index === 0 ? 0 : index - 1)
-			actions.go(prev?.id)
+			if (prev) actions.go(prev?.id)
 		},
 		execute
 	}
 
-	return reactive({
+	return {
 		data: links,
 		...states,
 		...actions
-	})
+	}
 }

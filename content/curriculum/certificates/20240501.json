@@ -1,0 +1,21 @@
+{
+	"en": {
+		"title": "UX Design Professional Certificate"
+	},
+	"es": {
+		"title": "Certificado de Diseño Profesional UX"
+	},
+	"credentials": [
+      "https://www.coursera.org/account/accomplishments/verify/E9NEM8EVLXG7", 
+      "https://www.coursera.org/account/accomplishments/verify/QU45KL2JGT8G",
+      "https://www.coursera.org/account/accomplishments/verify/E35GUSDPSWPH",
+      "https://www.coursera.org/account/accomplishments/verify/QSYSM9KVPE3V",
+      "https://www.coursera.org/account/accomplishments/verify/7YFU687DHTT9",
+      "https://www.coursera.org/account/accomplishments/verify/JH2S3YSDVHBF",
+      "https://www.coursera.org/account/accomplishments/verify/KUE73DQM3334"
+    ],
+	"provider": "Google",
+	"image": "/brands/google.png",
+	"startAt": "2024-05-01",
+	"endAt": "2024-05-01"
+}
