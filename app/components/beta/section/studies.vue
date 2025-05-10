@@ -9,21 +9,23 @@ div(class='overflow-clip min-h-svh flex flex-col relative')
 	div(class='flex flex-col w-full h-full py-24 grow bg-(--ui-primary)')
 		div(v-bind='options' class='px-4 sm:px-6 lg:px-8 gap-8 max-w-7xl mx-auto w-full motion-reduce:pb-24 grow')
 
-			client-only
-				template(#fallback)
-					u-timeline(:ui='ui.timeline' pending)
+			//- client-only
+			//- 	template(#fallback)
+			//- 		u-timeline(:ui='ui.timeline' pending)
 
-				u-timeline(
-					:orientation
-					:ui='ui.timeline'
-					:alternate='!mobile || md'
-					:reverse='!mobile || md'
-					:items='data'
-					class='scroll-slide-reverse-animation'
-					subtitle-key='provider'
-					badge-key='type'
-					time-key='startAt'
-					)
+			u-timeline(
+				:orientation
+				:ui='ui.timeline'
+				:alternate='!mobile || md'
+				:reverse='!mobile || md'
+				:items='data'
+				:pending
+				class='scroll-slide-reverse-animation'
+				subtitle-key='provider'
+				badge-key='type'
+				time-key='startAt'
+				lazy
+				)
 </template>
 
 <script lang="ts" setup>

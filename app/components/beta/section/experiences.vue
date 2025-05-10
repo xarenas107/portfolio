@@ -11,6 +11,7 @@ div(class='overflow-clip bg-(--ui-primary) relative flex motion-safe:min-h-svh f
 				:ui='ui.timeline'
 				:items='data'
 				:style='`--width: ${width}rem`'
+				:pending
 				content-key="description"
 				badge-key="abbreviation"
 				title-key="provider"
