@@ -1,5 +1,6 @@
 <template lang="pug">
 div(class='bg-primary-100/20 dark:bg-primary-900/20 max-w-full overflow-clip flex items-center min-h-svh')
+
 	u-lazy(class='w-full min-h-svh lg:min-h-auto')
 		u-container(v-bind='options' class="flex h-full w-full flex-col gap-4 overflow-visible py-16 pb-24 lg:py-32 relative")
 

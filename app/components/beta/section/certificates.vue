@@ -7,7 +7,7 @@ div(class='py-24 min-h-svh bg-(--ui-primary) relative overflow-clip place-conten
       template(#default='props')
         u-card-group(v-bind='props' :ui='ui.card' color='primary' class='z-20 motion-reduce:px-4 motion-reduce:sm:px-6 motion-reduce:lg:px-8')
           template(#item='{ item, props }')
-            u-card(v-bind='props' class='flex h-full flex-col justify-between cursor-default w-80 max-w-fit snap-center' as='li' variant='solid')
+            u-card(v-bind='props' class='flex h-full flex-col justify-between cursor-default w-80 min-w-fit snap-center' as='li' variant='solid')
               template(#header)
                 div(class='flex flex-col gap-4 justify-between')
                   div(class='flex flex-col gap-2 justify-between items-start')
@@ -28,19 +28,6 @@ div(class='py-24 min-h-svh bg-(--ui-primary) relative overflow-clip place-conten
 </template>
 
 <script lang="ts" setup>
-type Content = {
-	title: string
-	items: {
-		image?: string
-		title: string
-		credentials: string[]
-		provider: string
-		time: string
-		endAt: string
-		class?: string
-	}[]
-}
-
 type Props = {
 	scaleDown?: boolean
 }
@@ -55,7 +42,7 @@ const options = computed(() => {
 	}
 })
 
-const { data, pending } = useCertificates()
+const { data } = useCertificates()
 
 const ui = {
 	title: 'text-primary-100 dark:text-primary-50',
@@ -76,13 +63,11 @@ const ui = {
 @keyframes fade {
   from {
     transform: translateY(40svh);
-    // -webkit-text-stroke-width: 1px;
     color: transparent;
     opacity: 0;
   }
   50% {
     transform: translateY(0);
-    // -webkit-text-stroke-width: 2px;
     color: transparent;
     opacity: 1;
   }
