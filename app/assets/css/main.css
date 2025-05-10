@@ -68,6 +68,10 @@
 	paint-order: --value('stroke', 'fill', 'markers');
 }
 
+@utility d-* {
+	display: --value('block', 'grid', 'flex', 'none' ,[*]);
+}
+
 @utility view-transition-name-* {
 	view-transition-name: --value([*]);
 }
