@@ -51,6 +51,7 @@ export default defineNuxtConfig({
 		'nuxt-seo-utils',
 		'@nuxthub/core'
 	],
+	ssr: false,
 	imports: {
 		dirs: ['./stores']
 	},

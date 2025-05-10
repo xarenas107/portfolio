@@ -40,7 +40,7 @@ type Item<T = any> = {
 }
 
 type Props = {
-	orientation?: 'vertical' | 'horizontal'
+	orientation?: 'vertical' | 'horizontal' | 'auto'
 	alternate?: boolean
 	reverse?: boolean
 	items?: Item[]

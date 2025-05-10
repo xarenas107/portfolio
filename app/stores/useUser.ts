@@ -14,7 +14,6 @@ export default () => {
 		return response
 	}, {
 		default: () => ({} as UserCollectionItem),
-		server: false,
 		watch: [locale]
 	})
 

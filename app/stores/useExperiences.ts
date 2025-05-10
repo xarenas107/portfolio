@@ -19,7 +19,6 @@ export default () => {
 		return response
 	}, {
 		default: () => [] as ExperiencesCollectionItem[],
-		server: false,
 		watch: [locale]
 	})
 

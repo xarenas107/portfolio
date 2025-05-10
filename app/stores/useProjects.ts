@@ -16,7 +16,6 @@ export default () => {
 
 		return response
 	}, {
-		server: false,
 		default: () => [],
 		watch: [locale]
 	})

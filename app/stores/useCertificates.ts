@@ -17,7 +17,6 @@ export default () => {
 		return response
 	}, {
 		default: () => [] as CertificatesCollectionItem[],
-		server: false,
 		watch: [locale]
 	})
 

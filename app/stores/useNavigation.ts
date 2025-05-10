@@ -5,13 +5,10 @@ export default () => {
 	const key = 'sections'
 	const fields = ['stem', 'id', 'title', 'icon', 'order', 'active'] as const
 
-	const { data, execute, status } = useLazyAsyncData(key, async (nuxt) => {
-		const { code } = useLocale()
-		const lang = code.value as typeof locale.value
-
+	const { data, execute, status } = useLazyAsyncData(key, async () => {
 		const response = await queryCollection(key)
 			.order('order', 'ASC')
-			.select(...fields, lang)
+			.select(...fields, locale.value)
 			.all()
 
 		for (const route of response) {
