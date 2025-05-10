@@ -53,8 +53,6 @@ const options = computed(() => {
 	}
 })
 
-const getTime = (value: string) => new Date(value).getTime()
-
 const { data, pending } = useExperiences()
 
 const width = computed(() => {
