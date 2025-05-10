@@ -28,6 +28,7 @@ export default (id: ComputedRef<string> | Ref<string>) => {
 		}
 		return response
 	}, {
+		server: false,
 		watch: [locale, id]
 	})
 

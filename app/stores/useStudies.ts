@@ -19,6 +19,7 @@ export default () => {
 		return response
 	}, {
 		default: () => [] as StudiesCollectionItem[],
+		server: false,
 		watch: [locale]
 	})
 
