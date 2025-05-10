@@ -3,7 +3,7 @@ export default () => {
 	const hash = useHashRoute()
 
 	const key = 'sections'
-	const fields = ['stem', 'id', 'title', 'icon', 'order'] as const
+	const fields = ['stem', 'id', 'title', 'icon', 'order', 'active'] as const
 
 	const { data, execute, status } = useLazyAsyncData(key, async () => {
 		const response = await queryCollection(key)
@@ -23,18 +23,20 @@ export default () => {
 
 	const links = computed(() => {
 		const items = new Set(data.value)
-		return Array.from(items)?.map(({ id, stem, icon, title }, index) => {
-			const identifier = stem.split('/').at(-1) ?? id
+		return Array.from(items)
+			?.filter(({ active }) => active)
+			?.map(({ id, stem, icon, title }, index) => {
+				const identifier = stem.split('/').at(-1) ?? id
 
-			return {
-				icon,
-				text: title,
-				to: `/#${id}`,
-				active: hash.value === `#${identifier}`,
-				kbds: ['Shift', `F${index + 1}`],
-				id: identifier
-			}
-		})
+				return {
+					icon,
+					text: title,
+					to: `/#${id}`,
+					active: hash.value === `#${identifier}`,
+					kbds: ['Shift', `F${index + 1}`],
+					id: identifier
+				}
+			})
 	})
 
 	const states = useStatus(status)

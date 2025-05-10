@@ -5,11 +5,11 @@ beta-section-certificates(v-intersect='intersect' :scale-down ref='section')#cer
 beta-section-experiences(v-intersect='intersect' :scale-down ref='section')#experiences
 beta-section-skills(v-intersect='intersect' :scale-down ref='section')#skills
 
-div(class='relative w-full min-h-[200svh] flex items-center justify-center overflow-clip motion-reduce:hidden py-24 bg-default')
-	div(class="scale-animation rounded-full bg-(--ui-bg-elevated)/50 p-8 aspect-square")
-		div(class="h-4 w-4 mask-animation bg-elevated rounded-full relative")
+//- div(class='relative w-full min-h-[200svh] flex items-center justify-center overflow-clip motion-reduce:hidden py-24 bg-default')
+//- 	div(class="scale-animation rounded-full bg-(--ui-bg-elevated)/50 p-8 aspect-square")
+//- 		div(class="h-4 w-4 mask-animation bg-elevated rounded-full relative")
 
-beta-section-projects(v-intersect='intersect' :scale-down ref='section')#projects
+//- beta-section-projects(v-intersect='intersect' :scale-down ref='section')#projects
 beta-section-footer(:scale-down)
 </template>
 

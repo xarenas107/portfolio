@@ -1,5 +1,4 @@
 import { defineContentConfig, defineCollection, z } from '@nuxt/content'
-import type { LayoutKey } from '#build/types/layouts'
 
 export default defineContentConfig({
 	collections: {
@@ -9,6 +8,7 @@ export default defineContentConfig({
 			schema: z.object({
 				id: z.string(),
 				order: z.number().default(0),
+				active: z.boolean().optional().default(true),
 				icon: z.string(),
 				title: z.string().optional(),
 				en: z.object({
