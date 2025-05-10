@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.8.13
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.8.12...v1.8.13)
+
+### 🩹 Fixes
+
+- **hydration:** Solve wrong states ([52ba2e5](https://github.com/xarenas107/portfolio/commit/52ba2e5))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.8.12
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.8.11...v1.8.12)
