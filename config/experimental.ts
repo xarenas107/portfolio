@@ -4,5 +4,8 @@ export default <NuxtConfig['experimental']>{
 	asyncEntry: true,
 	typedPages: true,
 	viewTransition: true,
-	writeEarlyHints: true
+	writeEarlyHints: true,
+	cookieStore: true,
+	buildCache: true,
+	lazyHydration: true
 }
