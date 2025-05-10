@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.8.12
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.8.11...v1.8.12)
+
+### 🩹 Fixes
+
+- **hydration:** Temporary disable ssr ([954a62c](https://github.com/xarenas107/portfolio/commit/954a62c))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.8.11
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.8.10...v1.8.11)
