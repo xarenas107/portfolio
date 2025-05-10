@@ -1,11 +1,12 @@
 import type { NuxtConfig } from '@nuxt/schema'
 
 export default <NuxtConfig['experimental']>{
-	asyncEntry: true,
+	// asyncEntry: true,
 	typedPages: true,
 	viewTransition: true,
 	writeEarlyHints: true,
-	cookieStore: true
+	// cookieStore: true,
+	asyncContext: true
 	// buildCache: true,
 	// lazyHydration: true
 }
