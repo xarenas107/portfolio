@@ -19,7 +19,6 @@ div(class='overflow-clip min-h-svh flex flex-col relative')
 					:alternate='!mobile || md'
 					:reverse='!mobile || md'
 					:items='data'
-					:pending
 					class='scroll-slide-reverse-animation'
 					subtitle-key='provider'
 					badge-key='type'
