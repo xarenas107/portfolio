@@ -76,13 +76,4 @@ const intersect = [
 		animation-range: 100svh 150svh;
 	}
 }
-
-.mask-favicon {
-	--logo: url('/api/favicon');
-	-webkit-mask-image: var(--logo);
-	mask-image: var(--logo);
-	mask-repeat: no-repeat;
-	mask-origin: center;
-	mask-position: center center;
-}
 </style>

@@ -4,5 +4,8 @@ export default <NuxtConfig['nitro']>{
 	prerender: {
 		routes: ['/'],
 		crawlLinks: true
+	},
+	experimental: {
+		openAPI: true
 	}
 }
