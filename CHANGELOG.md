@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v1.8.1
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.8.0...v1.8.1)
+
+### 🩹 Fixes
+
+- **deploy:** Solve unespected deploy errors ([fb17865](https://github.com/xarenas107/portfolio/commit/fb17865))
+
+### 💅 Refactors
+
+- **content:** Remove unnused old content ([14fa726](https://github.com/xarenas107/portfolio/commit/14fa726))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.8.0
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.7.0...v1.8.0)
