@@ -14,7 +14,7 @@ export default () => {
 
 		return response
 	}, {
-		dedupe: 'defer',
+		default: () => [],
 		watch: [locale]
 	})
 

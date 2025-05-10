@@ -16,7 +16,8 @@ div(class='overflow-clip bg-(--ui-primary) relative flex motion-safe:min-h-svh f
 				subtitle-key="job"
 				orientation='horizontal'
 				data-allow-mismatch='class'
-				class='scroll-slide-animation-reverse motion-safe:top-[30svh] motion-safe:sticky motion-safe:min-w-[var(--width)]' :style='`--width: ${width}rem`'
+				class='scroll-slide-animation-reverse motion-safe:top-[30svh] motion-safe:sticky motion-safe:min-w-[var(--width)]'
+				:style='`--width: ${width}rem`'
 				alternate
 				reverse
 				lazy

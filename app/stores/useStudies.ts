@@ -1,5 +1,8 @@
+import type { StudiesCollectionItem } from '@nuxt/content'
+
 export default () => {
-	const { locale, t } = useI18n()
+	const { locale } = useI18n()
+
 	const key = 'studies'
 	const fields = ['title', 'provider', 'type', 'location', 'startAt', 'endAt', 'active'] as const
 
@@ -15,7 +18,7 @@ export default () => {
 
 		return response
 	}, {
-		dedupe: 'defer',
+		default: () => [] as StudiesCollectionItem[],
 		watch: [locale]
 	})
 

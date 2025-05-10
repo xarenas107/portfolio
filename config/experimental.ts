@@ -5,7 +5,7 @@ export default <NuxtConfig['experimental']>{
 	typedPages: true,
 	viewTransition: true,
 	writeEarlyHints: true,
-	cookieStore: true,
-	buildCache: true,
-	lazyHydration: true
+	cookieStore: true
+	// buildCache: true,
+	// lazyHydration: true
 }

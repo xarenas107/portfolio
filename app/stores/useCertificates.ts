@@ -1,3 +1,5 @@
+import type { CertificatesCollectionItem } from '@nuxt/content'
+
 export default () => {
 	const { locale, t } = useI18n()
 
@@ -14,7 +16,7 @@ export default () => {
 
 		return response
 	}, {
-		dedupe: 'defer',
+		default: () => [] as CertificatesCollectionItem[],
 		watch: [locale]
 	})
 
