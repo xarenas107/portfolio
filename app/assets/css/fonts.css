@@ -14,9 +14,9 @@
 	font-family: 'Khand';
 	src: 
 		local('Khand') ,
-		url('../fonts/Khand-Variable.woff2?url') format('woff2'),
-		url('../fonts/Khand-Variable.woff?url') format('woff'),
-		url('../fonts/Khand-Variable.ttf?url') format('truetype');
+		url('../fonts/Khand-Variable.woff2') format('woff2'),
+		url('../fonts/Khand-Variable.woff') format('woff'),
+		url('../fonts/Khand-Variable.ttf') format('truetype');
 	font-weight: 500 900;
 	font-variant-ligatures: additional-ligatures;
 	font-optical-sizing: auto;
