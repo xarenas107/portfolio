@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.8.10
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.8.9...v1.8.10)
+
+### 🩹 Fixes
+
+- **deploy:** Solve hydration mismatches ([a632418](https://github.com/xarenas107/portfolio/commit/a632418))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.8.9
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.8.8...v1.8.9)
