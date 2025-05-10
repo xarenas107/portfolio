@@ -1,4 +1,4 @@
-<template lang="pug">
+ <template lang="pug">
 u-main(ref='main' class='skew-y-(--skew) transition-(--transition-property) duration-200 ease-out')
     slot
 </template>
@@ -29,7 +29,10 @@ const state: State = {
 	ease: 0.75
 }
 
+const active = useState('scroll:active', () => false)
+
 const update = (event: Event) => {
+	active.value = true
 	if (state.pause || reduceMotion.value === 'reduce') return
 
 	const diff = state?.scroll - window.scrollY
@@ -48,6 +51,7 @@ const update = (event: Event) => {
 	if (state.timer) clearTimeout(state.timer)
 	state.timer = setTimeout(() => {
 		if (element) element.style.removeProperty('--skew')
+		active.value = false
 	}, 150)
 
 	emit('scroll', event)

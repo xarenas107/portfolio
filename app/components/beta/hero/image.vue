@@ -1,14 +1,12 @@
 <template lang="pug">
 div(class='relative overflow-visible w-full lg:max-w-lg lg:h-full lg:max-h-svh')
-
-	//- u-lazy(:transition='{ name: "transition-grow-y" }' :dealy='100' class='w-full h-full pointer-events-none')
 	div(key='bg-hero' class='w-full h-full min-h-48 sm:min-h-64 lg:min-h-full relative overflow-visible z-20')
 
 		nuxt-img(src='/hero/human-shadow.png' class='absolute bottom-0 right-0 grow object-cover max-w-full h-80 sm:h-96 z-10 blend-multiply opacity-70' loading='eager' key="image:shadow" alt='' cover)
 		nuxt-img(:alt="t('itsme')" src='/hero/human.png' class='absolute bottom-0 right-0 grow object-cover max-w-full h-80 sm:h-96 z-10' key="image" ref='image' loading='eager' cover)
 
 	//- tooltip
-	span(class='text-xs normal-case truncate font-sans font-normal h-6 px-2 py-1 rounded bg-white dark:bg-neutral-900 ring-1 ring-neutral-200 dark:ring-neutral-800 text-balance fixed z-40 pointer-events-none shadow group max-w-xs move-position' ref='tooltip') {{ t('itsme') }}
+	span(ref='tooltip' class='text-xs normal-case truncate font-sans font-normal h-6 px-2 py-1 rounded-(--ui-radius) bg-elevated ring-1 ring-(--ui-border) text-balance fixed z-40 pointer-events-none shadow max-w-xs top-(--move-y) left-(--move-x) opacity-(--opacity) ease duration-100 transition-opacity' :style) {{ t('itsme') }}
 </template>
 
 <script lang="ts" setup>
@@ -52,20 +50,16 @@ const on = {
 }
 
 useEventListener(target, 'mousemove', on.mousemove)
+
+const style = {
+	'--opacity': 0,
+	'--display': 'none'
+}
 </script>
 
 <style lang="scss" scoped>
 .transform-3d {
     transform-style: preserve-3d;
     perspective: 550px;
-}
-
-.move-position {
-  top: var(--move-y);
-  left: var(--move-x);
-  display: var(--display);
-  opacity: var(--opacity, 0);
-  transition: .5s ease-in-out;
-  transition-property: opacity;
 }
 </style>
