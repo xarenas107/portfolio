@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v1.8.9
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.8.8...v1.8.9)
+
+### 🩹 Fixes
+
+- **content:** Fetch on client only ([a440758](https://github.com/xarenas107/portfolio/commit/a440758))
+- **deploy:** Solve hydration mismatches ([767c49d](https://github.com/xarenas107/portfolio/commit/767c49d))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.8.8
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.8.7...v1.8.8)
