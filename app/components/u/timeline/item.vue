@@ -81,7 +81,8 @@ const props = withDefaults(defineProps<Props>(), {
 	timeProps: () => ({
 		year: 'numeric',
 		month: 'short'
-	})
+	}),
+	lazy: false
 })
 
 const { t, locale } = useI18n()

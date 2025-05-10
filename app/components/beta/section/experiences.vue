@@ -24,7 +24,6 @@ div(class='overflow-clip bg-(--ui-primary) relative flex motion-safe:min-h-svh f
 					class='scroll-slide-animation-reverse motion-safe:top-[30svh] motion-safe:sticky motion-safe:min-w-[var(--width)]'
 					alternate
 					reverse
-					lazy
 					)
 </template>
 

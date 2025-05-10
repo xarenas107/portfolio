@@ -23,7 +23,6 @@ div(class='overflow-clip min-h-svh flex flex-col relative')
 					subtitle-key='provider'
 					badge-key='type'
 					time-key='startAt'
-					lazy
 					)
 </template>
 
