@@ -1,6 +1,65 @@
 # Changelog
 
 
+## v1.8.0
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.7.0...v1.8.0)
+
+### 🚀 Enhancements
+
+- Add project section components ([553e3d9](https://github.com/xarenas107/portfolio/commit/553e3d9))
+- Add `project` page view ([969de4e](https://github.com/xarenas107/portfolio/commit/969de4e))
+- **layout:** Add new project section layouts with animations ([4b06533](https://github.com/xarenas107/portfolio/commit/4b06533))
+- **ui:** Add content scale-down on open menu ([de3c368](https://github.com/xarenas107/portfolio/commit/de3c368))
+- **ui:** Add transition when content is loaded ([b845c5e](https://github.com/xarenas107/portfolio/commit/b845c5e))
+- **tailwind:** Add utility class for css `display` property ([3d1855a](https://github.com/xarenas107/portfolio/commit/3d1855a))
+- **layout:** Add new layout for animation purposes ([1e1877c](https://github.com/xarenas107/portfolio/commit/1e1877c))
+
+### 🩹 Fixes
+
+- **scroll:** Solve missing scroll-bar variables ([31319f3](https://github.com/xarenas107/portfolio/commit/31319f3))
+- **style:** Sollve wrong showing styles ([342567f](https://github.com/xarenas107/portfolio/commit/342567f))
+- **meta:** Solve wrong page title ([b0b4b11](https://github.com/xarenas107/portfolio/commit/b0b4b11))
+- **seo:** Disable `updateSiteConfig` plugin ([511c01a](https://github.com/xarenas107/portfolio/commit/511c01a))
+- **html:** Solve wrong head meta `title` ([1eaddb7](https://github.com/xarenas107/portfolio/commit/1eaddb7))
+- **time:** Solve missing locales ([4fd20c9](https://github.com/xarenas107/portfolio/commit/4fd20c9))
+- **font:** Solve missing title font `Khand` ([0556d22](https://github.com/xarenas107/portfolio/commit/0556d22))
+- **certificates:** Solve wrong card width ([18f8f20](https://github.com/xarenas107/portfolio/commit/18f8f20))
+
+### 💅 Refactors
+
+- Code optimization ([83974f1](https://github.com/xarenas107/portfolio/commit/83974f1))
+- Code optimization ([e999fd8](https://github.com/xarenas107/portfolio/commit/e999fd8))
+
+### 🏡 Chore
+
+- **i18n:** Update locale config ([1ce68c9](https://github.com/xarenas107/portfolio/commit/1ce68c9))
+- Migrate to `nuxt/ui 3` and `tailwindcss 4` ([ddacb13](https://github.com/xarenas107/portfolio/commit/ddacb13))
+- Add `Karat` project assets ([9c05c70](https://github.com/xarenas107/portfolio/commit/9c05c70))
+- **style:** Migrate tailwind css configuration ([6c773aa](https://github.com/xarenas107/portfolio/commit/6c773aa))
+- **content:** Update content ([dcebc1d](https://github.com/xarenas107/portfolio/commit/dcebc1d))
+- **project:** Add content assets ([5bdca5f](https://github.com/xarenas107/portfolio/commit/5bdca5f))
+- **node:** Update packages ([0d667f1](https://github.com/xarenas107/portfolio/commit/0d667f1))
+- **content:** Update content ([4567f6a](https://github.com/xarenas107/portfolio/commit/4567f6a))
+- **style:** Minimal color changes ([ae1a53b](https://github.com/xarenas107/portfolio/commit/ae1a53b))
+- **node:** Update packages ([76fa518](https://github.com/xarenas107/portfolio/commit/76fa518))
+- **drawer:** Remove `rounded` corners ([ef73395](https://github.com/xarenas107/portfolio/commit/ef73395))
+- **node:** Update packages ([d043d9f](https://github.com/xarenas107/portfolio/commit/d043d9f))
+- **content:** Migrate `nuxt/content` 3.x ([c42babb](https://github.com/xarenas107/portfolio/commit/c42babb))
+- **scroll:** Remove native scrollbar in favor of horizontal top scroll bar ([566944f](https://github.com/xarenas107/portfolio/commit/566944f))
+- **fonts:** Increase speed by loading local first ([936c43b](https://github.com/xarenas107/portfolio/commit/936c43b))
+- **tailwindcss:** Add `mobile` and `desktop` custom breakpoints ([6f20130](https://github.com/xarenas107/portfolio/commit/6f20130))
+- **i18jn:** Update locales ([4cf5a85](https://github.com/xarenas107/portfolio/commit/4cf5a85))
+- **content:** Add `Giorgia IT` logo asset ([713d064](https://github.com/xarenas107/portfolio/commit/713d064))
+- **node:** Update packages ([6b29c1e](https://github.com/xarenas107/portfolio/commit/6b29c1e))
+- **projects:** Temporary disable section ([86b98f3](https://github.com/xarenas107/portfolio/commit/86b98f3))
+- **seo:** Enable `nuxt-seo-utils` ([2e7674c](https://github.com/xarenas107/portfolio/commit/2e7674c))
+- **nuxt:** Enable various experimentals ([ec9b175](https://github.com/xarenas107/portfolio/commit/ec9b175))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.7.0
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.6.0...v1.7.0)
