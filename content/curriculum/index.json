@@ -1,12 +1,12 @@
 {
 	"name": "Xavier",
 	"en": {
-		"description": "Graduated as a graphic designer in 2018 from the Higher Institute of Design of the University of Havana (ISDi) and currently studying the master's degree in UX-UI in Barcelona",
+		"description": "Graphic designer with over eight years of experience and a master's degree in user experience and interface design. My focus is on transforming complex ideas into intuitive and engaging digital experiences.",
 		"job": "UX-UI Designer",
 		"location": "Barcelona, Spain"
 	},
 	"es": {
-		"description": "Graduado de diseño gráfico en 2018 del Instituto Superior de Diseño de la Universidad de la Habana(ISDi) y actualmente realizando el máster en UX-UI en Barcelona",
+		"description": "Diseñador gráfico con más de 8 años de experiencia y máster en experiencia e interfaz de usuario. Mi trabajo es transformar ideas complejas en experiencias digitales intuitivas y atractivas.",
 		"job": "Diseñador UX-UI",
 		"location": "Barcelona, España"
 	},
