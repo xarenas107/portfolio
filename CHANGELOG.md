@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.8.17
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.8.16...v1.8.17)
+
+### 🩹 Fixes
+
+- **content:** Solve wrong content in certain cases ([a293561](https://github.com/xarenas107/portfolio/commit/a293561))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.8.16
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.8.15...v1.8.16)
