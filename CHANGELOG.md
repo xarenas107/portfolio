@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.8.15
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.8.14...v1.8.15)
+
+### 🩹 Fixes
+
+- **card-group:** Solve wrong inner glow on light theme ([82344d9](https://github.com/xarenas107/portfolio/commit/82344d9))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.8.14
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.8.13...v1.8.14)
