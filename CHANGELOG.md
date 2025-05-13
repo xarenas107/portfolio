@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.8.16
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.8.15...v1.8.16)
+
+### 🏡 Chore
+
+- **content:** Update user description ([fae6ec0](https://github.com/xarenas107/portfolio/commit/fae6ec0))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.8.15
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.8.14...v1.8.15)
