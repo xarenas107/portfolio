@@ -51,7 +51,7 @@ const ui = {
 		base: 'bg-inverted/20 p-px',
 		child: 'bg-primary text-highlighted/80',
 		before: `before:bg-inverted`,
-		after: `after:bg-primary-200 dark:after:bg-primary-100`
+		after: `after:bg-inverted`
 	},
 	badge: {
 		base: `w-fit h-fit text-nowrap gap-2 ring-1 ring-inset text-highlighted/80 hover:text-highlighted ring-inverted/50 hover:ring-inverted bg-primary`
