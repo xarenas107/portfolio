@@ -18,7 +18,7 @@ div(class='overflow-clip bg-(--ui-primary) relative flex motion-safe:min-h-svh f
 				subtitle-key="job"
 				orientation='horizontal'
 				data-allow-mismatch='class'
-				class='scroll-slide-animation-reverse motion-safe:top-[30svh] motion-safe:sticky motion-safe:min-w-[var(--width)]'
+				class='scroll-slide-animation-reverse motion-safe:top-[25svh] motion-safe:sticky motion-safe:min-w-[var(--width)]'
 				alternate
 				reverse
 				lazy
@@ -26,18 +26,6 @@ div(class='overflow-clip bg-(--ui-primary) relative flex motion-safe:min-h-svh f
 </template>
 
 <script lang="ts" setup>
-type Content = {
-	title: string
-	items: {
-		title: string
-		badge: string
-		subtitle: string
-		content: string
-		time: string
-		startAt: string
-	}[]
-}
-
 type Props = {
 	scaleDown?: boolean
 }
@@ -71,7 +59,7 @@ const ui = {
 		divider: 'border',
 		text: 'text-highlighted',
 		badge: {
-			base: 'text-(--ui-primary) bg-(--ui-primary)/20'
+			base: 'text-toned bg-elevated ring ring-(--ui-border)'
 		}
 	}
 }

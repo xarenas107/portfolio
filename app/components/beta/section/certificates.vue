@@ -1,5 +1,5 @@
 <template lang="pug">
-div(class='py-24 min-h-svh bg-(--ui-primary) relative overflow-clip place-content-center')
+div(class='py-24 min-h-svh bg-primary relative overflow-clip place-content-center')
   u-container(v-bind='options' class='flex flex-col gap-16')
     section-title(:class='ui.title' class="scroll-fade-animation z-40" hyphens) {{ t('section.certificates') }}
 
@@ -20,7 +20,7 @@ div(class='py-24 min-h-svh bg-(--ui-primary) relative overflow-clip place-conten
                         u-icon(name='i-heroicons-outline:external-link' class='w-4 h-4')
 
               template(#footer)
-                div(v-if='item.endAt' class='flex gap-2 text-primary-100 dark:text-primary-50/80 items-center')
+                div(v-if='item.endAt' class='flex gap-2 text-default/80 items-center')
                   u-icon(name='heroicons-outline:clock' class='w-5 h-5')
                   nuxt-time(:datetime="item.endAt" :locale class='uppercase text-xs' month='long' year='numeric')
 
@@ -45,16 +45,16 @@ const options = computed(() => {
 const { data } = useCertificates()
 
 const ui = {
-	title: 'text-primary-100 dark:text-primary-50',
+	title: 'text-highlighted',
 	card: {
 		border: 'px',
-		base: 'bg-primary-400 dark:bg-primary-300 p-px',
-		child: 'bg-(--ui-primary) text-primary-100 dark:text-primary-50',
-		before: `before:bg-primary-200 dark:before:bg-primary-100`,
+		base: 'bg-inverted/20 p-px',
+		child: 'bg-primary text-highlighted/80',
+		before: `before:bg-inverted`,
 		after: `after:bg-primary-200 dark:after:bg-primary-100`
 	},
 	badge: {
-		base: `w-fit h-fit text-nowrap gap-2 ring-1 ring-inset text-primary-200 hover:text-primary-100 dark:text-primary-200 dark:hover:text-primary-100 ring-primary-200 hover:ring-primary-100  dark:ring-primary-200 dark:hover:ring-primary-100`
+		base: `w-fit h-fit text-nowrap gap-2 ring-1 ring-inset text-highlighted/80 hover:text-highlighted ring-inverted/50 hover:ring-inverted bg-primary`
 	}
 }
 </script>

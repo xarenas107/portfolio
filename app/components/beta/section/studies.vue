@@ -2,11 +2,11 @@
 div(class='overflow-clip min-h-svh flex flex-col relative')
 	div(class='h-[20svh] w-full bg-gradient-to-b from-primary-100/20 to-(--ui-bg) dark:from-primary-900/20')
 
-	div(class='w-full bg-(--ui-primary) overflow-clip')
+	div(class='w-full bg-primary overflow-clip')
 		u-container(v-bind='options' class='overflow-clip')
 			section-title(class="text-(--ui-bg) -mt-1 md:-mt-2 scroll-slide-animation" hyphens) {{ t('section.studies') }}
 
-	div(class='flex flex-col w-full h-full py-24 grow bg-(--ui-primary)')
+	div(class='flex flex-col w-full h-full py-24 grow bg-primary')
 		div(v-bind='options' class='px-4 sm:px-6 lg:px-8 gap-8 max-w-7xl mx-auto w-full motion-reduce:pb-24 grow')
 
 			//- client-only
@@ -45,7 +45,6 @@ const options = computed(() => {
 })
 
 const { mobile, md } = useDisplay()
-const getTime = (value: string) => new Date(value).getTime()
 
 const orientation = computed(() => mobile.value ? 'vertical' : 'horizontal')
 const { data, pending } = useStudies()
@@ -53,12 +52,13 @@ const { data, pending } = useStudies()
 const ui = {
 	timeline: {
 		base: 'lg:min-w-[100dvw]',
-		divider: 'border-primary-300 dark:border-primary-200',
+		divider: 'border-inverted/20',
 		dot: {
-			base: 'bg-primary-100 dark:bg-primary-200'
+			base: 'bg-inverted'
 		},
+		text: 'text-highlighted',
 		badge: {
-			base: 'text-primary-100 dark:text-primary-50 bg-primary-400/20 dark:bg-primary-300/20 ring ring-primary-100/25 dark:ring-primary-50/25'
+			base: 'text-highlighted ring ring-(--ui-text-default)'
 		}
 	}
 }
