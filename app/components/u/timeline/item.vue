@@ -32,7 +32,7 @@ u-lazy(:class='[{ grow }]' :disabled='!lazy' class="flex w-max min-w-fit max-w-f
 			div(class='flex flex-col gap-4')
 				p(v-if='content' :class='ui.text' class='text-base opacity-80') {{ content }}
 
-				div(class='text-sm opacity-60 uppercase gap-2')
+				div(:class='ui.text' class='text-sm opacity-60 uppercase gap-2')
 					nuxt-time(:datetime='startAt' v-bind='options')
 					span(v-if='active || endAt' v-text='" - "')
 					span(v-if='active') {{  t('time.now') }}
