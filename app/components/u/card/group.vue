@@ -49,8 +49,8 @@ const classes = computed(() => {
 	const ui = {
 		base: `group-item relative p-${border} overflow-clip ${base} rounded-${rounded} w-full`,
 		child: `relative h-full z-20 overflow-clip ${child}`,
-		before: `before:absolute before:w-80 before:h-80 before:-left-40 before:-top-40 before:rounded-full before:opacity-0 before:pointer-events-none before:transition-opacity before:duration-500 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] group-hover:before:opacity-100 before:z-10 before:blur-[100px] ${before}`,
-		after: `after:absolute after:w-96 after:h-96 after:-left-48 after:-top-48 after:rounded-full after:opacity-0 after:pointer-events-none after:transition-opacity after:duration-500 after:translate-x-[var(--mouse-x)] after:translate-y-[var(--mouse-y)] hover:after:opacity-10 after:z-30 after:blur-[100px] ${after}`
+		before: `before:absolute before:w-80 before:h-80 before:-left-40 before:-top-40 before:rounded-full before:opacity-0 before:pointer-events-none before:transition-opacity before:duration-500 before:translate-x-(--mouse-x) before:translate-y-(--mouse-y) group-hover:before:opacity-100 before:z-10 before:blur-[100px] ${before}`,
+		after: `after:absolute after:w-96 after:h-96 after:-left-48 after:-top-48 after:rounded-full after:opacity-0 after:pointer-events-none after:transition-opacity after:duration-500 after:translate-x-(--mouse-x) after:translate-y-(--mouse-y) hover:after:opacity-10 after:z-30 after:blur-[100px] ${after}`
 	}
 
 	return ui
@@ -64,12 +64,15 @@ const on = {
 		}
 	},
 	mousemove: (event: MouseEvent) => {
+		if (Object.values(data.size).includes(0)) on.resize()
+
 		const { clientX, clientY } = event
 		const { left = 0, top = 0 } = group.value?.getBoundingClientRect() || {}
 		const { w, h } = data.size
 		const x = clientX - left
 		const y = clientY - top
 		const inside = x < w && x > 0 && y < h && y > 0
+
 		if (inside) {
 			data.mouse = { x, y }
 
