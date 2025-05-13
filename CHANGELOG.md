@@ -1,6 +1,29 @@
 # Changelog
 
 
+## v1.8.14
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.8.13...v1.8.14)
+
+### 🩹 Fixes
+
+- **content:** Solve wrong text cases ([4d01471](https://github.com/xarenas107/portfolio/commit/4d01471))
+- **ui:** Solve wrong color on certain cases ([d2d5caa](https://github.com/xarenas107/portfolio/commit/d2d5caa))
+- **card-group:** Solve wrong hover glow values ([9b54b4d](https://github.com/xarenas107/portfolio/commit/9b54b4d))
+
+### 💅 Refactors
+
+- Change  inline variables in favor of tailwind native utilities ([ea89a00](https://github.com/xarenas107/portfolio/commit/ea89a00))
+
+### 🏡 Chore
+
+- **navbar:** Increase gap between components to `gap-2` ([015f564](https://github.com/xarenas107/portfolio/commit/015f564))
+- **node:** Update dependences ([42c1888](https://github.com/xarenas107/portfolio/commit/42c1888))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.8.13
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.8.12...v1.8.13)
