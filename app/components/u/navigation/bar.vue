@@ -6,7 +6,7 @@ nav(v-if='active' class="border-(--ui-border-muted)/50 fixed w-full bottom-0 lg:
 
 	//- Navbar container
 	div(:class="ui.container")
-		div(class="relative flex h-16 items-center justify-between gap-1.5")
+		div(class="relative flex h-16 items-center justify-between gap-2")
 			div(class="hidden lg:flex flex-1 items-center sm:items-stretch sm:justify-start")
 				div(v-if='!slot.left' class='flex gap-6')
 					div(v-if='!back' class=" shrink-0 flex")
@@ -14,7 +14,7 @@ nav(v-if='active' class="border-(--ui-border-muted)/50 fixed w-full bottom-0 lg:
 
 					div(v-if='!back' class="flex")
 						//- u-navigation-menu(:items='navigation.data' color='primary' unmount-on-hide arrow content-orientation="vertical")
-						div(class="flex gap-1.5")
+						div(class="flex gap-2")
 							u-tooltip(v-for='{ icon, text, id, active, kbds } in data' :text :kbds :disabled='active')
 								u-navigation-link(v-if='id' @click='navigate(id)' :active :icon :text :aria-current='active' :kbds arrow)
 
@@ -22,9 +22,9 @@ nav(v-if='active' class="border-(--ui-border-muted)/50 fixed w-full bottom-0 lg:
 
 				slot(name='left' :menu)
 
-			div(class="absolute inset-y-0 right-0 items-center gap-1.5 pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 hidden xl:flex")
+			div(class="absolute inset-y-0 right-0 items-center gap-2 pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 hidden xl:flex")
 
-				div(v-if='!slot.right' class='flex gap-1.5')
+				div(v-if='!slot.right' class='flex gap-2')
 					u-share-button
 					u-language-select
 					u-color-select(square)
@@ -32,7 +32,7 @@ nav(v-if='active' class="border-(--ui-border-muted)/50 fixed w-full bottom-0 lg:
 
 				slot(name='rigth' :menu)
 
-			div(class="inset-y-0 left-0 flex items-center justify-end xl:hidden w-full")
+			div(class="inset-y-0 left-0 flex items-center gap-2 justify-end xl:hidden w-full")
 				u-share-button
 
 				//- Mobile menu, show/hide based on menu state
