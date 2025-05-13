@@ -36,7 +36,7 @@
     "@unhead/shared": "^2.0.8",
     "@vue/language-plugin-pug": "^2.2.10",
     "@vueuse/nuxt": "^13.1.0",
-    "nuxt": "^3.17.2",
+    "nuxt": "^3.17.3",
     "nuxt-seo-utils": "^7.0.11",
     "un": "^0.0.0",
     "vue": "^3.5.13",
@@ -50,13 +50,13 @@
     "@intlify/core": "^11.1.3",
     "@intlify/core-base": "^11.1.3",
     "@nuxt/devtools": "^2.4.0",
-    "@nuxt/eslint-config": "^1.3.0",
+    "@nuxt/eslint-config": "^1.3.1",
     "changelogen": "^0.6.1",
     "eslint": "^9.26.0",
     "pug": "^3.0.3",
-    "sass": "^1.87.0",
-    "sass-embedded": "^1.87.0",
+    "sass": "^1.88.0",
+    "sass-embedded": "^1.88.0",
     "unconfig": "^7.3.2",
-    "wrangler": "^4.14.4"
+    "wrangler": "^4.15.0"
   }
 }
