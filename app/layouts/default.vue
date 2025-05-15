@@ -20,8 +20,8 @@ const color = computed(() => {
 })
 
 const href = computed(() => {
-	const hex = color.value?.replace(/[#%]/g, '')
-	return `/api/favicon?color=${hex}&mode=${dark.value ? 'dark' : 'light'}`
+	const regex = color.value?.replace(/[#%]/g, '')
+	return `/api/favicon?color=${regex}&mode=${dark.value ? 'dark' : 'light'}`
 })
 
 useSeoMeta({
