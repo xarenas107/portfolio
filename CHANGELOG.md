@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v1.8.19
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.8.18...v1.8.19)
+
+### 🩹 Fixes
+
+- **favicon:** Solve wrong color display ([5a2633a](https://github.com/xarenas107/portfolio/commit/5a2633a))
+
+### 🏡 Chore
+
+- **content:** Update content ([d3fe287](https://github.com/xarenas107/portfolio/commit/d3fe287))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.8.18
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.8.17...v1.8.18)
