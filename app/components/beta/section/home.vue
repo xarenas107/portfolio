@@ -4,23 +4,23 @@ div(class='bg-primary-100/20 dark:bg-primary-900/20 max-w-full overflow-clip fle
 	u-lazy(class='w-full min-h-svh lg:min-h-auto')
 		u-container(v-bind='options' class="flex h-full w-full flex-col gap-4 overflow-visible py-16 pb-24 lg:py-32 relative")
 
-			u-transition(delay='1s' before-enter-class="max-w-0" enter-class='max-w-full' duration='.75s' timing-function="ease-in-out")
+			u-transition(delay='1s' before-enter-class="motion-safe:max-w-0" enter-class='max-w-full' duration='.75s' timing-function="ease-in-out")
 				template(#default='{ state, ...props }')
 					div(class='flex justify-center gap-4 transition-all duration-200')
 						h6(class='font-display uppercase font-bold text-2xl max-w-prose sm:text-4xl lg:text-6xl leading-4 text-nowrap text-highlighted') {{ greetings }}
 						u-separator(v-bind='props' color="primary" )
 
-			u-transition(delay='.5s' active-class='origin-bottom' before-enter-class="max-h-0" enter-class='max-h-48 sm:max-h-64 lg:max-h-full' duration='.5s' timing-function="ease-in-out")
+			u-transition(delay='.5s' active-class='origin-bottom' before-enter-class="motion-safe:max-h-0" enter-class='max-h-48 sm:max-h-64 lg:max-h-full' duration='.5s' timing-function="ease-in-out")
 					template(#default='{ state, ...props }')
 						span(v-bind='props' class='w-full h-full grow lg:hidden bg-(--ui-primary) rounded-(--ui-radius)')
 
-							u-transition(delay='1.65s' before-enter-class="rotate-x-90" active-class="origin-bottom" duration='.5s' timing-function="ease-in-out")
+							u-transition(delay='1.65s' before-enter-class="motion-safe:rotate-x-90" active-class="origin-bottom" duration='.5s' timing-function="ease-in-out")
 								template(#default='{ state, ...props }')
 									beta-hero-image(v-bind='props' class='lg:order-1')
 
 			div(class='flex flex-col gap-x-4 lg:gap-8 grow w-full')
 				div(class="font-display uppercase font-bold text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-10xl text-highlighted")
-					u-transition(delay='1s' before-enter-class="max-w-0" enter-class='max-w-full' duration='1s' timing-function="ease-in-out")
+					u-transition(delay='1s' before-enter-class="motion-safe:max-w-0" enter-class='max-w-full' duration='1s' timing-function="ease-in-out")
 						template(#default='{ state, ...props }')
 							div(class='flex place-content-center place-items-center gap-x-3 transition-all duration-200' :class='[state.idle ? "sm:gap-x-3" : "sm:gap-x-4 md:gap-x-4"]')
 								h1 {{  t('im') }}
@@ -32,7 +32,7 @@ div(class='bg-primary-100/20 dark:bg-primary-900/20 max-w-full overflow-clip fle
 										template(#default='{ state, ...props }')
 											beta-hero-image(v-bind='props' class='lg:order-1 hidden lg:flex origin-bottom')
 
-					u-transition(delay='1s' before-enter-class="max-w-0" enter-class='max-w-full' duration='1s' timing-function="ease-in-out")
+					u-transition(delay='1s' before-enter-class="motion-safe:max-w-0" enter-class='max-w-full' duration='1s' timing-function="ease-in-out")
 						template(#default='{ state, ...props }')
 							div(class='flex flex-wrap sm:flex-nowrap place-content-center gap-x-3 sm:gap-x-4 md:gap-x-6 hyphens-auto place-items-center transition-all duration-200')
 								div(v-for='word, index in data?.job?.split(" ")' class='flex place-content-center place-items-center text-nowrap w-full gap-x-3 sm:gap-x-4 md:gap-x-6 sm:w-auto')
@@ -41,12 +41,12 @@ div(class='bg-primary-100/20 dark:bg-primary-900/20 max-w-full overflow-clip fle
 
 								span(v-bind='props' class='hidden sm:block shrink grow bg-(--ui-primary) rounded-(--ui-radius) lg:-order-1 h-font')
 
-			u-transition(delay='.25s' before-enter-class="opacity-0 translate-y-10" duration='.5s' timing-function="ease-out")
+			u-transition(delay='.25s' before-enter-class="motion-safe:opacity-0 motion-safe:translate-y-10" duration='.5s' timing-function="ease-out")
 				template(#default='{ state, ...props }')
 					div(class='flex flex-col md:flex-row gap-6 justify-center')
 						p(v-bind='props' class='text-base text-default text-balance max-w-sm lg:max-w-lg delay-[1s] md:delay-0') {{ data?.description }}
 
-						u-transition(delay='1s' before-enter-class="max-w-0" enter-class='max-w-full' duration='1s' timing-function="ease-in-out")
+						u-transition(delay='1s' before-enter-class="motion-safe:max-w-0" enter-class='max-w-full' duration='1s' timing-function="ease-in-out")
 							template(#default='{ state, ...props }')
 								span(v-bind='props' class='hidden md:inline-block grow')
 
