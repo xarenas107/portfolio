@@ -1,5 +1,5 @@
 import type { ObjectDirective } from 'vue'
-import type { UseIntersectionObserverOptions } from '@vueuse/core/index.cjs'
+import type { UseIntersectionObserverOptions } from '@vueuse/core'
 
 type IntersectionObserverOptions = UseIntersectionObserverOptions & {
 	once?: boolean

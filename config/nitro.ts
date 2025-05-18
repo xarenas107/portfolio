@@ -4,8 +4,11 @@ export default <NuxtConfig['nitro']>{
 	prerender: {
 		routes: ['/'],
 		crawlLinks: true
+	},
+	experimental: {
+		websocket: true
+	},
+	hub: {
+		workers: true
 	}
-	// experimental: {
-	// 	openAPI: true
-	// }
 }

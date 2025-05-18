@@ -13,14 +13,6 @@ div(class='min-h-[60svh] relative overflow-clip bg-default py-24')
 </template>
 
 <script lang="ts" setup>
-type Content = {
-	title: string
-	items: {
-		title: string
-		content: string[]
-	}[]
-}
-
 type Props = {
 	scaleDown?: boolean
 }
@@ -47,7 +39,7 @@ const ui = {
 @keyframes scale-down {
   from {
     color: var(--ui-text-toned);
-    transform: rotate3d(1,0,0, -5deg) translateX(-50%) scale(4) perspective(550px);
+    transform: rotate3d(1,0,0, -5deg) translateX(-2.5ch) scale(4) perspective(550px);
     opacity: 100%;
   }
   50% {
