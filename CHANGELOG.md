@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v1.8.20
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.8.19...v1.8.20)
+
+### 🩹 Fixes
+
+- **scroll:** Solve wrong scroll with `hash` on page load ([c37d8ce](https://github.com/xarenas107/portfolio/commit/c37d8ce))
+
+### 🏡 Chore
+
+- Avoid some transitions on reduce-motion enabled ([3dd7ba1](https://github.com/xarenas107/portfolio/commit/3dd7ba1))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.8.19
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.8.18...v1.8.19)
