@@ -1,12 +1,12 @@
 {
 	"id": "projects",
 	"order": 6,
-	"active": false,
+	"active": true,
 	"icon": "i-heroicons:paint-brush",
 	"en": {
-		"title": "Projects"
+		"title": "Portfolio"
 	},
 	"es": {
-		"title": "Proyectos"
+		"title": "Portafolio"
 	}
 }

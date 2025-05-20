@@ -1,8 +1,8 @@
 <template lang='pug'>
-div(class='bg-elevated w-full py-24 min-h-svh flex flex-col gap-16 relative overflow-clip')
+div(class='bg-(--ui-primary)/10 w-full py-24 min-h-svh flex flex-col gap-16 relative overflow-clip')
 
-	div(v-bind='options' class='flex px-4 sm:px-6 lg:px-8 gap-8 max-w-7xl mx-auto scroll-slide-animation')
-		section-title(v-for='index in 6' :class='index % 2 ? "text-stroke paint-order-stroke text-(--ui-bg-elevated)" : ui.title') {{ t('section.projects') }}
+	//- div(v-bind='options' class='flex px-4 sm:px-6 lg:px-8 gap-8 max-w-7xl mx-auto scroll-slide-animation')
+		section-title(v-for='index in 6' :class='index % 2 ? "text-stroke paint-order-stroke text-(--ui-bg)" : ui.title') {{ t('section.projects') }}
 
 	u-container(:ui='ui.container')
 		u-card-group(v-bind='options' class='z-20 mr-4 w-full' :ui='ui.card')

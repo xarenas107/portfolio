@@ -1,13 +1,13 @@
 <template lang="pug">
 div(class='overflow-clip min-h-svh flex flex-col relative')
-	div(class='h-[20svh] w-full bg-gradient-to-b from-primary-100/20 to-(--ui-bg) dark:from-primary-900/20')
+	div(class='h-[20svh] w-full bg-gradient-to-b from-(--ui-primary)/10 to-(--ui-bg)')
 
 	div(class='w-full bg-primary overflow-clip')
 		u-container(v-bind='options' class='overflow-clip')
 			section-title(class="text-(--ui-bg) -mt-1 md:-mt-2 scroll-slide-animation" hyphens) {{ t('section.studies') }}
 
 	div(class='flex flex-col w-full h-full py-24 grow bg-primary')
-		div(v-bind='options' class='px-4 sm:px-6 lg:px-8 gap-8 max-w-7xl mx-auto w-full motion-reduce:pb-24 grow')
+		div(v-bind='options' class='px-4 sm:px-6 lg:px-8 gap-8 max-w-7xl mx-auto w-full motion-reduce:pb-24 grow ')
 
 			//- client-only
 			//- 	template(#fallback)

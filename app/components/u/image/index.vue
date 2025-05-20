@@ -30,7 +30,7 @@ const props = withDefaults(defineProps<Props>(), {
 		alt: () => '',
 		placeholder: {
 			svg: {
-				base: 'bg-neutral-400 dark:bg-neutral-400 stroke-neutral-600 dark:stroke-neutral-200'
+				base: 'bg-(--ui-text) stroke-neutral-600 dark:stroke-neutral-200'
 			}
 		}
 	})

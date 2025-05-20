@@ -22,7 +22,7 @@ ol(class="w-full flex group h-fit motion-reduce:overflow-auto scroll-hidden snap
 		:orientation
 		:alternate
 		:lazy
-		class='timeline-item snap-center'
+		class='timeline-item snap-start'
 		)
 </template>
 

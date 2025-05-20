@@ -22,10 +22,10 @@ nav(v-if='active' class="border-(--ui-border-muted)/50 fixed w-full bottom-0 lg:
 
 				slot(name='left' :menu)
 
-			div(class="absolute inset-y-0 right-0 items-center gap-2 pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 hidden xl:flex")
+			div(class="items-center gap-2 pr-2 sm:ml-6 sm:pr-0 hidden xl:flex")
 
-				div(v-if='!slot.right' class='flex gap-2')
-					u-share-button
+				div(v-if='!slot.right' class='inset-y-0 left-0 flex items-center gap-2 justify-end w-full')
+					u-share-button(square)
 					u-language-select
 					u-color-select(square)
 					u-theme-toggle(square)
@@ -33,7 +33,7 @@ nav(v-if='active' class="border-(--ui-border-muted)/50 fixed w-full bottom-0 lg:
 				slot(name='rigth' :menu)
 
 			div(class="inset-y-0 left-0 flex items-center gap-2 justify-end xl:hidden w-full")
-				u-share-button
+				u-share-button(square)
 
 				//- Mobile menu, show/hide based on menu state
 				u-drawer(v-model:open='menu' id='mobile-menu' direction='bottom' no-body-styles)

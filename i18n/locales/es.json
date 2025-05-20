@@ -67,7 +67,14 @@
 		"certificates": "Certificados",
 		"skills": "Skills",
 		"studies": "Estudios",
-		"projects": "Proyectos"
+		"projects": "Proyectos",
+		"portfolio": "Portafolio"
+	},
+	"control": {
+		"play": "Reproducir",
+		"pause": "Pausar",
+		"next": "Próximo",
+		"prev": "Anterior"
 	},
 	"share": {
 		"name": "Compartir"

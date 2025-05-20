@@ -118,7 +118,14 @@
 		"home": "Home",
 		"skills": "Skills",
 		"studies": "Studies",
-		"projects": "Projects"
+		"projects": "Projects",
+		"portfolio": "Portfolio"
+	},
+	"control": {
+		"play": "Play",
+		"pause": "Pause",
+		"next": "Next",
+		"prev": "Previous"
 	},
 	"share": {
 		"name": "Share"

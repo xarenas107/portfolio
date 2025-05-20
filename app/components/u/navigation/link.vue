@@ -30,8 +30,8 @@ const props = withDefaults(defineProps<Props>(), {
 
 const state = computed(() => {
 	return props.active
-		? 'bg-primary-500/10 dark:bg-primary-400/10 text-primary-500 dark:text-primary-400 hover:bg-primary-500/20 hover:dark:bg-primary-500/20'
-		: 'text-neutral-600 dark:text-neutral-300 hover:text-neutral-700 hover:dark:text-neutral-200 hover:bg-neutral-500/10 hover:dark:bg-neutral-400/10'
+		? 'bg-primary/10 text-primary hover:bg-primary/20'
+		: 'text-default hover:text-highlighted hover:bg-(--ui-text)/10'
 })
 
 const click = (event: MouseEvent) => emit('click', event)

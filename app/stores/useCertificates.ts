@@ -6,8 +6,8 @@ export default () => {
 	const key = 'certificates'
 	const { data, execute, status } = useLazyAsyncData(key, async () => {
 		const response = await queryCollection(key)
-			.select('title', 'provider', 'image', 'credentials', 'startAt', 'endAt', locale.value)
-			.order('startAt', 'DESC').all()
+			.select('title', 'provider', 'image', 'credentials', 'startAt', 'stem', 'endAt', locale.value)
+			.order('stem', 'DESC').all()
 
 		for (const item of response) {
 			Object.assign(item, item[locale.value])

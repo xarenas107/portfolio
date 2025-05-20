@@ -9,7 +9,11 @@ beta-section-skills(v-intersect='intersect' :scale-down ref='section')#skills
 //- 	div(class="scale-animation rounded-full bg-(--ui-bg-elevated)/50 p-8 aspect-square")
 //- 		div(class="h-4 w-4 mask-animation bg-elevated rounded-full relative")
 
-//- beta-section-projects(v-intersect='intersect' :scale-down ref='section')#projects
+div(class='relative w-full h-[400svh] flex justify-center content-center overflow-clip motion-reduce:hidden bg-gradient-to-t from-(--ui-primary)/10 to-(--ui-bg)')
+	div(class="aspect-square w-full px-4 sm:px-6 lg:px-8 m-auto max-w-7xl")
+		section-title(v-intersect='intersect' class='sticky top-1/2 -translate-y-1/2 leading-0 mask-animation !block grow' hyphens)#projects {{ t('section.portfolio') }}
+
+beta-section-projects(:scale-down ref='section')
 beta-section-footer(:scale-down)
 </template>
 
@@ -27,6 +31,7 @@ type Props = {
 await new Promise(resolve => setTimeout(resolve, 10))
 defineProps<Props>()
 
+const { t } = useI18n()
 const hash = useHashRoute()
 const section = ref(null)
 
@@ -43,37 +48,34 @@ const intersect = [
 </script>
 
 <style lang="scss">
-@keyframes scale {
-	from, 30% { scale: 1 }
-	to { scale: 100 }
-}
-
 @keyframes scale-full {
-	from, 20% { scale: 0 }
-	to { scale: 10 }
-}
-
-@keyframes opacity {
-	from { background: var(--bg-neutral-500) }
+	from, to {
+		margin-left: calc(50% - 4ch);
+	}
+	from, 10% {
+		opacity: 0;
+		color: var(--ui-text);
+	}
+	20%, 40% {
+		scale: 1;
+		color: var(--ui-primary);
+	}
+	50%, 80% {
+		opacity: 1;
+	}
+	to {
+		color: var(--ui-primary);
+		opacity: 0;
+		scale: 200;
+	}
 }
 
 @media (prefers-reduced-motion: no-preference) {
 	.mask-animation {
+		transform-origin: center;
 		animation: scale-full ease both;
 		animation-timeline: view();
-		animation-range: 0svh 150svh
-	}
-
-	.scale-animation {
-		animation: scale ease both;
-		animation-timeline: view();
-		animation-range: 0svh 100svh
-	}
-
-	.opacity-animation {
-		animation: opacity linear both;
-		animation-timeline: view();
-		animation-range: 100svh 150svh;
+		animation-range: 0% 100%
 	}
 }
 </style>

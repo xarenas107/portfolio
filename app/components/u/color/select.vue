@@ -1,10 +1,10 @@
 <template lang='pug'>
 client-only()
     template(#fallback)
-        u-skeleton(class='w-8 h-8 aspect-square rounded-lg bg-neutral-300/50 dark:bg-neutral-700/50')
+        u-skeleton(class='w-8 h-8 aspect-square rounded-lg bg-(--ui-text)/50')
 
     u-popover(:items)
-        u-button(:label='active?.title' :aria-label="t('color.option', 2)" variant='ghost' color='primary' size="lg" icon="i-heroicons-outline:color-swatch" :class='{ "aspect-square": square }')
+        u-button(:label='active?.title' :aria-label="t('color.option', 2)" variant='ghost' color='primary' size="lg" icon="i-heroicons-outline:color-swatch" :class='{ "aspect-square place-content-center": square }' class='hover:bg-primary/20')
 
         template(#content)
             div(class='flex flex-wrap gap-1.5 p-2 max-w-28 w-max' ref='element')
@@ -32,8 +32,8 @@ const items = computed(() => {
 })
 
 const active = computed(() => {
-	const item = items.value.find(item => item.active)
-	if (!props.showLabel && item) item.title = ''
+	const item = { ...items.value.find(item => item.active) }
+	if (!props.showLabel && item) delete item.title
 	return item
 })
 

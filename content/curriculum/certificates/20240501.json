@@ -1,17 +1,11 @@
 {
 	"en": {
-		"title": "UX Design Professional Certificate"
+		"title": "Design a user experience for social good / prepare for jobs by Google"
 	},
 	"es": {
-		"title": "Certificado de Diseño Profesional UX"
+		"title": "Diseñar una experiencia de usuario para el bien social / prepararse para trabajos de Google"
 	},
 	"credentials": [
-      "https://www.coursera.org/account/accomplishments/verify/E9NEM8EVLXG7", 
-      "https://www.coursera.org/account/accomplishments/verify/QU45KL2JGT8G",
-      "https://www.coursera.org/account/accomplishments/verify/E35GUSDPSWPH",
-      "https://www.coursera.org/account/accomplishments/verify/QSYSM9KVPE3V",
-      "https://www.coursera.org/account/accomplishments/verify/7YFU687DHTT9",
-      "https://www.coursera.org/account/accomplishments/verify/JH2S3YSDVHBF",
       "https://www.coursera.org/account/accomplishments/verify/KUE73DQM3334"
     ],
 	"provider": "Google",

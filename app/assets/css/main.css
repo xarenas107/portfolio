@@ -7,7 +7,8 @@
 	--ui-bg: var(--color-neutral-50);
 
 	@variant dark {
-		--ui-bg: var(--color-neutral-950)
+		--ui-bg: var(--color-neutral-950);
+		--ui-primary: var(--color-primary-600)
 	}
 }
 
@@ -78,6 +79,16 @@
 
 @utility contain-* {
 	contain: --value('none', 'size', 'layout', 'paint', 'strict');
+}
+
+@utility step-start-* {
+	--step-start: --value(integer, [integer]);
+	animation-timing-function: steps(--step-start, --step-position);
+}
+
+@utility step-position-* {
+	--step-position: --value('jump-start', 'jump-end', 'jump-none', 'jump-both', 'start', 'end');
+	animation-timing-function: steps(--step-start, --step-position);
 }
 
 

@@ -5,7 +5,7 @@ div(class='overflow-clip bg-(--ui-primary) relative flex motion-safe:min-h-svh f
 		section-title(:class='ui.title' class="scroll-slide-animation" hyphens) {{  t('section.experience', 2) }}
 
 	div(class='relative flex w-full bg-default h-full motion-safe:min-h-[150svh] py-24 grow motion-reduce:overflow-auto scroll-hidden')
-		div(v-bind='options' class='px-4 sm:px-6 motion-reduce:pr-0 motion-reduce:sm:pr-0 motion-reduce:lg:pr-0 lg:px-8 gap-8 motion-reduce:max-w-7xl mx-auto w-full grow')
+		div(v-bind='options' class='px-4 sm:px-6 motion-reduce:pr-0 motion-reduce:sm:pr-0 motion-reduce:lg:pr-0 lg:px-8 gap-8 motion-reduce:max-w-7xl mx-auto w-full grow ')
 
 			u-timeline(
 				:ui='ui.timeline'

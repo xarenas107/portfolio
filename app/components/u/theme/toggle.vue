@@ -1,9 +1,9 @@
 <template lang='pug'>
 client-only()
     template(#fallback)
-        u-skeleton(class='w-8 h-8 aspect-square rounded-lg bg-neutral-300/50 dark:bg-neutral-700/50')
+        u-skeleton(class='w-8 h-8 aspect-square rounded-lg bg-(--ui-text)/50')
 
-    u-button(@click='toggle' :icon='active?.icon' :label='active?.title' :aria-label='t("theme.name")' variant='ghost' color='neutral' size="lg" :class='[{ "aspect-square": square }, "hover:bg-neutral-500/10 hover:dark:bg-neutral-400/10"]')
+    u-button(@click='toggle' :icon='active?.icon' :label='active?.title' :aria-label='t("theme.name")' variant='ghost' color='neutral' size="lg" :class='[{ "aspect-square place-content-center": square }, "hover:bg-(--ui-text)/10"]')
 </template>
 
 <script lang='ts' setup>
@@ -36,8 +36,8 @@ const toggle = (event?: MouseEvent) => {
 }
 
 const active = computed(() => {
-	const item = items.value.find(scheme => scheme.value === mode.value)
-	if (!props.showLabel && item) item.title = ''
+	const item = { ...items.value.find(scheme => scheme.value === mode.value) }
+	if (!props.showLabel && item) delete item.title
 	return item
 })
 
