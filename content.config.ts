@@ -161,8 +161,10 @@ export default defineContentConfig({
 				sections: z.object({
 					'name': z.string().optional().default('project-base'),
 					'aspect-ratio': z.string().optional().default('16/9'),
+					'background': z.string().optional(),
 					'alt': z.string().default('').optional(),
 					'detail': z.union([z.boolean(), z.enum(['reverse'])]).optional().default(false),
+					'reverse': z.boolean().optional().default(false),
 					'src': z.string().array().default([]),
 					'description': z.string().optional(),
 					'colors': z.string().array().default([]),
