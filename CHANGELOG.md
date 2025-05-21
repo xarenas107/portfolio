@@ -1,6 +1,28 @@
 # Changelog
 
 
+## v1.8.21
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.8.20...v1.8.21)
+
+### 🩹 Fixes
+
+- **navbar:** Solve missing back button on sm devices ([8d35852](https://github.com/xarenas107/portfolio/commit/8d35852))
+- **ui:** Improve accesibility and system consistence ([c9a053f](https://github.com/xarenas107/portfolio/commit/c9a053f))
+
+### 🏡 Chore
+
+- **carousel:** Use native `nuxt/ui` carousel ([1c15fd5](https://github.com/xarenas107/portfolio/commit/1c15fd5))
+- **portfolio:** Add new content ([3cf57e5](https://github.com/xarenas107/portfolio/commit/3cf57e5))
+- **portfolio:** Update project model ([71552fd](https://github.com/xarenas107/portfolio/commit/71552fd))
+- **color:** Set `indigo` as default ([1223494](https://github.com/xarenas107/portfolio/commit/1223494))
+- Disable projects sections ([2e1b2aa](https://github.com/xarenas107/portfolio/commit/2e1b2aa))
+- **node:** Update packages ([d096383](https://github.com/xarenas107/portfolio/commit/d096383))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.8.20
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.8.19...v1.8.20)
