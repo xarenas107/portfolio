@@ -9,6 +9,6 @@ export default defineNuxtPlugin(() => {
 	})
 
 	onNuxtReady(() => {
-		if (!storage.value) app.ui.colors.primary = 'orange'
+		if (!storage.value) app.ui.colors.primary = 'indigo'
 	})
 })
