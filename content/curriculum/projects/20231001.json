@@ -1,0 +1,49 @@
+{
+	"title": "Fitness coaching service",
+	"cover": "/project/20231001/cover.png",
+	"layout": "project-base",
+	"en": {
+		"description": "Fitness training service that allows users to create and follow their own training plans, which will be beneficial for people who are new to the world of technology as it offers a very simple and intuitive experience."
+	},
+	"es": {
+		"description": "Servicio de entrenamiento fitness que permite a los usuarios crear y seguir sus propios planes de entrenamiento, lo que será beneficioso para las personas que se inician en el mundo de la tecnología ya que ofrece una experiencia muy sencilla e intuitiva."
+	},
+	"sections": [
+		{
+		  "name": "project-section-spread",
+		  "aspect-ratio": "16/9",
+		  "alt": "",
+		  "src": [
+			"/project/20231001/desktop/3.jpg",
+			"/project/20231001/desktop/2.jpg",
+			"/project/20231001/desktop/1.jpg",
+			"/project/20231001/desktop/4.jpg"
+		  ]
+		}, {
+		  "name": "project-section-paragraph",
+		  "es": {
+			"description": "El cliente es propietario de un gimnasio y necesita una aplicación de entrenamiento fitness para complementar su servicio y el público objetivo son personas con pocos conocimientos tecnológicos cuyo objetivo es ponerse en forma."
+		  },
+		  "en": {
+			"description": "The client owns a gym and needs a fitness training app to complement their service and the target audience is people with little technological knowledge whose goal is to get fit."
+		  }
+		}, {
+		  "name": "project-responsive",
+		  "detail": true,
+		  "aspect-ratio": "134/290",
+		  "alt": "",
+		  "background": "/project/20231001/desktop/4.jpg",
+		  "src": [
+			"/project/20231001/mobile/1.png",
+			"/project/20231001/mobile/2.png"
+		  ]
+		}, {
+		  "name": "project-color",
+		  "description": "As part of the color scheme, corporate colors were consistently used to foster brand recognition and familiarity, creating a coherent extension of its identity in the digital environment.",
+		  "palette": ["#26DC59", "#19411D", "#E0E1EC"],
+		  "es": {
+			"description": "Como parte de la gama cromática se emplearon los colores corporativos de manera consistente para fomentar el reconocimiento y la familiaridad con la marca, creando una extensión coherente de su identidad en el entorno digital."
+		  }
+		}
+	]
+}

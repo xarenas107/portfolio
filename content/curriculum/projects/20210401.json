@@ -1,13 +1,13 @@
 {
-	"cover": "/project/timer/cover.png",
+	"cover": "/project/20210401/cover.png",
 	"layout": "project-base",
 	"en": {
 		"title": "Time mobile app",
-		"description": "UI Design for an Adobe creative challenge."
+		"description": "This project focuses on the design of the user interface (UI) and user experience (UX) for a timer application, specifically designed for an Adobe Creative Challenge."
 	},
 	"es": {
-		"title": "Aplicación de temporizador para móviles",
-  		"description": "Diseño de interfaz de usuario para un desafío creativo de Adobe."
+		"title": "Aplicación móvil de temporizador",
+  		"description": "Este proyecto se centra en el diseño de la interfaz de usuario (UI) y la experiencia de usuario (UX) para una aplicación de temporizador, concebida específicamente para un 'Adobe Creative Challenge'."
 	},
 	"sections": [
 		{
@@ -16,13 +16,17 @@
 			"aspect-ratio": "195/420",
 			"alt": "",
 			"src": [
-				"/project/timer/app/1.png",
-				"/project/timer/app/2.png", 
-				"/project/timer/app/3.png"
+				"/project/20210401/app/1.png",
+				"/project/20210401/app/2.png", 
+				"/project/20210401/app/3.png"
 			]
 		}, {
 			"name": "project-color",
-			"palette": ["#36C2FE", "#E8ECF0", "#FF8C9A"]
+			"description": "As part of the color scheme, corporate colors were consistently used to foster brand recognition and familiarity, creating a coherent extension of its identity in the digital environment.",
+			"palette": ["#36C2FE", "#E8ECF0", "#FF8C9A"],
+			 "es": {
+				"description": "Como parte de la gama cromática se emplearon los colores corporativos de manera consistente para fomentar el reconocimiento y la familiaridad con la marca, creando una extensión coherente de su identidad en el entorno digital."
+			}
 		}
   ]
 }

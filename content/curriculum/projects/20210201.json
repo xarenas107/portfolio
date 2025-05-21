@@ -34,20 +34,18 @@
 		}, {
 		  "name": "project-responsive",
 		  "detail": true,
-		  "aspect-ratio": ["520/290", "134/290"],
+		  "aspect-ratio": "134/290",
 		  "alt": "",
+		  "background": "/project/20210201/responsive/1.png",
 		  "src": [
-			"/project/20210201/responsive/1.png",
 			"/project/20210201/responsive/2.png"
 		  ]
 		}, {
 		  "name": "project-color",
+		  "description": "As part of the color scheme, corporate colors were consistently used to foster brand recognition and familiarity, creating a coherent extension of its identity in the digital environment.",
 		  "palette": ["#C53B3B", "#E0E1EC"],
 		  "es": {
-			"description": "La gama cromática surge de los colores identitarios de la marca."
-		  },
-		  "en": {
-			"description": "The color range arises from the brand's identity colors."
+			"description": "Como parte de la gama cromática se emplearon los colores corporativos de manera consistente para fomentar el reconocimiento y la familiaridad con la marca, creando una extensión coherente de su identidad en el entorno digital."
 		  }
 		}
 	]

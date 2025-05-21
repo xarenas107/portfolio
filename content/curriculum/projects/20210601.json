@@ -1,0 +1,50 @@
+{
+	"cover": "/project/20210601/cover.png",
+	"layout": "project-base",
+	"en": {
+		"title": "Mobile app for a dermatological clinic",
+		"description": "Appointment booking service for a dermatological clinic through a mobile application."
+	},
+	"es": {
+		"title": "Aplicación móvil para una clínica dermatológica",
+  		"description": "Servicio de reserva de citas para clínica dermatológica a través de una aplicación móvil."
+	},
+	"sections": [
+		{
+			"name": "project-section-spread",
+			"aspect-ratio": "16/8",
+			"alt": "",
+			"src": [
+				"/project/20210601/desktop/1.jpg",
+				"/project/20210601/desktop/2.jpg",
+				"/project/20210601/desktop/3.jpg",
+				"/project/20210601/desktop/4.jpg"
+			]
+		},
+		{
+			"name": "project-section-paragraph",
+			"es": {
+			  "description": "The client owns a dermatological clinic and wants to implement an appointment booking service through an app."
+			},
+			"en": {
+			  "description": "El cliente es propietario de una clínica dermatológica y quiere implementar un servicio de reserva de citas a través de una aplicación."
+			}
+		}, {
+		  "name": "project-responsive",
+		  "detail": true,
+		  "aspect-ratio": "134/290",
+		  "alt": "",
+		  "background": "/project/20210601/desktop/5.jpg",
+		  "src": [
+			"/project/20210601/mobile/1.jpg"
+		  ]
+		}, {
+		  "name": "project-color",
+		  "description": "As part of the color scheme, corporate colors were consistently used to foster brand recognition and familiarity, creating a coherent extension of its identity in the digital environment.",
+		  "palette": ["#26DC59", "#19411D", "#E0E1EC"],
+		  "es": {
+			"description": "Como parte de la gama cromática se emplearon los colores corporativos de manera consistente para fomentar el reconocimiento y la familiaridad con la marca, creando una extensión coherente de su identidad en el entorno digital."
+		  }
+		}
+  ]
+}
