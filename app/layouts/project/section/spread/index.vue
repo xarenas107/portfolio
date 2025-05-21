@@ -1,5 +1,5 @@
 <template lang="pug">
-div(class='flex w-full content-between z-10 relative -space-x-32 grow shrink rounded-lg gap-4 bg-elevated justify-center p-8')
+div(class='flex w-full content-between z-10 relative -space-x-32 grow shrink rounded-lg gap-2 lg:gap-4 bg-elevated justify-center p-0 lg:p-8')
 	u-image(v-for='image in images' v-bind='image' class='rounded-lg shadow-smooth h-full grow shrink max-w-3xs spread-animation border border-(--ui-border)')
 </template>
 
@@ -8,6 +8,7 @@ type Props = {
 	detail?: boolean | 'reverse'
 	src?: string[]
 	aspectRatio?: `${number}/${number}` | number | 'auto'
+	reverse?: boolean
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -21,6 +22,8 @@ const style = computed(() => ({
 	'--aspect': props.aspectRatio,
 	'--basis': `minmax(100%, 10rem)`
 }))
+
+const direction = computed(() => props.reverse ? 'reverse' : 'normal')
 
 const images = computed(() => {
 	return props.src?.map((src = '', index = 0) => {
@@ -63,7 +66,7 @@ const images = computed(() => {
 
 @media (prefers-reduced-motion: no-preference) {
   .spread-animation {
-    animation: rotate ease-out both;
+    animation: rotate ease-out both v-bind(direction);
     animation-timeline: view();
     animation-range: 20dvh 50dvh;
   }

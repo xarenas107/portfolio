@@ -1,6 +1,6 @@
 <template lang='pug'>
 div(@click='event => toggle(color, event)' :class='[state]' class='p-2 rounded-lg')
-    span(:class="[`bg-(--color) dark:bg-(--dark-color)`, 'flex h-3 w-3 aspect-square flex-shrink-0 rounded-full cursor-pointer']" :style='`--color: ${shade[500]}; --dark-color: ${shade[400]}`' aria-hidden="true")
+    span(:class="[`bg-(--color) dark:bg-(--dark-color)`, 'flex h-3 w-3 aspect-square flex-shrink-0 rounded-full cursor-pointer']" :style='`--color: ${shade[500]}; --dark-color: ${shade[500]}`' aria-hidden="true")
 </template>
 
 <script lang='ts' setup>

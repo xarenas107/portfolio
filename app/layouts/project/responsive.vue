@@ -1,17 +1,20 @@
 <template lang="pug">
 div(class='flex items-stretch w-full content-between z-10 relative rounded-lg gap-4')
-	nuxt-img(v-for='image in images' v-bind='image' class='rounded-lg grow h-full object-cover object-top ring' loading='lazy')
+	nuxt-img(:src='background' class='rounded-lg grow h-full object-cover object-top ring bg-accented scroll-up-animation contrast-20 aspect-16/9' loading='lazy')
+	div(class='absolute top-1/2 -translate-1/2 left-1/2 flex gap-4 slide-up-animation')
+		nuxt-img(v-for='image in images' v-bind='image' class='rounded-lg grow mt-(--top) h-50 sm:h-72 md:h-96 lg:h-100 object-cover object-top ring shadow-smooth max-w-3xs slide-animation' loading='lazy')
 </template>
 
 <script lang="ts" setup>
 type Props = {
 	detail?: boolean
+	background?: string
 	src?: string[]
-	aspectRatio?: (`${number}/${number}` | number | 'auto')[]
+	aspectRatio?: `${number}/${number}` | number | 'auto'
 }
 
 const props = withDefaults(defineProps<Props>(), {
-	aspectRatio: () => [],
+	aspectRatio: () => '1/2',
 	src: () => []
 })
 
@@ -20,15 +23,14 @@ const images = computed(() => {
 		return {
 			id: index,
 			class: [
-				'bg-neutral-200 dark:bg-neutral-900 aspect-(--aspect) light:opacity-(--opacity) dark:brightness-(--opacity) max-h-(--max-height) ', {
-					'shadow-smooth max-w-3xs absolute top-[50%] -translate-y-[50%] left-[50%] -translate-x-[50%]': index !== 0
-				},
-				index === 0 ? 'scroll-up-animation' : 'slide-up-animation'
+				'bg-elevated aspect-(--aspect) light:opacity-(--opacity) dark:brightness-(--opacity) max-h-(--max-height)'
 			],
 			style: {
 				'--max-height': 'calc(100% - 20%)',
-				'--aspect': props.aspectRatio?.at(index),
-				'--opacity': `${index !== 0 ? 100 : 50}%`
+				'--aspect': props.aspectRatio,
+				'--opacity': `100%`,
+				'--top': `${index * 10}%`,
+				'--z-index': -index
 			},
 			alt: '',
 			src
@@ -47,14 +49,17 @@ const images = computed(() => {
 
 @keyframes slide-up {
     from {
-		transform: translateY(20dvh) scale(1.2);
+		transform: translateY(2dvh) scale(1.2);
 		box-shadow: 0 0 transparent;
     }
 }
 
+@keyframes slide {
+    from { margin-top: 0 }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .scroll-up-animation {
-	// transform-origin: center;
     animation: scroll-up ease-in forwards;
     animation-timeline: view();
     animation-range: entry;
@@ -64,5 +69,11 @@ const images = computed(() => {
     animation-timeline: view();
     animation-range: 20dvh 40dvh;
   }
+
+	.slide-animation {
+		animation: slide ease-in both;
+		animation-timeline: view();
+		animation-range: entry;
+	}
 }
 </style>

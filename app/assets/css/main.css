@@ -8,7 +8,7 @@
 
 	@variant dark {
 		--ui-bg: var(--color-neutral-950);
-		--ui-primary: var(--color-primary-600)
+		--ui-primary: var(--color-primary-500)
 	}
 }
 
