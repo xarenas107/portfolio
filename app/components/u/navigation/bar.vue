@@ -7,12 +7,12 @@ nav(v-if='active' class="border-(--ui-border-muted)/50 fixed w-full bottom-0 lg:
 	//- Navbar container
 	div(:class="ui.container")
 		div(class="relative flex h-16 items-center justify-between gap-2")
-			div(class="hidden lg:flex flex-1 items-center sm:items-stretch sm:justify-start")
+			div(class="flex flex-1 items-center sm:items-stretch sm:justify-start")
 				div(v-if='!slot.left' class='flex gap-6')
-					div(v-if='!back' class=" shrink-0 flex")
+					div(v-if='!back' class=" shrink-0 hidden lg:flex")
 						lazy-favicon(class="h-8 w-auto")
 
-					div(v-if='!back' class="flex")
+					div(v-if='!back' class="lg:flex hidden")
 						//- u-navigation-menu(:items='navigation.data' color='primary' unmount-on-hide arrow content-orientation="vertical")
 						div(class="flex gap-2")
 							u-tooltip(v-for='{ icon, text, id, active, kbds } in data' :text :kbds :disabled='active')
@@ -154,7 +154,7 @@ const { current } = useMagicKeys({
 })
 
 const ui = {
-	container: 'mx-auto max-w-7xl px-2 sm:px-6 lg:px-8',
+	container: 'mx-auto max-w-7xl px-4 sm:px-6 lg:px-8',
 	button: {
 		class: 'focus:outline-none focus:ring-1 focus:ring-inset focus:ring-neutral-600/50 dark:focus:ring-neutral-300/50',
 		variant: 'ghost',
