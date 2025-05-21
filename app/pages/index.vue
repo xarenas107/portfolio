@@ -9,11 +9,11 @@ beta-section-skills(v-intersect='intersect' :scale-down ref='section')#skills
 //- 	div(class="scale-animation rounded-full bg-(--ui-bg-elevated)/50 p-8 aspect-square")
 //- 		div(class="h-4 w-4 mask-animation bg-elevated rounded-full relative")
 
-div(class='relative w-full h-[400svh] flex justify-center content-center overflow-clip motion-reduce:hidden bg-gradient-to-t from-(--ui-primary)/10 to-(--ui-bg)')
-	div(class="aspect-square w-full px-4 sm:px-6 lg:px-8 m-auto max-w-7xl")
-		section-title(v-intersect='intersect' class='sticky top-1/2 -translate-y-1/2 leading-0 mask-animation !block grow' hyphens)#projects {{ t('section.portfolio') }}
+//- div(class='relative w-full h-[400svh] flex justify-center content-center overflow-clip motion-reduce:hidden bg-gradient-to-t from-(--ui-primary)/10 to-(--ui-bg)')
+//- 	div(class="aspect-square w-full px-4 sm:px-6 lg:px-8 m-auto max-w-7xl")
+//- 		section-title(v-intersect='intersect' class='sticky top-1/2 -translate-y-1/2 leading-0 mask-animation !block grow' hyphens)#projects {{ t('section.portfolio') }}
 
-beta-section-projects(:scale-down ref='section')
+//- beta-section-projects(:scale-down ref='section')
 beta-section-footer(:scale-down)
 </template>
 
@@ -56,7 +56,7 @@ const intersect = [
 		opacity: 0;
 		color: var(--ui-text);
 	}
-	20%, 40% {
+	20%, 60% {
 		scale: 1;
 		color: var(--ui-primary);
 	}
