@@ -23,9 +23,10 @@ const { t } = useI18n()
 const label = computed(() => props.showLabel ? t('share.name') : undefined)
 const { origin } = useRequestURL()
 const { data } = useUser()
+const { share } = useShare()
 
 const toggle = () => {
-	navigator.share({
+	share({
 		url: origin,
 		title: data.value?.name,
 		text: data.value?.job

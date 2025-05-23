@@ -1,7 +1,7 @@
 <template lang="pug">
 div(class='min-h-[60svh] relative overflow-clip bg-default py-24')
-  div(class='fade-exit-animation motion-safe:sticky motion-safe:top-[30svh]')
-    section-title(v-bind='options' :class='ui.title' class='origin-left scale-down-animation' hyphens) {{  t('section.skills') }}
+  div(v-bind='options' class='fade-exit-animation motion-safe:sticky motion-safe:top-[30svh]')
+    section-title(:class='ui.title' class='origin-left scale-down-animation' hyphens) {{  t('section.skills') }}
 
   u-container(v-bind='options' as='ul' class='grid grid-rows-1 grid-cols-1 sm:grid-rows-2 sm:grid-cols-2 lg:grid-rows-3 lg:grid-cols-3 gap-16 pt-8 sm:pt-12 md:pt-20 lg:pt-24 xl:pt-32 z-20 lg:m-auto')
     li(v-for='item, index in data' :class='`scroll-fade-animation lg:grid-start-${index + 1}`')

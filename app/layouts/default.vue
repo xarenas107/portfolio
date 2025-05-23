@@ -1,6 +1,6 @@
 <template lang='pug'>
 div(class='bg-default')
-    slot
+	slot
 </template>
 
 <script setup lang="ts">

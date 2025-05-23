@@ -1,5 +1,5 @@
  <template lang="pug">
-u-main(ref='main' class='skew-y-(--skew) transition-(--transition-property) duration-200 ease-out')
+u-main(ref='main' class='motion-safe:skew-y-(--skew) transition-[transform filter] duration-600 ease-out')
     slot
 </template>
 
@@ -8,6 +8,10 @@ import type { ComponentPublicInstance } from 'vue'
 
 type Emit = {
 	(event: 'scroll', value: Event): void
+}
+
+type Props = {
+	disabled?: boolean
 }
 
 type State = {
@@ -19,6 +23,9 @@ type State = {
 }
 
 const emit = defineEmits<Emit>()
+const props = withDefaults(defineProps<Props>(), {
+	disabled: false
+})
 
 const reduceMotion = usePreferredReducedMotion()
 const main = useTemplateRef<ComponentPublicInstance>('main')
@@ -50,7 +57,7 @@ const update = (event: Event) => {
 
 	if (state.timer) clearTimeout(state.timer)
 	state.timer = setTimeout(() => {
-		if (element) element.style.removeProperty('--skew')
+		if (element) element.style.setProperty('--skew', `0deg`)
 		active.value = false
 	}, 150)
 
@@ -66,12 +73,12 @@ onBeforeUpdate(() => {
 })
 
 onUpdated(() => {
-	setTimeout(() => state.pause = false, 300)
+	setTimeout(() => state.pause = props.disabled, 300)
 })
 
 onMounted(() => {
 	state.scroll = window.scrollY
-	state.pause = false
+	state.pause = props.disabled
 })
 </script>
 

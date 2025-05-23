@@ -1,5 +1,5 @@
 <template lang="pug">
-nav(v-if='active' class="border-(--ui-border-muted)/50 fixed w-full bottom-0 lg:bottom-auto z-50 transition-transform" :class='[classes, { "-translate-y-full": sticky && !reveal }]')
+nav(v-if='active' class="border-muted/50 fixed w-full bottom-0 lg:bottom-auto z-50 transition-[transform background] duration-200" :class='[classes, { "-translate-y-full": sticky && !reveal }]')
 
 	//- Scroll progress bar
 	u-progress(v-model='scroll.value' :max='scroll.max' :ui="ui.progress" color='neutral' size='2xs' )
@@ -111,16 +111,19 @@ const navigate = (value: string) => {
 }
 
 const recolor = () => {
-	const set = new Set<string>(['backdrop-blur', 'bg-(--ui-bg)/80'])
+	const set = new Set<string>(['backdrop-blur', 'bg-default'])
 
 	// Remove opacity on scroll top
 	if (window.scrollY === 0) set.add('sm:bg-transparent')
+	else set.add('sm:bg-default/80')
+
 	classes.value = Array.from(set).join(' ')
 }
 
 const hide = () => {
-	reveal.value = window.scrollY < 500 || top.value > window.scrollY
-	top.value = window.scrollY
+	const { scrollY = 0 } = window ?? {}
+	reveal.value = scrollY < 500 || top.value > scrollY
+	top.value = scrollY
 }
 
 const scroll = reactive({
@@ -134,7 +137,7 @@ const progress = () => {
 	scroll.value = scrollTop
 }
 
-useEventListener('scroll', (event) => {
+useEventListener('scroll', () => {
 	progress()
 	recolor()
 	hide()

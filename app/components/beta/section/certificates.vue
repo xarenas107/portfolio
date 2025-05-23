@@ -44,7 +44,7 @@ div(class='py-24 min-h-svh bg-primary relative overflow-clip place-content-cente
                           u-icon(name='i-heroicons-outline:external-link' class='w-4 h-4')
 
                 template(#footer)
-                  div(v-if='item.endAt' class='flex gap-2 text-default/80 items-center')
+                  div(v-if='item.endAt' class='flex gap-2 text-inverted/80 items-center')
                     u-icon(name='heroicons-outline:clock' class='w-5 h-5')
                     nuxt-time(:datetime="item.endAt" :locale class='uppercase text-xs' month='long' year='numeric')
 
@@ -53,7 +53,7 @@ div(class='py-24 min-h-svh bg-primary relative overflow-clip place-content-cente
       div(class='flex gap-6 items-center')
         //- u-button(@click='toggle()' icon='i-line-md:chevron-left' :aria-label='t("control.prev")' variant='ghost' color='neutral' size="lg" class='bg-primary hover:bg-inverted/20 aspect-square place-content-center rounded-full')
 
-        u-button(@click='toggle()' :icon :aria-label='t("control.play")' variant='outline' color='neutral' size="xl" class='bg-inverted/10 ring-inverted/20 hover:bg-inverted/20 aspect-square place-content-center rounded-full motion-reduce:hidden cursor-pointer')
+        u-button(@click='toggle()' :icon :aria-label='t("control.play")' variant='outline' color='neutral' size="xl" class='text-inverted bg-default/10 ring-default/20 hover:bg-default/20 aspect-square place-content-center rounded-full motion-reduce:hidden cursor-pointer')
 
         //- u-button(@click='toggle()' icon='i-line-md:chevron-right' :aria-label='t("control.prev")' variant='ghost' color='neutral' size="lg" class='bg-priamry hover:bg-inverted/20 aspect-square place-content-center rounded-full')
 </template>
@@ -78,16 +78,16 @@ const options = computed(() => {
 const { data } = useCertificates()
 
 const ui = {
-	title: 'text-highlighted',
+	title: 'text-inverted',
 	card: {
 		border: 'px',
-		base: 'bg-inverted/20 p-px',
-		child: 'bg-primary text-highlighted',
-		before: `before:bg-inverted`,
-		after: `after:bg-inverted`
+		base: 'bg-default/20 p-px',
+		child: 'bg-primary text-inverted',
+		before: `before:bg-default`,
+		after: `after:bg-default`
 	},
 	badge: {
-		base: `w-fit h-fit text-nowrap gap-2 ring-1 ring-inset text-highlighted/80 hover:text-highlighted ring-inverted/50 hover:ring-inverted bg-primary`
+		base: `w-fit h-fit text-nowrap gap-2 ring-1 ring-inset text-inverted/80 hover:text-inverted ring-default/50 hover:ring-default bg-primary`
 	},
 	carousel: {
 		item: 'w-full max-w-80'

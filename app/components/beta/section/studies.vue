@@ -1,9 +1,9 @@
 <template lang="pug">
 div(class='overflow-clip min-h-svh flex flex-col relative')
-	div(class='h-[20svh] w-full bg-gradient-to-b from-(--ui-primary)/10 to-(--ui-bg)')
+	div(class='h-[20svh] w-full bg-default')
 
 	div(class='w-full bg-primary overflow-clip')
-		u-container(v-bind='options' class='overflow-clip')
+		u-container(v-bind='options' class='overflow-clip origin-top')
 			section-title(class="text-(--ui-bg) -mt-1 md:-mt-2 scroll-slide-animation" hyphens) {{ t('section.studies') }}
 
 	div(class='flex flex-col w-full h-full py-24 grow bg-primary')
@@ -52,13 +52,13 @@ const { data, pending } = useStudies()
 const ui = {
 	timeline: {
 		base: 'lg:min-w-[100dvw]',
-		divider: 'border-inverted/20',
+		divider: 'border-default/20',
 		dot: {
-			base: 'bg-inverted'
+			base: 'bg-default'
 		},
-		text: 'text-highlighted',
+		text: 'text-inverted',
 		badge: {
-			base: 'text-highlighted ring ring-(--ui-text-default)'
+			base: 'text-inverted ring ring-(--ui-text-default)'
 		}
 	}
 }

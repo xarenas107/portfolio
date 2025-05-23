@@ -1,7 +1,7 @@
 <template lang="pug">
 div(class='overflow-clip bg-(--ui-primary) relative flex motion-safe:min-h-svh flex-col')
 	div(class='h-[20svh] w-full bg-(--ui-primary)')
-	u-container(v-bind='options' class='h-full w-full')
+	u-container(v-bind='options' class='h-full w-full origin-bottom')
 		section-title(:class='ui.title' class="scroll-slide-animation" hyphens) {{  t('section.experience', 2) }}
 
 	div(class='relative flex w-full bg-default h-full motion-safe:min-h-[150svh] py-24 grow motion-reduce:overflow-auto scroll-hidden')
