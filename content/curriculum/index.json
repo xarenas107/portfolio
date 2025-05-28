@@ -1,12 +1,12 @@
 {
 	"name": "Xavier",
 	"en": {
-		"description": "Graphic designer with over eight years of experience and a master's degree in user experience and interface design. My focus is on transforming complex ideas into intuitive and engaging digital experiences.",
+		"description": "Product designer with over eight years of experience. My focus is on transforming complex ideas into intuitive and engaging digital experiences.",
 		"job": "UX-UI Designer",
 		"location": "Barcelona, Spain"
 	},
 	"es": {
-		"description": "Diseñador gráfico con más de 8 años de experiencia y máster en experiencia e interfaz de usuario. Mi trabajo es transformar ideas complejas en experiencias digitales intuitivas y atractivas.",
+		"description": "Diseñador de producto con más de 8 años de experiencia. Mi trabajo es transformar ideas complejas en experiencias digitales intuitivas y atractivas.",
 		"job": "Diseñador UX-UI",
 		"location": "Barcelona, España"
 	},

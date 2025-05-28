@@ -45,13 +45,9 @@ const update = (event: Event) => {
 	const diff = state?.scroll - window.scrollY
 	const clamp = Math.max(-30, Math.min(diff, 30))
 	const speed = Math.round(clamp) * 0.1
-
 	const element = main.value?.$el as HTMLElement
 
-	if (element) {
-		element.style.setProperty('--skew', `${speed}deg`)
-		element.style.setProperty('--transition-porperty', 'transform filter')
-	}
+	if (element) element.style.setProperty('--skew', `${speed}deg`)
 
 	state.scroll = window.scrollY
 
