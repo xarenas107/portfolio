@@ -3,12 +3,12 @@ client-only()
 	template(#fallback)
 		u-skeleton(class='min-w-32 h-8 rounded-lg bg-(--ui-text)/50 w-full')
 
-	u-select-menu(:model-value='locale' @update:model-value='update' :items='locales' :aria-label="t('language.option', 2)" :placeholder='t("language.select")' icon='i-heroicons:language' label-key="name" value-key="code" class='min-w-32 w-full hover:bg-(--ui-text)/10' size='lg' variant='ghost')
-		template(#empty) {{ t('search.empty') }}
+	u-select(:model-value='locale' @update:model-value='update' :items='locales' :aria-label="t('language.option', 2)" :placeholder='t("language.select")' icon='i-heroicons:language' label-key="name" value-key="code" class='min-w-32 w-full hover:bg-(--ui-text)/10' size='lg' variant='ghost')
+		//- template(#empty) {{ t('search.empty') }}
 
 		template(#leading)
 			div(ref='element')
-				u-icon(name='i-heroicons:language' size='xl' class='shrink-0 w-5 h-5')
+				u-icon(name='i-heroicons:language' size='xl' class='shrink-0 w-5 h-5 -mb-1')
 </template>
 
 <script lang='ts' setup>
