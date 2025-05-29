@@ -1,6 +1,26 @@
 # Changelog
 
 
+## v1.8.25
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.8.24...v1.8.25)
+
+### 🩹 Fixes
+
+- **home:** Solve 'scroll to next section' event ([a9b3034](https://github.com/xarenas107/portfolio/commit/a9b3034))
+
+### 💅 Refactors
+
+- **content:** Better content parser with user-friendly purpouses ([bf0237e](https://github.com/xarenas107/portfolio/commit/bf0237e))
+
+### 🏡 Chore
+
+- **node:** Update dependences ([30c03cb](https://github.com/xarenas107/portfolio/commit/30c03cb))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.8.24
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.8.23...v1.8.24)
