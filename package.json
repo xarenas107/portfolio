@@ -58,6 +58,6 @@
     "sass": "^1.89.0",
     "sass-embedded": "^1.89.0",
     "unconfig": "^7.3.2",
-    "wrangler": "^4.17.0"
+    "wrangler": "^4.18.0"
   }
 }
