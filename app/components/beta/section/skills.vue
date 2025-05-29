@@ -9,7 +9,7 @@ div(class='min-h-[60svh] relative overflow-clip bg-default py-24')
         h3(class="font-bold uppercase font-display text-4xl sm:text-4xl md:text-3xl lg:text-5xl xl:text-6xl text-highlighted hyphens-auto break-words sm:break-normal") {{  item.title  }}
 
         div(class='group flex flex-wrap gap-2 max-w-[48ch]')
-          p(class='text-base text-balance text-default') {{ item?.content?.join(', ') }}
+          p(class='text-base text-balance text-default') {{ parse(item?.content) }}
 </template>
 
 <script lang="ts" setup>
@@ -29,6 +29,12 @@ const options = computed(() => {
 })
 
 const { data } = useSkills()
+
+const parse = (array: string[] = []) => {
+	return array.length
+		? `${array.slice(0, -1).join(', ')} ${t('and')} ${array?.at(-1)}.`
+		: `${array.join(', ')}.`
+}
 
 const ui = {
 	title: 'text-default motion-safe:opacity-10 px-4 sm:px-6 lg:px-8 m-auto max-w-7xl'
