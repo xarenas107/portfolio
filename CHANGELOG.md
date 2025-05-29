@@ -1,6 +1,26 @@
 # Changelog
 
 
+## v1.8.24
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.8.23...v1.8.24)
+
+### 🩹 Fixes
+
+- **language-selector:** Remove `search` function ([b768397](https://github.com/xarenas107/portfolio/commit/b768397))
+
+### 💅 Refactors
+
+- Minor changes ([02254fa](https://github.com/xarenas107/portfolio/commit/02254fa))
+
+### 🏡 Chore
+
+- **node:** Update dependences ([de8cb5b](https://github.com/xarenas107/portfolio/commit/de8cb5b))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.8.23
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.8.20...v1.8.23)
