@@ -56,8 +56,9 @@ div(class='bg-gradient-to-b from-(--ui-primary)/10 to-(--ui-bg) max-w-full overf
 								u-link-action(v-for='item, key in data?.contact' v-bind='item' :key)
 								u-link-action(:title='data?.location' icon='i-material-symbols:location-on-outline')
 
-			div(class='w-full bottom-0 absolute left-0 items-center justify-center pointer-events-none flex')
-				u-icon(name='i-heroicons:arrow-small-down-solid' class="w-8 h-8 motion-safe:animate-bounce")
+			div(class='w-full bottom-0 absolute left-0 items-center justify-center flex')
+				u-button(@click='navigate("#studies")' variant='link' color='neutral' class='rounded-full cursor-pointer')
+					u-icon(name='i-heroicons:arrow-small-down-solid' class="w-8 h-8 motion-safe:animate-bounce")
 </template>
 
 <script lang="ts" setup>
@@ -79,6 +80,11 @@ const { t } = useI18n()
 
 const transition = {
 	name: 'transition-fade'
+}
+
+const navigate = (value: `#${string}`) => {
+	const element = document.querySelector(value)
+	element?.scrollIntoView({ behavior: 'smooth', block: 'start' })
 }
 
 const greetings = useGreetings()
