@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v1.9.0
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.8.25...v1.9.0)
+
+### 🚀 Enhancements
+
+- **certificates:** Add carousel controls ([db572e3](https://github.com/xarenas107/portfolio/commit/db572e3))
+
+### 🩹 Fixes
+
+- **style:** Set `height` to fit in certain elements ([b0bc817](https://github.com/xarenas107/portfolio/commit/b0bc817))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.8.25
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.8.24...v1.8.25)
