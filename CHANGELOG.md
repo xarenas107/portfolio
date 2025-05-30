@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.9.2
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.9.1...v1.9.2)
+
+### 🩹 Fixes
+
+- **initial-scroll:** Solve missing `initial scroll` on page load ([6bd9b18](https://github.com/xarenas107/portfolio/commit/6bd9b18))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.9.1
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.9.0...v1.9.1)
