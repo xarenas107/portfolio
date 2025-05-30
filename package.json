@@ -1,7 +1,7 @@
 {
   "name": "curriculum-vitae",
   "description": "A fancy way to show my skills",
-  "version": "1.9.0",
+  "version": "1.9.1",
   "private": true,
   "type": "module",
   "author": {
