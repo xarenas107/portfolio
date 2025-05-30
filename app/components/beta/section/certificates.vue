@@ -29,7 +29,7 @@ div(class='py-24 min-h-svh bg-primary relative overflow-clip place-content-cente
 
       u-card-group(:ui='ui.card' color='primary' class='z-20')
         template(#default='{ childClass, containerClass }')
-          u-carousel(v-if='data?.length' @select='select' v-slot="{ item }" :items='data' :ui="ui.carousel" :auto-scroll='play' :start-index='1' class='min-w-dvw left-1/2 -translate-x-1/2' align='start' loop)
+          u-carousel(v-if='data?.length' @select='control.select' v-slot="{ item }" :items='data' :ui="ui.carousel" :auto-scroll='play' :start-index='1' class='min-w-dvw left-1/2 -translate-x-1/2' align='start' ref="carousel" loop)
             div(:class='containerClass' class='h-80 ml-4 sm:ml-6 lg:ml-8')
               u-card(:class='childClass' class='flex h-full w-full flex-col justify-between cursor-default min-w-fit snap-center' as='li' variant='solid')
                 template(#header)
@@ -50,12 +50,12 @@ div(class='py-24 min-h-svh bg-primary relative overflow-clip place-content-cente
 
                 nuxt-img(v-if='item.image' :src='item.image' :alt='item.provider' class='-z-20 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-10 w-[10rem] rounded-lg overflow-clip pointer-events-none invert')
 
-      div(class='flex gap-6 items-center')
-        //- u-button(@click='toggle()' icon='i-line-md:chevron-left' :aria-label='t("control.prev")' variant='ghost' color='neutral' size="lg" class='bg-primary hover:bg-inverted/20 aspect-square place-content-center rounded-full')
+      div(class='flex gap-2 items-center')
+        u-button(@click='control.prev' icon='i-line-md:chevron-left' :aria-label='t("control.prev")' variant='outline' color='neutral' size="xl" :class='ui.button')
 
-        u-button(@click='toggle()' :icon :aria-label='t("control.play")' variant='outline' color='neutral' size="xl" class='text-inverted bg-default/10 ring-default/20 hover:bg-default/20 aspect-square place-content-center rounded-full motion-reduce:hidden cursor-pointer')
+        u-button(@click='toggle()' :icon :aria-label='t("control.play")' variant='solid' color='neutral' size="xl" class='bg-default hover:bg-accented text-primary ring-default aspect-square place-content-center rounded-full motion-reduce:hidden cursor-pointer')
 
-        //- u-button(@click='toggle()' icon='i-line-md:chevron-right' :aria-label='t("control.prev")' variant='ghost' color='neutral' size="lg" class='bg-priamry hover:bg-inverted/20 aspect-square place-content-center rounded-full')
+        u-button(@click='control.next' icon='i-line-md:chevron-right' :aria-label='t("control.prev")' variant='outline' color='neutral' size="xl" :class='ui.button')
 </template>
 
 <script lang="ts" setup>
@@ -91,13 +91,28 @@ const ui = {
 	},
 	carousel: {
 		item: 'w-full max-w-80'
-	}
+	},
+	button: 'text-inverted bg-default/10 ring-default/20 hover:bg-default/20 aspect-square place-content-center rounded-full cursor-pointer'
 }
 
 const [play, toggle] = useToggle(!reduce.value)
 const icon = computed(() => !play.value ? 'i-line-md:play' : 'i-line-md:pause')
 
-const select = (value: number) => {
+watchThrottled(reduce, (value) => {
+	if (value) play.value = false
+}, { throttle: 100 })
+
+const carousel = useTemplateRef('carousel')
+const index = shallowRef(0)
+
+const control = {
+	select: (value: number) => { index.value = value },
+	to: (value: number) => {
+		control.select(value)
+		carousel.value?.emblaApi?.scrollTo(value)
+	},
+	next: () => { control.to(index.value + 1) },
+	prev: () => { control.to(index.value - 1) }
 }
 </script>
 
