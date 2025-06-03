@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v1.12.3
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.12.1...v1.12.3)
+
+### 💅 Refactors
+
+- **units:** Replace dvh by percent unit ([54ada87](https://github.com/xarenas107/portfolio/commit/54ada87))
+
+### 🏡 Chore
+
+- **release:** V1.12.2 ([56338cb](https://github.com/xarenas107/portfolio/commit/56338cb))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.12.2
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.12.1...v1.12.2)
