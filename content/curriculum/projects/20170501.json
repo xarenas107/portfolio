@@ -1,0 +1,59 @@
+{
+	"cover": "/project/20170501/cover.png",
+	"layout": "project-base",
+	"title": "Website design for the Alliance Française in Cuba",
+	"description": "This case study details the website design of the Alliance Française in Cuba, based in the José Miguel Gómez House, its main headquarters. The project focused on transferring and enhancing the institution's existing visual identity and signage system to a modern and functional web platform, creating a portal that reflected its cultural heritage and educational offerings.",
+	"es": {
+		"title": "Diseño del sitio web de la Alianza Francesa en Cuba",
+		"description": "Este caso de estudio detalla el diseño del sitio web de la Alianza Francesa en Cuba, con sede en la Casa José Miguel Gómez, su sede principal.  El proyecto se centró en trasladar y potenciar el sistema de identidad visual y señalética existente de la institución a una plataforma web moderna y funcional, creando un portal que reflejara su patrimonio cultural y su oferta educativa."
+	},
+	"sections": [
+		{
+			"name": "project-section-spread",
+			"aspect-ratio": "1900/905",
+			"landscape": true,
+			"alt": "Web design view",
+			"src": [
+				"/project/20170501/desktop/1.png",
+				"/project/20170501/desktop/2.png",
+				"/project/20170501/desktop/3.png"
+			],
+			"es": {
+				"alt": "Vista del diseño web"
+			}
+		},
+		{
+			"name": "project-section-paragraph",
+			"description": "The Alliance Française in Cuba needed a website that would not only serve as a centralized information point but also capture the essence of its visual identity and the signage system of its main headquarters, the José Miguel Gómez House. The challenge lay in designing a digital experience that would be accessible to local and international audiences, reflect the institution's cultural richness, and facilitate access to information about courses, events, and French culture.",
+			"es": {
+			  "description": "La Alianza Francesa en Cuba necesitaba un sitio web que no solo sirviera como punto de información centralizado, sino que también capturara la esencia de su identidad visual y el sistema de señalética de su sede principal, la Casa José Miguel Gómez.  El desafío radicaba en diseñar una experiencia digital que fuera accesible para el público local e internacional, reflejara la riqueza cultural de la institución y facilitara el acceso a información sobre cursos, eventos y la cultura francesa."
+			}
+		},{
+		  "name": "project-responsive",
+		  "detail": true,
+		  "aspect-ratio": "134/290",
+		  "alt": "",
+		  "background": "/project/20170501/desktop/1.png",
+		  "src": [
+			"/project/20170501/app/1.png",
+			"/project/20170501/app/2.png",
+			"/project/20170501/app/3.png"
+		  ]
+		}, {
+		  "name": "project-section-paragraph",
+		  "title": "Tipography",
+		  "description": "The fonts selected were <strong>Bebas Neue</strong>, <strong>Jellyka</strong>, Saint-Andrew's Queen</strong>, and <strong>Source Sans Pro</strong>. Bebas Neue was used for the headlines for its visual impact, and Source Sans Pro was used for the body copy, ensuring legibility and a clean, modern aesthetic.",
+		  "es": {
+			"title": "Tipografía",
+			"description": "Se seleccionaron las tipografías <strong>Bebas Neue</strong>, <strong>Jellyka, Saint-Andrew's Queen</strong> y <strong>Source Sans Pro</strong>. Bebas Neue se usó para titulares por su impacto visual y Source Sans Pro para el cuerpo de texto, garantizando legibilidad y una estética moderna y limpia."
+		  }
+		}, {
+			"name": "project-color",
+			"description": "The core colors of the visual identity (such as black, white, and a distinctive red) are carefully incorporated into the web design, creating a comfortable and recognizable environment for the brand.",
+			"palette": ["#E21C47", "#2E2E2C"],
+			"es": {
+				"description": "Los colores principales de la identidad visual (como el negro, blanco y un distintivo rojo) se incorporaron cuidadosamente en el diseño web, creando un ambiente sofisticado y reconocible para la marca."
+			}
+		}
+  ]
+}

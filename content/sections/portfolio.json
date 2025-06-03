@@ -1,0 +1,12 @@
+{
+	"id": "portfolio",
+	"order": 6,
+	"active": true,
+	"icon": "i-heroicons:paint-brush",
+	"en": {
+		"title": "Portfolio"
+	},
+	"es": {
+		"title": "Portafolio"
+	}
+}

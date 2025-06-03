@@ -2,12 +2,12 @@
 	"cover": "/project/20241101/cover.png",
 	"layout": "project-base",
 	"en": {
-		"title": "Mobile app for a dermatological clinic",
-		"description": "Appointment booking service for a dermatological clinic through a mobile application."
+		"title": "Mobile app design for a dermatology clinic",
+		"description": "This case study details the design of a mobile app intended to facilitate appointment booking for a dermatology clinic. The main objective was to create an intuitive tool that would allow patients to manage their appointments efficiently, thereby improving the user experience and optimizing the clinic's operations."
 	},
 	"es": {
-		"title": "Aplicación móvil para una clínica dermatológica",
-  		"description": "Servicio de reserva de citas para clínica dermatológica a través de una aplicación móvil."
+		"title": "Diseño de aplicación móvil para clínica dermatológica",
+  		"description": "Este caso de estudio detalla el diseño de una aplicación móvil destinada a facilitar la reserva de citas para una clínica dermatológica. El objetivo principal fue crear una herramienta intuitiva que permitiera a los pacientes gestionar sus citas de manera eficiente, mejorando así la experiencia del usuario y optimizando la operación de la clínica."
 	},
 	"sections": [
 		{
@@ -27,15 +27,26 @@
 		{
 			"name": "project-section-paragraph",
 			"es": {
-			  "description": "The client owns a dermatological clinic and wants to implement an appointment booking service through an app."
+			  "description": "The dermatology clinic wanted to implement an appointment booking service via a mobile app to streamline its operations and offer greater convenience to its patients. The challenge was to design an interface that was easy to use for a diverse audience, including those less familiar with technology, while also efficiently managing the booking process and the clinic's promotions."
 			},
 			"en": {
-			  "description": "El cliente es propietario de una clínica dermatológica y quiere implementar un servicio de reserva de citas a través de una aplicación."
+			  "description": "La clínica dermatológica deseaba implementar un servicio de reserva de citas a través de una aplicación móvil para modernizar sus operaciones y ofrecer una mayor comodidad a sus pacientes. El reto consistía en diseñar una interfaz que fuera fácil de usar para un público diverso, incluyendo aquellos no tan familiarizados con la tecnología, y que al mismo tiempo gestionara de forma eficiente el proceso de reserva y las promociones de la clínica."
 			}
-		}, 
-		{
+		}, {
+		  "name": "project-section-paragraph",
+		  "title": "Tipography",
+		  "description": "The <strong>Raleway</strong> and <strong>Roboto</strong> fonts were selected for their clarity, legibility, and modern aesthetic, which is essential for a health app.",
+		  "es": {
+			"title": "Tipografía",
+			"description": "Se seleccionaron las tipografías <strong>Raleway</strong> y <strong>Roboto</strong> por su claridad, legibilidad y estética moderna, lo cual es fundamental para una aplicación de salud."
+		  }
+		}, {
 			"name": "project-color",
-			"palette": ["#86625B", "#F1C289", "#779C9C", "#A0CAC6", "#E8E8E8"]
+			"description": "The chosen colors (soft blue tones, white, and green accents) contribute to a calm and professional visual experience, aligned with the identity of a dermatological clinic.",
+			"palette": ["#86625B", "#F1C289", "#779C9C", "#A0CAC6", "#E8E8E8"],
+			"es": {
+				"description": "Los colores elegidos (tonos azules suaves, blanco y acentos en verde) contribuyen a una experiencia visual calmada y profesional, alineada con la identidad de una clínica dermatológica."
+			}
 		}
   ]
 }

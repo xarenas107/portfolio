@@ -1,0 +1,74 @@
+{
+	"cover": "/project/20210101/cover.png",
+	"layout": "project-base",
+	"title": "Branding, signage, and website design for the Peruvian-Cuban Clinic",
+	"description": "In a competitive healthcare landscape, the Peruvian Cuban Medical Office needed to differentiate itself and clearly communicate its specialized services. The challenge was to create a visual identity that was both modern and reassuring, while also developing a digital presence that was intuitive and informative for patients seeking specialized medical care.",
+	"es": {
+		"title": "Diseño de marca, señalética y sitio web para el Consultorio Peruano Cubano",
+		"description": "En un panorama sanitario competitivo, el Consultorio Médico Peruano Cubano necesitaba diferenciarse y comunicar con claridad sus servicios especializados. El reto consistía en crear una identidad visual moderna y a la vez tranquilizadora, a la vez que desarrollar una presencia digital intuitiva e informativa para los pacientes que buscaban atención médica especializada."
+	},
+	"sections": [
+		{
+			"name": "project-section-paragraph",
+			"title": "Visual brand and signage",
+			"description": "The logo design ingeniously combines the initials of the company with a graphic representation of the ozone molecule, which is one of its main treatments fields. The visual identity was extended to all physical touchpoints, including signage for the medical office. <br> This ensures a consistent brand experience for patients from the moment they arrive.",
+			"src": "/project/20210101/brand/1.png",
+			"es": {
+				"title": "Marca visual y señalética",
+				"description": "El diseño del logotipo combina ingeniosamente las iniciales de la empresa con una representación gráfica de la molécula de ozono, que es uno de sus campos de tratamientos principales. La identidad visual se extendió a todos los puntos de contacto físicos, incluida la señalización para el consultorio médico. Esto ingresa a la experiencia de marca constante para los pacientes desde el momento en que llegan."
+			}
+		}, {
+			"name": "project-section-paragraph",
+			"title": "Website",
+			"description": "The website needed to incorporate clean designs, professional images, and subtle animations to create an engaging and trustworthy online environment. Consistent application of the brand's typography and color palette ensured a seamless brand experience from offline to online.",
+			"es": {
+				"title": "Sitio web",
+				"description": "El sitio web debía incorporar diseños limpios, imágenes profesionales y animaciones sutiles para crear un entorno en línea atractivo y confiable. La aplicación consistente de la tipografía y la paleta de colores de la marca garantiza una experiencia de marca fluida desde el ámbito offline al online."
+				
+			}
+		}, {
+			"name": "project-section-spread",
+			"aspect-ratio": "17/8",
+			"reverse": true,
+			"landscape": true,	
+			"alt": "Web design view",
+			"src": [
+				"/project/20210101/desktop/1.png",
+				"/project/20210101/desktop/2.png",
+				"/project/20210101/desktop/3.png"
+			],
+			"es": {
+				"alt": "Vista del diseño web"
+			}
+		}, {
+			"name": "project-responsive",
+			"description": "The creation of an adaptable website an era of the disposition of any necessary, ensuring a consistent and optimated user experience in both mobile devices and desktop browsers. This allowed to reach a broader public and offer flexibility in how users interact with the platform, either from their smart tephones, computer tables.",
+			"detail": true,
+			"aspect-ratio": "134/290",
+			"alt": "Multi device view",
+			"background": "/project/20210101/desktop/1.png",
+			"src": [
+			"/project/20210101/mobile/1.png"
+			],
+			"es": {
+				"alt": "Vista de diseño multidispositivo",
+				"description": "La creación de un sitio web adaptable a cualquier dispositivo era necesaria, asegurando una experiencia de usuario consistente y optimizada tanto en dispositivos móviles como en navegadores de escritorio. Esto permitió alcanzar a un público más amplio y ofrecer flexibilidad en cómo los usuarios interactúan con la plataforma, ya sea desde sus teléfonos inteligentes, tablets o computadoras."
+			}
+		}, {
+		  "name": "project-section-paragraph",
+		  "title": "Tipography",
+		  "description": "The fonts selected were <strong>Typo Round</strong> and <strong>Roboto</strong>. Typo Round was used for the headlines for its visual impact, and Roboto was used for the body copy, ensuring legibility and a clean, modern aesthetic.",
+		  "es": {
+			"title": "Tipografía",
+			"description": "Se seleccionaron las tipografías <strong>Typo Round</strong> y <strong>Roboto</strong>. Typo Round se usó para titulares por su impacto visual y Roboto el cuerpo de texto, garantizando legibilidad y una estética moderna y limpia."
+		  }
+		}, {
+			"name": "project-color",
+			"description": "The teal color palette evokes confidence, tranquility, and healing.",
+			"palette": ["#1D9A94", "#D8D9DD", "#020202"],
+			"es": {
+				"description": "La paleta de colores verde azulado evoca confianza, tranquilidad y curación."
+			}
+		}
+  ]
+}

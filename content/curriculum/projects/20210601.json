@@ -2,17 +2,18 @@
 	"cover": "/project/20210601/cover.png",
 	"layout": "project-base",
 	"en": {
-		"title": "Mobile app for a dermatological clinic",
-		"description": "Appointment booking service for a dermatological clinic through a mobile application."
+		"title": "Design of a multi-device web platform for managing medical records",
+		"description": "This case study presents the design of Hiscloud, a multi-device web platform created for the remote management of electronic medical records in healthcare centers. The main objective was to develop a secure and efficient solution that would allow healthcare professionals to access and manage patient information from any location and device, thus optimizing clinical and administrative processes."
 	},
 	"es": {
-		"title": "Aplicación móvil para una clínica dermatológica",
-  		"description": "Servicio de reserva de citas para clínica dermatológica a través de una aplicación móvil."
+		"title": "Diseño de plataforma web multi-dispositivo para la gestión de historias clínicas",
+  		"description": "Este caso de estudio presenta el diseño de Hiscloud, una plataforma web multi-dispositivo creada para la gestión remota de historias clínicas electrónicas en centros de salud. El objetivo principal fue desarrollar una solución segura y eficiente que permitiera a los profesionales de la salud acceder y gestionar la información de los pacientes desde cualquier lugar y dispositivo, optimizando así los procesos clínicos y administrativos."
 	},
 	"sections": [
 		{
 			"name": "project-section-spread",
-			"aspect-ratio": "16/8",
+			"aspect-ratio": "324/180",
+			"landscape": true,
 			"alt": "",
 			"src": [
 				"/project/20210601/desktop/1.jpg",
@@ -23,11 +24,9 @@
 		},
 		{
 			"name": "project-section-paragraph",
+			"description": "The client sought to modernize medical record management in healthcare facilities, moving from traditional systems to a digital cloud-based platform. The challenge was to design a user interface (UI) and user experience (UX) that was intuitive and easy to use for medical and administrative staff, while ensuring the security and privacy of sensitive patient data and accessible across multiple devices.",
 			"es": {
-			  "description": "The client owns a dermatological clinic and wants to implement an appointment booking service through an app."
-			},
-			"en": {
-			  "description": "El cliente es propietario de una clínica dermatológica y quiere implementar un servicio de reserva de citas a través de una aplicación."
+			  "description": "El cliente buscaba modernizar la gestión de los registros médicos en los centros de salud, pasando de sistemas tradicionales a una plataforma digital en la nube. El desafío consistía en diseñar una interfaz de usuario (UI) y una experiencia de usuario (UX) que fuera intuitiva y fácil de usar para el personal médico y administrativo, garantizando al mismo tiempo la seguridad y privacidad de los datos sensibles de los pacientes, y que fuera accesible desde múltiples dispositivos."
 			}
 		}, {
 		  "name": "project-responsive",
@@ -38,6 +37,14 @@
 		  "src": [
 			"/project/20210601/mobile/1.jpg"
 		  ]
+		}, {
+		  "name": "project-section-paragraph",
+		  "title": "Tipography",
+		  "description": "<strong>Roboto Flex</strong> was selected for its high readability and adaptability, ideal for presenting large amounts of data clearly and accessibly on different screen sizes.",
+		  "es": {
+			"title": "Tipografía",
+			"description": "Se seleccionó <strong>Roboto Flex</strong> por su alta legibilidad y adaptabilidad, ideal para presentar grandes cantidades de datos de forma clara y accesible en diferentes tamaños de pantalla."
+		  }
 		}, {
 		  "name": "project-color",
 		  "description": "As part of the color scheme, corporate colors were consistently used to foster brand recognition and familiarity, creating a coherent extension of its identity in the digital environment.",

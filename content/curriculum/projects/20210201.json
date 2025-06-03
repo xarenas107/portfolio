@@ -1,45 +1,199 @@
 {
-	"title": "Karat",
-	"cover": "/project/20210201/cover.png",
 	"layout": "project-base",
-	"en": {
-		"description": "Sales app for a karate's school"
-	},
+	"title": "Sales app and website design for a karate school",
+	"description": "<p> This case study presents the design of an e-commerce mobile and web application for 'Karat,' a karate school in Lima, Peru, that also operates as a sports equipment store. The project's primary objective was to create an intuitive platform that would allow users to easily purchase sports equipment and track the status of their orders.</p> <p>My key responsibilities encompassed conducting user interviews to understand core needs, developing both paper and digital wireframes, creating low and high-fidelity prototypes, performing usability studies to gather user feedback, ensuring comprehensive accessibility, and continuously iterating on designs to optimize the user experience. </p>",
+	"highlighted": true,
+	"cover": "/project/20210201/cover.png",
 	"es": {
-		"description": "Aplicación de ventas para una escuela de karate"
+		"title": "Diseño de aplicación de ventas y sitio web para escuela de karate",
+		"description": "<p>Este caso de estudio presenta el diseño de una aplicación móvil y web de comercio electrónico para 'Karat', una escuela de karate en Lima, Perú, que también opera como tienda de equipos deportivos.  El objetivo principal del proyecto fue crear una plataforma intuitiva que permitiera a los usuarios comprar fácilmente equipos deportivos y rastrear el estado de sus pedidos.</p> <p>Mis principales responsabilidades incluyeron realizar entrevistas a usuarios para comprender sus necesidades clave, desarrollar wireframes tanto en papel como digitales, crear prototipos de baja y alta fidelidad, realizar estudios de usabilidad para recopilar comentarios de los usuarios, garantizar una accesibilidad integral y la iteración continua de los diseños para optimizar la experiencia del usuario. </p>"
 	},
 	"sections": [
 		{
-		  "name": "project-section-spread-fan",
-		  "detail": true,
-		  "aspect-ratio": "194/420",
-		  "alt": "",
-		  "src": [
-			"/project/20210201/app/1.png",
-			"/project/20210201/app/2.png",
-			"/project/20210201/app/3.png",
-			"/project/20210201/app/4.png",
-			"/project/20210201/app/5.png",
-			"/project/20210201/app/6.png",
-			"/project/20210201/app/7.png"
-		  ]
-		}, {
-		  "name": "project-section-paragraph",
+		  "name": "project-overview",
+		  "title": "User research",
+		  "description": "I conducted interviews and created empathy maps to empathize with users and their needs, thereby identifying pain points. A key user group identified through the research was adults with a certain interest in sports who work and don't have time to visit a physical store.",
+		  "active": true,
+		  "items": [
+			{
+				"title": "Time",
+				"description": "Working adults are too busy to spend time visiting a physical store.",
+				"icon": "i-heroicons:clock"
+			}, {
+				"title": "Accesibility",
+				"description": "Platforms for purchasing sports equipment are not equipped with assistive technologies.",
+				"icon": "i-heroicons:eye"
+		  }
+		],
 		  "es": {
-			"description": "El cliente es dueño de una escuela de karate ubicada en Lima, Perú, que cuenta con una tienda de equipamiento deportivo y ofrecen una amplia gama de productos. Karat se dirige a los clientes deportistas y personas interesadas en las artes marciales que necesitan comprar equipamiento de karate."
+			"title": "Investigación de usuarios",
+			"description": "Realicé entrevistas y creé mapas de empatía para empatizar con los usuarios y sus necesidades, identificando así los puntos débiles. Un grupo clave de usuarios identificado a través de la investigación fueron los adultos con cierto interés en los deportes que trabajan y no tienen tiempo para visitar una tienda física.",
+			"items": [
+				{
+					"title": "Tiempo",
+					"description": "Los adultos que trabajan están demasiado ocupados para perder tiempo visitando una tienda física.",
+					"icon": "i-heroicons-clock"
+				}, {
+					"title": "Accesibilidad",
+					"description": "Las plataformas de compra de material deportivo no están equipadas con tecnologías de asistencia.",
+					"icon": "i-heroicons-eye"
+			}
+			]
+		  }
+		},
+		{
+			"name": "project-persona",
+			"active": true,
+			"description": "After conducting several interviews, it was possible to create an archetype of the type of user for whom the service to be created would be intended.",
+			"user": "Rosa",
+			"summary": "Rosa is a single immigrant mother. She works too much and doesn't have time to go to a physical store to buy sports equipment for her son.",
+			"quote": "My son needs to practice sports to improve his quality of life.",
+			"image": "/avatar/1.png",
+			"statement": "Rosa is a single immigrant mother who doesn't have time to go to a physical store to buy sports equipment for her son because she works too much.",
+			"goals": [
+				"To help rise my son in sports and improve his quality of life", 
+				"To make my child happy"
+			],
+			"frustrations": [
+				"I am not skilled with technology and never had buyed online.", 
+				"I wish to pay more attention to my son's needs but I don't have enough time"],
+			"props": [
+				["Age", 33],
+				["Education", "Business admin degree"],
+				["Hometown", "Lima"],
+				["Family", "Lives with her son"],
+				["Occupation", "Bartender"]
+			],
+			"es": {
+				"description": "Luego de realizar varias entrevistas, fue posible crear un arquetipo del tipo de usuario al cual estaría destinado el servicio a crear.",
+				"summary": "Rosa es una madre soltera inmigrante. Trabaja demasiado y no tiene tiempo para ir a una tienda física a comprar equipo deportivo para su hijo.",
+				"quote": "Mi hijo necesita practicar deporte para mejorar su calidad de vida.",
+				"statement": "Rosa es una madre soltera inmigrante que no tiene tiempo para ir a una tienda física a comprar equipo deportivo para su hijo porque trabaja demasiado.",
+				"goals": [
+					"Ayudar a mi hijo a desarrollarse en el deporte y mejorar su calidad de vida.",
+					"Hacer feliz a mi hijo."
+				],
+				"frustrations": [
+					"No tengo mucha experiencia con la tecnología y nunca he comprado en línea.",
+					"Quiero prestar más atención a las necesidades de mi hijo, pero no tengo suficiente tiempo."
+				],
+				"props": [
+					["Edad", 33],
+					["Educación", "Administración de empresas"],
+					["Ciudad de origen", "Lima"],
+					["Familia", "Vive con su hijo"],
+					["Ocupación", "Camarera"]
+				]
+			}
+		}, {
+		  "name": "project-journey",
+		  "active": true,
+		  "description": "Mapping a journey revealed how useful it would be for users have access to a dedicated application to buy their sports equipment.",
+		  "table": {
+			"action": [
+				"Define shopping list",
+				"Search products", 
+				"Pay", 
+				"Wait for delivery", 
+				"Receive order"
+			],
+			"task": [
+				["Get pen and paper.", "Define list.", "Write list."],
+				["Get the mobile.", "Open the web navigator.", "Search products.", "Enter to the website.", "Add products to shopping car."],
+				["Enter credit card.", "Submit the order."],
+				["Track order.","Pay attention for the sound of the doorbell."],
+				["Open the door.", "Receive order."]
+			],
+			"emotion": [
+				["Worried about the prices."],
+				["Worried about site reliability.", "Insecure.", "Disappointed for the difficult of site navigation."],
+				["Insecure.", "Excited for the chopping."],
+				["Anxious about time."],
+				["Impressed by how quickly arrived the delivery."]
+			],
+			"opportunity": [
+				["Use a to do list app."],
+				["Create a dedicated app for the site."],
+				[],
+				["Add a feature that offer order status update with notifications or voice messages."],
+				[]
+			]
+
 		  },
-		  "en": {
-			"description": "The client owns a karate school located in Lima, Peru, with a sports equipment store and a wide range of products. Karat targets athletes and people interested in martial arts who need to purchase karate equipment."
+		  "es": {
+			 "description": "Mapear un recorrido reveló lo útil que sería para los usuarios tener acceso a una aplicación dedicada para comprar su equipamiento deportivo..",
+			"table": {
+				"action": [
+					"Definir lista de la compra",
+					"Buscar productos",
+					"Pagar",
+					"Esperar la entrega",
+					"Recibir el pedido"
+					],
+				"task": [
+					["Tomar papel y bolígrafo.", "Definir lista.", "Escribir lista."],
+					["Obtener el móvil.", "Abrir el navegador web.", "Buscar productos.", "Acceder al sitio web.", "Añadir productos al carrito de la compra."],
+					["Ingresar tarjeta de crédito.", "Enviar el pedido."],
+					["Seguir pedido.","Prestar atención al timbre."],
+					["Abrir la puerta.", "Recibir el pedido."]
+				],
+				"emotion": [
+					["Preocupado por los precios."],
+					["Preocupado por la fiabilidad del sitio web.", "Inseguro.", "Decepcionado por la dificultad de la navegación."],
+					["Inseguro.", "Emocionado por el corte."],
+					["Preocupado por el tiempo."],
+					["Impresionado por la rapidez con la que llegó el pedido."]
+				],
+				"oportunidad": [
+					["Usar una app de listas de tareas"],
+					["Crear una app dedicada al sitio."],
+					[],
+					["Añadir una función que ofrezca actualizaciones del estado del pedido con notificaciones o mensajes de voz"],
+					[]
+				]
+			}
 		  }
 		}, {
+			"title": "Wireframing & prototipyng",
+			"description": "In the ideation phase, a site map was developed. My main focus was on making strategic decisions regarding the information architecture, seeking to ensure intuitive navigation and a fluid user experience. Following this, the initial wireframes were created and validated through unmoderated usability studies. Following an iterative process based on the findings of these studies, a high-fidelity prototype was developed.",
+			"name": "project-section-spread-fan",
+			"detail": true,
+			"aspect-ratio": "194/420",
+			"alt": "",
+			"src": [
+				"/project/20210201/app/1.png",
+				"/project/20210201/app/2.png",
+				"/project/20210201/app/3.png",
+				"/project/20210201/app/4.png",
+				"/project/20210201/app/5.png",
+				"/project/20210201/app/6.png",
+				"/project/20210201/app/7.png"
+			],
+			"es": {
+				"title": "Estructura y prototipado",
+				"description": "En la fase de ideación, se desarrolló un mapa del sitio. Mi enfoque principal fue la toma de decisiones estratégicas en la arquitectura de la información, buscando garantizar una navegación intuitiva y una experiencia de usuario fluida. Después de esto, se crearon los primeros wireframes, los cuales fueron validados a través de estudios de usabilidad no moderados;  tras un proceso iterativo basado en los hallazgos de dichos estudios, se logró evolucionar hacia un prototipo de alta fidelidad."
+			}
+		}, {
 		  "name": "project-responsive",
-		  "detail": true,
-		  "aspect-ratio": "134/290",
-		  "alt": "",
-		  "background": "/project/20210201/responsive/1.png",
-		  "src": [
-			"/project/20210201/responsive/2.png"
-		  ]
+		   "description": "Part of the project also included creating a responsive web version of this app, ensuring a consistent and optimized user experience on both mobile devices and desktop browsers. This allowed Karat to reach a broader audience and offer flexibility in how users interact with the platform, whether from their smartphones, tablets, or computers.",
+		   "detail": true,
+		   "aspect-ratio": "134/290",
+		   "alt": "",
+		   "background": "/project/20210201/responsive/1.png",
+		   "src": [
+			   "/project/20210201/responsive/2.png"
+			],
+			"es": {
+			  "description": "Parte del proyecto también incluía la creación de la versión web responsive de esta aplicación, asegurando una experiencia de usuario consistente y optimizada tanto en dispositivos móviles como en navegadores de escritorio. Esto permitió a Karat alcanzar a un público más amplio y ofrecer flexibilidad en cómo los usuarios interactúan con la plataforma, ya sea desde sus teléfonos inteligentes, tablets o computadoras."
+			}
+		},  {
+		  "name": "project-section-paragraph",
+		  "title": "Tipography",
+		  "description": "The <strong>Roboto</strong> font was used, chosen for its legibility and versatility, contributing to a clear and modern user experience.",
+		  "es": {
+			"title": "Tipografía",
+			"description": "Se utilizó la fuente <strong>Roboto</strong>, elegida por su legibilidad y versatilidad, lo que contribuye a una experiencia de usuario clara y moderna."
+		  }
 		}, {
 		  "name": "project-color",
 		  "description": "As part of the color scheme, corporate colors were consistently used to foster brand recognition and familiarity, creating a coherent extension of its identity in the digital environment.",

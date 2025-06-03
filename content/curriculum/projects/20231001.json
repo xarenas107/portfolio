@@ -1,17 +1,80 @@
 {
-	"title": "Fitness coaching service",
+	"title": "Fitness coaching web service design",
+	"description": "This case study presents the design of a fitness training web application created to complement a gym's services. The application is designed for users with limited technological knowledge who are looking for a simple and intuitive way to achieve their fitness goals. The main objective was to develop a platform that would allow users to create and follow their own training plans in an accessible and motivating way.",
 	"cover": "/project/20231001/cover.png",
 	"layout": "project-base",
-	"en": {
-		"description": "Fitness training service that allows users to create and follow their own training plans, which will be beneficial for people who are new to the world of technology as it offers a very simple and intuitive experience."
-	},
+	"highlighted": true,
 	"es": {
-		"description": "Servicio de entrenamiento fitness que permite a los usuarios crear y seguir sus propios planes de entrenamiento, lo que será beneficioso para las personas que se inician en el mundo de la tecnología ya que ofrece una experiencia muy sencilla e intuitiva."
+		"title": "Diseño de servicio web de entrenamiento físico",
+		"description": "Este caso de estudio presenta el diseño de una aplicación web de entrenamiento físico creada para complementar los servicios de un gimnasio. La aplicación está diseñada para usuarios con poco conocimiento tecnológico que buscan una manera sencilla e intuitiva de lograr sus metas de fitness. El objetivo principal fue desarrollar una plataforma que permitiera a los usuarios crear y seguir sus propios planes de entrenamiento de manera accesible y motivadora."
 	},
 	"sections": [
 		{
+		  "name": "project-overview",
+		  "title": "User research",
+		  "description": "In order to empathize with the target user and their needs, I conducted interviews, created empathy maps, and identified their pain points until I was able to develop a user archetype.",
+		  "active": true,
+		  "es": {
+			"title": "Investigación de usuarios",
+			"description": "Con el objetivo de empatizar con el usuario objetivo y sus necesidades, realicé entrevistas, creé mapas de empatía e identifiqué sus puntos débiles, hasta poder elaborar un arquetipo de usuario."
+		  }
+		}, {
+			"name": "project-persona",
+			"active": true,
+			"description": "After conducting several interviews, it was possible to create an archetype of the type of user for whom the service to be created would be intended.",
+			"user": "Stephany",
+			"summary": "Stephany is a 45-year-old, female-identifying teacher who lives in Houston, Texas. She set a New Year's goal to get in shape.",
+			"quote": "...sometimes i close the app without completing my goal.",
+			"image": "/avatar/1.png",
+			"statement": "Stephany is a 45-year-old woman who wants to start the year with the goal of getting in shape but she is not good at technology.",
+			"goals": [
+				"To get fit"
+			],
+			"frustrations": [
+				"I am not skilled with technology.", 
+				"Apps are difficult to navigate and has complex interfaces."
+			],
+			"props": [
+				["Age", 45],
+				["Hometown", "Houston, Texas"],
+				["Occupation", "Teacher"]
+			],
+			"es": {
+				"description": "Luego de realizar varias entrevistas, fue posible crear un arquetipo del tipo de usuario al cual estaría destinado el servicio a crear.",
+				"summary": "Stephany es una maestra de 45 años que se identifica como mujer y vive en Houston, Texas. Se propuso como meta de Año Nuevo ponerse en forma.",
+				"quote": "...a veces cierro la aplicación sin completar mi objetivo.",
+				"statement": "Stephany es una mujer de 45 años que quiere empezar el año con el objetivo de ponerse en forma pero no se le da bien la tecnología.",
+				"goals": [
+					"Ponerse en forma"
+				],
+				"frustrations": [
+					"No tengo mucha experiencia con la tecnología.", 
+					"Las aplicaciones son difíciles de navegar y tienen interfaces complejas."
+				],
+				"props": [
+					["Edad", 45],
+					["Ciudad de origen", "Houston, Texas"],
+					["Ocupación", "Profesora"]
+				]
+			}
+		}, {
+		  "name": "project-section-paragraph",
+		  "description": "Based on the information obtained, I created a user journey map, created and validated user stories, and formulated hypotheses until I arrived at the objective statement.",
+		  "es": {
+			"description": "Con base en la información obtenida, creé un mapa de recorrido del usuario, creé y validé historias de usuario, un planteamiento de hipótesis hasta llegar al planteamiento del objetivo."
+		  }
+		}, {
+			"name": "project-section-paragraph",
+			"title": "Wireframing & prototipyng",
+		  	"description": "In the ideation phase, a site map was developed. My main focus was on making strategic decisions regarding the information architecture, seeking to ensure intuitive navigation and a fluid user experience. Following this, the initial wireframes were created and validated through unmoderated usability studies. Following an iterative process based on the findings of these studies, a high-fidelity prototype was developed.",
+			"es": {
+				"title": "Estructura y prototipado",
+				"description": "En la fase de ideación, se desarrolló un mapa del sitio. Mi enfoque principal fue la toma de decisiones estratégicas en la arquitectura de la información, buscando garantizar una navegación intuitiva y una experiencia de usuario fluida. Después de esto, se crearon los primeros wireframes, los cuales fueron validados a través de estudios de usabilidad no moderados;  tras un proceso iterativo basado en los hallazgos de dichos estudios, se logró evolucionar hacia un prototipo de alta fidelidad."
+			}
+		}, {
 		  "name": "project-section-spread",
 		  "aspect-ratio": "16/9",
+		  "reverse": true,
 		  "alt": "",
 		  "src": [
 			"/project/20231001/desktop/3.jpg",
@@ -21,11 +84,9 @@
 		  ]
 		}, {
 		  "name": "project-section-paragraph",
+		  "description": "It was vital for the project that the site be adaptable to multiple devices, and this was achieved. Recognizing that users would access the platform from a variety of environments, including desktops, laptops, tablets, and smartphones, a fully responsive design was implemented. This approach guaranteed a fluid and consistent user experience, regardless of the screen size or device used. By ensuring this adaptability, the goal was to maximize the platform's reach, allow access anytime, anywhere, and ensure that key information and functionalities were always accessible and legible, avoiding user frustration and optimizing interaction with the service.",
 		  "es": {
-			"description": "El cliente es propietario de un gimnasio y necesita una aplicación de entrenamiento fitness para complementar su servicio y el público objetivo son personas con pocos conocimientos tecnológicos cuyo objetivo es ponerse en forma."
-		  },
-		  "en": {
-			"description": "The client owns a gym and needs a fitness training app to complement their service and the target audience is people with little technological knowledge whose goal is to get fit."
+			"description": "Para el proyecto era vital que el sitio fuera adaptable a múltiples dispositivos y así se hizo. Conscientes de que los usuarios accederían a la plataforma desde una variedad de entornos, incluyendo ordenadores de escritorio, portátiles, tablets y smartphones, se implementó un diseño responsive integral. Esta aproximación garantizó una experiencia de usuario fluida y consistente, independientemente del tamaño de la pantalla o el dispositivo utilizado. Al asegurar esta adaptabilidad, el objetivo fue maximizar el alcance de la plataforma, permitir el acceso en cualquier momento y lugar, y garantizar que la información y las funcionalidades clave fueran siempre accesibles y legibles, evitando la frustración del usuario y optimizando la interacción con el servicio."
 		  }
 		}, {
 		  "name": "project-responsive",
@@ -37,6 +98,14 @@
 			"/project/20231001/mobile/1.png",
 			"/project/20231001/mobile/2.png"
 		  ]
+		}, {
+		  "name": "project-section-paragraph",
+		  "title": "Tipography",
+		  "description": "The <strong>Inter</strong> typeface was used for its legibility at different sizes and its modern, clean appearance, which is crucial for an application where clarity of numbers and text is key.",
+		  "es": {
+			"title": "Tipografía",
+			"description": "Se utilizó la tipografía <strong>Inter</strong> por su legibilidad en diferentes tamaños y su apariencia moderna y limpia, lo que es crucial para una aplicación donde la claridad de los números y el texto es fundamental."
+		  }
 		}, {
 		  "name": "project-color",
 		  "description": "As part of the color scheme, corporate colors were consistently used to foster brand recognition and familiarity, creating a coherent extension of its identity in the digital environment.",

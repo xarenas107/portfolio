@@ -1,0 +1,55 @@
+{
+	"cover": "/project/20250401/cover.png",
+	"layout": "project-base",
+	"en": {
+		"title": "Personal finance service panel design",
+		"description": "The main objective of this project was to cease an intuitive and functional user interface that allowed users to have clear and efficient control over their finances, facilitating the Transaccionns registry, data visualization and financial decision making."
+	},
+	"es": {
+		"title": "Diseño de panel de servicio de finanzas personales",
+  		"description": "El objetivo principal de este proyecto fue crear una interfaz de usuario intuitiva y funcional que permitiera a los usuarios tener un control claro y eficiente sobre sus finanzas, facilitando el registro de transacciones, la visualización de datos y la toma de decisiones financieras."
+	},
+	"sections": [
+		{
+			"name": "project-section-spread",
+			"aspect-ratio": "324/180",
+			"reverse": true,
+			"landscape": true,
+			"alt": "",
+			"src": [
+				"/project/20250401/desktop/3.png",
+				"/project/20250401/desktop/1.png",
+				"/project/20250401/desktop/2.png"
+			]
+		}, {
+			"name": "project-responsive",
+			"description": "In the digital age, personal finance management can be complex and overwhelming. The challenge was to transform this complexity into a simple and attractive user experience. It was needed to design a Dashboard that not only showed data, but also made them understandable and actionable, allowing users to register transactions quickly and visualize expenditure patterns effectively.",
+			"detail": true,
+			"aspect-ratio": "134/290",
+			"alt": "",
+			"background": "/project/20250401/desktop/1.png",
+			"src": [
+				"/project/20250401/mobile/1.png",
+				"/project/20250401/mobile/2.png"
+		  	],
+			"es": {
+			  "description": "En la era digital, la gestión de las finanzas personales puede ser compleja y abrumadora. El desafío radicó en transformar esta complejidad en una experiencia de usuario sencilla y atractiva. Se necesitaba diseñar un dashboard que no solo mostrara datos, sino que también los hiciera comprensibles y accionables, permitiendo a los usuarios registrar transacciones rápidamente y visualizar patrones de gasto de forma efectiva."
+			}
+		}, {
+		  "name": "project-section-paragraph",
+		  "title": "Tipography",
+		  "description": "<strong>Roboto</strong> was selected for its high readability and adaptability, ideal for presenting large amounts of data clearly and accessibly on different screen sizes.",
+		  "es": {
+			"title": "Tipografía",
+			"description": "Se seleccionó <strong>Roboto</strong> por su alta legibilidad y adaptabilidad, ideal para presentar grandes cantidades de datos de forma clara y accesible en diferentes tamaños de pantalla."
+		  }
+		}, {
+		  "name": "project-color",
+		  "description": "The core colors of the visual identity are carefully incorporated into the web design, creating a comfortable and recognizable environment for the brand.",
+		  "palette": ["#EFB100", "#615FFF", "#2B7FFF", "#F1F5F9"],
+		  "es": {
+			"description": "Los colores principales de la identidad visual se incorporaron cuidadosamente en el diseño web, creando un ambiente sofisticado y reconocible para la marca."
+		  }
+		}
+  ]
+}
