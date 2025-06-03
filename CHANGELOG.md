@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v1.12.1
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.12.0...v1.12.1)
+
+### 💅 Refactors
+
+- Minor optimization ([7e59ce3](https://github.com/xarenas107/portfolio/commit/7e59ce3))
+
+### 🏡 Chore
+
+- **contact:** Hide `behance` contact ([3941793](https://github.com/xarenas107/portfolio/commit/3941793))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.12.0
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.9.2...v1.12.0)
