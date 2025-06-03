@@ -1,16 +1,138 @@
 {
 	"cover": "/project/20210601/cover.png",
 	"layout": "project-base",
-	"en": {
-		"title": "Design of a multi-device web platform for managing medical records",
-		"description": "This case study presents the design of Hiscloud, a multi-device web platform created for the remote management of electronic medical records in healthcare centers. The main objective was to develop a secure and efficient solution that would allow healthcare professionals to access and manage patient information from any location and device, thus optimizing clinical and administrative processes."
-	},
+	"title": "Design of a multi-device web platform for managing medical records",
+	"description": "This case study presents the design of Hiscloud, a multi-device web platform created for the remote management of electronic medical records in healthcare centers. The main objective was to develop a secure and efficient solution that would allow healthcare professionals to access and manage patient information from any location and device, thus optimizing clinical and administrative processes.",
+	"highlighted": true,
 	"es": {
 		"title": "Diseño de plataforma web multi-dispositivo para la gestión de historias clínicas",
   		"description": "Este caso de estudio presenta el diseño de Hiscloud, una plataforma web multi-dispositivo creada para la gestión remota de historias clínicas electrónicas en centros de salud. El objetivo principal fue desarrollar una solución segura y eficiente que permitiera a los profesionales de la salud acceder y gestionar la información de los pacientes desde cualquier lugar y dispositivo, optimizando así los procesos clínicos y administrativos."
 	},
 	"sections": [
 		{
+		  "name": "project-overview",
+		  "title": "User research",
+		  "description": "I conducted interviews and created empathy maps to empathize with users and their needs, thereby identifying pain points. A key user group identified through the research was middle-aged medical staff, who are accustomed to managing patient records physically and are trying to optimize their management through the use of new technologies.",
+		  "active": true,
+		  "items": [
+			{
+				"title": "Time",
+				"description": "Medical personnel in general are not very familiar with technology.",
+				"icon": "i-heroicons:cpu-chip"
+			}, {
+				"title": "Accesibility",
+				"description": "Digital medical record management platforms are not equipped with assistive technologies.",
+				"icon": "i-heroicons:eye"
+		  }
+		],
+		  "es": {
+			"title": "Investigación de usuarios",
+			"description": "Realicé entrevistas y creé mapas de empatía para empatizar con los usuarios y sus necesidades, identificando así los puntos débiles. Un grupo clave de usuarios identificado a través de la investigación fue el personal médico de mediana edad, acostumbrado a gestionar las historias clinicas de los pacientes de forma física y que con el uso de las nuevas tecnologías intenta optimizar su gestión.",
+			"items": [
+				{
+					"title": "Tiempo",
+					"description": "El personal médico en general no es muy cercano a la tecnología.",
+					"icon": "i-heroicons:cpu-chip"
+				}, {
+					"title": "Accesibilidad",
+					"description": "Las plataformas digitales de gestión de historias clínicas no están equipadas con tecnologías de asistencia.",
+					"icon": "i-heroicons-eye"
+			}
+			]
+		  }
+		}, {
+			"name": "project-persona",
+			"active": true,
+			"description": "After conducting several interviews, it was possible to create an archetype of the type of user for whom the service to be created would be intended.",
+			"user": "Marta",
+			"summary": "Marta is a doctor who is accustomed to the traditional method of writing medical records on paper. She wants to optimize her workflow but is somewhat wary of technology.",
+			"quote": "I need to optimize the time I spend writing a medical history.",
+			"image": "/avatar/1.png",
+			"statement": "Marta is a middle-aged doctor who wants to optimize her workflow but has a certain distrust of technology.",
+			"goals": [
+				"Optimize my workflow so I can focus more on my patients."
+			],
+			"frustrations": [
+				"Medical records pile up, and there comes a time when you don't have enough space to store them."
+			],
+			"props": [
+				["Age", 45],
+				["Education", "Medicine"],
+				["Hometown", "Lima"],
+				["Occupation", "Doctor"]
+			],
+			"es": {
+				"description": "Luego de realizar varias entrevistas, fue posible crear un arquetipo del tipo de usuario al cual estaría destinado el servicio a crear.",
+				"summary": "Marta es una doctora que está acostumbrada al método tradicional a escribir las historias clinicas en papel. Quiere optimizar su proceso de trabajo pero tiene cierta desconfianza en la tecnología.",
+				"quote": "Necesito optimizar el tiempo que empleo en redactar una historia clínica.",
+				"statement": "Marta  es una doctora de mediana edad que quiere optimizar su proceso de trabajo pero tiene cierta desconfianza en la tecnología.",
+				"goals": [
+					"Optimizar mi proceso de trabajo para así dedicar más atención a mis pacientes"
+				],
+				"frustrations": [
+					"Las historias clínicas se van acumulando y llega el momento que no tienes espacio para guardarlas."
+				],
+				"props": [
+					["Edad", 45],
+					["Educación", "Medicina"],
+					["Ciudad de origen", "Lima"],
+					["Ocupación", "Doctora"]
+				]
+			}
+		}, {
+		  "name": "project-journey",
+		  "active": true,
+		  "description": "Mapping a journey revealed how useful it would be for users have access to a dedicated application to buy their sports equipment.",
+		  "table": {
+			"action": [
+				"Greet the patient",
+				"Complete the medical record",
+				"Save the medical record"
+			],
+			"task": [
+				["Identify that this is a new patient"],
+				["Find a medical record template.", "Pick a pen.", "Ask questions and perform a physical exam", "Complete the medical record."],
+				["Save the medical record."]
+			],
+			"emotion": [
+				["Prepared.", "Slightly worried."],
+				["Focused.", "Analytical.", "Decisive"],
+				["Relieved.", "Slightly tired"]
+			],
+			"opportunity": [
+				["Digital list of necessary documents.", "Pre-labeled folders or 'new patient' kits."],
+				["Patient form pre-filled by the administration or the patient themselves.", "Key question guides for common pathologies."],
+				["Scanning key documents for a digital backup."]
+			]
+		},
+		"es": {
+			 "description": "Mapear un recorrido reveló lo útil que sería para los usuarios tener acceso a una aplicación dedicada para comprar su equipamiento deportivo..",
+			"table": {
+				"action": [
+					"Recibir al paciente",
+					"Llenar la historia clínica",
+					"Guardar la historia clínica"
+					],
+				"task": [
+					["Identificar que es un nuevo paciente"],
+					["Buscar un modelo de historia clínica.", "Tomar un bolígrafo.", "Hacer preguntas y exámen físico", "Llenar la historia clínica."],
+					["Almacenar la historia clínica."]
+				],
+				"emotion": [
+					["Preparado.", "Ligeramente preocupado."],
+					["Concetrado.", "Analítico", "Resolutivo"],
+					["Aliviado.", "Ligeramente cansado"]
+				],
+				"opportunity": [
+					["Lista digital de documentos necesarios.", "Carpetas pre-etiquetadas o kits de 'nuevo paciente'."],
+					["Ficha de paciente pre-rellenada por administración o el mismo paciente.", "Guías de preguntas clave para patologías comunes."],
+					["Escaneo de documentos clave para un backup digital."]
+				]
+			}
+		  }
+		}, {
+			"title": "Wireframing & prototipyng",
+			"description": "In the ideation phase, a site map was developed. My main focus was on making strategic decisions regarding the information architecture, seeking to ensure intuitive navigation and a fluid user experience. Following this, the initial wireframes were created and validated through unmoderated usability studies. Following an iterative process based on the findings of these studies, a high-fidelity prototype was developed.",
 			"name": "project-section-spread",
 			"aspect-ratio": "324/180",
 			"landscape": true,
@@ -20,13 +142,17 @@
 				"/project/20210601/desktop/2.jpg",
 				"/project/20210601/desktop/3.jpg",
 				"/project/20210601/desktop/4.jpg"
-			]
+			],
+			"es": {
+				"title": "Estructura y prototipado",
+				"description": "En la fase de ideación, se desarrolló un mapa del sitio. Mi enfoque principal fue la toma de decisiones estratégicas en la arquitectura de la información, buscando garantizar una navegación intuitiva y una experiencia de usuario fluida. Después de esto, se crearon los primeros wireframes, los cuales fueron validados a través de estudios de usabilidad no moderados;  tras un proceso iterativo basado en los hallazgos de dichos estudios, se logró evolucionar hacia un prototipo de alta fidelidad."
+			}
 		},
 		{
 			"name": "project-section-paragraph",
-			"description": "The client sought to modernize medical record management in healthcare facilities, moving from traditional systems to a digital cloud-based platform. The challenge was to design a user interface (UI) and user experience (UX) that was intuitive and easy to use for medical and administrative staff, while ensuring the security and privacy of sensitive patient data and accessible across multiple devices.",
+			"description": "Part of the project also included creating a responsive web version of this application, ensuring a consistent and optimized user experience on both mobile devices and desktop browsers. This allowed Hiscloud to offer flexibility in how users interact with the platform, whether from their smartphones, tablets, or computers.",
 			"es": {
-			  "description": "El cliente buscaba modernizar la gestión de los registros médicos en los centros de salud, pasando de sistemas tradicionales a una plataforma digital en la nube. El desafío consistía en diseñar una interfaz de usuario (UI) y una experiencia de usuario (UX) que fuera intuitiva y fácil de usar para el personal médico y administrativo, garantizando al mismo tiempo la seguridad y privacidad de los datos sensibles de los pacientes, y que fuera accesible desde múltiples dispositivos."
+			 	"description": "Parte del proyecto también incluía la creación de la versión web responsive de esta aplicación, asegurando una experiencia de usuario consistente y optimizada tanto en dispositivos móviles como en navegadores de escritorio. Esto permitió a Hiscloud ofrecer flexibilidad en cómo los usuarios interactúan con la plataforma, ya sea desde sus teléfonos inteligentes, tablets o computadoras."
 			}
 		}, {
 		  "name": "project-responsive",
@@ -48,7 +174,7 @@
 		}, {
 		  "name": "project-color",
 		  "description": "As part of the color scheme, corporate colors were consistently used to foster brand recognition and familiarity, creating a coherent extension of its identity in the digital environment.",
-		  "palette": ["#26DC59", "#19411D", "#E0E1EC"],
+		  "palette": ["#5072E0", "#1F2F2F", "#0D1117"],
 		  "es": {
 			"description": "Como parte de la gama cromática se emplearon los colores corporativos de manera consistente para fomentar el reconocimiento y la familiaridad con la marca, creando una extensión coherente de su identidad en el entorno digital."
 		  }

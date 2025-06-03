@@ -1,7 +1,7 @@
 {
 	"layout": "project-base",
 	"title": "Sales app and website design for a karate school",
-	"description": "<p> This case study presents the design of an e-commerce mobile and web application for 'Karat,' a karate school in Lima, Peru, that also operates as a sports equipment store. The project's primary objective was to create an intuitive platform that would allow users to easily purchase sports equipment and track the status of their orders.</p> <p>My key responsibilities encompassed conducting user interviews to understand core needs, developing both paper and digital wireframes, creating low and high-fidelity prototypes, performing usability studies to gather user feedback, ensuring comprehensive accessibility, and continuously iterating on designs to optimize the user experience. </p>",
+	"description": "<p>This case study presents the design of an e-commerce mobile and web application for 'Karat,' a karate school in Lima, Peru, that also operates as a sports equipment store. The project's primary objective was to create an intuitive platform that would allow users to easily purchase sports equipment and track the status of their orders.</p> <p>My key responsibilities encompassed conducting user interviews to understand core needs, developing both paper and digital wireframes, creating low and high-fidelity prototypes, performing usability studies to gather user feedback, ensuring comprehensive accessibility, and continuously iterating on designs to optimize the user experience. </p>",
 	"highlighted": true,
 	"cover": "/project/20210201/cover.png",
 	"es": {
@@ -144,7 +144,7 @@
 					["Preocupado por el tiempo."],
 					["Impresionado por la rapidez con la que llegó el pedido."]
 				],
-				"oportunidad": [
+				"opportunity": [
 					["Usar una app de listas de tareas"],
 					["Crear una app dedicada al sitio."],
 					[],

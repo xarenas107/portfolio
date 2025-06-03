@@ -42,7 +42,7 @@
 		}, {
 		  "name": "project-section-paragraph",
 		  "title": "Tipography",
-		  "description": "The fonts selected were <strong>Bebas Neue</strong>, <strong>Jellyka</strong>, Saint-Andrew's Queen</strong>, and <strong>Source Sans Pro</strong>. Bebas Neue was used for the headlines for its visual impact, and Source Sans Pro was used for the body copy, ensuring legibility and a clean, modern aesthetic.",
+		  "description": "The fonts selected were <strong>Bebas Neue</strong>, <strong>Jellyka, Saint-Andrew's Queen</strong>, and <strong>Source Sans Pro</strong>. Bebas Neue was used for the headlines for its visual impact, and Source Sans Pro was used for the body copy, ensuring legibility and a clean, modern aesthetic.",
 		  "es": {
 			"title": "Tipografía",
 			"description": "Se seleccionaron las tipografías <strong>Bebas Neue</strong>, <strong>Jellyka, Saint-Andrew's Queen</strong> y <strong>Source Sans Pro</strong>. Bebas Neue se usó para titulares por su impacto visual y Source Sans Pro para el cuerpo de texto, garantizando legibilidad y una estética moderna y limpia."
@@ -50,7 +50,7 @@
 		}, {
 			"name": "project-color",
 			"description": "The core colors of the visual identity (such as black, white, and a distinctive red) are carefully incorporated into the web design, creating a comfortable and recognizable environment for the brand.",
-			"palette": ["#E21C47", "#2E2E2C"],
+			"palette": ["#E21C47", "#2E2E2C", "#F2F2F2"],
 			"es": {
 				"description": "Los colores principales de la identidad visual (como el negro, blanco y un distintivo rojo) se incorporaron cuidadosamente en el diseño web, creando un ambiente sofisticado y reconocible para la marca."
 			}
