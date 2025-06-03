@@ -55,7 +55,7 @@ div(class='py-24 min-h-svh bg-primary relative overflow-clip place-content-cente
 
         u-button(@click='toggle()' :icon :aria-label='t("control.play")' variant='solid' color='neutral' size="xl" class='bg-default hover:bg-accented text-primary ring-default aspect-square place-content-center rounded-full motion-reduce:hidden cursor-pointer')
 
-        u-button(@click='control.next' icon='i-line-md:chevron-right' :aria-label='t("control.prev")' variant='outline' color='neutral' size="xl" :class='ui.button')
+        u-button(@click='control.next' icon='i-line-md:chevron-right' :aria-label='t("control.next")' variant='outline' color='neutral' size="xl" :class='ui.button')
 </template>
 
 <script lang="ts" setup>
@@ -80,11 +80,8 @@ const { data } = useCertificates()
 const ui = {
 	title: 'text-inverted',
 	card: {
-		border: 'px',
-		base: 'bg-default/20 p-px',
-		child: 'bg-primary text-inverted',
-		before: `before:bg-default`,
-		after: `after:bg-default`
+		base: 'bg-default/20 group-hover:from-(--ui-bg)/50',
+		child: 'bg-primary/80 text-inverted'
 	},
 	badge: {
 		base: `w-fit h-fit text-nowrap gap-2 ring-1 ring-inset text-inverted/80 hover:text-inverted ring-default/50 hover:ring-default bg-primary`

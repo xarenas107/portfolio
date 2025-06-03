@@ -72,7 +72,7 @@ const images = computed(() => {
   .slide-up-animation {
     animation: slide-up ease-in both;
     animation-timeline: view();
-    animation-range: 20dvh 40dvh;
+    animation-range: entry-crossing;
   }
 
 	.slide-animation {

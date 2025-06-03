@@ -73,7 +73,7 @@ const images = computed(() => {
   .spread-animation {
     animation: rotate ease-out both v-bind(direction);
     animation-timeline: view();
-    animation-range: 10% 50%;
+    animation-range: entry-crossing;
   }
 }
 
