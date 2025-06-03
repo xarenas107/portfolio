@@ -41,7 +41,8 @@ export default defineContentConfig({
 				portfolio: z.object({
 					title: z.string(),
 					icon: z.string(),
-					href: z.string()
+					href: z.string(),
+					active: z.boolean().optional().default(true)
 				}).array().default([]),
 				contact: z.object({
 					title: z.string(),
