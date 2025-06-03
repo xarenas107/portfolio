@@ -11,9 +11,10 @@ export const useHashRoute = (options: Options = {}) => {
 	const state = computed({
 		get: () => route.hash,
 		set(data) {
-			const value = active.value ? data || undefined : route.hash
-			const is = value?.startsWith('#')
-			const hash = value ? is ? value : `#${value}` : value
+			if (!data) return
+			const value = active.value ? data : route.hash
+			const parsed = value?.startsWith('#') ? value : `#${value}`
+			const hash = value ? parsed : undefined
 			router.replace({ ...route, hash })
 		}
 	})
