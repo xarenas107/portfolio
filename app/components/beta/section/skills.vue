@@ -46,13 +46,19 @@ const ui = {
   from {
     color: var(--ui-text-toned);
     transform: rotate3d(1,0,0, -5deg) translateX(-2.5ch) scale(4) perspective(550px);
+  }
+  0%, 40% {
     opacity: 100%;
   }
   50% {
-    opacity: 100%;
-  }
-  80% {
     transform: scale(1);
+  }
+  50%, 80% {
+    opacity: 10%;
+  }
+
+  to {
+    opacity: 0;
   }
 }
 
@@ -83,7 +89,7 @@ const ui = {
     transform-style: preserve-3d;
     animation: scale-down ease-out both;
     animation-timeline: view();
-    animation-range: 0 60svh;
+    animation-range: 0 80%;
   }
   .scroll-fade-animation {
     animation: fade ease both;
