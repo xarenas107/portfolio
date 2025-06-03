@@ -1,9 +1,9 @@
 <template lang="pug">
 u-container(class="min-h-svh py-24 flex flex-col gap-16 lg:gap-24 relative")
 	div(class='flex flex-col gap-6')
-		u-card(:ui='ui.card' class='aspect-[10/4] w-full relative overflow-clip flex items-end')
-			div(v-if='image' class='w-full h-full bg-primary-900/20 dark:bg-primary-100/20 absolute z-10 left-0 top-0')
-			nuxt-img(v-if='image' :src='image' :alt='title' class="object-cover w-full h-full absolute top-0 left-0 placeholder-active")
+		u-card(class='aspect-[10/4] w-full relative overflow-clip flex items-end')
+			//- div(v-if='image' class='w-full h-full absolute z-10 left-0 top-0')
+			//- nuxt-img(v-if='image' :src='image' :alt='title' class="object-cover w-full h-full absolute top-0 left-0 placeholder-active")
 			//- u-placeholder(class='aspect-w-12 aspect-h-4 w-full rounded-lg placeholder-active')
 
 			section-title(class='z-20 relative text-neutral-100 dark:text-neutral-950 -ml-6 -mb-9 sm:-ml-8 sm:-mb-14 max-w-prose') {{ title }}

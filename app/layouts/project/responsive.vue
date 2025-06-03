@@ -1,9 +1,12 @@
 <template lang="pug">
-div(class='flex items-stretch w-full content-between z-10 relative rounded-lg gap-4')
-	nuxt-img(:src='background' class='rounded-lg grow h-full object-cover object-top ring bg-accented scroll-up-animation contrast-20 aspect-16/9' loading='lazy')
-	div(class='absolute top-1/2 -translate-1/2 left-1/2 flex gap-4 slide-up-animation')
-		nuxt-img(v-for='image in images' v-bind='image' class='rounded-lg grow mt-(--top) h-50 sm:h-72 md:h-96 lg:h-100 object-cover object-top ring shadow-smooth max-w-3xs slide-animation' loading='lazy')
-</template>
+section(class="flex flex-col gap-16")
+	nuxt-layout(v-if='title || description' name='project-section-paragraph' :title :description small)
+
+	div(class='flex items-stretch w-full content-between relative rounded-lg gap-4 bg-elevated')
+		nuxt-img(:src='background' class='rounded-lg grow h-full object-cover object-top ring bg-accented scroll-up-animation opacity-20 aspect-16/9' loading='lazy')
+		div(class='absolute top-1/2 -translate-1/2 left-1/2 flex gap-4 slide-up-animation')
+			nuxt-img(v-for='image in images' v-bind='image' class='rounded-lg grow mt-(--top) h-50 sm:h-72 md:h-96 lg:h-100 object-cover object-top ring shadow-smooth max-w-3xs slide-animation' loading='lazy')
+	</template>
 
 <script lang="ts" setup>
 type Props = {
@@ -11,6 +14,8 @@ type Props = {
 	background?: string
 	src?: string[]
 	aspectRatio?: `${number}/${number}` | number | 'auto'
+	title?: string
+	description?: string
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -21,16 +26,16 @@ const props = withDefaults(defineProps<Props>(), {
 const images = computed(() => {
 	return props.src?.map((src = '', index = 0) => {
 		return {
-			id: index,
+			id: `${index}`,
 			class: [
 				'bg-elevated aspect-(--aspect) light:opacity-(--opacity) dark:brightness-(--opacity) max-h-(--max-height)'
 			],
 			style: {
 				'--max-height': 'calc(100% - 20%)',
-				'--aspect': props.aspectRatio,
+				'--aspect': `${props.aspectRatio}`,
 				'--opacity': `100%`,
 				'--top': `${index * 10}%`,
-				'--z-index': -index
+				'--z-index': `${-index}`
 			},
 			alt: '',
 			src

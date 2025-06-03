@@ -1,21 +1,37 @@
 <template lang="pug">
-div(class='flex flex-col gap-2 w-full')
-	h4(v-if='title' class='text-balance flex gap-2 font-display uppercase font-bold text-4xl md:text-6xl lg:text-6xl xl:text-8xl') {{ title }}
-	p(v-if='description' style='--characters: 120' class='max-w-prose text-base sm:text-lg text-balance')
-		span(class="text-animation") {{ description }}
+section(class="flex flex-col gap-8")
+	div(class='flex flex-col gap-2 w-full')
+		h4(v-if='title' class='text-balance flex gap-2 font-display uppercase' :class='[styles]') {{ title }}
+		article(v-if='description' style='--characters: 120' class='max-w-prose text-base sm:text-lg text-balance space-y-4')
+			span(class="text-animation" class='space-y-4' v-html='description')
+
+	nuxt-img(v-if='src' :src class='rounded-lg grow h-full object-center ring bg-elevated object-cover sm:aspect-2/1 md:aspect-3/1 scroll-up-animation text-default' fit='cover' loading='lazy' format='webp' preset='cover')
 </template>
 
 <script lang="ts" setup>
 type Props = {
 	title?: string
 	description?: string
+	smallTitle?: boolean
+	src?: string
 }
 
-withDefaults(defineProps<Props>(), {
+const props = withDefaults(defineProps<Props>(), {
+})
+
+const styles = computed(() => {
+	if (props.smallTitle) return 'font-semibod text-2xl'
+	return 'font-bold text-2xl md:text-4xl lg:text-6xl xl:text-6xl'
 })
 </script>
 
 <style lang="scss" scoped>
+@keyframes scroll-up {
+    from {
+		object-position: center -10dvh;
+		opacity: 0;
+    }
+}
 @keyframes text {
 	from { background-size: 0 }
 	to { background-size: 100% }
@@ -34,6 +50,12 @@ withDefaults(defineProps<Props>(), {
     animation: text .1s steps(var(--characters, 100)) both;
     animation-timeline: view();
 	animation-range: 10% 40%;
+  }
+
+  .scroll-up-animation {
+    animation: scroll-up ease-in forwards;
+    animation-timeline: view();
+    animation-range: entry;
   }
 }
 </style>

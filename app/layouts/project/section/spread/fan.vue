@@ -1,14 +1,20 @@
 <template lang="pug">
-div(class='flex w-full content-stretch z-10 relative rounded-lg h-50 sm:h-90 md:h-100 lg:h-120 justify-center bg-elevated gap-8')
-	nuxt-img(v-for='image in images' v-bind='image' class='rounded-lg shadow-smooth h-full max-w-3xs absolute origin-bottom border border-(--ui-border) spread-animation')
+section(class="flex flex-col gap-16")
+	nuxt-layout(v-if='title || description' name='project-section-paragraph' :title :description :small-title)
+
+	div(class='flex w-full content-stretch z-10 relative rounded-lg h-50 sm:h-90 md:h-100 lg:h-120 justify-center bg-elevated gap-8')
+		nuxt-img(v-for='image in images' v-bind='image' class='rounded-lg shadow-smooth h-full max-w-3xs absolute origin-bottom border border-(--ui-border) spread-animation object-cover' loading='lazy' preset="cover")
 </template>
 
 <script lang="ts" setup>
 type Props = {
+	title?: string
+	description?: string
 	detail?: boolean
 	cover?: string
 	src?: string[]
 	aspectRatio?: `${number}/${number}` | number | 'auto'
+	smallTitle?: boolean
 }
 
 const props = withDefaults(defineProps<Props>(), {
