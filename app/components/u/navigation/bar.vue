@@ -89,7 +89,6 @@ type Props = {
 const slot = useSlots()
 const { t } = useI18n()
 const hash = useHashRoute()
-const { xl } = useDisplay()
 
 defineProps<Props>()
 
@@ -170,13 +169,14 @@ const ui = {
 	}
 }
 
-watchThrottled(xl, (value) => {
-	if (value) menu.value = false
-}, { throttle: 100 })
-
 onMounted(() => {
 	progress()
 	recolor()
+
+	const { desktop } = useDisplay()
+	watchThrottled(desktop, (value) => {
+		if (value) menu.value = false
+	}, { throttle: 100 })
 })
 </script>
 
