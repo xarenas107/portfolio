@@ -21,18 +21,17 @@ const props = withDefaults(defineProps<Props>(), {
 	transition: () => ({ name: 'transition-fade' }),
 	delay: () => 0,
 	appear: () => true,
-	once: () => true
+	once: () => true,
+	as: () => 'div'
 })
 
 const intersected = shallowRef(!!props.disabled)
-const is = computed(() => props.as || 'div')
+const is = computed(() => props.as)
 
 const intersect = [
 	(entries: IntersectionObserverEntry[]) => {
 		entries.forEach(({ isIntersecting }) => {
-			setTimeout(() => {
-				intersected.value = isIntersecting
-			}, Number(props.delay))
+			if (isIntersecting) intersected.value = true
 		})
 	}, {
 		rootMargin: props.margin,

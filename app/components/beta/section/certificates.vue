@@ -114,18 +114,18 @@ const control = {
 </script>
 
 <style lang="scss" scoped>
-@keyframes fade {
-  from {
-    transform: translateY(40svh);
-    color: transparent;
-    opacity: 0;
-  }
-  50% {
-    transform: translateY(0);
-    color: transparent;
-    opacity: 1;
-  }
-}
+// @keyframes fade {
+//   from {
+//     transform: translateY(40%);
+//     color: transparent;
+//     opacity: 0;
+//   }
+//   50% {
+//     transform: translateY(0);
+//     color: transparent;
+//     opacity: 1;
+//   }
+// }
 
 @keyframes rotate-3d {
   from {
@@ -138,21 +138,21 @@ const control = {
   }
 }
 
-@keyframes slide-from-end {
-  from {
-    transform: translate(-100%);
-  }
-  to {
-    transform: translate(100dvw);
-  }
-}
+// @keyframes slide-from-end {
+//   from {
+//     transform: translate(-100%);
+//   }
+//   to {
+//     transform: translate(100dvw);
+//   }
+// }
 
-@keyframes scale-down {
-  from {
-    color: var(--ui-color-primary-600);
-    transform: translate(-50dvw) scale(3);
-  }
-}
+// @keyframes scale-down {
+//   from {
+//     color: var(--ui-color-primary-600);
+//     transform: translate(-50dvw) scale(3);
+//   }
+// }
 
 @media (prefers-reduced-motion: no-preference) {
   .scroll-fade-animation {
@@ -160,18 +160,18 @@ const control = {
     transform-style: preserve-3d;
     animation: rotate-3d ease-out both;
     animation-timeline: view();
-    animation-range: -40svh 80svh;
+    animation-range: 0% 40%;
   }
-  .scroll-slide-animation {
-    animation: slide-from-end linear both;
-    animation-timeline: view();
-    animation-range: 20svh 100svh;
-  }
-  .scale-down-animation {
-    transform-origin: left top;
-    animation: scale-down ease-in forwards;
-    animation-timeline: view();
-    animation-range: entry;
-  }
+  // .scroll-slide-animation {
+  //   animation: slide-from-end linear both;
+  //   animation-timeline: view();
+  //   animation-range: 20svh 100svh;
+  // }
+  // .scale-down-animation {
+  //   transform-origin: left top;
+  //   animation: scale-down ease-in forwards;
+  //   animation-timeline: view();
+  //   animation-range: entry;
+  // }
 }
 </style>

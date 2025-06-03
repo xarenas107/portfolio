@@ -4,7 +4,7 @@ div(class='min-h-[60svh] relative overflow-clip bg-default py-24')
     section-title(:class='ui.title' class='origin-left scale-down-animation' hyphens) {{  t('section.skills') }}
 
   u-container(v-bind='options' as='ul' class='grid grid-rows-1 grid-cols-1 sm:grid-rows-2 sm:grid-cols-2 lg:grid-rows-3 lg:grid-cols-3 gap-16 pt-8 sm:pt-12 md:pt-20 lg:pt-24 xl:pt-32 z-20 lg:m-auto')
-    li(v-for='item, index in data' :class='`scroll-fade-animation lg:grid-start-${index + 1}`')
+    li(v-for='item, index in data' :class='`scroll-fade-animation lg:col-start-(--place) lg:row-start-(--place)`' :style='{ "--place": index + 1 }')
       div(class='flex flex-col gap-4 align-start')
         h3(class="font-bold uppercase font-display text-4xl sm:text-4xl md:text-3xl lg:text-5xl xl:text-6xl text-highlighted hyphens-auto break-words sm:break-normal") {{  item.title  }}
 
@@ -89,31 +89,17 @@ const ui = {
     transform-style: preserve-3d;
     animation: scale-down ease-out both;
     animation-timeline: view();
-    animation-range: 0 80%;
+    animation-range: 0% 80%;
   }
   .scroll-fade-animation {
     animation: fade ease both;
     animation-timeline: view();
-    animation-range: 20svh 100svh;
-  }
-  .scroll-rainbow-animation {
-    animation: rainbow ease-in both;
-    animation-timeline: view();
-    animation-range: 100svh 110svh;
+    animation-range: 20% 80%;
   }
   .fade-exit-animation {
     animation: fade-out ease forwards;
     animation-timeline: view();
     animation-range: exit-crossing;
-  }
-}
-
-@media (min-width: 1024px) {
-  @for $i from 1 through 3 {
-    .lg\:grid-start-#{$i} {
-      grid-column-start: #{$i};
-      grid-row-start: #{$i};
-    }
   }
 }
 </style>

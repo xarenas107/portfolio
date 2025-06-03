@@ -2,7 +2,7 @@
 div
 	u-container(class="min-h-svh py-24 pt-4 sm:pt-6 lg:pt-24 flex flex-col gap-16 relative")
 		div(class='flex flex-col gap-8 z-20')
-			u-image(v-if='cover' :src='cover' :alt='title' class="w-full sm:aspect-2/1 md:aspect-3/1 object-cover rounded-lg ring bg-elevated parallel-animation" loading='lazy' preset="cover" :img-attrs='{ class: "w-full h-full" }')
+			u-image(v-if='cover' :src='cover' :alt='title' class="w-full sm:aspect-2/1 md:aspect-3/1 object-cover rounded-lg ring bg-elevated h-64 parallel-animation" loading='lazy' preset="cover" :img-attrs='{ class: "w-full h-full" }')
 
 			div(class='flex flex-col gap-2')
 				h1(class='text-balance flex font-display uppercase font-bold text-4xl sm:text-6xl xl:text-8xl text-highlighted') {{ title }}
@@ -14,9 +14,9 @@ div
 					u-icon(name='i-svg-spinners:180-ring-with-bg' size='2xl' class='w-12 h-12 animate-spin')
 					span(class='animate-pulse') {{ t('state.loading') }}...
 
-			nuxt-layout(v-for='section in sections' v-bind='section')
+			lazy-nuxt-layout(v-for='section in sections' v-bind='section')
 
-	div(class='bg-elevated w-full')
+	u-lazy(class='bg-elevated w-full')
 		lazy-u-container(class="py-24 pt-4 sm:pt-6 lg:pt-16 relative items-center")
 			nuxt-layout(name='project-section-others')
 </template>

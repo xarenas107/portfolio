@@ -85,13 +85,13 @@ const ui = {
   .scroll-slide-animation {
     animation: slide-from-start ease-in-out both;
     animation-timeline: view();
-    animation-range: 0svh 80svh;
+    animation-range: 0% 80%;
   }
 
   .scroll-slide-animation-reverse {
 	animation: slide-from-end cubic-bezier(.12,.48,.72,1) both;
     animation-timeline: view();
-    animation-range: 0svh 180svh;
+    animation-range: 0% 80%;
   }
 }
 </style>
