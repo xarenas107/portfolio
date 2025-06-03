@@ -1,6 +1,40 @@
 # Changelog
 
 
+## v1.11.0
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.9.2...v1.11.0)
+
+### 🚀 Enhancements
+
+- **layout:** Add new project layouts ([342b235](https://github.com/xarenas107/portfolio/commit/342b235))
+
+### 🩹 Fixes
+
+- **skills:** Improve scroll driven animation ([a0f8fd0](https://github.com/xarenas107/portfolio/commit/a0f8fd0))
+- **scroll:** Avoid navigation to home when `hash` is undefined ([076b20d](https://github.com/xarenas107/portfolio/commit/076b20d))
+- **projects:** Solve wrong types ([edacbf6](https://github.com/xarenas107/portfolio/commit/edacbf6))
+- **back:** Back button replaced with `back to home` ([dd3e377](https://github.com/xarenas107/portfolio/commit/dd3e377))
+
+### 💅 Refactors
+
+- Remove unnused components ([c0b8319](https://github.com/xarenas107/portfolio/commit/c0b8319))
+
+### 🏡 Chore
+
+- **content:** Add content ([7894f0a](https://github.com/xarenas107/portfolio/commit/7894f0a))
+- **i18n:** Update locales ([04fcf76](https://github.com/xarenas107/portfolio/commit/04fcf76))
+- **content:** Update content ([1d1d4b6](https://github.com/xarenas107/portfolio/commit/1d1d4b6))
+- **content:** Update models ([9d43b85](https://github.com/xarenas107/portfolio/commit/9d43b85))
+- **style:** Unified bg-color in certain cases ([c884967](https://github.com/xarenas107/portfolio/commit/c884967))
+- Minor changes ([8b21ba4](https://github.com/xarenas107/portfolio/commit/8b21ba4))
+- **npm:** Update packages ([e2882a5](https://github.com/xarenas107/portfolio/commit/e2882a5))
+- **release:** V1.10.0 ([1a018c0](https://github.com/xarenas107/portfolio/commit/1a018c0))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.10.0
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.9.2...v1.10.0)
