@@ -96,7 +96,7 @@ const styles = computed(() => {
 			border: props.ui?.divider || 'border-neutral-700 dark:border-primary-300'
 		},
 		align: 'place-items-end text-end',
-		size: props.alternate ? `${horizontal.value ? 'h' : 'w'}-5/12 ${horizontal.value ? 'row-span-1' : 'col-span-1'} basis-5/12 grow flex-auto` : `${horizontal.value ? 'row-auto' : 'col-span-5'}`,
+		size: props.alternate ? `${horizontal.value ? 'h-5/12 row-span-1' : 'w-5/12 col-span-1'} basis-5/12 grow flex-auto` : `${horizontal.value ? 'row-auto' : 'col-span-5'}`,
 		spacing: horizontal.value ? 'mr-10' : 'mb-10',
 		column: horizontal.value ? `flex-col grid-rows-timeline${alternate} gap-6` : `grid-cols-timeline${alternate} grid-flow-col-dense gap-6`,
 		animation: 'fade-bottom-animation'
