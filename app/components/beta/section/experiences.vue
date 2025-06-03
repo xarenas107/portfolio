@@ -1,8 +1,8 @@
 <template lang="pug">
 div(class='overflow-clip bg-(--ui-primary) relative flex motion-safe:min-h-svh flex-col')
-	div(class='h-[20svh] w-full bg-(--ui-primary)')
-	u-container(v-bind='options' class='h-full w-full origin-bottom')
-		section-title(:class='ui.title' class="scroll-slide-animation" hyphens) {{  t('section.experience', 2) }}
+	div(class='h-64 w-full bg-(--ui-primary) flex ')
+		u-container(v-bind='options' class='h-full w-full origin-bottom items-end flex')
+			section-title(:class='ui.title' class="scroll-slide-animation" hyphens) {{  t('section.experience', 2) }}
 
 	div(class='relative flex w-full bg-default h-full motion-safe:min-h-[150svh] py-24 grow motion-reduce:overflow-auto scroll-hidden')
 		div(v-bind='options' class='px-4 sm:px-6 motion-reduce:pr-0 motion-reduce:sm:pr-0 motion-reduce:lg:pr-0 lg:px-8 gap-8 motion-reduce:max-w-7xl mx-auto w-full grow ')
@@ -10,15 +10,15 @@ div(class='overflow-clip bg-(--ui-primary) relative flex motion-safe:min-h-svh f
 			u-timeline(
 				:ui='ui.timeline'
 				:items='data'
-				:style='`--width: ${width}rem`'
+				:style
 				:pending
 				content-key="description"
 				badge-key="abbreviation"
 				title-key="provider"
 				subtitle-key="job"
 				orientation='horizontal'
-				data-allow-mismatch='class'
-				class='scroll-slide-animation-reverse motion-safe:top-[25svh] motion-safe:sticky motion-safe:min-w-[var(--width)]'
+				data-allow-mismatch='style'
+				class='scroll-slide-animation-reverse motion-safe:top-48 motion-safe:sticky motion-safe:min-w-(--width)'
 				alternate
 				reverse
 				lazy
@@ -44,10 +44,13 @@ const options = computed(() => {
 
 const { data, pending } = useExperiences()
 
-const width = computed(() => {
+const style = computed(() => {
 	const size = data.value?.length || 0
 	const length = 25 * (8 + size)
-	return length
+
+	return {
+		'--width': `${length}rem`
+	}
 })
 
 const ui = {
@@ -85,7 +88,7 @@ const ui = {
   .scroll-slide-animation {
     animation: slide-from-start ease-in-out both;
     animation-timeline: view();
-    animation-range: 0% 80%;
+    animation-range: 0% 60%;
   }
 
   .scroll-slide-animation-reverse {

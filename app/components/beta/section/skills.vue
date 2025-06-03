@@ -1,5 +1,5 @@
 <template lang="pug">
-div(class='min-h-[60svh] relative overflow-clip bg-default py-24')
+div(class='relative overflow-clip bg-default py-24')
   div(v-bind='options' class='fade-exit-animation motion-safe:sticky motion-safe:top-[30svh]')
     section-title(:class='ui.title' class='origin-left scale-down-animation' hyphens) {{  t('section.skills') }}
 

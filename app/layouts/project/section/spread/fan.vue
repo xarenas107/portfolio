@@ -3,7 +3,7 @@ section(class="flex flex-col gap-16")
 	nuxt-layout(v-if='title || description' name='project-section-paragraph' :title :description :small-title)
 
 	div(class='flex w-full content-stretch z-10 relative rounded-lg h-50 sm:h-90 md:h-100 lg:h-120 justify-center bg-elevated gap-8')
-		nuxt-img(v-for='image in images' v-bind='image' class='rounded-lg shadow-smooth h-full max-w-3xs absolute origin-bottom border border-(--ui-border) spread-animation object-cover' loading='lazy' preset="cover")
+		nuxt-img(v-for='image in images' v-bind='image' class='rounded-lg shadow-smooth h-full max-w-3xs absolute origin-bottom border border-(--ui-border) spread-animation object-cover')
 </template>
 
 <script lang="ts" setup>
@@ -13,6 +13,7 @@ type Props = {
 	detail?: boolean
 	cover?: string
 	src?: string[]
+	alt?: string
 	aspectRatio?: `${number}/${number}` | number | 'auto'
 	smallTitle?: boolean
 }
@@ -22,22 +23,17 @@ const props = withDefaults(defineProps<Props>(), {
 	aspectRatio: () => 'auto'
 })
 
-const { desktop } = useDisplay()
-
-const style = computed(() => ({
-	'--aspect': props.aspectRatio,
-	'--basis': `minmax(100%, 10rem)`
-}))
-
 const images = computed(() => {
-	const total = props.src.length || 0
+	const { src, alt } = props
+	const total = src.length || 0
 	const half = total / 2
 	const round = Math.floor(half)
 
-	return props.src.map((src = '', index = 0) => {
+	return src.map((src = '', index = 0) => {
 		const shade = 900 - index * 100
+		const { length } = props.src
 
-		const detail = props.detail && index === 0
+		const detail = props.detail && index < 2
 		const delta = props.detail ? -1 : 0
 		const order = index + delta
 
@@ -51,18 +47,19 @@ const images = computed(() => {
 
 		return {
 			id: index,
-			class: ['bg-(--color) aspect-(--aspect) basis-(--basis) z-(--order) rotate-(--rotate) translate-x-(--translate-x) light:contrast-(--tw-opacity) dark:brightness-(--tw-opacity)', {
-				'bg-neutral-900 mx-0': desktop.value && detail
+			class: ['bg-(--color) aspect-(--aspect) basis-(--basis) z-(--order) rotate-(--rotate) translate-x-(--translate-x) light:contrast-(--opacity) dark:brightness-(--opacity)', {
+				'lg:bg-neutral-900 lg:mx-0': detail
 			}],
 			style: {
 				'--order': -index,
 				'--color': `var(--color-neutral-${shade}, var(--color-neutral-50))`,
 				'--rotate': `${rotation}deg`,
 				'--translate-x': `${translate}%`,
-				'--tw-opacity': detail ? '100%' : `${100 - order * 100 / props.src.length}%`,
-				...style.value
+				'--opacity': detail ? '100%' : `${(length - order) * 100 / length}%`,
+				'--aspect': props.aspectRatio,
+				'--basis': `minmax(100%, 10rem)`
 			},
-			alt: '',
+			alt,
 			src
 		}
 	})
@@ -73,16 +70,17 @@ const images = computed(() => {
 @keyframes rotate {
   from {
 	rotate: 0deg;
-	translate: 0 0
+	translate: 0 0;
+	filter: unset
   }
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .spread-animation {
     transform-origin: bottom;
-    animation: rotate ease-in forwards;
+    animation: rotate ease-in both;
     animation-timeline: view();
-    animation-range: entry-crossing;
+    animation-range: 0% 50%;
   }
 }
 </style>

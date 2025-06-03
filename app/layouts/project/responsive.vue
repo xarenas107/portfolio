@@ -3,9 +3,9 @@ section(class="flex flex-col gap-16")
 	nuxt-layout(v-if='title || description' name='project-section-paragraph' :title :description small)
 
 	div(class='flex items-stretch w-full content-between relative rounded-lg gap-4 bg-elevated')
-		u-image(:src='background' class='rounded-lg grow h-full object-cover object-top ring bg-accented scroll-up-animation opacity-20 aspect-16/9' loading='lazy')
+		nuxt-img(:src='background' class='rounded-lg grow h-full object-cover object-top ring bg-accented scroll-up-animation opacity-20 aspect-16/9' loading='lazy')
 		div(class='absolute top-1/2 -translate-1/2 left-1/2 flex gap-4 slide-up-animation')
-			lazy-nuxt-img(v-for='image in images' v-bind='image' class='rounded-lg grow mt-(--top) h-50 sm:h-72 md:h-96 lg:h-100 object-cover object-top ring shadow-smooth max-w-3xs slide-animation')
+			nuxt-img(v-for='image in images' v-bind='image' class='rounded-lg grow mt-(--top) h-50 sm:h-72 md:h-96 lg:h-100 object-cover object-top ring shadow-smooth max-w-3xs slide-animation')
 	</template>
 
 <script lang="ts" setup>
@@ -28,10 +28,9 @@ const images = computed(() => {
 		return {
 			id: `${index}`,
 			class: [
-				'bg-elevated aspect-(--aspect) light:opacity-(--opacity) dark:brightness-(--opacity) max-h-(--max-height)'
+				'bg-elevated aspect-(--aspect) light:opacity-(--opacity) dark:brightness-(--opacity)'
 			],
 			style: {
-				'--max-height': 'calc(100% - 20%)',
 				'--aspect': `${props.aspectRatio}`,
 				'--opacity': `100%`,
 				'--top': `${index * 10}%`,
@@ -47,7 +46,7 @@ const images = computed(() => {
 <style lang="scss" scoped>
 @keyframes scroll-up {
     from {
-		object-position: center -50%;
+		object-position: center 10%;
 		opacity: 0;
     }
 }
@@ -65,14 +64,14 @@ const images = computed(() => {
 
 @media (prefers-reduced-motion: no-preference) {
   .scroll-up-animation {
-    animation: scroll-up ease-in forwards;
+    animation: scroll-up ease-in both;
     animation-timeline: view();
     animation-range: entry;
   }
   .slide-up-animation {
     animation: slide-up ease-in both;
     animation-timeline: view();
-    animation-range: entry-crossing;
+    animation-range: 0% 50%;
   }
 
 	.slide-animation {
