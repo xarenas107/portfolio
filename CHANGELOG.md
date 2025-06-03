@@ -1,6 +1,26 @@
 # Changelog
 
 
+## v1.12.4
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.12.3...v1.12.4)
+
+### 🩹 Fixes
+
+- **navigation:** Prevent hydration missmatches ([f6b8977](https://github.com/xarenas107/portfolio/commit/f6b8977))
+
+### 💅 Refactors
+
+- Minor improvements ([a5d8ca0](https://github.com/xarenas107/portfolio/commit/a5d8ca0))
+
+### 🏡 Chore
+
+- **content:** Update content ([1df5cad](https://github.com/xarenas107/portfolio/commit/1df5cad))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.12.3
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.12.1...v1.12.3)
