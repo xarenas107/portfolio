@@ -34,6 +34,57 @@
 	"option": {
 		"name": "Opción | Opciones"
 	},
+	"project": {
+		"accessibility": "Accessibilidad",
+		"finding": "Descubrimiento | Descubrimientos",
+		"frustration": "Frustración | Frustraciones",
+		"goal": "Meta | Metas",
+		"length": "Longitud | Longitudes",
+		"location": "Ubicación | Ubicaciones",
+		"name": "Proyecto | Proyectos",
+		"painPoint": "Punto de dolor | Punto de dolor",
+		"parameter": "Parámetro | Parámetros",
+		"participant": "Participante | Participantes",
+		"product": "Producto | Productos",
+		"research": "Investigaqción",
+		"sitemap": "Mapa del sitio | Mapas del sitio",
+		"summary": "Resumen",
+		"time": "Tiempo",
+		"design": {
+			"wireframe": "Estructura digital",
+			"prototype": {
+				"name": "Prototipo | Prototipos",
+				"high": "@:project.design.prototype.name de alta fidelidad",
+				"low": "@:project.design.prototype.name de baja fidelidad",
+				"usability": {
+					"name": "Usabilidad",
+					"study": {
+						"name": "@:project.design.usability.study.name de @.lower:project.design.usability.name",
+						"type": "Tipo de @.lower:project.design.usability.study.name"
+					}
+				}
+			}
+		},
+		"user": {
+			"age": "Edad | Edades",
+			"education": "Educación",
+			"family": "Familia | Familias",
+			"hometown": "Lugar de residencia",
+			"job": "Trabajo | Trabajos",
+			"research": "@:project.research de usuario",
+			"statement": "Declaración del problema",
+			"journey": {
+				"action": "Acción | Acciones",
+				"emotion": "Emoción | Emociones",
+				"name": "Mapa de recorrido del usuario",
+				"opportunities": "Oportunidades de mejora",
+				"task": "Lista de tareas"
+			},
+			"persona": {
+				"name": "Arquetipo de usuario"
+			}
+		}
+	},
 	"color": {
 		"name": "Color | Colores",
 		"option": "@:option.name de color",
@@ -59,7 +110,8 @@
 	},
 	"back": {
 		"name": "Retroceder",
-		"sr": "Retrocede a la página anterior"
+		"sr": "Retrocede a la página anterior",
+		"home": "Volver al inicio"
 	},
 	"section": {
 		"home": "Inicio",
@@ -79,5 +131,6 @@
 	"share": {
 		"name": "Compartir"
 	},
-	"and": "y"
+	"and": "y",
+	"other": "Otro | Otros"
 }

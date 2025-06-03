@@ -9,7 +9,8 @@
 	},
 	"back": {
 		"name": "Back",
-		"sr": "Return to previous page"
+		"sr": "Return to previous page",
+		"home": "Back to home"
 	},
 	"color": {
 		"blue": "Blue",
@@ -52,7 +53,7 @@
 	"project": {
 		"accessibility": "Accessibility",
 		"finding": "Finding | Findings",
-		"frustration": "Frustration | Frustations",
+		"frustration": "Frustration | Frustrations",
 		"goal": "Goal | Goals",
 		"length": "Length | Length",
 		"location": "Location | Locations",
@@ -139,5 +140,6 @@
 		"name": "Theme | Themes",
 		"system": "System"
 	},
-	"and": "and"
+	"and": "and",
+	"other": "Other | Others"
 }
