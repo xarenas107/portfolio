@@ -14,12 +14,10 @@ div
 					u-icon(name='i-svg-spinners:180-ring-with-bg' size='2xl' class='w-12 h-12 animate-spin')
 					span(class='animate-pulse') {{ t('state.loading') }}...
 
-			u-transition(delay='.1s' before-enter-class="opacity-0" duration='.25s' timing-function="ease-out")
-				template(#default='{ state, ...props }')
-					nuxt-layout(v-for='section in sections' v-bind='{ ...props, ...section }')
+			nuxt-layout(v-for='section in sections' v-bind='section')
 
 	div(class='bg-elevated w-full')
-		u-container(class="py-24 pt-4 sm:pt-6 lg:pt-16 relative items-center")
+		lazy-u-container(class="py-24 pt-4 sm:pt-6 lg:pt-16 relative items-center")
 			nuxt-layout(name='project-section-others')
 </template>
 

@@ -6,7 +6,7 @@ u-app(:locale)
 	nuxt-layout
 		u-navigation-bar(v-model:open='menu' :active='!!route.meta.navbar' :back='route.meta.navbar === "back"')
 
-		nuxt-layout(name='animate-skew')
+		nuxt-layout(name='animate-skew' disabled)
 			nuxt-page(:scale-down='menu')
 </template>
 

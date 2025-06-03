@@ -16,7 +16,7 @@ div(class='overflow-clip min-h-svh flex flex-col relative')
 			u-timeline(
 				:orientation
 				:ui='ui.timeline'
-				:alternate='!mobile || md'
+				:alternate='!mobile '
 				:reverse='!mobile || md'
 				:items='data'
 				:pending

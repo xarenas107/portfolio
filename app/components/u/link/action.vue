@@ -1,5 +1,5 @@
 <template lang='pug'>
-u-link(:to='href' :class='["flex items-center gap-2", classes]' :disabled='disabled || !href' target="_blank")
+u-link(v-if='active' :to='href' :class='["flex items-center gap-2", classes]' :disabled='disabled || !href' target="_blank")
     u-icon(v-if='icon' :name='icon' class='h-6 w-6')
     span(v-if='title') {{ title }}
 </template>
@@ -9,12 +9,15 @@ type Props = {
 	href?: string
 	title?: string
 	icon?: string
+	active?: boolean
 	disabled?: boolean
 	ui?: {
 		text?: string
 	}
 }
-const props = defineProps<Props>()
+const props = withDefaults(defineProps<Props>(), {
+	active: true
+})
 
 const classes = computed(() => {
 	const {

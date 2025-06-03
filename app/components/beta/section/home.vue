@@ -50,6 +50,7 @@ div(class='bg-gradient-to-b from-(--ui-primary)/10 to-(--ui-bg) max-w-full overf
 							template(#default='{ state, ...props }')
 								span(v-bind='props' class='hidden md:inline-block grow')
 
+						//- Contacts
 						div(v-bind='props' class='flex gap-y-3 gap-x-6 flex-col max-w-sm delay-[1.2s] md:delay-0')
 							div(class='flex gap-y-3 gap-x-6 flex-wrap')
 								u-link-action(v-for='item in data?.portfolio' v-bind='item')
