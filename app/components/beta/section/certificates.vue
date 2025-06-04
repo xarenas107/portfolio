@@ -1,5 +1,5 @@
 <template lang="pug">
-div(class='py-24 min-h-svh bg-primary relative overflow-clip place-content-center')
+div(class='py-24 min-h-screen bg-primary relative overflow-clip place-content-center')
   u-container(v-bind='options' class='flex flex-col gap-16')
     section-title(:class='ui.title' class="scroll-fade-animation z-40" hyphens) {{ t('section.certificates') }}
 

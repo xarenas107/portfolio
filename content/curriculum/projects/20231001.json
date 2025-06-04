@@ -73,7 +73,7 @@
 			}
 		}, {
 		  "name": "project-section-spread",
-		  "aspect-ratio": "16/9",
+		  "aspect-ratio": "1200/600",
 		  "landscape": true,
 		  "alt": "",
 		  "src": [
@@ -91,7 +91,7 @@
 		}, {
 		  "name": "project-responsive",
 		  "detail": true,
-		  "aspect-ratio": "134/290",
+		  "aspect-ratio": "370/800",
 		  "alt": "",
 		  "background": "/project/20231001/desktop/4.webp",
 		  "src": [

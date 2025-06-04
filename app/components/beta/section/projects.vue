@@ -1,5 +1,5 @@
 <template lang='pug'>
-div(class='w-full py-24 min-h-svh flex flex-col gap-16 relative overflow-clip')
+div(class='w-full py-24 min-h-screen flex flex-col gap-16 relative overflow-clip')
 
 	div(v-bind='options' class='flex px-4 sm:px-6 lg:px-8 gap-8 max-w-7xl mx-auto scroll-slide-animation')
 		section-title(v-for='index in 6' :class='index % 2 ? "text-stroke paint-order-stroke text-default" : ui.title') {{ t('section.portfolio') }}

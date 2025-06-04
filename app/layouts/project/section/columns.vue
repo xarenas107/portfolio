@@ -25,15 +25,15 @@ defineProps<Props>()
 <style lang="scss" scoped>
 @keyframes fade {
   from {
-    transform: translateY(20svh);
+    transform: translateY(20%);
     opacity: 0
   }
   40%, 70% {
-    transform: translateY(0dvw);
+    transform: translateY(0%);
     opacity: 100%
   }
   to {
-    transform: translateY(-20h);
+    transform: translateY(-20%);
     opacity: 0
   }
 }

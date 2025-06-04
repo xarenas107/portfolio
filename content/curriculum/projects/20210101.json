@@ -28,7 +28,7 @@
 			}
 		}, {
 			"name": "project-section-spread",
-			"aspect-ratio": "17/8",
+			"aspect-ratio": "1200/573",
 			"reverse": true,
 			"landscape": true,	
 			"alt": "Web design view",
@@ -44,7 +44,7 @@
 			"name": "project-responsive",
 			"description": "Creating a responsive website was essential, ensuring a consistent and optimized user experience on both mobile devices and desktop browsers. This allowed for a broader audience and offered flexibility in how users interact with the platform, whether on their smartphones, tablets, or computers.",
 			"detail": true,
-			"aspect-ratio": "134/290",
+			"aspect-ratio": "360/800",
 			"alt": "Multi device view",
 			"background": "/project/20210101/desktop/1.webp",
 			"src": [

@@ -1,5 +1,5 @@
 <template lang="pug">
-div(class='relative overflow-visible w-full lg:max-w-lg lg:h-full lg:max-h-svh')
+div(class='relative overflow-visible w-full lg:max-w-lg lg:h-full lg:max-h-screen')
 	div(key='bg-hero' class='w-full h-full min-h-48 sm:min-h-64 lg:min-h-full relative overflow-visible z-20 text-base')
 
 		nuxt-img(src='/hero/human-shadow.webp' class='absolute bottom-0 right-0 grow object-cover max-w-full h-80 sm:h-96 z-10 blend-multiply opacity-70' loading='eager' key="image:shadow" alt='' format='webp')

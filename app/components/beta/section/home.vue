@@ -1,7 +1,7 @@
 <template lang="pug">
-div(class='bg-gradient-to-b from-(--ui-primary)/10 to-(--ui-bg) max-w-full overflow-clip flex items-center min-h-svh')
+div(class='bg-gradient-to-b from-(--ui-primary)/10 to-(--ui-bg) max-w-full overflow-clip flex items-center min-h-screen')
 
-	u-lazy(class='w-full min-h-svh lg:min-h-auto')
+	u-lazy(class='w-full min-h-screen lg:min-h-auto')
 		u-container(v-bind='options' class="flex h-full w-full flex-col gap-4 overflow-visible py-16 pb-24 lg:py-32 relative")
 
 			u-transition(delay='1s' before-enter-class="motion-safe:max-w-0" enter-class='max-w-full' duration='.75s' timing-function="ease-in-out")

@@ -1,5 +1,5 @@
 <template lang="pug">
-u-container(class="min-h-svh py-24 flex flex-col gap-16 lg:gap-24 relative")
+u-container(class="min-h-screen py-24 flex flex-col gap-16 lg:gap-24 relative")
 	div(class='flex flex-col gap-6')
 		u-card(class='aspect-[10/4] w-full relative overflow-clip flex items-end')
 			//- div(v-if='image' class='w-full h-full absolute z-10 left-0 top-0')
@@ -35,7 +35,7 @@ u-container(class="min-h-svh py-24 flex flex-col gap-16 lg:gap-24 relative")
 				h4(class='text-2xl lg:text-4xl font-semibold flex items-center') {{ t('project.user.persona.name') }}
 				u-card(class='ring-1  bg-neutral-200')
 					template(#header)
-						nuxt-layout(name='project-section-persona' :item='user?.persona' class='sm:col-span-2 lg:col-span-3 ')
+						nuxt-layout(name='project-persona' :item='user?.persona' class='sm:col-span-2 lg:col-span-3 ')
 
 					div(class='grid grid-cols-auto sm:grid-cols-2 lg:grid-cols-3 gap-4')
 						nuxt-layout(name='project-section-card' :title="t('project.user.statement')" :content='user?.persona?.statement' class='sm:col-span-2 lg:col-auto bg-neutral-300 dark:bg-neutral-800')

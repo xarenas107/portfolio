@@ -1,6 +1,6 @@
 <template lang="pug">
 div(class='relative overflow-clip bg-default py-24')
-  div(v-bind='options' class='fade-exit-animation motion-safe:sticky motion-safe:top-[30svh]')
+  div(v-bind='options' class='fade-exit-animation motion-safe:sticky motion-safe:top-1/3')
     section-title(:class='ui.title' class='origin-left scale-down-animation' hyphens) {{  t('section.skills') }}
 
   u-container(v-bind='options' as='ul' class='grid grid-rows-1 grid-cols-1 sm:grid-rows-2 sm:grid-cols-2 lg:grid-rows-3 lg:grid-cols-3 gap-16 pt-8 sm:pt-12 md:pt-20 lg:pt-24 xl:pt-32 z-20 lg:m-auto')
@@ -64,15 +64,15 @@ const ui = {
 
 @keyframes fade {
   from {
-    transform: translateY(20svh);
+    transform: translateY(20%);
     opacity: 0
   }
   40%, 70% {
-    transform: translateY(0dvw);
+    transform: translateY(0%);
     opacity: 100%
   }
   to {
-    transform: translateY(-20h);
+    transform: translateY(-20%);
     opacity: 0
   }
 }
@@ -89,7 +89,7 @@ const ui = {
     transform-style: preserve-3d;
     animation: scale-down ease-out both;
     animation-timeline: view();
-    animation-range: 0% 80%;
+    animation-range: 0% 60%;
   }
   .scroll-fade-animation {
     animation: fade ease both;
@@ -99,7 +99,7 @@ const ui = {
   .fade-exit-animation {
     animation: fade-out ease forwards;
     animation-timeline: view();
-    animation-range: exit-crossing;
+    animation-range: exit;
   }
 }
 </style>

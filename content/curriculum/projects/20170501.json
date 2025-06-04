@@ -10,7 +10,7 @@
 	"sections": [
 		{
 			"name": "project-section-spread",
-			"aspect-ratio": "1900/905",
+			"aspect-ratio": "1200/573",
 			"landscape": true,
 			"alt": "Web design view",
 			"src": [
@@ -31,7 +31,7 @@
 		},{
 		  "name": "project-responsive",
 		  "detail": true,
-		  "aspect-ratio": "134/290",
+		  "aspect-ratio": "356/800",
 		  "alt": "",
 		  "background": "/project/20170501/desktop/1.webp",
 		  "src": [

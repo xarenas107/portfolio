@@ -159,7 +159,7 @@
 			"description": "In the ideation phase, a site map was developed. My main focus was on making strategic decisions regarding the information architecture, seeking to ensure intuitive navigation and a fluid user experience. Following this, the initial wireframes were created and validated through unmoderated usability studies. Following an iterative process based on the findings of these studies, a high-fidelity prototype was developed.",
 			"name": "project-section-spread-fan",
 			"detail": true,
-			"aspect-ratio": "194/420",
+			"aspect-ratio": "369/800",
 			"alt": "",
 			"src": [
 				"/project/20210201/app/1.webp",
@@ -178,7 +178,7 @@
 		  "name": "project-responsive",
 		   "description": "Part of the project also included creating a responsive web version of this app, ensuring a consistent and optimized user experience on both mobile devices and desktop browsers. This allowed Karat to reach a broader audience and offer flexibility in how users interact with the platform, whether from their smartphones, tablets, or computers.",
 		   "detail": true,
-		   "aspect-ratio": "134/290",
+		   "aspect-ratio": "368/800",
 		   "alt": "",
 		   "background": "/project/20210201/responsive/1.webp",
 		   "src": [

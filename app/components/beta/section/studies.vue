@@ -1,10 +1,9 @@
 <template lang="pug">
-div(class='overflow-clip min-h-svh flex flex-col relative')
-	div(class='h-[20svh] w-full bg-default')
-
-	div(class='w-full bg-primary overflow-clip')
-		u-container(v-bind='options' class='overflow-clip origin-top')
-			section-title(class="text-(--ui-bg) -mt-1 md:-mt-2 scroll-slide-animation" hyphens) {{ t('section.studies') }}
+div(class='overflow-clip min-h-screen flex flex-col relative')
+	div(class='h-80 w-full bg-default flex items-end')
+		div(class='w-full bg-primary overflow-clip')
+			u-container(v-bind='options' class='overflow-clip origin-top')
+				section-title(class="text-(--ui-bg) -mt-1 md:-mt-2 scroll-slide-animation" hyphens) {{ t('section.studies') }}
 
 	div(class='flex flex-col w-full h-full py-24 grow bg-primary')
 		div(v-bind='options' class='px-4 sm:px-6 lg:px-8 gap-8 max-w-7xl mx-auto w-full motion-reduce:pb-24 grow ')

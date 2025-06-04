@@ -12,7 +12,7 @@
 	"sections": [
 		{
 			"name": "project-section-spread",
-			"aspect-ratio": "324/180",
+			"aspect-ratio": "1200/600",
 			"reverse": true,
 			"landscape": true,
 			"alt": "",
@@ -25,7 +25,7 @@
 			"name": "project-responsive",
 			"description": "In the digital age, personal finance management can be complex and overwhelming. The challenge was to transform this complexity into a simple and attractive user experience. It was needed to design a Dashboard that not only showed data, but also made them understandable and actionable, allowing users to register transactions quickly and visualize expenditure patterns effectively.",
 			"detail": true,
-			"aspect-ratio": "134/290",
+			"aspect-ratio": "368/800",
 			"alt": "",
 			"background": "/project/20250401/desktop/1.webp",
 			"src": [
