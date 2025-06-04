@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.12.14
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.12.13...v1.12.14)
+
+### 🩹 Fixes
+
+- **accesiblity:** Solve minor issues ([9108224](https://github.com/xarenas107/portfolio/commit/9108224))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.12.13
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.12.12...v1.12.13)
