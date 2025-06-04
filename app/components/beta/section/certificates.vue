@@ -35,7 +35,7 @@ div(class='py-24 min-h-svh bg-primary relative overflow-clip place-content-cente
                 template(#header)
                   div(class='flex flex-col gap-4 justify-between')
                     div(class='flex flex-col gap-2 justify-between items-start')
-                      h5(class='font-extrabold text-lg') {{ item?.title }}
+                      h4(class='font-extrabold text-lg') {{ item?.title }}
                       span(class=' text-xs text-nowrap') {{ item?.provider }}
 
                     div(class='flex gap-2 group flex-wrap')
@@ -48,7 +48,7 @@ div(class='py-24 min-h-svh bg-primary relative overflow-clip place-content-cente
                     u-icon(name='heroicons-outline:clock' class='w-5 h-5')
                     nuxt-time(:datetime="item.endAt" :locale class='uppercase text-xs' month='long' year='numeric')
 
-                nuxt-img(v-if='item.image' :src='item.image' :alt='item.provider' class='-z-20 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-10 w-[10rem] rounded-lg overflow-clip pointer-events-none invert')
+                nuxt-img(v-if='item.image' :src='item.image' :alt='item.provider' class='-z-20 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-10 w-[10rem] rounded-lg overflow-clip pointer-events-none invert' loading='lazy' fromat='webp' width='160' height='160')
 
       div(class='flex gap-2 items-center')
         u-button(@click='control.prev' icon='i-line-md:chevron-left' :aria-label='t("control.prev")' variant='outline' color='neutral' size="xl" :class='ui.button')

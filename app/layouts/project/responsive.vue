@@ -3,9 +3,9 @@ section(class="flex flex-col gap-16")
 	nuxt-layout(v-if='title || description' name='project-section-paragraph' :title :description small)
 
 	div(class='flex items-stretch w-full content-between relative rounded-lg gap-4 bg-elevated')
-		nuxt-img(:src='background' class='rounded-lg grow h-full object-cover object-top ring bg-accented scroll-up-animation opacity-20 aspect-16/9' loading='lazy')
+		nuxt-img(:src='background' class='rounded-lg grow h-full object-cover object-top ring bg-accented scroll-up-animation opacity-20 aspect-16/9' loading='lazy' width='1200' height='' format='webp')
 		div(class='absolute top-1/2 -translate-1/2 left-1/2 flex gap-4 slide-up-animation')
-			nuxt-img(v-for='image in images' v-bind='image' class='rounded-lg grow mt-(--top) h-50 sm:h-72 md:h-96 lg:h-100 object-cover object-top ring shadow-smooth max-w-3xs slide-animation')
+			nuxt-img(v-for='image in images' v-bind='image' class='rounded-lg grow mt-(--top) h-50 sm:h-72 md:h-96 lg:h-100 object-cover object-top ring shadow-smooth max-w-3xs slide-animation' loading='eager' width='' height='800'  format='webp')
 	</template>
 
 <script lang="ts" setup>

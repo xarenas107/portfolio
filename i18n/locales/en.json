@@ -114,6 +114,7 @@
 		"empty": "No data found"
 	},
 	"section": {
+		"name": "Section | Sections",
 		"certificates": "Certificates",
 		"experience": "Experience",
 		"home": "Home",
@@ -121,6 +122,11 @@
 		"studies": "Studies",
 		"projects": "Projects",
 		"portfolio": "Portfolio"
+	},
+	"go": {
+		"name": "Go to",
+		"top": "@:go top",
+		"next": "@:go next @.lower:section.name"
 	},
 	"control": {
 		"play": "Play",

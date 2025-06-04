@@ -24,9 +24,9 @@ type Props = {
 
 const props = withDefaults(defineProps<Props>(), {
 	border: () => 'px',
-	as: () => 'ul',
 	ui: () => ({}),
-	selector: () => '.group-item'
+	selector: () => '.group-item',
+	as: 'div'
 })
 
 const items = defineModel<T[]>('items', { default: () => [] })

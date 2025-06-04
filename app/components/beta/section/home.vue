@@ -58,7 +58,7 @@ div(class='bg-gradient-to-b from-(--ui-primary)/10 to-(--ui-bg) max-w-full overf
 								u-link-action(:title='data?.location' icon='i-material-symbols:location-on-outline')
 
 			div(class='w-full bottom-0 absolute left-0 items-center justify-center flex')
-				u-button(@click='navigate("#studies")' variant='link' color='neutral' class='rounded-full cursor-pointer')
+				u-button(@click='navigate("#studies")' variant='link' :aria-label='t("go.next")' color='neutral' class='rounded-full cursor-pointer')
 					u-icon(name='i-heroicons:arrow-small-down-solid' class="w-8 h-8 motion-safe:animate-bounce")
 </template>
 

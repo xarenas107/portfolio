@@ -6,7 +6,7 @@ div(class='relative overflow-clip bg-default py-24')
   u-container(v-bind='options' as='ul' class='grid grid-rows-1 grid-cols-1 sm:grid-rows-2 sm:grid-cols-2 lg:grid-rows-3 lg:grid-cols-3 gap-16 pt-8 sm:pt-12 md:pt-20 lg:pt-24 xl:pt-32 z-20 lg:m-auto')
     li(v-for='item, index in data' :class='`scroll-fade-animation lg:col-start-(--place) lg:row-start-(--place)`' :style='{ "--place": index + 1 }')
       div(class='flex flex-col gap-4 align-start')
-        h3(class="font-bold uppercase font-display text-4xl sm:text-4xl md:text-3xl lg:text-5xl xl:text-6xl text-highlighted hyphens-auto break-words sm:break-normal") {{  item.title  }}
+        h4(class="font-bold uppercase font-display text-4xl sm:text-4xl md:text-3xl lg:text-5xl xl:text-6xl text-highlighted hyphens-auto break-words sm:break-normal") {{  item.title  }}
 
         div(class='group flex flex-wrap gap-2 max-w-[48ch]')
           p(class='text-base text-balance text-default') {{ parse(item?.content) }}

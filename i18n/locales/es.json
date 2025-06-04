@@ -114,6 +114,7 @@
 		"home": "Volver al inicio"
 	},
 	"section": {
+		"name": "Sección | Secciones",
 		"home": "Inicio",
 		"experience": "Experience",
 		"certificates": "Certificados",
@@ -121,6 +122,11 @@
 		"studies": "Estudios",
 		"projects": "Proyectos",
 		"portfolio": "Portafolio"
+	},
+		"go": {
+		"name": "Ir a",
+		"top": "@:go top",
+		"next": "@:go próxima @.lower:section.name"
 	},
 	"control": {
 		"play": "Reproducir",

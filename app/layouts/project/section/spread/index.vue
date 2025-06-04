@@ -3,7 +3,7 @@ section(class="flex flex-col gap-16")
 	nuxt-layout(v-if='title || description' name='project-section-paragraph' :title :description :small-title)
 
 	div(class='flex w-full content-between z-10 relative grow shrink rounded-lg gap-2 lg:gap-4 justify-center' :class='[landscape ? "flex-col sm:flex-row items-center sm:items-start -space-y-32 sm:space-y-0 sm:-space-x-32 sm:p-8 sm:bg-elevated" : "-space-x-32 bg-elevated p-8"]')
-		nuxt-img(v-for='image in images' v-bind='image' :class='landscape ? "max-w-full" : "max-w-48"' class='rounded-lg shadow-smooth h-full w-full  sm:max-w-64 md:max-w-72 lg:max-w-xs spread-animation border border-accented max-h-120 object-cover' preset="cover" loading='lazy' format='webp')
+		nuxt-img(v-for='image in images' v-bind='image' :class='landscape ? "max-w-full" : "max-w-48"' class='rounded-lg shadow-smooth h-full w-full  sm:max-w-64 md:max-w-72 lg:max-w-xs spread-animation border border-accented max-h-120 object-cover' width='' height='400' format='webp')
 </template>
 
 <script lang="ts" setup>

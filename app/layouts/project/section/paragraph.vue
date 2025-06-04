@@ -5,7 +5,7 @@ section(class="flex flex-col gap-8")
 		article(v-if='description' style='--characters: 120' class='max-w-prose text-base sm:text-lg text-balance space-y-4')
 			span(class="text-animation" class='space-y-4' v-html='description')
 
-	nuxt-img(v-if='src' :src class='rounded-lg grow h-full object-center ring bg-elevated object-cover sm:aspect-2/1 md:aspect-3/1 scroll-up-animation text-default' fit='cover' loading='lazy' format='webp' preset='cover')
+	nuxt-img(v-if='src' :src class='rounded-lg grow h-full object-center ring bg-elevated object-cover sm:aspect-2/1 md:aspect-3/1 scroll-up-animation text-default' fit='cover' format='webp')
 </template>
 
 <script lang="ts" setup>

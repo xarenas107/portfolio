@@ -10,7 +10,7 @@ div(class='w-full py-24 min-h-svh flex flex-col gap-16 relative overflow-clip')
 				div(class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grid-flow-row-dense auto-rows-fr auto-cols-fr gap-4")
 
 					nuxt-link(v-for='{ id, cover, title, highlighted } in data' @click.native='open' :class='[containerClass, { "row-span-2": highlighted }]' :id class="h-auto max-w-full rounded-lg cursor-pointer relative group/item")
-						nuxt-img(:src='cover' :alt='title' :class='[childClass]' class='object-cover rounded-lg pointer-events-none')
+						nuxt-img(:src='cover' :alt='title' :class='[childClass]' class='object-cover rounded-lg pointer-events-none' format='webp' width='400' height='400')
 
 						div(class='absolute z-20 top-0 left-0 w-[100%] h-[100%] p-4 bg-(--ui-bg-accented)/70 place-content-end-safe opacity-0 group-hover/item:opacity-100 rounded-lg border backdrop-blur-xs transition-all duration-400 ease-out pointer-events-none group-hover/item:view-transition-name-[overlay]')
 							div(class='flex flex-col gap-2 opacity-0 translate-y-24 group-hover/item:translate-y-0 group-hover/item:opacity-100 transition-transform duration-400 ease-out h-full place-center justify-center p-4')

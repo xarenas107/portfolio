@@ -6,7 +6,7 @@ section(class='flex flex-col gap-8')
 		template(#default='{ childClass, containerClass }')
 			u-carousel(v-if='data?.length' @select='control.select' v-slot="{ item }" :items :ui="ui.carousel" ref="carousel" align='start' class='w-full' loop arrows)
 				nuxt-link(@click.native='open(item?.id)' :class='[containerClass, { "row-span-2": item?.highlighted }]' class="h-auto max-w-full rounded-lg cursor-pointer relative group/item flex flex-wrap gap-2")
-					nuxt-img(:src='item?.cover' :alt='item?.title' :class='[childClass]' class='object-cover rounded-lg pointer-events-none')
+					nuxt-img(:src='item?.cover' :alt='item?.title' :class='[childClass]' class='object-cover rounded-lg pointer-events-none' format='webp' width='160' height='160' loading='lazy')
 					//- h6(class='text-default text-xs max-w-prose text-balance line-clamp-4 truncate') {{ item?.title }}
 </template>
 
