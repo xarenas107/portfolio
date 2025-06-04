@@ -1,5 +1,5 @@
 <template lang='pug'>
-div(class='bg-default')
+div(class='bg-default selection:bg-primary/20 selection:text-primary')
 	slot
 </template>
 

@@ -1,5 +1,5 @@
 <template lang='pug'>
-component(v-intersect='intersect' :is)
+component(v-intersect='intersect' :is :style)
 	transition(v-bind='options')
 		slot(v-if='intersected')
 </template>
@@ -14,6 +14,8 @@ type Props = {
 	once?: boolean
 	margin?: string
 	threshold?: number | number[]
+	minHeight?: string | number
+	minWidth?: string | number
 	as?: keyof HTMLElementTagNameMap
 }
 
@@ -24,6 +26,8 @@ const props = withDefaults(defineProps<Props>(), {
 	once: () => true,
 	as: () => 'div'
 })
+
+const style = useDimension(props)
 
 const intersected = shallowRef(!!props.disabled)
 const is = computed(() => props.as)

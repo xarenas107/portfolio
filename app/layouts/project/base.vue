@@ -16,8 +16,8 @@ div
 
 			lazy-nuxt-layout(v-for='section in sections' v-bind='section')
 
-	u-lazy(class='bg-elevated w-full')
-		lazy-u-container(class="py-24 pt-4 sm:pt-6 lg:pt-16 relative items-center")
+	u-lazy(class='bg-elevated w-full min-h-px')
+		u-container(class="py-24 pt-4 sm:pt-6 lg:pt-16 relative items-center")
 			nuxt-layout(name='project-section-others')
 </template>
 

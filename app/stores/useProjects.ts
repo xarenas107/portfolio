@@ -3,7 +3,7 @@ import type { ProjectsCollectionItem } from '@nuxt/content'
 export default () => {
 	const { locale } = useI18n()
 	const key = 'projects'
-	const fields = ['title', 'description', 'cover', 'stem', 'id', 'highlighted'] as const
+	const fields = ['title', 'description', 'cover', 'stem', 'id', 'highlighted', 'pinned'] as const
 
 	const { data, execute, status } = useLazyAsyncData(key, async () => {
 		const response = await queryCollection(key)

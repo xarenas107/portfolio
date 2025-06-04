@@ -3,7 +3,8 @@
 	"title": "Sales app and website design for a karate school",
 	"description": "<p>This case study presents the design of an e-commerce mobile and web application for 'Karat,' a karate school in Lima, Peru, that also operates as a sports equipment store. The project's primary objective was to create an intuitive platform that would allow users to easily purchase sports equipment and track the status of their orders.</p> <p>My key responsibilities encompassed conducting user interviews to understand core needs, developing both paper and digital wireframes, creating low and high-fidelity prototypes, performing usability studies to gather user feedback, ensuring comprehensive accessibility, and continuously iterating on designs to optimize the user experience. </p>",
 	"highlighted": true,
-	"cover": "/project/20210201/cover.png",
+	"pinned": true,
+	"cover": "/project/20210201/cover.webp",
 	"es": {
 		"title": "Diseño de aplicación de ventas y sitio web para escuela de karate",
 		"description": "<p>Este caso de estudio presenta el diseño de una aplicación móvil y web de comercio electrónico para 'Karat', una escuela de karate en Lima, Perú, que también opera como tienda de equipos deportivos.  El objetivo principal del proyecto fue crear una plataforma intuitiva que permitiera a los usuarios comprar fácilmente equipos deportivos y rastrear el estado de sus pedidos.</p> <p>Mis principales responsabilidades incluyeron realizar entrevistas a usuarios para comprender sus necesidades clave, desarrollar wireframes tanto en papel como digitales, crear prototipos de baja y alta fidelidad, realizar estudios de usabilidad para recopilar comentarios de los usuarios, garantizar una accesibilidad integral y la iteración continua de los diseños para optimizar la experiencia del usuario. </p>"
@@ -161,13 +162,13 @@
 			"aspect-ratio": "194/420",
 			"alt": "",
 			"src": [
-				"/project/20210201/app/1.png",
-				"/project/20210201/app/2.png",
-				"/project/20210201/app/3.png",
-				"/project/20210201/app/4.png",
-				"/project/20210201/app/5.png",
-				"/project/20210201/app/6.png",
-				"/project/20210201/app/7.png"
+				"/project/20210201/app/1.webp",
+				"/project/20210201/app/2.webp",
+				"/project/20210201/app/3.webp",
+				"/project/20210201/app/4.webp",
+				"/project/20210201/app/5.webp",
+				"/project/20210201/app/6.webp",
+				"/project/20210201/app/7.webp"
 			],
 			"es": {
 				"title": "Estructura y prototipado",
@@ -179,9 +180,9 @@
 		   "detail": true,
 		   "aspect-ratio": "134/290",
 		   "alt": "",
-		   "background": "/project/20210201/responsive/1.png",
+		   "background": "/project/20210201/responsive/1.webp",
 		   "src": [
-			   "/project/20210201/responsive/2.png"
+			   "/project/20210201/responsive/2.webp"
 			],
 			"es": {
 			  "description": "Parte del proyecto también incluía la creación de la versión web responsive de esta aplicación, asegurando una experiencia de usuario consistente y optimizada tanto en dispositivos móviles como en navegadores de escritorio. Esto permitió a Karat alcanzar a un público más amplio y ofrecer flexibilidad en cómo los usuarios interactúan con la plataforma, ya sea desde sus teléfonos inteligentes, tablets o computadoras."

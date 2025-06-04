@@ -1,5 +1,5 @@
 {
-	"cover": "/project/20210101/cover.png",
+	"cover": "/project/20210101/cover.webp",
 	"layout": "project-base",
 	"title": "Branding, signage, and website design for the Peruvian-Cuban Clinic",
 	"description": "In a competitive healthcare landscape, the Peruvian Cuban Medical Office needed to differentiate itself and clearly communicate its specialized services. The challenge was to create a visual identity that was both modern and reassuring, while also developing a digital presence that was intuitive and informative for patients seeking specialized medical care.",
@@ -12,7 +12,7 @@
 			"name": "project-section-paragraph",
 			"title": "Visual brand and signage",
 			"description": "The logo design ingeniously combines the initials of the company with a graphic representation of the ozone molecule, which is one of its main treatments fields. The visual identity was extended to all physical touchpoints, including signage for the medical office. <br> This ensures a consistent brand experience for patients from the moment they arrive.",
-			"src": "/project/20210101/brand/1.png",
+			"src": "/project/20210101/brand/1.webp",
 			"es": {
 				"title": "Marca visual y señalética",
 				"description": "El diseño del logotipo combina ingeniosamente las iniciales de la empresa con una representación gráfica de la molécula de ozono, que es uno de sus campos de tratamientos principales. La identidad visual se extendió a todos los puntos de contacto físicos, incluida la señalización para el consultorio médico. Esto ingresa a la experiencia de marca constante para los pacientes desde el momento en que llegan."
@@ -33,9 +33,9 @@
 			"landscape": true,	
 			"alt": "Web design view",
 			"src": [
-				"/project/20210101/desktop/1.png",
-				"/project/20210101/desktop/2.png",
-				"/project/20210101/desktop/3.png"
+				"/project/20210101/desktop/1.webp",
+				"/project/20210101/desktop/2.webp",
+				"/project/20210101/desktop/3.webp"
 			],
 			"es": {
 				"alt": "Vista del diseño web"
@@ -46,9 +46,9 @@
 			"detail": true,
 			"aspect-ratio": "134/290",
 			"alt": "Multi device view",
-			"background": "/project/20210101/desktop/1.png",
+			"background": "/project/20210101/desktop/1.webp",
 			"src": [
-			"/project/20210101/mobile/1.png"
+			"/project/20210101/mobile/1.webp"
 			],
 			"es": {
 				"alt": "Vista de diseño multidispositivo",

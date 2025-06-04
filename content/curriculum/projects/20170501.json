@@ -1,5 +1,5 @@
 {
-	"cover": "/project/20170501/cover.png",
+	"cover": "/project/20170501/cover.webp",
 	"layout": "project-base",
 	"title": "Website design for the Alliance Française in Cuba",
 	"description": "This case study details the website design of the Alliance Française in Cuba, based in the José Miguel Gómez House, its main headquarters. The project focused on transferring and enhancing the institution's existing visual identity and signage system to a modern and functional web platform, creating a portal that reflected its cultural heritage and educational offerings.",
@@ -14,9 +14,9 @@
 			"landscape": true,
 			"alt": "Web design view",
 			"src": [
-				"/project/20170501/desktop/1.png",
-				"/project/20170501/desktop/2.png",
-				"/project/20170501/desktop/3.png"
+				"/project/20170501/desktop/1.webp",
+				"/project/20170501/desktop/2.webp",
+				"/project/20170501/desktop/3.webp"
 			],
 			"es": {
 				"alt": "Vista del diseño web"
@@ -33,11 +33,11 @@
 		  "detail": true,
 		  "aspect-ratio": "134/290",
 		  "alt": "",
-		  "background": "/project/20170501/desktop/1.png",
+		  "background": "/project/20170501/desktop/1.webp",
 		  "src": [
-			"/project/20170501/app/1.png",
-			"/project/20170501/app/2.png",
-			"/project/20170501/app/3.png"
+			"/project/20170501/app/1.webp",
+			"/project/20170501/app/2.webp",
+			"/project/20170501/app/3.webp"
 		  ]
 		}, {
 		  "name": "project-section-paragraph",

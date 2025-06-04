@@ -152,6 +152,7 @@ export default defineContentConfig({
 				description: z.string().optional(),
 				cover: z.string().optional(),
 				highlighted: z.boolean().optional(),
+				pinned: z.boolean().optional(),
 				layout: z.string().optional().default('project-base'),
 				en: z.object({
 					title: z.string().optional(),

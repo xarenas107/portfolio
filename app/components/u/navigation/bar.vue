@@ -2,7 +2,7 @@
 nav(v-if='active' class="border-muted/50 fixed w-full bottom-0 lg:bottom-auto z-50 transition-[transform background] duration-200" :class='[classes, { "-translate-y-full": sticky && !reveal }]')
 
 	//- Scroll progress bar
-	u-progress(v-model='scroll.value' :max='scroll.max' :ui="ui.progress" color='neutral' size='2xs' )
+	u-progress(v-model='scroll.value' :max='scroll.max' :ui="ui.progress" color='neutral' size='2xs')
 
 	//- Navbar container
 	div(:class="ui.container")
@@ -15,8 +15,8 @@ nav(v-if='active' class="border-muted/50 fixed w-full bottom-0 lg:bottom-auto z-
 					div(v-if='!back' class="lg:flex hidden")
 						//- u-navigation-menu(:items='navigation.data' color='primary' unmount-on-hide arrow content-orientation="vertical")
 						div(class="flex gap-2")
-							u-tooltip(v-for='{ icon, text, id, active, kbds } in data' :text :kbds :disabled='active')
-								u-navigation-link(v-if='id' @click='navigate(id)' :active :icon :text :aria-current='active' :kbds arrow)
+							u-tooltip(v-for='{ icon, text, id, active, kbds, to } in data' :text :kbds :disabled='active')
+								u-navigation-link(v-if='id' @click.prevent='navigate(id)' :href='to' :active :icon :text :aria-current='active' :kbds arrow)
 
 					u-navigation-button-back(v-else)
 
@@ -48,8 +48,8 @@ nav(v-if='active' class="border-muted/50 fixed w-full bottom-0 lg:bottom-auto z-
 								h6(class='text-muted text-bold text-sm') {{ t('navigation.name') }}
 
 								ul(class='flex flex-col gap-1')
-									li(v-for='{ icon, text, id, active } in data')
-										u-navigation-link(v-if='id' @click='navigate(id)' :active :icon :text :aria-current='active')
+									li(v-for='{ icon, text, id, active, to } in data')
+										u-navigation-link(v-if='id' :href='to' @click.prevent='navigate(id)' :active :icon :text :aria-current='active')
 
 							div(class='flex flex-col gap-4 grow')
 								h6(class='text-muted text-bold text-sm') {{ t('navigation.settings', 2) }}

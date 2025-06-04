@@ -31,7 +31,7 @@ export default () => {
 				return {
 					icon,
 					text: title,
-					to: `/#${id}`,
+					to: `/#${identifier}`,
 					active: hash.value === `#${identifier}`,
 					kbds: ['Shift', `F${index + 1}`],
 					id: identifier
