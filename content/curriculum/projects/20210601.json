@@ -1,5 +1,5 @@
 {
-	"cover": "/project/20210601/cover.png",
+	"cover": "/project/20210601/cover.webp",
 	"layout": "project-base",
 	"title": "Design of a multi-device web platform for managing medical records",
 	"description": "This case study presents the design of Hiscloud, a multi-device web platform created for the remote management of electronic medical records in healthcare centers. The main objective was to develop a secure and efficient solution that would allow healthcare professionals to access and manage patient information from any location and device, thus optimizing clinical and administrative processes.",
@@ -134,14 +134,14 @@
 			"title": "Wireframing & prototipyng",
 			"description": "In the ideation phase, a site map was developed. My main focus was on making strategic decisions regarding the information architecture, seeking to ensure intuitive navigation and a fluid user experience. Following this, the initial wireframes were created and validated through unmoderated usability studies. Following an iterative process based on the findings of these studies, a high-fidelity prototype was developed.",
 			"name": "project-section-spread",
-			"aspect-ratio": "324/180",
+			"aspect-ratio": "1200/675",
 			"landscape": true,
 			"alt": "",
 			"src": [
-				"/project/20210601/desktop/1.jpg",
-				"/project/20210601/desktop/2.jpg",
-				"/project/20210601/desktop/3.jpg",
-				"/project/20210601/desktop/4.jpg"
+				"/project/20210601/desktop/1.webp",
+				"/project/20210601/desktop/2.webp",
+				"/project/20210601/desktop/3.webp",
+				"/project/20210601/desktop/4.webp"
 			],
 			"es": {
 				"title": "Estructura y prototipado",
@@ -159,9 +159,9 @@
 		  "detail": true,
 		  "aspect-ratio": "134/290",
 		  "alt": "",
-		  "background": "/project/20210601/desktop/5.jpg",
+		  "background": "/project/20210601/desktop/5.webp",
 		  "src": [
-			"/project/20210601/mobile/1.jpg"
+			"/project/20210601/mobile/1.webp"
 		  ]
 		}, {
 		  "name": "project-section-paragraph",

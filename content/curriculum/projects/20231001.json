@@ -1,7 +1,7 @@
 {
 	"title": "Fitness coaching web service design",
 	"description": "This case study presents the design of a fitness training web application created to complement a gym's services. The application is designed for users with limited technological knowledge who are looking for a simple and intuitive way to achieve their fitness goals. The main objective was to develop a platform that would allow users to create and follow their own training plans in an accessible and motivating way.",
-	"cover": "/project/20231001/cover.png",
+	"cover": "/project/20231001/cover.webp",
 	"layout": "project-base",
 	"highlighted": true,
 	"es": {
@@ -74,13 +74,13 @@
 		}, {
 		  "name": "project-section-spread",
 		  "aspect-ratio": "16/9",
-		  "reverse": true,
+		  "landscape": true,
 		  "alt": "",
 		  "src": [
-			"/project/20231001/desktop/3.jpg",
-			"/project/20231001/desktop/2.jpg",
-			"/project/20231001/desktop/1.jpg",
-			"/project/20231001/desktop/4.jpg"
+			"/project/20231001/desktop/3.webp",
+			"/project/20231001/desktop/2.webp",
+			"/project/20231001/desktop/1.webp",
+			"/project/20231001/desktop/4.webp"
 		  ]
 		}, {
 		  "name": "project-section-paragraph",
@@ -93,10 +93,10 @@
 		  "detail": true,
 		  "aspect-ratio": "134/290",
 		  "alt": "",
-		  "background": "/project/20231001/desktop/4.jpg",
+		  "background": "/project/20231001/desktop/4.webp",
 		  "src": [
-			"/project/20231001/mobile/1.png",
-			"/project/20231001/mobile/2.png"
+			"/project/20231001/mobile/1.webp",
+			"/project/20231001/mobile/2.webp"
 		  ]
 		}, {
 		  "name": "project-section-paragraph",

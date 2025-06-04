@@ -1,5 +1,5 @@
 {
-	"cover": "/project/20250401/cover.png",
+	"cover": "/project/20250401/cover.webp",
 	"layout": "project-base",
 	"en": {
 		"title": "Personal finance service panel design",
@@ -17,9 +17,9 @@
 			"landscape": true,
 			"alt": "",
 			"src": [
-				"/project/20250401/desktop/3.png",
-				"/project/20250401/desktop/1.png",
-				"/project/20250401/desktop/2.png"
+				"/project/20250401/desktop/3.webp",
+				"/project/20250401/desktop/1.webp",
+				"/project/20250401/desktop/2.webp"
 			]
 		}, {
 			"name": "project-responsive",
@@ -27,10 +27,10 @@
 			"detail": true,
 			"aspect-ratio": "134/290",
 			"alt": "",
-			"background": "/project/20250401/desktop/1.png",
+			"background": "/project/20250401/desktop/1.webp",
 			"src": [
-				"/project/20250401/mobile/1.png",
-				"/project/20250401/mobile/2.png"
+				"/project/20250401/mobile/1.webp",
+				"/project/20250401/mobile/2.webp"
 		  	],
 			"es": {
 			  "description": "En la era digital, la gestión de las finanzas personales puede ser compleja y abrumadora. El desafío radicó en transformar esta complejidad en una experiencia de usuario sencilla y atractiva. Se necesitaba diseñar un dashboard que no solo mostrara datos, sino que también los hiciera comprensibles y accionables, permitiendo a los usuarios registrar transacciones rápidamente y visualizar patrones de gasto de forma efectiva."
