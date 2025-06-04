@@ -21,9 +21,9 @@ section(v-if='active' class="flex flex-col gap-8")
 				ul(class='text-base list-inside flex flex-col gap-2 text-balance text-toned')
 					li(v-for='content in item.content') {{ content }}
 
-		u-card-group(:ui='ui.card')
+		u-card-group(:ui='ui.card' as='div')
 			template(#default='{ childClass, containerClass }')
-				div(class='grid grid-cols-auto sm:grid-cols-2 lg:grid-cols-3 gap-4')
+				div(class='grid grid-cols-auto sm:grid-cols-2 lg:grid-cols-3 gap-4 list-none')
 					div(v-for='item, index in group' :class='[containerClass]' class='scroll-up-animation')
 						u-card(:class='[index === 0 ? "h-full bg-default text-highlighted" : childClass]' as='li' variant='solid')
 							template(#header)
@@ -31,7 +31,7 @@ section(v-if='active' class="flex flex-col gap-8")
 									u-icon(:name='item.icon' class='size-8')
 									h4(class='text-2xl font-semibold flex items-center font-display') {{ item?.title }}
 
-							ul(class='text-base list-inside flex flex-col gap-2 text-balance text-toned')
+							ul(class='text-base flex flex-col gap-2 text-balance text-toned')
 								li(v-for='content in item?.content') {{ content }}
 
 		//- template(#footer)
