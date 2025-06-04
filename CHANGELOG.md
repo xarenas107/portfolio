@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v1.12.10
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.12.9...v1.12.10)
+
+### 🔥 Performance
+
+- **image:** Reduce size and set format to `webp` ([d096c1f](https://github.com/xarenas107/portfolio/commit/d096c1f))
+
+### 🏡 Chore
+
+- **projects:** Add scroll-driven fade animation ([49c6e66](https://github.com/xarenas107/portfolio/commit/49c6e66))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.12.9
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.12.8...v1.12.9)
