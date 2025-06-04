@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.12.11
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.12.10...v1.12.11)
+
+### 🔥 Performance
+
+- **image:** Reduce size and set format to `webp` ([c77a8ef](https://github.com/xarenas107/portfolio/commit/c77a8ef))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.12.10
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.12.9...v1.12.10)
