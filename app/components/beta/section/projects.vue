@@ -9,7 +9,7 @@ div(class='w-full py-24 min-h-svh flex flex-col gap-16 relative overflow-clip')
 			template(#default='{ containerClass, childClass }')
 				div(class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grid-flow-row-dense auto-rows-fr auto-cols-fr gap-4")
 
-					nuxt-link(v-for='{ id, cover, title, highlighted, pinned } in data' @click.native='open' :class='[containerClass, { "row-span-2": highlighted, "-order-1": pinned }]' :id class="h-auto flex flex-col gap-2 max-w-full rounded-lg cursor-pointer relative group/item scroll-up-animation")
+					nuxt-link(v-for='{ id, cover, title, highlighted, pinned } in data' @click.native='open' :class='[containerClass, { "row-span-2": highlighted, "-order-1": pinned }]' :id class="h-auto flex flex-col gap-2 max-w-full rounded-lg cursor-pointer relative group/item scroll-up-animation focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-2")
 						nuxt-img(:src='cover' :alt='title' :class='[childClass]' class='object-cover rounded-lg pointer-events-none' format='webp' width='400' height='400')
 
 						div(class='absolute pointer-coarse:hidden z-20 top-0 left-0 w-[100%] h-[100%] p-2 sm:p-4 bg-(--ui-bg-accented)/70 place-content-end-safe opacity-0 group-hover/item:opacity-100 rounded-lg border backdrop-blur-xs transition-all duration-400 ease-out pointer-events-none group-hover/item:view-transition-name-[overlay]')

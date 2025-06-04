@@ -1,10 +1,10 @@
 <template lang='pug'>
 client-only()
     template(#fallback)
-        u-skeleton(class='w-8 h-8 aspect-square rounded-lg bg-(--ui-text)/50')
+        u-skeleton(class='w-8 h-8 aspect-square rounded-lg bg-inverted/50')
 
     u-popover(:items)
-        u-button(:label='active?.title' :aria-label="t('color.option', 2)" variant='ghost' color='primary' size="lg" icon="i-heroicons-outline:color-swatch" :class='{ "aspect-square place-content-center": square }' class='hover:bg-primary/20')
+        u-button(:label='active?.title' :aria-label="t('color.option', 2)" variant='ghost' color='primary' size="lg" icon="i-heroicons-outline:color-swatch" :class='{ "aspect-square place-content-center": square }' class='hover:bg-primary/10 cursor-pointer focus-visible:bg-transparent focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2')
 
         template(#content)
             div(class='flex flex-wrap gap-1.5 p-2 max-w-28 w-max' ref='element')

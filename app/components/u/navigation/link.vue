@@ -2,9 +2,9 @@
 div
 	client-only
 		template(#fallback)
-			u-skeleton(class='min-w-28 h-8 rounded-lg bg-neutral-300/50 dark:bg-neutral-700/50')
+			u-skeleton(class='min-w-28 h-8 rounded-lg bg-inverted/50')
 
-		a(@click='click' :href :aria-current :class='[state]' class="rounded-lg px-3 py-2 flex gap-1.5 text-sm font-medium cursor-pointer relative" ref='link')
+		a(@click='click' :href :aria-current :class='[state]' class="rounded-lg px-3 py-2 flex gap-1.5 text-sm font-medium cursor-pointer relative focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary" ref='link')
 			u-icon(v-if='icon' :name='icon' class='w-5 h-5 flex-shrink-0 relative')
 			span(v-if='text') {{ text }}
 </template>

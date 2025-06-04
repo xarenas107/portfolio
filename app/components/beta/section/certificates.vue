@@ -53,7 +53,7 @@ div(class='py-24 min-h-svh bg-primary relative overflow-clip place-content-cente
       div(class='flex gap-2 items-center')
         u-button(@click='control.prev' icon='i-line-md:chevron-left' :aria-label='t("control.prev")' variant='outline' color='neutral' size="xl" :class='ui.button')
 
-        u-button(@click='toggle()' :icon :aria-label='t("control.play")' variant='solid' color='neutral' size="xl" class='bg-default hover:bg-accented text-primary ring-default aspect-square place-content-center rounded-full motion-reduce:hidden cursor-pointer')
+        u-button(@click='toggle()' :icon :aria-label='t("control.play")' variant='solid' color='neutral' size="xl" class='bg-default hover:bg-accented text-primary ring-default aspect-square place-content-center rounded-full motion-reduce:hidden cursor-pointer focus-visible:outline-default focus-visible:outline-2 focus-visible:outline-offset-2')
 
         u-button(@click='control.next' icon='i-line-md:chevron-right' :aria-label='t("control.next")' variant='outline' color='neutral' size="xl" :class='ui.button')
 </template>
@@ -89,7 +89,7 @@ const ui = {
 	carousel: {
 		item: 'w-full max-w-80'
 	},
-	button: 'text-inverted bg-default/10 ring-default/20 hover:bg-default/20 aspect-square place-content-center rounded-full cursor-pointer'
+	button: 'text-inverted bg-default/10 ring-default/20 hover:bg-default/20 aspect-square place-content-center rounded-full cursor-pointer focus-visible:ring-default/20 focus-visible:outline-default focus-visible:outline-2 focus-visible:outline-offset-2'
 }
 
 const [play, toggle] = useToggle(!reduce.value)

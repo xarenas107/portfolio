@@ -1,9 +1,9 @@
 <template lang='pug'>
 client-only()
     template(#fallback)
-        u-skeleton(class='w-8 h-8 aspect-square rounded-lg bg-(--ui-text)/50')
+        u-skeleton(class='w-8 h-8 aspect-square rounded-lg bg-inverted/50')
 
-    u-button(@click='toggle' :icon='active?.icon' :label='active?.title' :aria-label='t("theme.name")' variant='ghost' color='neutral' size="lg" :class='[{ "aspect-square place-content-center": square }, "hover:bg-(--ui-text)/10"]')
+    u-button(@click='toggle' :icon='active?.icon' :label='active?.title' :aria-label='t("theme.name")' variant='ghost' color='neutral' size="lg" :class='[{ "aspect-square place-content-center": square }, "hover:bg-inverted/10 cursor-pointer focus-visible:bg-transparent focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"]')
 </template>
 
 <script lang='ts' setup>

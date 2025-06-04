@@ -10,10 +10,10 @@ div(class='bg-default border-t border-accented pb-16 lg:pb-0')
 
         div(class='flex gap-y-3 gap-x-6 flex-col')
             div(class='flex gap-y-3 gap-x-6 flex-wrap')
-                u-link-action(v-for='item in data?.portfolio' v-bind='item')
+                u-link-action(v-for='item in data?.portfolio' v-bind='item' class='focus-visible:rounded focus-visible:outline-2 focus-visible:outline-offset-2')
 
             div(class='flex gap-y-3 gap-x-6 flex-wrap')
-                u-link-action(v-for='item in data?.contact' v-bind='item')
+                u-link-action(v-for='item in data?.contact' v-bind='item' class='focus-visible:rounded focus-visible:outline-2 focus-visible:outline-offset-2')
 </template>
 
 <script lang="ts" setup>
