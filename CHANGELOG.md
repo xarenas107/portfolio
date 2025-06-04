@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.12.9
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.12.8...v1.12.9)
+
+### 🔥 Performance
+
+- **accesibility:** Minor improvements ([330c7b2](https://github.com/xarenas107/portfolio/commit/330c7b2))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.12.8
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.12.7...v1.12.8)
