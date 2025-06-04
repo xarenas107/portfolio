@@ -8,7 +8,7 @@
 		"credentials": ["https://www.domestika.org/es/certificates/94770f9f6fec8bad13da5af7322d79f7"]
 	},
 	"provider": "Domestika",
-	"image": "/brands/domestika.png",
+	"image": "/brands/domestika.webp",
 	"startAt": "2020-05-01",
 	"endAt": "2020-05-01"
 }

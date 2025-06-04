@@ -30,7 +30,7 @@ useSeoMeta({
 	description: () => t('app.description'),
 	themeColor: () => color.value,
 	ogImage: () => href.value,
-	// ogImage: () => '/hero/human.png',
+	// ogImage: () => '/hero/human.webp',
 	ogImageAlt: title,
 	ogLocale: locale,
 	ogLocaleAlternate: 'en',
@@ -38,7 +38,7 @@ useSeoMeta({
 	twitterTitle: title,
 	twitterDescription: () => t('app.description'),
 	twitterImage: () => href.value,
-	// twitterImage: () => '/hero/human.png',
+	// twitterImage: () => '/hero/human.webp',
 	twitterCard: 'player'
 })
 
