@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.12.12
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.12.11...v1.12.12)
+
+### 🩹 Fixes
+
+- **accesiblity:** Add `focus` visble style in certain elements ([23094d8](https://github.com/xarenas107/portfolio/commit/23094d8))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.12.11
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.12.10...v1.12.11)
