@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.12.8
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.12.7...v1.12.8)
+
+### 🩹 Fixes
+
+- **list:** Hide list-disc ([77af40a](https://github.com/xarenas107/portfolio/commit/77af40a))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.12.7
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.12.6...v1.12.7)
