@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v1.12.15
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.12.14...v1.12.15)
+
+### 🩹 Fixes
+
+- **content:** Solve wrong content ([38c9a81](https://github.com/xarenas107/portfolio/commit/38c9a81))
+
+### 🏡 Chore
+
+- **node:** Update dependences ([08a5e2e](https://github.com/xarenas107/portfolio/commit/08a5e2e))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.12.14
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.12.13...v1.12.14)
