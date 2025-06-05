@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.12.16
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.12.15...v1.12.16)
+
+### 🩹 Fixes
+
+- **accesibility:** Ensure loading state is visible on page loading ([e3bf6e2](https://github.com/xarenas107/portfolio/commit/e3bf6e2))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.12.15
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.12.14...v1.12.15)
