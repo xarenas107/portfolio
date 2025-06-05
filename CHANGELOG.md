@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.12.17
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.12.16...v1.12.17)
+
+### 🏡 Chore
+
+- **seo:** Minor optimization ([fbee26d](https://github.com/xarenas107/portfolio/commit/fbee26d))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.12.16
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.12.15...v1.12.16)
