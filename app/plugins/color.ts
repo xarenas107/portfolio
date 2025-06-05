@@ -1,4 +1,4 @@
-export default defineNuxtPlugin(() => {
+export default defineNuxtPlugin((nuxt) => {
 	const app = useAppConfig()
 	const storage = useLocalStorage('color', () => '')
 

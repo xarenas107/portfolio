@@ -2,7 +2,7 @@
 nav(v-if='active' class="border-muted/50 fixed w-full bottom-0 lg:bottom-auto z-50 transition-[transform background] duration-200" :class='[classes, { "-translate-y-full": sticky && !reveal }]')
 
 	//- Scroll progress bar
-	u-progress(v-model='scroll.value' :max='scroll.max' :ui="ui.progress" color='neutral' size='2xs')
+	lazy-u-loader
 
 	//- Navbar container
 	div(:class="ui.container")
@@ -125,19 +125,7 @@ const hide = () => {
 	top.value = scrollY
 }
 
-const scroll = reactive({
-	value: 0,
-	max: 0
-})
-
-const progress = () => {
-	const { scrollTop, scrollHeight, clientHeight } = document.documentElement
-	scroll.max = scrollHeight - clientHeight
-	scroll.value = scrollTop
-}
-
 useEventListener('scroll', () => {
-	progress()
 	recolor()
 	hide()
 })
@@ -161,16 +149,10 @@ const ui = {
 		class: 'focus:outline-none focus:ring-1 focus:ring-inset focus:ring-neutral-600/50 dark:focus:ring-neutral-300/50',
 		variant: 'ghost',
 		color: 'neutral'
-	},
-	progress: {
-		root: 'absolute top-0 lg:top-auto lg:bottom-0',
-		indicator: 'rounded-none',
-		base: 'rounded-none bg-(--ui-border-accented)/50'
 	}
 }
 
 onMounted(() => {
-	progress()
 	recolor()
 
 	const { desktop } = useDisplay()
