@@ -6,7 +6,7 @@ div
 
 			div(class='flex flex-col gap-2')
 				h1(class='text-balance flex font-display uppercase font-bold text-4xl sm:text-6xl xl:text-8xl text-highlighted') {{ title }}
-				h4(v-if='description' class="text-base max-w-prose sm:text-lg text-balance space-y-4" v-html='description')
+				p(v-if='description' class="text-base max-w-prose sm:text-lg text-balance space-y-4" v-html='description')
 
 		client-only
 			template(#fallback)

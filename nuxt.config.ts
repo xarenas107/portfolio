@@ -49,7 +49,11 @@ export default defineNuxtConfig({
 		'@nuxt/content',
 		'@nuxtjs/i18n',
 		'nuxt-seo-utils',
-		'@nuxthub/core'
+		'@nuxthub/core',
+		'@nuxtjs/robots',
+		'@nuxtjs/sitemap',
+		'nuxt-og-image',
+		'nuxt-link-checker'
 	],
 	ssr: false,
 	imports: {
