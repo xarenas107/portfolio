@@ -12,6 +12,7 @@ nav(v-if='active' class="border-muted/50 fixed w-full bottom-0 lg:bottom-auto z-
 					div(v-if='!back' class=" shrink-0 hidden lg:flex")
 						lazy-favicon(class="h-8 w-auto")
 
+					u-download-button(v-if='!back' show-label class='lg:hidden')
 					div(v-if='!back' class="lg:flex hidden")
 						//- u-navigation-menu(:items='navigation.data' color='primary' unmount-on-hide arrow content-orientation="vertical")
 						div(class="flex gap-2")
@@ -25,6 +26,7 @@ nav(v-if='active' class="border-muted/50 fixed w-full bottom-0 lg:bottom-auto z-
 			div(class="items-center gap-2 pr-2 sm:ml-6 sm:pr-0 hidden xl:flex")
 
 				div(v-if='!slot.right' class='inset-y-0 left-0 flex items-center gap-2 justify-end w-full')
+					u-download-button(square)
 					u-share-button(square)
 					u-language-select
 					u-color-select(square)
@@ -113,8 +115,8 @@ const recolor = () => {
 	const set = new Set<string>(['backdrop-blur', 'bg-default'])
 
 	// Remove opacity on scroll top
-	if (window.scrollY === 0) set.add('sm:bg-transparent')
-	else set.add('sm:bg-default/80')
+	if (window.scrollY === 0) set.add('lg:bg-transparent')
+	else set.add('lg:bg-default/80')
 
 	classes.value = Array.from(set).join(' ')
 }
@@ -162,4 +164,4 @@ onMounted(() => {
 })
 </script>
 
-<style scoped></style>
+<style lang="sass" scoped></style>

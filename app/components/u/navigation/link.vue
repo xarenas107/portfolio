@@ -7,6 +7,7 @@ div
 		a(@click='click' :href :aria-current :class='[state]' class="rounded-lg px-3 py-2 flex gap-1.5 text-sm font-medium cursor-pointer relative focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary" ref='link')
 			u-icon(v-if='icon' :name='icon' class='w-5 h-5 flex-shrink-0 relative')
 			span(v-if='text') {{ text }}
+			slot
 </template>
 
 <script setup lang="ts">
@@ -35,7 +36,6 @@ const state = computed(() => {
 })
 
 const click = (event: MouseEvent) => emit('click', event)
-
 const element = useTemplateRef('link')
 
 const { current } = useMagicKeys({
