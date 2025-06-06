@@ -1,14 +1,15 @@
 <template lang='pug'>
 client-only()
-    template(#fallback)
-        u-skeleton(class='w-8 h-8 aspect-square rounded-lg bg-inverted/50')
+	template(#fallback)
+		u-skeleton(class='w-8 h-8 aspect-square rounded-lg bg-inverted/50')
+	u-tooltip(:text :open='hover')
+		template(#default='props')
+			u-popover(:items)
+				u-button(@mouseenter='change(true)' @mouseleave='change(false)' :label='active?.title' :aria-label="text" variant='ghost' color='primary' size="lg" icon="i-heroicons-outline:color-swatch" :class='{ "aspect-square place-content-center": square }' class='hover:bg-primary/10 cursor-pointer focus-visible:bg-transparent focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2' ref='button')
 
-    u-popover(:items)
-        u-button(:label='active?.title' :aria-label="t('color.option', 2)" variant='ghost' color='primary' size="lg" icon="i-heroicons-outline:color-swatch" :class='{ "aspect-square place-content-center": square }' class='hover:bg-primary/10 cursor-pointer focus-visible:bg-transparent focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2')
-
-        template(#content)
-            div(class='flex flex-wrap gap-1.5 p-2 max-w-28 w-max' ref='element')
-                u-color-button(v-for='item in items' @change='toggle' :color='item.color' :active='item.active') {{ item }}
+				template(#content)
+					div(class='flex flex-wrap gap-1.5 p-2 max-w-28 w-max' ref='element')
+						u-color-button(v-for='item in items' @change='toggle' :color='item.color' :active='item.active') {{ item }}
 </template>
 
 <script lang='ts' setup>
@@ -23,6 +24,7 @@ const { t } = useI18n()
 const app = useAppConfig()
 const colors = ['slate', 'orange', 'yellow', 'emerald', 'indigo', 'rose']
 
+const text = computed(() => t('color.option', 2))
 const items = computed(() => {
 	return [...colors].map(color => ({
 		active: app.ui.colors.primary === color,
@@ -46,6 +48,9 @@ const toggle = (value: string) => {
 		app.ui.colors.primary = value
 	})
 }
+
+const change = (value: boolean) => hover.value = value
+const hover = shallowRef(false)
 </script>
 
 <style lang='scss' scoped>
