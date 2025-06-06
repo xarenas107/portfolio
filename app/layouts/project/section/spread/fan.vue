@@ -3,7 +3,7 @@ section(class="flex flex-col gap-16")
 	nuxt-layout(v-if='title || description' name='project-section-paragraph' :title :description :small-title)
 
 	div(class='flex w-full content-stretch z-10 relative rounded-lg h-50 sm:h-90 md:h-100 lg:h-120 justify-center bg-elevated gap-8')
-		nuxt-img(v-for='image in images' v-bind='image' class='rounded-lg shadow-smooth h-full max-w-3xs absolute origin-bottom border border-default spread-animation object-cover' height='600' width='' format='webp')
+		nuxt-picture(v-for='image in images' v-bind='image' class='rounded-lg shadow-smooth h-full max-w-3xs absolute origin-bottom border border-default spread-animation object-cover overflow-clip' format='webp')
 </template>
 
 <script lang="ts" setup>
@@ -58,6 +58,11 @@ const images = computed(() => {
 				'--opacity': detail ? '100%' : `${(length - order) * 100 / length}%`,
 				'--aspect': props.aspectRatio,
 				'--basis': `minmax(100%, 10rem)`
+			},
+			imgAttrs: {
+				class: 'w-full h-full object-cover',
+				width: '',
+				height: '800'
 			},
 			alt,
 			src

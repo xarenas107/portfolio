@@ -3,31 +3,8 @@ div(class='py-24 min-h-screen bg-primary relative overflow-clip place-content-ce
   u-container(v-bind='options' class='flex flex-col gap-16')
     section-title(:class='ui.title' class="scroll-fade-animation z-40" hyphens) {{ t('section.certificates') }}
 
-    div(class='flex flex-col gap-8')
-      //- u-infinite-slider(:stop='!play' :items='data' ref='infinite-slider' class='flex gap-4')
-        template(#default='props')
-          u-card-group(v-bind='props' :ui='ui.card' color='primary' class='z-20')
-            template(#item='{ item, props, index }')
-              u-card(v-bind='props' class='flex h-full flex-col justify-between cursor-default w-80 min-w-fit snap-center' as='li' variant='solid')
-                template(#header)
-                  div(class='flex flex-col gap-4 justify-between')
-                    div(class='flex flex-col gap-2 justify-between items-start')
-                      h5(class='font-extrabold text-lg') {{ item?.title }}
-                      span(class=' text-xs text-nowrap') {{ item?.provider }}
-
-                    div(class='flex gap-2 group flex-wrap')
-                      u-link(v-for='to, index in item.credentials' :to)
-                        u-badge(:ui='ui.badge' size='md' variant='outline') {{ index ? `No. ${ index + 1 }` : "Credential" }}
-                          u-icon(name='i-heroicons-outline:external-link' class='w-4 h-4')
-
-                template(#footer)
-                  div(v-if='item.endAt' class='flex gap-2 text-default/80 items-center')
-                    u-icon(name='heroicons-outline:clock' class='w-5 h-5')
-                    nuxt-time(:datetime="item.endAt" :locale class='uppercase text-xs' month='long' year='numeric')
-
-                nuxt-img(v-if='item.image' :src='item.image' :alt='item.provider' class='-z-20 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-10 w-[10rem] rounded-lg overflow-clip pointer-events-none invert')
-
-      u-card-group(:ui='ui.card' color='primary' class='z-20')
+    div(class='flex flex-col gap-8' )
+      u-card-group(:ui='ui.card' color='primary' class='z-20' )
         template(#default='{ childClass, containerClass }')
           u-carousel(v-if='data?.length' @select='control.select' v-slot="{ item }" :items='data' :ui="ui.carousel" :auto-scroll='play' :start-index='1' class='min-w-dvw left-1/2 -translate-x-1/2' align='start' ref="carousel" loop)
             div(:class='containerClass' class='h-80 ml-4 sm:ml-6 lg:ml-8')
@@ -48,7 +25,7 @@ div(class='py-24 min-h-screen bg-primary relative overflow-clip place-content-ce
                     u-icon(name='heroicons-outline:clock' class='w-5 h-5')
                     nuxt-time(:datetime="item.endAt" :locale class='uppercase text-xs' month='long' year='numeric')
 
-                nuxt-img(v-if='item.image' :src='item.image' :alt='item.provider' class='-z-20 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-10 w-[10rem] rounded-lg overflow-clip pointer-events-none invert' loading='lazy' fromat='webp' width='160' height='160')
+                nuxt-picture(v-if='item.image' :src='item.image' :alt='item.provider' :img-attrs class='-z-20 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-10 w-[10rem] rounded-lg overflow-clip pointer-events-none invert' fromat='webp')
 
       div(class='flex gap-2 items-center')
         u-button(@click='control.prev' icon='i-line-md:chevron-left' :aria-label='t("control.prev")' variant='outline' color='neutral' size="xl" :class='ui.button')
@@ -77,21 +54,6 @@ const options = computed(() => {
 
 const { data } = useCertificates()
 
-const ui = {
-	title: 'text-inverted',
-	card: {
-		base: 'bg-default/20 group-hover:from-(--ui-bg)/50',
-		child: 'bg-primary/80 text-inverted'
-	},
-	badge: {
-		base: `w-fit h-fit text-nowrap gap-2 ring-1 ring-inset text-inverted/80 hover:text-inverted ring-default/50 hover:ring-default bg-primary`
-	},
-	carousel: {
-		item: 'w-full max-w-80'
-	},
-	button: 'text-inverted bg-default/10 ring-default/20 hover:bg-default/20 aspect-square place-content-center rounded-full cursor-pointer focus-visible:ring-default/20 focus-visible:outline-default focus-visible:outline-2 focus-visible:outline-offset-2'
-}
-
 const [play, toggle] = useToggle(!reduce.value)
 const icon = computed(() => !play.value ? 'i-line-md:play' : 'i-line-md:pause')
 
@@ -105,11 +67,31 @@ const index = shallowRef(0)
 const control = {
 	select: (value: number) => { index.value = value },
 	to: (value: number) => {
-		control.select(value)
 		carousel.value?.emblaApi?.scrollTo(value)
 	},
 	next: () => { control.to(index.value + 1) },
 	prev: () => { control.to(index.value - 1) }
+}
+
+const imgAttrs = {
+	class: 'w-full h-full object-cover',
+	width: '160',
+	height: '160'
+}
+
+const ui = {
+	title: 'text-inverted',
+	card: {
+		base: 'bg-default/20 group-hover:from-(--ui-bg)/50',
+		child: 'bg-primary/80 text-inverted'
+	},
+	badge: {
+		base: `w-fit h-fit text-nowrap gap-2 ring-1 ring-inset text-inverted/80 hover:text-inverted ring-default/50 hover:ring-default bg-primary`
+	},
+	carousel: {
+		item: 'w-full max-w-80'
+	},
+	button: 'text-inverted bg-default/10 ring-default/20 hover:bg-default/20 aspect-square place-content-center rounded-full cursor-pointer focus-visible:ring-default/20 focus-visible:outline-default focus-visible:outline-2 focus-visible:outline-offset-2'
 }
 </script>
 

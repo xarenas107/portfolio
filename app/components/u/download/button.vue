@@ -1,6 +1,6 @@
 <template lang='pug'>
-u-tooltip(:text)
-	u-button(v-if='data.resume?.href' :label :href='data.resume.href' :aria-label='text' :download="data.resume.name" icon="i-heroicons:arrow-down-tray-20-solid" variant='ghost' color='neutral' size='lg' :class='{ "aspect-square place-content-center": square }' class='"hover:bg-inverted/10 cursor-pointer focus-visible:bg-transparent focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"' as="a" loading-auto)
+u-tooltip(v-if='data.resume?.href' :text)
+	u-button(:href='data.resume.href' :aria-label='text' :download="data.resume.name" :label icon="i-heroicons:arrow-down-tray-20-solid" variant='ghost' color='neutral' size='lg' :class='{ "aspect-square place-content-center": square }' class='"hover:bg-inverted/10 cursor-pointer focus-visible:bg-transparent focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"' as="a" loading-auto)
 </template>
 
 <script lang='ts' setup>

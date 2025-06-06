@@ -3,9 +3,9 @@ section(class="flex flex-col gap-16")
 	nuxt-layout(v-if='title || description' name='project-section-paragraph' :title :description small-title)
 
 	div(class='flex items-stretch w-full content-between relative rounded-lg gap-4 bg-elevated')
-		nuxt-picture(:src='background' :img-attrs="{ class: 'w-full' }" alt='' class='rounded-lg grow h-full w-full object-cover object-top ring bg-accented scroll-up-animation opacity-20 aspect-16/9 overflow-clip' width='1200' height='' format='webp')
+		nuxt-picture(:src='background' :img-attrs="{ class: 'size-full object-cover', width: '1200', height:'' }" alt='' class='rounded-lg grow h-full w-full object-cover object-top ring bg-accented scroll-up-animation opacity-20 aspect-16/9 overflow-clip')
 		div(class='absolute top-1/2 -translate-1/2 left-1/2 flex gap-4 slide-up-animation')
-			nuxt-img(v-for='image in images' v-bind='image' :img-attrs="{ class: 'w-full' }" class='rounded-lg grow mt-(--top) h-50 sm:h-72 md:h-96 lg:h-100 object-cover object-top overflow-clip ring shadow-smooth max-w-3xs slide-animation' width='' height='800'  format='webp')
+			nuxt-picture(v-for='image in images' v-bind='image' :img-attrs="{ class: 'size-full object-cover', width:'', height: '800' }" class='rounded-lg grow mt-(--top) h-50 sm:h-72 md:h-96 lg:h-100 object-cover overflow-clip ring shadow-smooth max-w-3xs slide-animation')
 	</template>
 
 <script lang="ts" setup>
@@ -64,17 +64,20 @@ const images = computed(() => {
 
 @media (prefers-reduced-motion: no-preference) {
 	.scroll-up-animation {
+		will-change: object-position, opacity;
 		animation: scroll-up ease-in both;
 		animation-timeline: view();
 		animation-range: entry;
 	}
 	.slide-up-animation {
+		will-change: transform, box-shadow;
 		animation: slide-up ease-in both;
 		animation-timeline: view();
 		animation-range: 0% 50%;
 	}
 
 	.slide-animation {
+		will-change: margin-top;
 		animation: slide ease-in both;
 		animation-timeline: view();
 		animation-range: entry;
