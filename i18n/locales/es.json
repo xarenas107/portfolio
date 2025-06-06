@@ -6,6 +6,10 @@
 		"name": "@:portfolio",
 		"description": "Curriculum Vitae"
 	},
+		"resume": {
+		"name": "Resumen | Resumenes",
+		"download": "Descargar @.lower:resume.name"
+	},
 	"greetings": {
 		"hi": "¡Hola!",
 		"moorning": "¡Buenos días!",

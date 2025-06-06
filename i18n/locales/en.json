@@ -3,6 +3,10 @@
 	"itsme": "This is me",
 	"portfolio": "Portfolio | Portfolios",
 	"presentation": "My name is { name } and I'm a { job }",
+	"resume": {
+		"name": "Resume | Resumes",
+		"download": "Download @.lower:resume.name"
+	},
 	"app": {
 		"description": "Curriculum Vitae",
 		"name": "@:portfolio"
