@@ -3,7 +3,7 @@ import type { UserCollectionItem } from '@nuxt/content'
 export default () => {
 	const { locale } = useI18n()
 	const key = 'user'
-	const fields = ['name', 'description', 'job', 'location', 'portfolio', 'contact'] as const
+	const fields = ['name', 'description', 'job', 'location', 'portfolio', 'contact', 'resume'] as const
 
 	const { data, execute, status } = useLazyAsyncData(key, async () => {
 		const response = await queryCollection(key).select(...fields, locale.value).first()

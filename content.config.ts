@@ -24,6 +24,10 @@ export default defineContentConfig({
 			source: 'curriculum/index.json',
 			schema: z.object({
 				name: z.string(),
+				resume: z.object({
+					href: z.string().optional(),
+					name: z.string().optional()
+				}).optional(),
 				image: z.string().optional(),
 				description: z.string().optional(),
 				job: z.string().optional(),
