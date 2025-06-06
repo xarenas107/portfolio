@@ -1,0 +1,46 @@
+{
+	"cover": "/project/20250601/cover.webp",
+	"layout": "project-base",
+	"en": {
+		"title": "Application design to promote sustainable mobility in Barcelona",
+		"description": "Collectibus is an innovative gamification project designed to encourage the use of eco-friendly public transportation and contribute to reducing car use in the city of Barcelona. Through a system of digital collectibles and challenges, the app seeks to transform daily bus commutes into an engaging and rewarding experience, thus promoting more sustainable mobility habits."
+	},
+	"es": {
+		"title": "Diseño de aplicación para fomentar una movilidad sostenible en Barcelona",
+  		"description": "Collectibus es un proyecto innovador de gamificación diseñado para incentivar el uso del transporte público ecológico y contribuir a la reducción del uso del coche particular en la ciudad de Barcelona. A través de un sistema de coleccionables digitales y desafíos, la aplicación busca transformar los trayectos diarios en autobús en una experiencia atractiva y gratificante, fomentando así hábitos de movilidad más sostenibles."
+	},
+	"sections": [
+		{
+			"name": "project-section-spread",
+			"detail": "reverse",
+			"aspect-ratio": "370/800",
+			"alt": "",
+			"src": [
+				"/project/20250601/app/1.webp",
+				"/project/20250601/app/2.webp", 
+				"/project/20250601/app/3.webp"
+			]
+		}, {
+			"name": "project-section-paragraph",
+			"description": "The creation of this app was informed by strategic user research, essential for understanding the motivations and barriers that influence public transport use in Barcelona. This initial analysis allowed us to identify not only the reasons behind the preference for cars, but also the opportunities for gamification to incentivize sustainable habits. It was crucial to understand what types of rewards and challenges would resonate with users, ensuring that the digital collectibles mechanic was genuinely engaging. The subsequent design process was iterative and user-centered. Research insights were translated into intuitive flows and a visually compelling interface. From wireframing to the final UI design, every decision was made to optimize usability and reinforce the gamification experience. User testing would have allowed us to refine key features such as the QR code scanner and collectibles album management, ensuring that the app not only meets its goal of encouraging green transport but also offers a seamless and rewarding experience.",
+			"es": {
+				"description": "La creación de esta aplicación se fundamentó en una investigación de usuario estratégica, esencial para comprender las motivaciones y barreras que influyen en el uso del transporte público en Barcelona. Este análisis inicial nos permitió identificar no solo las razones detrás de la preferencia por el coche, sino también las oportunidades para que la gamificación incentivara hábitos sostenibles. Fue crucial entender qué tipo de recompensas y desafíos resonarían con los usuarios, asegurando que la mecánica de coleccionables digitales fuera genuinamente atractiva.El proceso de diseño posterior fue iterativo y centrado en el usuario. Se tradujeron los insights de la investigación en flujos intuitivos y una interfaz visualmente atractiva. Desde el wireframing hasta el diseño final de la UI, cada decisión se tomó para optimizar la usabilidad y reforzar la experiencia de gamificación. Las pruebas de usuario habrían permitido refinar funcionalidades clave como el escáner de códigos QR y la gestión del álbum de coleccionables, asegurando que la app no solo cumpla su objetivo de fomentar el transporte ecológico, sino que también ofrezca una experiencia fluida y gratificante."
+			}
+		}, {
+		  "name": "project-section-paragraph",
+		  "title": "Tipography",
+		  "description": "The <strong>Anek Latin</strong> typeface was used for headlines due to its distinctive personality and <strong>Roboto</strong> for body text due to its legibility and versatility in different sizes.",
+		  "es": {
+			"title": "Tipografía",
+			"description": "Se utilizó la tipografía <strong>Anek Latin</strong> para titulares por su personalidad distintiva y  <strong>Roboto</strong> para cuerpo de texto por su legibilidad y versatilidad en diferentes tamaños."
+		  }
+		}, {
+			"name": "project-color",
+			"description": "Vibrant colors were chosen to convey energy and visibility, while the dark background helps highlight interactive and collectible elements.",
+			"palette": ["#CDC701", "#010101"],
+			 "es": {
+				"description": "Se eligieron colores vibrantes para transmitir energía y visibilidad, mientras que el fondo oscuro ayuda a resaltar los elementos interactivos y coleccionables."
+			}
+		}
+  ]
+}

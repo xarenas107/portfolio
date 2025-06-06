@@ -136,6 +136,7 @@
 			"name": "project-section-spread",
 			"aspect-ratio": "1200/675",
 			"landscape": true,
+			"reverse": true,
 			"alt": "",
 			"src": [
 				"/project/20210601/desktop/1.webp",
