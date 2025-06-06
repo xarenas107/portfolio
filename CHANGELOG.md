@@ -1,6 +1,20 @@
 # Changelog
 
 
+## v1.13.1
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.13.0...v1.13.1)
+
+### 🩹 Fixes
+
+- **accesibility:** Solve missing tooltips ([ebe3516](https://github.com/xarenas107/portfolio/commit/ebe3516))
+- **download:** Solve wrong function ([c755d46](https://github.com/xarenas107/portfolio/commit/c755d46))
+- **content:** Prevent duplicate request ([448f1ce](https://github.com/xarenas107/portfolio/commit/448f1ce))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.13.0
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.12.17...v1.13.0)
