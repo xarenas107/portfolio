@@ -1,6 +1,30 @@
 # Changelog
 
 
+## v1.13.0
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.12.17...v1.13.0)
+
+### 🚀 Enhancements
+
+- Add `download resume` button ([a7c8266](https://github.com/xarenas107/portfolio/commit/a7c8266))
+
+### 🩹 Fixes
+
+- **projects:** Solve missing `intersection observer` ([aee1529](https://github.com/xarenas107/portfolio/commit/aee1529))
+- **accesibility:** Solve missing tooltips ([4b8c091](https://github.com/xarenas107/portfolio/commit/4b8c091))
+
+### 🏡 Chore
+
+- **experience:** Update content ([4e68a1d](https://github.com/xarenas107/portfolio/commit/4e68a1d))
+- **i18n:** Update locales ([3cfe0fd](https://github.com/xarenas107/portfolio/commit/3cfe0fd))
+- **content:** Update content model ([8e97224](https://github.com/xarenas107/portfolio/commit/8e97224))
+- **node:** Update dependences ([9facf9f](https://github.com/xarenas107/portfolio/commit/9facf9f))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.12.17
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.12.16...v1.12.17)
