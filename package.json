@@ -39,7 +39,6 @@
     "@vue/language-plugin-pug": "^2.2.10",
     "@vueuse/nuxt": "^13.3.0",
     "ipx": "^3.0.3",
-    "js-file-download": "^0.4.12",
     "nuxt": "^3.17.5",
     "nuxt-link-checker": "^4.3.0",
     "nuxt-og-image": "^5.1.6",

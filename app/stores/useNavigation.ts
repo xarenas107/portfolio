@@ -18,7 +18,8 @@ export default () => {
 		return response
 	}, {
 		default: () => [],
-		watch: [locale]
+		watch: [locale],
+		dedupe: 'defer'
 	})
 
 	const links = computed(() => {

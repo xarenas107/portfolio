@@ -17,7 +17,8 @@ export default () => {
 		return response
 	}, {
 		default: () => [] as CertificatesCollectionItem[],
-		watch: [locale]
+		watch: [locale],
+		dedupe: 'defer'
 	})
 
 	const states = useStatus(status)

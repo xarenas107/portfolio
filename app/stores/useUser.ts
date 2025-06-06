@@ -11,10 +11,12 @@ export default () => {
 
 		Object.assign(response, { ...response, ...response[locale.value] ?? {} })
 		delete response[locale.value]
+
 		return response
 	}, {
 		default: () => ({} as UserCollectionItem),
-		watch: [locale]
+		watch: [locale],
+		dedupe: 'defer'
 	})
 
 	const states = useStatus(status)

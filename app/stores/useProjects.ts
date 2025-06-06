@@ -19,7 +19,8 @@ export default () => {
 		return response
 	}, {
 		default: () => [] as ProjectsCollectionItem[],
-		watch: [locale]
+		watch: [locale],
+		dedupe: 'defer'
 	})
 
 	const states = useStatus(status)

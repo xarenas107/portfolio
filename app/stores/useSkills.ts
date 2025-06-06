@@ -15,7 +15,8 @@ export default () => {
 		return response
 	}, {
 		default: () => [],
-		watch: [locale]
+		watch: [locale],
+		dedupe: 'defer'
 	})
 
 	const states = useStatus(status)

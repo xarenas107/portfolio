@@ -28,7 +28,8 @@ export default (id: ComputedRef<string> | Ref<string>) => {
 		}
 		return response
 	}, {
-		watch: [locale, id]
+		watch: [locale, id],
+		dedupe: 'defer'
 	})
 
 	const states = useStatus(status)
