@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v1.13.2
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.13.1...v1.13.2)
+
+### 🏡 Chore
+
+- **image:** Use html picture tag ([fa2ac48](https://github.com/xarenas107/portfolio/commit/fa2ac48))
+- **content:** Add content ([d8e2405](https://github.com/xarenas107/portfolio/commit/d8e2405))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.13.1
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.13.0...v1.13.1)
