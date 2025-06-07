@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.13.4
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.13.3...v1.13.4)
+
+### 🔥 Performance
+
+- **layout:** Minor improvements ([7e75c4b](https://github.com/xarenas107/portfolio/commit/7e75c4b))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.13.3
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.13.2...v1.13.3)
