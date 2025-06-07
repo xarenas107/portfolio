@@ -11,8 +11,7 @@
 	},
 	"sections": [
 		{
-			"name": "project-section-spread",
-			"detail": "reverse",
+			"name": "project-responsive",
 			"aspect-ratio": "370/800",
 			"alt": "",
 			"src": [

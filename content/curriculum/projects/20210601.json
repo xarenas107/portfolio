@@ -136,13 +136,11 @@
 			"name": "project-section-spread",
 			"aspect-ratio": "1200/675",
 			"landscape": true,
-			"reverse": true,
 			"alt": "",
 			"src": [
-				"/project/20210601/desktop/1.webp",
-				"/project/20210601/desktop/2.webp",
 				"/project/20210601/desktop/3.webp",
-				"/project/20210601/desktop/4.webp"
+				"/project/20210601/desktop/2.webp",
+				"/project/20210601/desktop/5.webp"
 			],
 			"es": {
 				"title": "Estructura y prototipado",

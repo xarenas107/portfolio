@@ -3,7 +3,8 @@ section(class="flex flex-col gap-16")
 	nuxt-layout(v-if='title || description' name='project-section-paragraph' :title :description small-title)
 
 	div(class='flex items-stretch w-full content-between relative rounded-lg gap-4 bg-elevated')
-		nuxt-picture(:src='background' :img-attrs="{ class: 'size-full object-cover', width: '1200', height:'' }" alt='' class='rounded-lg grow h-full w-full object-cover object-top ring bg-accented scroll-up-animation opacity-20 aspect-16/9 overflow-clip')
+		div(class='rounded-lg grow size-full object-cover object-top ring bg-accented opacity-20 aspect-16/9 overflow-clip')
+			nuxt-picture(v-if='background' :src='background' :img-attrs="{ class: 'size-full object-cover', width: '1200', height:'' }" alt='')
 		div(class='absolute top-1/2 -translate-1/2 left-1/2 flex gap-4 slide-up-animation')
 			nuxt-picture(v-for='image in images' v-bind='image' :img-attrs="{ class: 'size-full object-cover', width:'', height: '800' }" class='rounded-lg grow mt-(--top) h-50 sm:h-72 md:h-96 lg:h-100 object-cover overflow-clip ring shadow-smooth max-w-3xs slide-animation')
 	</template>
@@ -73,7 +74,7 @@ const images = computed(() => {
 		will-change: transform, box-shadow;
 		animation: slide-up ease-in both;
 		animation-timeline: view();
-		animation-range: 0% 50%;
+		animation-range: 0% 40%;
 	}
 
 	.slide-animation {

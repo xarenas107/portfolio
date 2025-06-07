@@ -29,13 +29,12 @@
 		}, {
 			"name": "project-section-spread",
 			"aspect-ratio": "1200/573",
-			"reverse": true,
 			"landscape": true,	
 			"alt": "Web design view",
 			"src": [
-				"/project/20210101/desktop/1.webp",
 				"/project/20210101/desktop/2.webp",
-				"/project/20210101/desktop/3.webp"
+				"/project/20210101/desktop/3.webp",
+				"/project/20210101/desktop/1.webp"
 			],
 			"es": {
 				"alt": "Vista del diseño web"
