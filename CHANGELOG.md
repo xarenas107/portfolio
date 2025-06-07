@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.13.3
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.13.2...v1.13.3)
+
+### 🩹 Fixes
+
+- **animation:** Temporary disable certain buggy scroll driven animation ([0c25b2e](https://github.com/xarenas107/portfolio/commit/0c25b2e))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.13.2
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.13.1...v1.13.2)
