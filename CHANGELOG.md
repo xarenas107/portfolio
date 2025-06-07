@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.13.5
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.13.4...v1.13.5)
+
+### 🏡 Chore
+
+- **content:** Update `skills` ([df1a4bf](https://github.com/xarenas107/portfolio/commit/df1a4bf))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.13.4
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.13.3...v1.13.4)
