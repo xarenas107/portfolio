@@ -9,9 +9,8 @@
 	},
 	"sections": [
 		{
-			"name": "project-section-spread",
+			"name": "project-spread",
 			"aspect-ratio": "1200/573",
-			"landscape": true,
 			"alt": "Web design view",
 			"src": [
 				"/project/20170501/desktop/3.webp",

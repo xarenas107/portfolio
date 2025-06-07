@@ -157,7 +157,7 @@
 		}, {
 			"title": "Wireframing & prototipyng",
 			"description": "In the ideation phase, a site map was developed. My main focus was on making strategic decisions regarding the information architecture, seeking to ensure intuitive navigation and a fluid user experience. Following this, the initial wireframes were created and validated through unmoderated usability studies. Following an iterative process based on the findings of these studies, a high-fidelity prototype was developed.",
-			"name": "project-section-spread-fan",
+			"name": "project-spread-fan",
 			"detail": true,
 			"aspect-ratio": "369/800",
 			"alt": "",
@@ -167,8 +167,7 @@
 				"/project/20210201/app/3.webp",
 				"/project/20210201/app/4.webp",
 				"/project/20210201/app/5.webp",
-				"/project/20210201/app/6.webp",
-				"/project/20210201/app/7.webp"
+				"/project/20210201/app/6.webp"
 			],
 			"es": {
 				"title": "Estructura y prototipado",

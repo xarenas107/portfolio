@@ -11,10 +11,8 @@
 	},
 	"sections": [
 		{
-			"name": "project-section-spread",
+			"name": "project-spread",
 			"aspect-ratio": "1200/600",
-			"reverse": true,
-			"landscape": true,
 			"alt": "",
 			"src": [
 				"/project/20250401/desktop/3.webp",

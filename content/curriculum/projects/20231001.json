@@ -72,9 +72,8 @@
 				"description": "En la fase de ideación, se desarrolló un mapa del sitio. Mi enfoque principal fue la toma de decisiones estratégicas en la arquitectura de la información, buscando garantizar una navegación intuitiva y una experiencia de usuario fluida. Después de esto, se crearon los primeros wireframes, los cuales fueron validados a través de estudios de usabilidad no moderados;  tras un proceso iterativo basado en los hallazgos de dichos estudios, se logró evolucionar hacia un prototipo de alta fidelidad."
 			}
 		}, {
-		  "name": "project-section-spread",
+		  "name": "project-spread",
 		  "aspect-ratio": "1200/600",
-		  "landscape": true,
 		  "alt": "",
 		  "src": [
 			"/project/20231001/desktop/3.webp",

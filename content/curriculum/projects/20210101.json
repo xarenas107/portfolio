@@ -27,9 +27,8 @@
 				
 			}
 		}, {
-			"name": "project-section-spread",
+			"name": "project-spread",
 			"aspect-ratio": "1200/573",
-			"landscape": true,	
 			"alt": "Web design view",
 			"src": [
 				"/project/20210101/desktop/2.webp",

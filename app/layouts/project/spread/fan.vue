@@ -3,7 +3,7 @@ section(class="flex flex-col gap-16")
 	nuxt-layout(v-if='title || description' name='project-section-paragraph' :title :description :small-title)
 
 	div(class='flex w-full content-stretch z-10 relative rounded-lg h-50 sm:h-90 md:h-100 lg:h-120 justify-center bg-elevated gap-8')
-		nuxt-picture(v-for='image in images' v-bind='image' class='rounded-lg shadow-smooth h-full max-w-3xs absolute origin-bottom border border-default spread-animation object-cover overflow-clip' format='webp')
+		nuxt-picture(v-for='image in images' v-bind='image' class='rounded-lg shadow-smooth h-full max-w-3xs absolute origin-bottom ring ring-accented spread-animation overflow-clip')
 </template>
 
 <script lang="ts" setup>
@@ -43,7 +43,7 @@ const images = computed(() => {
 
 		const percent = 40
 		const alpha = props.detail ? index === 0 ? -100 + percent : percent : 0
-		const translate = -12 * (half - index) + alpha
+		const translate = -12 * (half - index) + alpha + (props.detail ? 20 : 0)
 
 		return {
 			id: index,
@@ -76,16 +76,18 @@ const images = computed(() => {
   from {
 	rotate: 0deg;
 	translate: 0 0;
+	box-shadow: 0 0 transparent;
 	filter: unset
   }
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .spread-animation {
+	will-change: transform, translate, rotate, filter, box-shadow;
     transform-origin: bottom;
     animation: rotate ease-in both;
     animation-timeline: view();
-    animation-range: 0% 50%;
+    animation-range: 20% 40%;
   }
 }
 </style>

@@ -45,10 +45,10 @@
 
 	/* Shadow */
 	--shadow-smooth: 
-		356px 404px 215px 0px --alpha(var(--ui-color-neutral-950) / 1%), 
-		200px 227px 182px 0px --alpha(var(--ui-color-neutral-950) / 4%), 
-		89px 101px 135px 0px --alpha(var(--ui-color-neutral-950) / 8%), 
-		22px 25px 74px 0px --alpha(var(--ui-color-neutral-950) / 10%);
+		340px 404px 200px 0px --alpha(var(--ui-color-neutral-950) / 0%), 
+		200px 220px 160px 0px --alpha(var(--ui-color-neutral-950) / 4%), 
+		80px 100px 120px 0px --alpha(var(--ui-color-neutral-950) / 8%), 
+		20px 24px 72px 0px --alpha(var(--ui-color-neutral-950) / 10%);
 }
 
 @layer utilities {

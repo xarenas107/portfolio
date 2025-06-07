@@ -167,25 +167,25 @@ export default defineContentConfig({
 					description: z.string().optional()
 				}),
 				sections: z.object({
+					'title': z.string().optional(),
+					'description': z.string().optional(),
 					'name': z.string().optional().default('project-base'),
 					'aspect-ratio': z.string().optional().default('16/9'),
 					'background': z.string().optional(),
-					'alt': z.string().default('').optional(),
 					'detail': z.union([z.boolean(), z.enum(['reverse'])]).optional(),
 					'reverse': z.boolean().optional(),
 					'vertical': z.boolean().optional(),
 					'src': z.string().array().default([]),
-					'description': z.string().optional(),
-					'title': z.string().optional(),
 					'small-title': z.boolean().optional(),
 					'colors': z.string().array().default([]),
 					'user': z.string().optional(),
+					'alt': z.string().default('').optional(),
 					'summary': z.string().optional(),
 					'quote': z.string().optional(),
-					'image': z.string().optional(),
 					'statement': z.string().optional(),
-					'goals': z.string().array().optional(),
 					'frustrations': z.string().array().optional(),
+					'goals': z.string().array().optional(),
+					'image': z.string().optional(),
 					'props': z.string().or(z.number()).array().array().optional(),
 					'items': z.object({
 						title: z.string().optional(),
@@ -193,12 +193,35 @@ export default defineContentConfig({
 						icon: z.string().optional()
 					}).partial().array().optional(),
 					'en': z.object({
-						description: z.string().optional()
+						title: z.string().optional(),
+						description: z.string().optional(),
+						alt: z.string().default('').optional(),
+						summary: z.string().optional(),
+						quote: z.string().optional(),
+						statement: z.string().optional(),
+						frustrations: z.string().array().optional(),
+						goals: z.string().array().optional(),
+						items: z.object({
+							title: z.string().optional(),
+							description: z.string().optional(),
+							icon: z.string().optional()
+						}).partial().array().optional()
 					}),
 					'es': z.object({
-						description: z.string().optional()
+						title: z.string().optional(),
+						description: z.string().optional(),
+						summary: z.string().optional(),
+						quote: z.string().optional(),
+						statement: z.string().optional(),
+						frustrations: z.string().array().optional(),
+						goals: z.string().array().optional(),
+						items: z.object({
+							title: z.string().optional(),
+							description: z.string().optional(),
+							icon: z.string().optional()
+						}).partial().array().optional()
 					})
-				}).array().default([])
+				}).partial().array().default([])
 			})
 		})
 	}
