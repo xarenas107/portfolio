@@ -7,6 +7,7 @@ export default () => {
 
 	const { data, execute, status } = useLazyAsyncData(key, async () => {
 		const response = await queryCollection(key)
+			.where('active', '=', true)
 			.order('order', 'ASC')
 			.select(...fields, locale.value)
 			.all()

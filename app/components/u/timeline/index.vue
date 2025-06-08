@@ -8,7 +8,7 @@ ol(class="w-full flex group h-fit motion-reduce:overflow-auto scroll-hidden snap
 		:title='item[titleKey]'
 		:subtitle='item[subtitleKey]'
 		:badge='item[badgeKey]'
-		:active='item?.active'
+		:current='item?.current'
 		:content='item[contentKey]'
 		:startAt='item.startAt'
 		:endAt='item.endAt'
@@ -31,6 +31,7 @@ type Item<T = any> = {
 	title?: string
 	subtitle?: string
 	active?: boolean
+	current?: boolean
 	badge?: string
 	time?: string
 	content?: string

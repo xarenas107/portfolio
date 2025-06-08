@@ -15,7 +15,7 @@ u-lazy(:class='[{ grow }]' :disabled='!lazy' class="flex w-max min-w-fit max-w-f
 			u-separator(:orientation :class='[{ "invisible": lineStart }, horizontal ? "hidden" : "h-4" ]' :ui='styles.divider')
 
 			div(class='relative')
-				span(v-if='active' class='motion-safe:animate-ping absolute inline-flex h-full w-full rounded-full' :class='ui.dot')
+				span(v-if='current' class='motion-safe:animate-ping absolute inline-flex h-full w-full rounded-full' :class='ui.dot')
 				u-timeline-dot(:class='ui.dot' class='z-40')
 			u-separator(:ui='styles.divider' :orientation)
 
@@ -34,8 +34,8 @@ u-lazy(:class='[{ grow }]' :disabled='!lazy' class="flex w-max min-w-fit max-w-f
 
 				div(:class='ui.text' class='text-sm opacity-60 uppercase gap-2')
 					nuxt-time(:datetime='startAt' v-bind='options')
-					span(v-if='active || endAt' v-text='" - "')
-					span(v-if='active') {{  t('time.now') }}
+					span(v-if='current || endAt' v-text='" - "')
+					span(v-if='current') {{  t('time.now') }}
 					nuxt-time(v-else-if='endAt' :datetime='endAt' v-bind='options')
 					span(v-if='location') {{ `, ${location}` }}
 </template>
@@ -52,7 +52,7 @@ type Props = {
 	startAt?: string | number | Date
 	endAt?: string | number | Date
 	location?: string
-	active?: boolean
+	current?: boolean
 	ui?: {
 		text?: string
 		badge?: Record<string, unknown>

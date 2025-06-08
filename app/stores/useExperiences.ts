@@ -8,6 +8,7 @@ export default () => {
 
 	const { data, execute, status } = useLazyAsyncData(key, async () => {
 		const response = await queryCollection(key)
+			.where('active', '=', true)
 			.select(...fields, locale.value)
 			.order('startAt', 'DESC').all()
 

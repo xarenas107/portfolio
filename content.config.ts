@@ -49,6 +49,7 @@ export default defineContentConfig({
 					active: z.boolean().optional().default(true)
 				}).array().default([]),
 				contact: z.object({
+					active: z.boolean().optional().default(true),
 					title: z.string(),
 					icon: z.string(),
 					href: z.string()
@@ -60,11 +61,12 @@ export default defineContentConfig({
 			source: 'curriculum/studies/**.json',
 			schema: z.object({
 				title: z.string().optional(),
+				active: z.boolean().optional().default(true),
 				provider: z.string().optional(),
 				type: z.string().optional(),
 				location: z.string().optional(),
 				startAt: z.string().datetime(),
-				active: z.boolean().default(false),
+				current: z.boolean().default(false),
 				endAt: z.string().datetime(),
 				en: z.object({
 					title: z.string().optional(),
@@ -85,6 +87,7 @@ export default defineContentConfig({
 			source: 'curriculum/certificates/**.json',
 			schema: z.object({
 				title: z.string().optional(),
+				active: z.boolean().optional().default(true),
 				provider: z.string().optional(),
 				credentials: z.string().array().optional(),
 				startAt: z.string().datetime(),
@@ -110,7 +113,8 @@ export default defineContentConfig({
 				abbreviation: z.string().optional(),
 				job: z.string().optional(),
 				description: z.string().optional(),
-				active: z.boolean().default(false),
+				active: z.boolean().optional().default(true),
+				current: z.boolean().default(false),
 				startAt: z.string().datetime(),
 				endAt: z.string().datetime().optional(),
 				location: z.string().optional(),
@@ -135,6 +139,7 @@ export default defineContentConfig({
 			source: 'curriculum/skills/**.json',
 			schema: z.object({
 				title: z.string().optional(),
+				active: z.boolean().optional().default(true),
 				content: z.string().array().default([]),
 				en: z.object({
 					title: z.string().optional(),
@@ -151,7 +156,7 @@ export default defineContentConfig({
 			source: 'curriculum/projects/**.json',
 			schema: z.object({
 				id: z.string().optional(),
-				active: z.boolean().default(true),
+				active: z.boolean().optional().default(true),
 				title: z.string().optional(),
 				description: z.string().optional(),
 				cover: z.string().optional(),

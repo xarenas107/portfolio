@@ -25,7 +25,7 @@ div(class='py-24 min-h-screen bg-primary relative overflow-clip place-content-ce
                     u-icon(name='heroicons-outline:clock' class='w-5 h-5')
                     nuxt-time(:datetime="item.endAt" :locale class='uppercase text-xs' month='long' year='numeric')
 
-                nuxt-picture(v-if='item.image' :src='item.image' :alt='item.provider' :img-attrs class='-z-20 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-10 w-[10rem] rounded-lg overflow-clip pointer-events-none invert' fromat='webp')
+                nuxt-picture(v-if='item.image' :src='item.image' :alt='item.provider' :img-attrs class='-z-20 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-10 w-[10rem] rounded-lg overflow-clip pointer-events-none light:invert')
 
       div(class='flex gap-2 items-center')
         u-button(@click='control.prev' icon='i-line-md:chevron-left' :aria-label='t("control.prev")' variant='outline' color='neutral' size="xl" :class='ui.button')
@@ -96,19 +96,6 @@ const ui = {
 </script>
 
 <style lang="scss" scoped>
-// @keyframes fade {
-//   from {
-//     transform: translateY(40%);
-//     color: transparent;
-//     opacity: 0;
-//   }
-//   50% {
-//     transform: translateY(0);
-//     color: transparent;
-//     opacity: 1;
-//   }
-// }
-
 @keyframes rotate-3d {
   from {
     color: transparent;
@@ -120,22 +107,6 @@ const ui = {
   }
 }
 
-// @keyframes slide-from-end {
-//   from {
-//     transform: translate(-100%);
-//   }
-//   to {
-//     transform: translate(100dvw);
-//   }
-// }
-
-// @keyframes scale-down {
-//   from {
-//     color: var(--ui-color-primary-600);
-//     transform: translate(-50dvw) scale(3);
-//   }
-// }
-
 @media (prefers-reduced-motion: no-preference) {
   .scroll-fade-animation {
     transform-origin: left top;
@@ -144,16 +115,5 @@ const ui = {
     animation-timeline: view();
     animation-range: 0% 40%;
   }
-  // .scroll-slide-animation {
-  //   animation: slide-from-end linear both;
-  //   animation-timeline: view();
-  //   animation-range: 20svh 100svh;
-  // }
-  // .scale-down-animation {
-  //   transform-origin: left top;
-  //   animation: scale-down ease-in forwards;
-  //   animation-timeline: view();
-  //   animation-range: entry;
-  // }
 }
 </style>

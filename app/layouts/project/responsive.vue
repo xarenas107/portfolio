@@ -6,7 +6,7 @@ section(class="flex flex-col gap-16")
 		div(class='rounded-lg grow size-full object-cover object-top bg-accented opacity-20 aspect-16/9 overflow-clip')
 			nuxt-picture(v-if='background' :src='background' :img-attrs alt='')
 		div(class='absolute top-1/2 -translate-1/2 left-1/2 flex gap-4 slide-up-animation')
-			nuxt-picture(v-for='image in images' v-bind='image' class='rounded-lg grow mt-(--top) h-50 sm:h-72 md:h-96 lg:h-100 object-cover overflow-clip ring ring-accented shadow-smooth max-w-3xs slide-animation')
+			nuxt-picture(v-for='image in images' v-bind='image' class='rounded-lg grow mt-(--top) h-50 sm:h-72 md:h-96 lg:h-100 object-cover overflow-clip ring ring-accented shadow-smooth slide-animation')
 	</template>
 
 <script lang="ts" setup>

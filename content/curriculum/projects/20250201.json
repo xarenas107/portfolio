@@ -1,0 +1,40 @@
+{
+	"cover": "/project/20250201/cover.webp",
+	"layout": "project-base",
+	"active": false,
+	"title": "Time management mobile app design",
+	"description": "This project presents the user interface (UI) design of a time-management mobile app, created as part of an Adobe creative challenge. The project focused on creating a fluid and intuitive user experience for essential features such as alarms, timers, and stopwatches, with a focus on aesthetics and ease of use.",
+	"es": {
+		"title": "Diseño de aplicación móvil de gestión de tiempo",
+  		"description": "Este proyecto presenta el diseño de la interfaz de usuario (UI) de una aplicación móvil de gestión de tiempo, creada como parte de un desafío creativo de Adobe. El proyecto se centró en la creación de una experiencia de usuario fluida e intuitiva para funcionalidades esenciales como alarmas, temporizadores y cronómetros, con un enfoque en la estética y la facilidad de uso."
+	},
+	"sections": [
+		{
+			"name": "project-section-paragraph",
+			"aspect-ratio": "1200/537",
+			"alt": "",
+			"src": "/project/20250201/app/1.webp"
+		}, {
+			"name": "project-section-paragraph",
+			"description": "The goal of this Adobe creative challenge was to design a weather app that not only fulfilled standard functions (clock, alarm, timer, stopwatch) but also offered a visually appealing and highly usable interface. The challenge was to innovate in the presentation of these everyday features, making interaction more enjoyable and efficient for the user.",
+			"es": {
+				"description": "El objetivo de este desafío creativo de Adobe era diseñar una aplicación de tiempo que no solo cumpliera con las funciones estándar (reloj, alarma, temporizador, cronómetro) sino que también ofreciera una interfaz visualmente atractiva y altamente utilizable. El reto consistía en innovar en la presentación de estas funcionalidades cotidianas, haciendo que la interacción fuera más agradable y eficiente para el usuario."
+			}
+		}, {
+		  "name": "project-section-paragraph",
+		  "title": "Tipography",
+		  "description": "The <strong>Inter</strong> typeface was used for its legibility at different sizes and its modern, clean appearance, which is crucial for an application where clarity of numbers and text is key.",
+		  "es": {
+			"title": "Tipografía",
+			"description": "Se utilizó la tipografía <strong>Inter</strong> por su legibilidad en diferentes tamaños y su apariencia moderna y limpia, lo que es crucial para una aplicación donde la claridad de los números y el texto es fundamental."
+		  }
+		}, {
+			"name": "project-color",
+			"description": "The selected colors combine a neutral background (dark and light) with vibrant color accents to highlight interactive elements and the progress of timers, making the interface dynamic and attractive.",
+			"palette": ["#36C2FE", "#E8ECF0", "#FF8C9A"],
+			 "es": {
+				"description": "Los colores seleccionados combinan un fondo neutro (oscuro y claro) con acentos de color vibrante para destacar elementos interactivos y el progreso de los temporizadores, haciendo la interfaz dinámica y atractiva."
+			}
+		}
+  ]
+}

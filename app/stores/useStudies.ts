@@ -4,10 +4,11 @@ export default () => {
 	const { locale } = useI18n()
 
 	const key = 'studies'
-	const fields = ['title', 'provider', 'type', 'location', 'startAt', 'endAt', 'active'] as const
+	const fields = ['title', 'provider', 'type', 'location', 'startAt', 'endAt', 'active', 'current'] as const
 
 	const { data, execute, status } = useLazyAsyncData(key, async () => {
 		const response = await queryCollection(key)
+			.where('active', '=', true)
 			.select(...fields, locale.value)
 			.order('startAt', 'DESC').all()
 

@@ -4,6 +4,7 @@ export default () => {
 	const key = 'skills'
 	const { data, execute, status } = useLazyAsyncData(key, async () => {
 		const response = await queryCollection(key)
+			.where('active', '=', true)
 			.select('title', 'content', 'stem', locale.value)
 			.order('stem', 'ASC').all()
 

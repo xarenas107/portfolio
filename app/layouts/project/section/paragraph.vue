@@ -1,11 +1,11 @@
 <template lang="pug">
 section(class="flex flex-col gap-8")
 	div(class='flex flex-col gap-2 w-full')
-		h4(v-if='title' class='text-balance flex gap-2 font-display uppercase' :class='[styles]') {{ title }}
+		h4(v-if='title' v-bind='ui.title' class='text-balance flex gap-2 font-display uppercase') {{ title }}
 		article(v-if='description' style='--characters: 120' class='max-w-prose text-base sm:text-lg text-balance space-y-4')
 			span(class="text-animation" class='space-y-4' v-html='description')
 
-	nuxt-picture(v-if='src' :src :img-attrs class='rounded-lg grow object-center ring bg-elevated object-cover sm:aspect-2/1 md:aspect-3/1 h-64 lg:h-80 overflow-clip scroll-up-animation')
+	nuxt-picture(v-if='src' :src v-bind='ui.image' class='w-full h-fit rounded-lg grow object-center ring bg-elevated object-cover overflow-clip scroll-up-animation')
 </template>
 
 <script lang="ts" setup>
@@ -13,22 +13,32 @@ type Props = {
 	title?: string
 	description?: string
 	smallTitle?: boolean
+	aspectRatio?: string
 	src?: string
 }
 
 const props = withDefaults(defineProps<Props>(), {
+	aspectRatio: '16/9'
 })
 
-const styles = computed(() => {
-	if (props.smallTitle) return 'font-semibod text-2xl'
-	return 'font-bold text-2xl md:text-4xl lg:text-6xl xl:text-6xl'
+const ui = computed(() => {
+	return {
+		title: {
+			class: props.smallTitle ? 'font-semibod text-2xl' : 'font-bold text-2xl md:text-4xl lg:text-6xl xl:text-6xl'
+		},
+		image: {
+			class: 'aspect-(--aspect)',
+			imgAttrs: {
+				class: 'size-full object-cover',
+				width: '1200',
+				height: ''
+			},
+			style:	{
+				'--aspect': props.aspectRatio
+			}
+		}
+	}
 })
-
-const imgAttrs = {
-	class: 'w-full h-full object-cover',
-	width: '1200',
-	height: ''
-}
 </script>
 
 <style lang="scss" scoped>

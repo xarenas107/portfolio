@@ -4,9 +4,12 @@ export default () => {
 	const { locale, t } = useI18n()
 
 	const key = 'certificates'
+	const fields = ['title', 'provider', 'image', 'credentials', 'startAt', 'stem', 'endAt', 'active'] as const
+
 	const { data, execute, status } = useLazyAsyncData(key, async () => {
 		const response = await queryCollection(key)
-			.select('title', 'provider', 'image', 'credentials', 'startAt', 'stem', 'endAt', locale.value)
+			.where('active', '=', true)
+			.select(...fields, locale.value)
 			.order('stem', 'DESC').all()
 
 		for (const item of response) {
