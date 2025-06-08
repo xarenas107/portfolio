@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v1.13.6
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.13.5...v1.13.6)
+
+### 🩹 Fixes
+
+- **content:** Solve wrong content ([b33c588](https://github.com/xarenas107/portfolio/commit/b33c588))
+- **ui:** Adjust scroll-driven animations ([b5cf02c](https://github.com/xarenas107/portfolio/commit/b5cf02c))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.13.5
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.13.4...v1.13.5)
