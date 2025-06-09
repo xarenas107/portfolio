@@ -8,12 +8,10 @@ div(class='bg-default border-t border-accented pb-16 lg:pb-0')
                 h5(class='text-xl font-black text-highlighted grow') {{ data?.name }}
                 h6(class='text-sm font-semibold text-muted grow') {{ data?.job }}
 
-        div(class='flex gap-y-3 gap-x-6 flex-col')
-            div(class='flex gap-y-3 gap-x-6 flex-wrap')
-                u-link-action(v-for='item in data?.portfolio' v-bind='item' :class='ui.link')
-
-            div(class='flex gap-y-3 gap-x-6 flex-wrap')
-                u-link-action(v-for='item in data?.contact' v-bind='item' :class='ui.link')
+        div(class='flex gap-y-3 gap-x-6 flex-wrap max-w-sm')
+            u-link-action(v-for='item in data?.portfolio' v-bind='item')
+            u-link-action(v-for='item in data?.contact' v-bind='item')
+            u-link-action(:title='data?.location' icon='i-material-symbols:location-on-outline')
 </template>
 
 <script lang="ts" setup>
@@ -30,10 +28,6 @@ const options = computed(() => {
 	}
 })
 const { data } = useUser()
-
-const ui = {
-	link: 'focus-visible:rounded focus-visible:outline-2 focus-visible:outline-offset-2'
-}
 </script>
 
 <style lang="scss" scoped>

@@ -4,7 +4,7 @@ client-only()
 		u-skeleton(class='w-8 h-8 aspect-square rounded-lg bg-inverted/50')
 
 	u-tooltip(:text)
-		u-button(@click='toggle' :icon='active?.icon' :label='active?.title' :aria-label='text' variant='ghost' color='neutral' size="lg" :class='[{ "aspect-square place-content-center": square }, "hover:bg-inverted/10 cursor-pointer focus-visible:bg-transparent focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"]')
+		u-button(@click='toggle' :icon='active?.icon' :label='active?.title' :aria-label='text' variant='ghost' color='neutral' size="lg" :class='[{ "aspect-square place-content-center": square }]' class='hover:bg-inverted/10 cursor-pointer focus-visible:bg-inverted/10 focus:focus-visible:ring-2 focus:focus-visible:ring-inverted')
 </template>
 
 <script lang='ts' setup>

@@ -53,12 +53,12 @@ div(class='bg-gradient-to-b from-(--ui-primary)/10 to-(--ui-bg) max-w-full overf
 						//- Contacts
 						div(v-bind='props' class='flex gap-y-3 gap-x-6 flex-col max-w-sm delay-[1.2s] md:delay-0')
 							div(class='flex gap-y-3 gap-x-6 flex-wrap')
-								u-link-action(v-for='item in data?.portfolio' v-bind='item' class='focus-visible:rounded focus-visible:outline-2 focus-visible:outline-offset-2')
-								u-link-action(v-for='item, key in data?.contact' v-bind='item' :key class='focus-visible:rounded focus-visible:outline-2 focus-visible:outline-offset-2')
+								u-link-action(v-for='item in data?.portfolio' v-bind='item')
+								u-link-action(v-for='item, key in data?.contact' v-bind='item' :key)
 								u-link-action(:title='data?.location' icon='i-material-symbols:location-on-outline')
 
 			div(class='w-full bottom-0 absolute left-0 items-center justify-center flex')
-				u-button(@click='navigate("#studies")' variant='link' :aria-label='t("go.next")' color='neutral' class='rounded-full cursor-pointer')
+				u-button(@click='navigate("#studies")' variant='link' :aria-label='t("go.next")' color='neutral' class='rounded-full cursor-pointer aspect-square')
 					u-icon(name='i-heroicons:arrow-small-down-solid' class="w-8 h-8 motion-safe:animate-bounce")
 </template>
 

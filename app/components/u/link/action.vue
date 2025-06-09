@@ -1,5 +1,5 @@
 <template lang='pug'>
-u-link(v-if='active' :to='href' :class='["flex items-center gap-2", classes]' :disabled='disabled || !href' target="_blank")
+u-link(v-if='active' :to='href' :class='["flex items-center gap-2", classes]' :disabled='disabled || !href' class="focus-visible:rounded focus-visible:outline-2 focus-visible:outline-inverted focus-visible:outline-offset-4" target="_blank")
     u-icon(v-if='icon' :name='icon' class='h-6 w-6')
     span(v-if='title') {{ title }}
 </template>
