@@ -91,7 +91,7 @@ const ui = {
 	carousel: {
 		item: 'w-full max-w-80'
 	},
-	button: 'text-inverted bg-default/10 ring-default/20 hover:bg-default/20 aspect-square place-content-center rounded-full cursor-pointer focus-visible:ring-default/20 focus-visible:outline-default focus-visible:outline-2 focus-visible:outline-offset-2'
+	button: 'text-inverted bg-default/10 ring-default/20 hover:bg-default/20 aspect-square place-content-center rounded-full cursor-pointer focus-visible:bg-default/20 focus:focus-visible:ring-offset-primary focus:focus-visible:ring-2 focus-visible:ring-default focus-visible:outline-primary'
 }
 </script>
 
