@@ -1,7 +1,7 @@
 {
   "name": "curriculum-vitae",
   "description": "A fancy way to show my skills",
-  "version": "1.13.8",
+  "version": "1.13.9",
   "private": true,
   "type": "module",
   "author": {
@@ -9,7 +9,14 @@
     "email": "xarenas107@gmail.com"
   },
   "keywords": [
-    "CV", "Portfolio", "Curriculum Vitae", "UX/UI Design", "Product Design", "Figma", "Design Thinking", "User Research"
+    "CV",
+    "Portfolio",
+    "Curriculum Vitae",
+    "UX/UI Design",
+    "Product Design",
+    "Figma",
+    "Design Thinking",
+    "User Research"
   ],
   "repository": {
     "type": "git",
