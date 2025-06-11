@@ -136,12 +136,13 @@ const { current } = useMagicKeys({
 	passive: false,
 	onEventFired(event) {
 		const keys = ['arrowdown', 'arrowup']
-		const is = keys?.some(value => current.has(value))
+		const isKey = keys?.some(value => current.has(value))
+		const isBody = document.activeElement?.tagName === 'BODY'
 
-		if (!is || current.size !== 1) return
+		if (!isKey || !isBody || current.size !== 1) return
 		event.preventDefault()
 		if (current.has('arrowdown')) next()
-		else prev()
+		if (current.has('arrowup')) prev()
 	}
 })
 
