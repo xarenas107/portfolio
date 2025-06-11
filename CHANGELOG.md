@@ -1,6 +1,23 @@
 # Changelog
 
 
+## v1.13.10
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.13.9...v1.13.10)
+
+### 🩹 Fixes
+
+- **color:** Solve contrast issues in dark mode ([633b440](https://github.com/xarenas107/portfolio/commit/633b440))
+
+### 🏡 Chore
+
+- Update content ([649b699](https://github.com/xarenas107/portfolio/commit/649b699))
+- **node:** Update dependences ([77a5c8c](https://github.com/xarenas107/portfolio/commit/77a5c8c))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.13.9
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.13.8...v1.13.9)
