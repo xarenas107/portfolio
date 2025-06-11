@@ -12,16 +12,16 @@
 		{
 		  "name": "project-overview",
 		  "title": "User research",
-		  "description": "In order to empathize with the target user and their needs, I conducted interviews, created empathy maps, and identified their pain points until I was able to develop a user archetype.",
+		  "description": "To empathize with users and understand their needs, some desktop research and several interviews were conducted, empathy maps were created, and patterns were found in the collected information to identify pain points. A key user group identified through the research was middle-aged medical staff, who are accustomed to managing patient records physically and are trying to optimize their management with the use of new technologies.",
 		  "active": true,
 		  "es": {
 			"title": "Investigación de usuarios",
-			"description": "Con el objetivo de empatizar con el usuario objetivo y sus necesidades, realicé entrevistas, creé mapas de empatía e identifiqué sus puntos débiles, hasta poder elaborar un arquetipo de usuario."
+			"description": "Para empatizar con los usuarios y comprender sus necesidades, se realizó una investigación documental y varias entrevistas, se crearon mapas de empatía y se identificaron patrones en la información recopilada para identificar puntos críticos. Un grupo clave de usuarios identificado a través de la investigación fue el personal médico de mediana edad, acostumbrado a gestionar físicamente los historiales de los pacientes y que busca optimizar su gestión con el uso de nuevas tecnologías."
 		  }
 		}, {
 			"name": "project-persona",
 			"active": true,
-			"description": "After conducting several interviews, it was possible to create an archetype of the type of user for whom the service to be created would be intended.",
+			"description": "After having the necessary information, it was possible to create an archetype of the type of user the service would be aimed at.",
 			"user": "Stephany",
 			"summary": "Stephany is a 45-year-old, female-identifying teacher who lives in Houston, Texas. She set a New Year's goal to get in shape.",
 			"quote": "...sometimes i close the app without completing my goal.",
@@ -40,7 +40,7 @@
 				["Occupation", "Teacher"]
 			],
 			"es": {
-				"description": "Luego de realizar varias entrevistas, fue posible crear un arquetipo del tipo de usuario al cual estaría destinado el servicio a crear.",
+				"description": "Luego de contar con la información necesaria fue posible crear un arquetipo del tipo de usuario al cual estaría destinado el servicio.",
 				"summary": "Stephany es una maestra de 45 años que se identifica como mujer y vive en Houston, Texas. Se propuso como meta de Año Nuevo ponerse en forma.",
 				"quote": "...a veces cierro la aplicación sin completar mi objetivo.",
 				"statement": "Stephany es una mujer de 45 años que quiere empezar el año con el objetivo de ponerse en forma pero no se le da bien la tecnología.",

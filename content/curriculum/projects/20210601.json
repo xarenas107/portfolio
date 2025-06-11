@@ -12,11 +12,11 @@
 		{
 		  "name": "project-overview",
 		  "title": "User research",
-		  "description": "I conducted interviews and created empathy maps to empathize with users and their needs, thereby identifying pain points. A key user group identified through the research was middle-aged medical staff, who are accustomed to managing patient records physically and are trying to optimize their management through the use of new technologies.",
+		  "description": "To empathize with users and understand their needs, some desktop research and several interviews were conducted, empathy maps were created, and patterns were found in the collected information to identify pain points. A key user group identified through the research was middle-aged medical staff, who are accustomed to managing patient records physically and are trying to optimize their management with the use of new technologies.",
 		  "active": true,
 		  "items": [
 			{
-				"title": "Time",
+				"title": "Technology",
 				"description": "Medical personnel in general are not very familiar with technology.",
 				"icon": "i-heroicons:cpu-chip"
 			}, {
@@ -27,10 +27,10 @@
 		],
 		  "es": {
 			"title": "Investigación de usuarios",
-			"description": "Realicé entrevistas y creé mapas de empatía para empatizar con los usuarios y sus necesidades, identificando así los puntos débiles. Un grupo clave de usuarios identificado a través de la investigación fue el personal médico de mediana edad, acostumbrado a gestionar las historias clinicas de los pacientes de forma física y que con el uso de las nuevas tecnologías intenta optimizar su gestión.",
+			"description": "Con el objetivo de empatizar con los usuarios y conocer sus necesidades, se realizó algo de investigación de escritorio y varias entrevistas, se crearon mapas de empatía y se hallaron patrones en la información recopilada para así identificar los puntos débiles. Un grupo clave de usuarios identificado a través de la investigación fue el personal médico de mediana edad, acostumbrado a gestionar las historias clinicas de los pacientes de forma física y que con el uso de las nuevas tecnologías intenta optimizar su gestión.",
 			"items": [
 				{
-					"title": "Tiempo",
+					"title": "Tecnología",
 					"description": "El personal médico en general no es muy cercano a la tecnología.",
 					"icon": "i-heroicons:cpu-chip"
 				}, {
@@ -43,7 +43,7 @@
 		}, {
 			"name": "project-persona",
 			"active": true,
-			"description": "After conducting several interviews, it was possible to create an archetype of the type of user for whom the service to be created would be intended.",
+			"description": "After having the necessary information, it was possible to create an archetype of the type of user the service would be aimed at.",
 			"user": "Marta",
 			"summary": "Marta is a doctor who is accustomed to the traditional method of writing medical records on paper. She wants to optimize her workflow but is somewhat wary of technology.",
 			"quote": "I need to optimize the time I spend writing a medical history.",
@@ -62,7 +62,7 @@
 				["Occupation", "Doctor"]
 			],
 			"es": {
-				"description": "Luego de realizar varias entrevistas, fue posible crear un arquetipo del tipo de usuario al cual estaría destinado el servicio a crear.",
+				"description": "Luego de contar con la información necesaria fue posible crear un arquetipo del tipo de usuario al cual estaría destinado el servicio.",
 				"summary": "Marta es una doctora que está acostumbrada al método tradicional a escribir las historias clinicas en papel. Quiere optimizar su proceso de trabajo pero tiene cierta desconfianza en la tecnología.",
 				"quote": "Necesito optimizar el tiempo que empleo en redactar una historia clínica.",
 				"statement": "Marta  es una doctora de mediana edad que quiere optimizar su proceso de trabajo pero tiene cierta desconfianza en la tecnología.",
