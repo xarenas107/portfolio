@@ -1,6 +1,26 @@
 # Changelog
 
 
+## v1.13.12
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.13.11...v1.13.12)
+
+### 🩹 Fixes
+
+- **accesibility:** Navigation through keyboard improvements ([fb11bff](https://github.com/xarenas107/portfolio/commit/fb11bff))
+
+### 💅 Refactors
+
+- **component:** Minor improvements ([67405d5](https://github.com/xarenas107/portfolio/commit/67405d5))
+
+### 🏡 Chore
+
+- **i18n:** Update locales ([175160d](https://github.com/xarenas107/portfolio/commit/175160d))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.13.11
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.13.10...v1.13.11)
