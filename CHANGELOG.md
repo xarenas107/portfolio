@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.13.11
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.13.10...v1.13.11)
+
+### 🩹 Fixes
+
+- **accesibility:** Navigation through keyboard improvements ([9399856](https://github.com/xarenas107/portfolio/commit/9399856))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.13.10
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.13.9...v1.13.10)
