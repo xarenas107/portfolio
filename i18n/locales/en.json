@@ -18,14 +18,14 @@
 	},
 	"color": {
 		"blue": "Blue",
-		"emerald": "Green emerald",
+		"emerald": "Emerald",
 		"indigo": "Indigo",
 		"name": "Color | Colors",
 		"option": "Color @.lower:option.name",
 		"orange": "Orange",
 		"red": "Red",
 		"rose": "Rose",
-		"sky": "Blue sky",
+		"sky": "Sky",
 		"slate": "Slate",
 		"violet": "Violet",
 		"yellow": "Yellow"
