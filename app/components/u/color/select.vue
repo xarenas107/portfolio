@@ -9,7 +9,7 @@ client-only()
 					u-button(:label='active?.title' :aria-label="text" :variant='open ? "soft" : "ghost"' color='primary' size="lg" icon="i-heroicons-outline:color-swatch" :class='{ "aspect-square place-content-center": square }' class='hover:bg-inverted/10 cursor-pointer focus-visible:bg-inverted/10 focus:focus-visible:ring-2 focus:focus-visible:ring-inverted' ref='button')
 
 			template(#content)
-				div(class='flex flex-wrap gap-1.5 p-2 max-w-28 w-max' ref='element')
+				div(class='grid grid-cols-3 gap-1.5 p-2 max-w-prose w-fit' ref='element')
 					u-color-button(v-for='item in items' @change='toggle' :color='item.color' :active='item.active') {{ item }}
 </template>
 

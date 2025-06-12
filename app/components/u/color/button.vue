@@ -1,6 +1,7 @@
 <template lang='pug'>
-u-button(@click='event => toggle(color, event)' :aria-label='color' :class='[state]' color="neutral" variant='outline' class='p-2 rounded-lg ring-default' tabindex="0")
-    span(:class="[`bg-(--color) dark:bg-(--dark-color)`, 'flex h-3 w-3 aspect-square flex-shrink-0 rounded-full cursor-pointer']" :style='{ "--color": shade[500], "--dark-color": shade[400] }')
+u-button(@click='event => toggle(color, event)' :aria-label='t(`color.${color}`)' :class='[state]' color="neutral" variant='link' class='rounded-lg ring-default' tabindex="0" size="xl")
+	template(#leading)
+		span(:class="[`bg-(--color) dark:bg-(--dark-color)`, 'flex h-3 w-3 aspect-square flex-shrink-0 rounded-full cursor-pointer']" :style='{ "--color": shade[500], "--dark-color": shade[400] }')
 </template>
 
 <script lang='ts' setup>
@@ -15,6 +16,7 @@ type Emit = {
 	(e: 'change', value: string, event: MouseEvent): void
 }
 
+const { t } = useI18n()
 const shade = computed(() => colors[props.color as keyof typeof colors] || colors.slate)
 const emit = defineEmits<Emit>()
 
