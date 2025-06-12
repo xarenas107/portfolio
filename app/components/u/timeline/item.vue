@@ -1,49 +1,51 @@
 <template lang='pug'>
-u-lazy(:class='[{ grow }]' :disabled='!lazy' class="flex w-max min-w-fit max-w-full" as='li')
-	div(:class='[{ grow }, styles.column]' class="grid")
-		div(v-if='alternate' :class='[styles.size, { "order-1": alternate && reverse }]')
-		div(class='flex shrink justify-center items-center relative' :class='horizontal ?  "row-auto" : "col-span-1 flex-col"')
-			u-separator(
-				v-if='progress > 0'
-				:class='horizontal ? "left-0 divider" : "mt-4 top-0 divider-vertical"'
-				:style='`--progress: ${progress}%`'
-				:orientation
-				:ui='styles.divider'
-				class='absolute grow z-20'
-				)
+div(:class='[{ grow }, styles.column]' class="grid")
+	div(v-if='alternate' :class='[ui.container, styles.size, styles.spacing, { "order-1": alternate && reverse }]')
+		//- div(class='bg-elevated/50 size-full rounded-lg')
 
-			u-separator(:orientation :class='[{ "invisible": lineStart }, horizontal ? "hidden" : "h-4" ]' :ui='styles.divider')
+	div(class='flex shrink justify-center items-center relative' :class='horizontal ?  "row-auto" : "col-span-1 flex-col w-fit"')
+		u-separator(
+			v-if='progress > 0'
+			:class='horizontal ? "left-0 divider" : "mt-4 top-0 divider-vertical"'
+			:style='`--progress: ${progress}%`'
+			:orientation
+			:ui='styles.divider'
+			class='absolute grow z-20'
+			)
 
-			div(class='relative')
-				span(v-if='current' class='motion-safe:animate-ping absolute inline-flex h-full w-full rounded-full' :class='ui.dot')
-				u-timeline-dot(:class='ui.dot' class='z-40')
-			u-separator(:ui='styles.divider' :orientation)
+		u-separator(:orientation :class='[{ "invisible": !lineStart }, horizontal ? "hidden" : "h-4" ]' :ui='styles.divider')
 
-		div(class='flex flex-col gap-4 text-balance max-w-xs sm:max-w-sm' :class='[ui.container, styles.spacing, styles.size, { "-order-1": alternate && reverse }]')
-			div(class='flex flex-col gap-0')
-				div(v-if='title' class='flex gap-4')
-					div
-						h3(class="text-xl font-bold text-balance w-auto" :class='ui.text') {{ title }}
-					div(class='grow')
-						u-badge(v-if='badge' :label='badge' :ui='ui.badge' size='md' variant='subtle' class='h-fit text-nowrap')
+		div(class='relative')
+			span(v-if='current' class='motion-safe:animate-ping absolute inline-flex size-full rounded-full' :class='ui.dot')
+			u-timeline-dot(:class='ui.dot' class='z-40')
+		u-separator(:ui='styles.divider' :orientation :class='{ "invisible": !lineEnd }')
 
-				h4(v-if='subtitle' class="text-base font-semibold opacity-80" :class='ui.text') {{ subtitle }}
+	div(:class='[ui.container, styles.spacing, styles.size, { "-order-1": alternate && reverse }]')
+		div(class='flex flex-col gap-0')
+			div(v-if='title' class='flex gap-4')
+				div
+					h3(class="text-xl font-bold text-balance w-auto" :class='ui.text') {{ title }}
+				div(class='grow')
+					u-badge(v-if='badge' :label='badge' :ui='ui.badge' size='md' variant='subtle' class='h-fit text-nowrap')
 
-			div(class='flex flex-col gap-4')
-				p(v-if='content' :class='ui.text' class='text-base opacity-80') {{ content }}
+			h4(v-if='subtitle' class="text-base font-semibold opacity-80" :class='ui.text') {{ subtitle }}
 
-				div(:class='ui.text' class='text-sm opacity-60 uppercase gap-2')
-					nuxt-time(:datetime='startAt' v-bind='options')
-					span(v-if='current || endAt' v-text='" - "')
-					span(v-if='current') {{  t('time.now') }}
-					nuxt-time(v-else-if='endAt' :datetime='endAt' v-bind='options')
-					span(v-if='location') {{ `, ${location}` }}
+		div(class='flex flex-col gap-4')
+			p(v-if='content' :class='ui.text' class='text-base opacity-80') {{ content }}
+
+			div(:class='ui.text' class='text-sm opacity-60 uppercase gap-2')
+				nuxt-time(:datetime='startAt' v-bind='options')
+				span(v-if='current || endAt' v-text='" - "')
+				span(v-if='current') {{  t('time.now') }}
+				nuxt-time(v-else-if='endAt' :datetime='endAt' v-bind='options')
+				span(v-if='location') {{ `, ${location}` }}
+
+			//- div(class='bg-elevated/50 size-full rounded-lg min-h-2/ aspect-16/9')
 </template>
 
 <script lang='ts' setup>
 type Props = {
 	title?: string
-	lazy?: boolean
 	subtitle?: string
 	badge?: string
 	content?: string
@@ -68,6 +70,7 @@ type Props = {
 	orientation?: 'vertical' | 'horizontal'
 	alternate?: boolean
 	lineStart?: boolean
+	lineEnd?: boolean
 	grow?: boolean
 	reverse?: boolean
 }
@@ -78,27 +81,37 @@ const props = withDefaults(defineProps<Props>(), {
 		dot: {}
 	}),
 	startAt: () => Date.now(),
+	lineEnd: true,
 	timeProps: () => ({
 		year: 'numeric',
 		month: 'short'
-	}),
-	lazy: false
+	})
 })
 
 const { t, locale } = useI18n()
 const progress = defineModel('progress', { default: 0 })
 const horizontal = computed(() => props.orientation === 'horizontal')
 const styles = computed(() => {
-	const alternate = props.alternate ? '-alternate' : ''
-
 	return {
 		divider: {
 			border: props.ui?.divider || 'border-neutral-700 dark:border-primary-300'
 		},
 		align: 'place-items-end text-end',
-		size: props.alternate ? `${horizontal.value ? 'h-5/12 row-span-1' : 'w-5/12 col-span-1'} basis-5/12 grow flex-auto` : `${horizontal.value ? 'row-auto' : 'col-span-5'}`,
+		size: {
+			// 'h-5/12 row-span-1': props.alternate && horizontal.value,
+			// 'w-5/12 col-span-1': props.alternate && !horizontal.value,
+			// 'row-auto': !props.alternate && horizontal.value,
+			// 'col-span-5': !props.alternate && !horizontal.value
+		},
 		spacing: horizontal.value ? 'mr-10' : 'mb-10',
-		column: horizontal.value ? `flex-col grid-rows-timeline${alternate} gap-6` : `grid-cols-timeline${alternate} grid-flow-col-dense gap-6`,
+		column: {
+			'gap-6': true,
+			'grid-flow-col-dense grid-cols-[auto_1fr]': !horizontal.value,
+			// 'grid-flow-col': !horizontal.value,
+			'grid-rows-[auto_1fr]': horizontal.value,
+			'odd:grid-rows-[1fr_auto_1fr]': props.alternate
+			// 'odd:grid-cols-[1fr_auto_1fr]': !horizontal.value && props.alternate
+		},
 		animation: 'fade-bottom-animation'
 	}
 })
@@ -125,6 +138,7 @@ const ui = computed(() => {
 	return {
 		text,
 		dot: progress.value === 0 ? base : active,
+		container: 'flex flex-col gap-4 text-balance max-w-xs sm:max-w-sm',
 		badge: {
 			base: 'text-primary-800 dark:text-primary-600 bg-primary-400/50 dark:bg-primary-400/50',
 			...props.ui?.badge || {}

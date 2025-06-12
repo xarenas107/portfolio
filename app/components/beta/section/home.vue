@@ -1,7 +1,7 @@
 <template lang="pug">
 div(class='bg-gradient-to-b from-(--ui-primary)/10 to-(--ui-bg) max-w-full overflow-clip flex items-center min-h-screen')
 
-	u-lazy(class='w-full min-h-screen lg:min-h-auto')
+	u-lazy(:delay='250' class='w-full min-h-screen lg:min-h-auto')
 		u-container(v-bind='options' class="flex h-full w-full flex-col gap-4 overflow-visible py-16 pb-24 lg:py-32 relative")
 
 			u-transition(delay='1s' before-enter-class="motion-safe:max-w-0" enter-class='max-w-full' duration='.75s' timing-function="ease-in-out")
@@ -12,13 +12,13 @@ div(class='bg-gradient-to-b from-(--ui-primary)/10 to-(--ui-bg) max-w-full overf
 
 			u-transition(delay='.5s' active-class='origin-bottom' before-enter-class="motion-safe:max-h-0" enter-class='max-h-48 sm:max-h-64 lg:max-h-full' duration='.5s' timing-function="ease-in-out")
 					template(#default='{ state, ...props }')
-						span(v-bind='props' class='w-full h-full grow lg:hidden bg-primary rounded-(--ui-radius)')
+						span(v-bind='props' class='w-full h-full grow lg:hidden bg-primary rounded-lg')
 
 							u-transition(delay='1.65s' before-enter-class="motion-safe:rotate-x-90" active-class="origin-bottom" duration='.5s' timing-function="ease-in-out")
 								template(#default='{ state, ...props }')
 									beta-hero-image(v-bind='props' class='lg:order-1')
 
-			div(class='flex flex-col gap-x-4 lg:gap-8 grow w-full')
+			div(:style='{ "--box-height": ".75em" }' class='flex flex-col gap-x-4 lg:gap-8 grow w-full')
 				div(class="font-display uppercase font-bold text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-10xl text-highlighted")
 					u-transition(delay='1s' before-enter-class="motion-safe:max-w-0" enter-class='max-w-full' duration='1s' timing-function="ease-in-out")
 						template(#default='{ state, ...props }')
@@ -26,7 +26,7 @@ div(class='bg-gradient-to-b from-(--ui-primary)/10 to-(--ui-bg) max-w-full overf
 								h1 {{  t('im') }}
 								h1(class='lg:order-1') {{ data?.name }},
 
-								span(v-bind='props' class='h-font grow bg-primary rounded-(--ui-radius)')
+								span(v-bind='props' class='h-(--box-height) grow bg-primary rounded-lg')
 
 									u-transition(delay='1.5s' before-enter-class="scale-y-0" duration='.5s' timing-function="ease-in-out")
 										template(#default='{ state, ...props }')
@@ -37,9 +37,9 @@ div(class='bg-gradient-to-b from-(--ui-primary)/10 to-(--ui-bg) max-w-full overf
 							div(class='flex flex-wrap sm:flex-nowrap place-content-center gap-x-3 sm:gap-x-4 md:gap-x-6 hyphens-auto place-items-center transition-all duration-200')
 								div(v-for='word, index in data?.job?.split(" ")' class='flex place-content-center place-items-center text-nowrap w-full gap-x-3 sm:gap-x-4 md:gap-x-6 sm:w-auto')
 									h1 {{ word }}
-									span(v-bind='props' class='grow lg:-order-1 h-font sm:hidden bg-primary rounded-(--ui-radius)')
+									span(v-bind='props' class='grow lg:-order-1 h-(--box-height) sm:hidden bg-primary rounded-lg')
 
-								span(v-bind='props' class='hidden sm:block shrink grow bg-primary rounded-(--ui-radius) lg:-order-1 h-font')
+								span(v-bind='props' class='hidden sm:block shrink grow bg-primary rounded-lg lg:-order-1 h-(--box-height)')
 
 			u-transition(delay='.25s' before-enter-class="motion-safe:opacity-0 motion-safe:translate-y-10" duration='.5s' timing-function="ease-out")
 				template(#default='{ state, ...props }')
@@ -96,48 +96,5 @@ const { data } = useUser()
 </script>
 
 <style lang="scss" scoped>
-@keyframes scale-up {
-	to {
-		transform: translateY(50%);
-	}
-}
 
-@keyframes reveal {
-
-	from,
-	5% {
-		transform: translateY(-200%);
-	}
-
-	50%,
-	55% {
-		transform: translateY(-100%);
-	}
-
-	95%,
-	to {
-		transform: translateY(0%);
-	}
-}
-
-@media (prefers-reduced-motion: no-preference) {
-	.parallax-exit-animation {
-		animation: scale-up ease-out forwards;
-		animation-timeline: view();
-		animation-range: exit;
-	}
-
-	.reveal-animation {
-		animation: reveal 5s cubic-bezier(.9, .01, .01, .9) infinite;
-	}
-}
-
-.h-font {
-	height: .75em;
-}
-
-.rotate-x-90 {
-	transform: rotateX(-90deg) perspective(550px);
-	transform-style: preserve-3d;
-}
 </style>

@@ -20,6 +20,7 @@ div(class='overflow-clip bg-primary relative flex motion-safe:min-h-screen flex-
 				data-allow-mismatch='style'
 				class='scroll-slide-animation-reverse motion-safe:top-48 motion-safe:sticky motion-safe:min-w-(--width)'
 				alternate
+				line-end
 				reverse
 				lazy
 				)

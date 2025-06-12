@@ -35,7 +35,9 @@ const is = computed(() => props.as)
 const intersect = [
 	(entries: IntersectionObserverEntry[]) => {
 		entries.forEach(({ isIntersecting }) => {
-			if (isIntersecting) intersected.value = true
+			if (isIntersecting) {
+				setTimeout(() => intersected.value = true, Number(props.delay))
+			}
 		})
 	}, {
 		rootMargin: props.margin,

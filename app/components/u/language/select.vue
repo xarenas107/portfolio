@@ -6,7 +6,6 @@ client-only()
 	u-tooltip(:text :open='!popover && hover')
 		div(v-hover='change')
 			u-select(v-model:open='popover' :model-value='locale' @update:model-value='update' :items='locales' :aria-label="text" :placeholder='text' icon='i-heroicons:language' label-key="name" value-key="code" class='min-w-32 w-full hover:bg-inverted/10 cursor-pointer focus-visible:bg-inverted/10 focus:focus-visible:ring-2 focus:focus-visible:ring-inverted' size='lg' variant='ghost')
-				//- template(#empty) {{ t('search.empty') }}
 
 				template(#leading)
 					div(ref='element')

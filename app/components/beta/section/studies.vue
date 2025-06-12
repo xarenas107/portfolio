@@ -12,13 +12,14 @@ div(class='overflow-clip min-h-screen flex flex-col relative')
 				:orientation
 				:ui='ui.timeline'
 				:alternate='!mobile '
-				:reverse='!mobile || md'
 				:items='data'
 				:pending
 				class='scroll-slide-reverse-animation'
 				subtitle-key='provider'
 				badge-key='type'
 				time-key='startAt'
+				line-end
+				reverse
 				lazy
 				)
 </template>
@@ -39,7 +40,7 @@ const options = computed(() => {
 	}
 })
 
-const { mobile, md } = useDisplay()
+const { mobile } = useDisplay()
 
 const orientation = computed(() => mobile.value ? 'vertical' : 'horizontal')
 const { data, pending } = useStudies()

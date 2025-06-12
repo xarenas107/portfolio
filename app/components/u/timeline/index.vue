@@ -1,32 +1,33 @@
 <template lang='pug'>
-ol(class="w-full flex group h-fit motion-reduce:overflow-auto scroll-hidden snap-x snap-mandatory" :class='[ui.base, { "flex-col": !horizontal, "items-center": !horizontal && alternate }]')
+primitive(as='ol' class="w-full flex group h-fit motion-reduce:overflow-auto scroll-hidden snap-x snap-mandatory" :class='[ui.base, { "flex-col": !horizontal, "items-center": !horizontal && alternate }]' :data-orientation="orientation")
 	slot(v-if='slot.default' v-for='item, index in data' :item :index :orientation :alternate :lazy)
 
-	u-timeline-item(
-		v-else
-		v-for='item, index in data'
-		:title='item[titleKey]'
-		:subtitle='item[subtitleKey]'
-		:badge='item[badgeKey]'
-		:current='item?.current'
-		:content='item[contentKey]'
-		:startAt='item.startAt'
-		:endAt='item.endAt'
-		:location="item[locationKey]"
-		v-model:progress="percents[index]"
-		:key='index'
-		:ui='ui.item'
-		:line-start='index === 0'
-		:grow='index + 1 >= items.length'
-		:reverse='!(index % 2)'
-		:orientation
-		:alternate
-		:lazy
-		class='timeline-item snap-start'
-		)
+	u-lazy(v-else v-for='item, index in data' :class='{ grow: index + 1 === items.length }' :disabled='!lazy' class="flex" as='li')
+		u-timeline-item(
+			v-model:progress="percents[index]"
+			:title='item[titleKey]'
+			:subtitle='item[subtitleKey]'
+			:badge='item[badgeKey]'
+			:current='item?.current'
+			:content='item[contentKey]'
+			:startAt='item.startAt'
+			:endAt='item.endAt'
+			:location="item[locationKey]"
+			:key='index'
+			:ui='ui.item'
+			:line-start='lineStart || index !== 0'
+			:line-end='lineEnd || index + 1 <  items.length'
+			:grow='index + 1 >= items.length'
+			:reverse='reverse ? !(index % 2): false'
+			:orientation
+			:alternate
+			class='snap-start min-w-full'
+			)
 </template>
 
 <script lang='ts' setup>
+import { Primitive } from 'reka-ui'
+
 type Item<T = any> = {
 	title?: string
 	subtitle?: string
@@ -50,6 +51,8 @@ type Props = {
 	subtitleKey?: string
 	contentKey?: string
 	locationKey?: string
+	lineEnd?: boolean
+	lineStart?: boolean
 	pending?: boolean
 	lazy?: boolean
 	progress?: number
@@ -73,6 +76,8 @@ const props = withDefaults(defineProps<Props>(), {
 	subtitleKey: () => 'subtitle',
 	contentKey: () => 'content',
 	locationKey: () => 'location',
+	lineEnd: () => false,
+	lineStart: () => false,
 	items: () => [],
 	ui: () => ({}),
 	progress: () => 0
