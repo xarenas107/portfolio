@@ -92,6 +92,19 @@
 }
 
 
+@custom-variant opacity-safe {
+	@media (prefers-reduced-transparency: no-preference) {
+        @slot
+    }
+}
+
+@custom-variant opacity-reduce {
+	@media (prefers-reduced-transparency: reduce) {
+        @slot
+    }
+}
+
+
 /* @utility bg-elevated {
 	background-color: color-mix(var(--bg-elevated), --modifier(ratio));
 } */

@@ -2,10 +2,11 @@
 client-only()
 	template(#fallback)
 		u-skeleton(class='w-8 h-8 aspect-square rounded-lg bg-inverted/50')
-	u-tooltip(:text :open='hover')
-		u-popover(:items)
-			div(v-hover='change')
-				u-button(:label='active?.title' :aria-label="text" variant='ghost' color='primary' size="lg" icon="i-heroicons-outline:color-swatch" :class='{ "aspect-square place-content-center": square }' class='hover:bg-inverted/10 cursor-pointer focus-visible:bg-inverted/10 focus:focus-visible:ring-2 focus:focus-visible:ring-inverted' ref='button')
+	u-tooltip(:text :open='!popover && hover')
+		u-popover(:items v-model:open="popover")
+			template(#default='{ open }')
+				div(v-hover='change')
+					u-button(:label='active?.title' :aria-label="text" :variant='open ? "soft" : "ghost"' color='primary' size="lg" icon="i-heroicons-outline:color-swatch" :class='{ "aspect-square place-content-center": square }' class='hover:bg-inverted/10 cursor-pointer focus-visible:bg-inverted/10 focus:focus-visible:ring-2 focus:focus-visible:ring-inverted' ref='button')
 
 			template(#content)
 				div(class='flex flex-wrap gap-1.5 p-2 max-w-28 w-max' ref='element')
@@ -41,6 +42,7 @@ const active = computed(() => {
 
 const target = useTemplateRef('element')
 const toggle = (value: string) => {
+	popover.value = false
 	if (app.ui.colors.primary === value) return
 
 	const element = target.value
@@ -51,6 +53,7 @@ const toggle = (value: string) => {
 
 const change = (value: boolean) => hover.value = value
 const hover = shallowRef(false)
+const popover = shallowRef(false)
 </script>
 
 <style lang='scss' scoped>
