@@ -1,10 +1,8 @@
 {
-	"en": {
-		"title": "Languages",
-		"content": ["English (Conversacional)", "Spanish (Native)"]
-	},
+	"title": "Languages",
+	"content": ["English (Advanced)", "Spanish (Native)"],
 	"es": {
 		"title": "Idiomas",
-		"content": ["Inglés (Conversacional)", "Español (Nativo)"]
+		"content": ["Inglés (Avanzado)", "Español (Nativo)"]
 	}
 }
