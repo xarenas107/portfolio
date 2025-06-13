@@ -1,33 +1,22 @@
-const is = {
-	hex: (color: string) => {
-		const regex = /^(?:[0-9a-f]{3}){1,2}$/i
-		return regex.test(color)
-	},
-	oklch: (color: string) => {
-		const regex = /^oklch/
-		return regex.test(color)
-	}
-}
+import { z } from 'zod/v4'
 
-const parse = (color: string) => {
-	return is.hex(color)
-		? `#${color}`
-		: is.oklch(color)
-			? color.split(' ').map((v, i) => i === 0 ? `${v}%` : v).join(' ')
-			: color
-}
+const schema = z.union([
+	z.string().regex(/^([A-F0-9]{6}|[A-F0-9]{3})$/i).transform(value => `#${value}`),
+	z.string().regex(/^rgb\(?([01]?\d\d?|2[0-4]\d|25[0-5])(\W+)([01]?\d\d?|2[0-4]\d|25[0-5])\W+(([01]?\d\d?|2[0-4]\d|25[0-5])\)?)$/),
+	z.string().regex(/^oklch\(\s*(?:100|\d{1,2}(?:\.\d+)?)\s+[\d.]+\s+[\d.]+\s*\)$/).transform(value => value.split(' ').map((v, i) => i === 0 ? `${v}%` : v).join(' '))
+])
 
 export default defineEventHandler(async (event) => {
 	const { color = 'orange', mode = 'light' } = getQuery(event)
+	const theme = mode === 'dark' ? 'lightgray' : 'darkgray'
+	const { success, data } = schema.default(theme).safeParse(color)
 
-	const scheme = `${color}`?.replaceAll('%', ' ').trim()
-	const value = parse(`${scheme}`)
 	const svg = `
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 53.2" style="enable-background:new 0 0 48 53.2;">
       <style type="text/css">
         .bg{ fill:none }
-        .fill{ fill:${mode === 'dark' ? 'lightgray' : 'darkgray'} }
-        .accent{ fill:${value}
+        .fill{ fill:${theme} }
+        .accent{ fill:${success ? data : theme}
       </style>
     	<rect class="bg" width="48" height="53.2"/>
       <polygon class='fill' points="47.8 15.4 36 3.6 24.2 15.4 12.4 27.2 24.2 39 24.2 39 36 50.8 47.8 39 36 27.2 47.8 15.4"/>

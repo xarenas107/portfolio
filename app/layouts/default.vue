@@ -7,15 +7,15 @@ div(class='bg-default selection:bg-inverted selection:text-(--ui-bg)')
 const { t, locale } = useI18n()
 const head = useLocaleHead()
 const app = useAppConfig()
-const tailwind = useTailwind()
+const { theme } = useTailwind()
 const dark = usePreferredDark()
 
 const title = () => app.name
 
 const color = computed(() => {
-	const colors = tailwind.theme.colors as Record<string, Record<number, string>>
+	const colors = theme.colors as Record<string, Record<number, string>>
 	const { primary } = app.ui.colors
-	const variant = dark.value ? 400 : 500
+	const variant = dark.value ? 300 : 500
 	return colors[primary]?.[variant]
 })
 

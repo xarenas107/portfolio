@@ -1,14 +1,11 @@
-export default defineNuxtPlugin((nuxt) => {
+export default defineNuxtPlugin(() => {
 	const app = useAppConfig()
-	const storage = useLocalStorage('color', () => '')
-
-	app.ui.colors.primary = storage.value || app.ui.colors.primary
-
-	watch(() => app.ui.colors.primary, (value) => {
-		if (storage.value !== value) storage.value = value
-	})
+	const storage = useLocalStorage('color', () => 'indigo')
+	if (storage.value) app.ui.colors.primary = storage.value
 
 	onNuxtReady(() => {
-		if (!storage.value) app.ui.colors.primary = 'indigo'
+		watch(() => app.ui.colors.primary, (value) => {
+			if (storage.value !== value) storage.value = value
+		})
 	})
 })
