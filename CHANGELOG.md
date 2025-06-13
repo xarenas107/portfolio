@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.13.14
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.13.13...v1.13.14)
+
+### 💅 Refactors
+
+- Minor improvements ([ac7b8ff](https://github.com/xarenas107/portfolio/commit/ac7b8ff))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.13.13
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.13.12...v1.13.13)
