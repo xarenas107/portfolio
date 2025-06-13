@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.13.13
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.13.12...v1.13.13)
+
+### 💅 Refactors
+
+- **accent-color:** Minor improvements ([b436965](https://github.com/xarenas107/portfolio/commit/b436965))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.13.12
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.13.11...v1.13.12)
