@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v1.13.15
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.13.14...v1.13.15)
+
+### 💅 Refactors
+
+- Minor changes ([760b38e](https://github.com/xarenas107/portfolio/commit/760b38e))
+
+### 🏡 Chore
+
+- **node:** Update dependences ([4f70f89](https://github.com/xarenas107/portfolio/commit/4f70f89))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.13.14
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.13.13...v1.13.14)
