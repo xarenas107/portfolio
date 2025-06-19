@@ -4,7 +4,7 @@ nuxt-route-announcer
 
 u-app(:locale)
 	nuxt-layout
-		u-navigation-bar(v-model:open='menu' :active='!!route.meta.navbar' :back='route.meta.navbar === "back"')
+		u-navigation-bar(v-model:open='menu' :active='!!route.meta.navbar' :back='route.meta.navbar === "back"' sticky)
 
 		//- nuxt-layout(name='animate-skew')
 		nuxt-page(:scale-down='menu')
