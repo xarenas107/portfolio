@@ -92,11 +92,11 @@ const imgAttrs = {
 
 @media (prefers-reduced-motion: no-preference) {
 	.scroll-slide-animation {
-		animation: slide-from-end linear forwards;
+		animation: slide-from-end linear both;
 		animation-timeline: view();
 	}
 	.scroll-up-animation {
-		animation: scroll-up ease-in forwards;
+		animation: scroll-up ease-in both;
 		animation-timeline: view();
 		animation-range: entry;
 	}

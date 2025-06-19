@@ -13,7 +13,7 @@ beta-section-skills(v-intersect='intersect' :scale-down ref='section')#skills
 	div(class="w-full px-4 sm:px-6 lg:px-8 m-auto max-w-7xl")
 		section-title(v-intersect='intersect' class='sticky top-1/2 -translate-y-1/2 leading-0 mask-animation !block grow' hyphens) {{ t('section.portfolio') }}
 
-beta-section-projects(v-intersect='intersect' :scale-down ref='section')#portfolio
+beta-section-projects(v-if='portfolio' v-intersect='intersect' :scale-down ref='section')#portfolio
 beta-section-footer(:scale-down)
 </template>
 
@@ -28,7 +28,9 @@ type Props = {
 	scaleDown?: boolean
 }
 
-await new Promise(resolve => setTimeout(resolve, 10))
+const { data } = useNavigation()
+const portfolio = computed(() => data.value.find(({ id }) => id === 'portfolio'))
+// await new Promise(resolve => setTimeout(resolve, 10))
 defineProps<Props>()
 
 const { t } = useI18n()

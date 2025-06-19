@@ -1,17 +1,16 @@
  <template lang="pug">
-u-main(ref='main' class='motion-safe:skew-y-(--skew) transition-[transform filter] duration-600 ease-out' :style)
+u-main(ref='main' class='motion-safe:skew-y-(--skew) transition-[transform filter] duration-300 ease-out' :style)
 	slot
 </template>
 
 <script lang="ts" setup>
-import type { ComponentPublicInstance } from 'vue'
-
 type Emit = {
 	(event: 'scroll', value: Event): void
 }
 
 type Props = {
 	disabled?: boolean
+	blur?: boolean
 }
 
 type State = {
@@ -29,12 +28,12 @@ const props = withDefaults(defineProps<Props>(), {
 })
 
 const reduceMotion = usePreferredReducedMotion()
-const main = useTemplateRef<ComponentPublicInstance>('main')
+
 const state: State = reactive({
 	scroll: 0,
 	pause: true,
 	current: 0,
-	ease: 0.75,
+	ease: 0.1,
 	value: 0
 })
 
@@ -48,23 +47,24 @@ const active = useState('scroll:active', () => false)
 
 const step = () => {
 	if (state.timer) clearTimeout(state.timer)
-	if (!active.value || state.pause || reduceMotion.value === 'reduce') return
+	if (!active.value || state.pause) return
 
 	const diff = state?.scroll - window.scrollY
 	const clamp = Math.max(-30, Math.min(diff, 30))
-	state.value = Math.round(clamp) * 0.1
+	state.value = Math.round(clamp) * state.ease
 	state.scroll = window.scrollY
 
 	state.timer = setTimeout(() => {
 		state.value = 0
 		active.value = false
-	}, 150)
+	}, 200)
 }
 
 const update = (event: Event) => {
 	active.value = true
-	if (import.meta.client) step()
 	emit('scroll', event)
+	if (reduceMotion.value === 'reduce') return
+	if (import.meta.client) step()
 }
 
 useEventListener('scroll', update, {
@@ -76,12 +76,11 @@ onBeforeUpdate(() => {
 })
 
 onUpdated(() => {
-	setTimeout(() => state.pause = props.disabled, 300)
+	state.pause = props.disabled
 })
 
 onMounted(() => {
 	state.scroll = window.scrollY
-	state.pause = props.disabled
 })
 </script>
 
