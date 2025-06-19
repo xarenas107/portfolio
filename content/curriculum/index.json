@@ -19,7 +19,7 @@
 			"href": "https://www.linkedin.com/in/xarenas"
 		},{
 			"title": "Behance",
-			"active": false,
+			"active": true,
 			"icon": "i-fa6-brands:behance",
 			"href": "https://www.behance.net/xavierarenas"
 		},{

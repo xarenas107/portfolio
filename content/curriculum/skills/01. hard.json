@@ -1,8 +1,8 @@
 {
 	"title": "Hard skills",
-	"content": ["UX/UI design", "Accessible & inclusive design", "Usability testing", "Design thinking", "User research", "Wireframing & prototyping", "Logo design", "Editorial design", "Information arquitecture", "Style guides", "Figma", "FigJam", "Jitter", "Artificial intelligence (AI)", "Photoshop", "Illustrator", "Indesign", "Fresco", "After Effects", "Premier", "XD", "Javascript", "Typescript", "MongoDB", "NodeJs", "CSS", "SCSS", "HTML5", "Pug", "Vue", "Nuxt"],
+	"content": ["UX/UI design", "Accessible & inclusive design", "Usability testing", "Design thinking", "User research", "Wireframing & prototyping", "Logo design", "Editorial design", "Information arquitecture", "Style guides", "Figma", "FigJam", "Jitter", "Artificial intelligence (AI)", "Photoshop", "Illustrator", "Indesign", "Fresco", "After Effects", "Premier", "XD", "VS Code", "Postman", "Javascript", "Typescript", "MongoDB", "NodeJs", "CSS", "SCSS", "HTML5", "Pug", "Vue", "Nuxt"],
 	"es": {
 		"title": "Habilidades fuertes",
-		"content": ["Diseño UX/UI", "Diseño accesible e inclusivo", "Pruebas de usabilidad", "Pensamiento de diseño", "Investigación de usuarios", "Wireframing y prototipado", "Diseño de identidad", "Diseño editorial", "Arquitectura de información", "Guías de estilo", "Figma", "Jitter", "Inteligencia artificial (IA)", "FigJam", "Photoshop", "Illustrator", "Indesign", "Fresco", "After Effects", "Premier", "XD", "Javascript", "Typescript", "MongoDB", "NodeJs", "CSS", "SCSS", "HTML5", "Pug", "Vue", "Nuxt"]
+		"content": ["Diseño UX/UI", "Diseño accesible e inclusivo", "Pruebas de usabilidad", "Pensamiento de diseño", "Investigación de usuarios", "Wireframing y prototipado", "Diseño de identidad", "Diseño editorial", "Arquitectura de información", "Guías de estilo", "Figma", "Jitter", "Inteligencia artificial (IA)", "FigJam", "Photoshop", "Illustrator", "Indesign", "Fresco", "After Effects", "Premier", "XD", "VS Code", "Postman", "Javascript", "Typescript", "MongoDB", "NodeJs", "CSS", "SCSS", "HTML5", "Pug", "Vue", "Nuxt"]
 	}
 }
