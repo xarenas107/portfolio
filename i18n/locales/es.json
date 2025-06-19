@@ -128,9 +128,9 @@
 		"portfolio": "Portafolio"
 	},
 		"go": {
-		"name": "Ir a",
-		"top": "@:go top",
-		"next": "@:go próxima @.lower:section.name"
+			"name": "Ir a",
+			"top": "@:go top",
+			"next": "@:go próxima @.lower:section.name"
 	},
 	"control": {
 		"play": "Reproducir",
