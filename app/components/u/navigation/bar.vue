@@ -83,7 +83,9 @@ u-tooltip(:open='tooltip' class='h-auto' :ui='ui.tooltip')
 			slot(:menu :reveal)
 
 	template(#content)
-		u-button(:href="behance?.href" :label="t('section.portfolio')" class='rounded-full cursor-pointer backdrop-blur' variant='subtle' color='neutral' trailing-icon="i-heroicons:arrow-up-right-20-solid" size='xl')
+		u-transition(delay='.5s' before-enter-class="opacity-0" duration='.25s')
+			template(#default='{ state, ...props }')
+				lazy-u-button(v-bind='props' :href="behance?.href" :label="t('section.portfolio')" class='rounded-full cursor-pointer backdrop-blur' variant='subtle' color='neutral' trailing-icon="i-heroicons-outline:external-link" size='xl')
 </template>
 
 <script setup lang="ts">
@@ -130,8 +132,8 @@ const state = {
 	start: false
 }
 
-const { desktop } = useDisplay()
-const { y, isScrolling, arrivedState } = useWindowScroll({
+const { desktop, platform } = useDisplay()
+const { y, directions, arrivedState } = useWindowScroll({
 	onScroll: () => {
 		recolor()
 		hide()
@@ -160,7 +162,7 @@ const recolor = () => {
 }
 
 const hide = () => {
-	if (desktop.value) return
+	if (!platform.value.touch) return
 	reveal.value = y.value < 500 || arrivedState.top
 
 	const multiplier = 1
@@ -172,7 +174,8 @@ const hide = () => {
 	if (top) state.position = 0
 	// nav.value?.style.setProperty('--position', `${state.position / speed}%`)
 
-	state.position = state.position > 50 ? 100 : 0
+	if (directions.bottom) state.position = 100
+	else if (directions.top) state.position = 0
 	nav.value?.style.setProperty('--position', `${state.position}%`)
 }
 
