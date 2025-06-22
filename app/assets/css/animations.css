@@ -1,0 +1,121 @@
+/* Animation timeline */
+@utility animate-direction-* {
+	animation-direction: --value('normal', 'reverse', 'alternate', 'alternate-reverse', 'unset', 'initial', [*]);
+}
+
+@utility animate-duration-* {
+	animation-duration: --value(integer, [integer])ms;
+}
+
+@utility animate-delay-* {
+	animation-delay: --value(integer, [integer])ms;
+}
+
+@utility animate-fill-* {
+	animation-fill-mode: --value('none', 'forwards', 'backwards', 'both', [*]);
+}
+
+@utility animate-timeline-* {
+	--animation-timeline: --value([*]);
+	--animation-timeline: --value('view', 'root')();
+	--animation-timeline: --value('auto', 'none', 'initial', 'unset');
+	animation-timeline: var(--animation-timeline)
+}
+
+@utility animate-range-* {
+	animation-range: --value('cover', 'contain', 'entry', 'exit', 'entry-crossing', 'exit-crossing', [*]);
+}
+
+@utility animate-name-* {
+	animation-name: --value([*]);
+}
+
+@utility animate-slide-y-* {
+	--slide-y: --value(percentage, [percentage], [length]);
+	--slide-y: calc(--value(integer) * 1%);
+	animation-name: slide;
+}
+
+@utility -animate-slide-y-* {
+	--slide-y: calc(--value(percentage, [percentage], [length]) * -1);
+	--slide-y: calc(--value(integer) * -1%);
+	animation-name: slide;
+}
+
+@utility animate-slide-* {
+	--slide: --value(percentage, [percentage], [length]);
+	--slide-x: calc(--value(integer) * 1%);
+	animation-name: slide;
+}
+@utility -animate-slide-* {
+	--slide: calc(--value(percentage, [percentage], [length]) * -1);
+	--slide-x: calc(--value(integer) * -1%);
+	animation-name: slide;
+}
+
+@utility animate-from-* {
+	--animation-range-start: --value('cover', 'contain', 'entry', 'exit', 'entry-crossing', 'exit-crossing', percentage, [percentage], [length], [*]);
+	--animation-range-start: calc(--value(integer) * 1%);
+	animation-range-start: var(--animation-range-start);
+}
+
+@utility animate-to-* {
+	--animation-range-end: --value('cover', 'contain', 'entry', 'exit', 'entry-crossing', 'exit-crossing', percentage, [percentage], [length], [*]);
+	--animation-range-end: calc(--value(integer) * 1%);
+	animation-range-end: var(--animation-range-end);
+}
+
+@utility -animate-from-* {
+	--animation-range-start: calc(--value(percentage, [percentage], [length]) * -1);
+	--animation-range-start: calc(--value(integer) * -1%);
+	animation-range-start: var(--animation-range-start);
+}
+
+@utility -animate-to-* {
+	--animation-range-end: calc(--value(percentage, [percentage], [length]) * -1);
+	--animation-range-end: calc(--value(integer) * -1%);
+	animation-range-end: var(--animation-range-end);
+}
+
+@utility animate-* {
+	--animation-timing: --value('linear', 'ease', 'ease-in', 'ease-out', 'step-start', 'step-end', 'ease-in-out');
+	animation-timing-function: var(--animation-timing, linear);
+	/* --animation-timing: steps(var(--animation-steps, 0), --value('jump-start', 'jump-end', 'jump-none', 'jump-both', 'start', 'end')); */
+}
+
+/* @utility animate-steps-* {
+	--animation-steps: --value(integer);
+} */
+
+@utility animate-state-* {
+	animation-play-state: --value('running', 'paused', [*]);
+}
+
+@keyframes slide-y {
+	from { transform: translateY(100%) }
+}
+@keyframes slide-x {
+	from { transform: translateX(100%) }
+}
+
+@keyframes slide {
+	from { transform: translate(var(--slide, var(--slide-x, 0), var(--slide-y, 0))) }
+}
+
+@keyframes fade-out {
+  from { opacity: 100% }
+}
+
+@keyframes fade-in {
+  from { opacity: 0% }
+}
+
+@keyframes zoom-out {
+	from, to { transform-style: preserve-3d }
+	from { transform: rotate3d(1,0,0, -5deg) translateX(-2.5ch) scale(4) perspective(32rem) }
+}
+
+@keyframes float {
+	from, to { transform: translateY(0) }
+	50% { transform: translateY(-1rem) }
+}

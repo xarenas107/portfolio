@@ -4,6 +4,7 @@ slot(v-if='active' :class='ui' :style :state)
 
 <script lang='ts' setup>
 type Props = {
+	class?: string
 	activeClass?: string
 	beforeEnterClass?: string
 	enterClass?: string
@@ -18,12 +19,13 @@ const props = withDefaults(defineProps<Props>(), {
 
 const ui = computed(() => {
 	const { beforeEnterClass, enterClass, activeClass } = props
-	if (state.done) return ''
+	if (state.done) return [enterClass, props.class]
 
 	const data = new Set([
 		activeClass,
+		props.class,
 		!state.pending ? beforeEnterClass : enterClass,
-		'transition-all will-change[all]'
+		'transition-all will-change-[all]'
 	])
 
 	return Array.from(data)

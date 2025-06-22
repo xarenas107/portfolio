@@ -3,7 +3,7 @@ div(class='overflow-clip min-h-screen flex flex-col relative')
 	div(class='h-80 w-full bg-default flex items-end')
 		div(class='w-full bg-primary overflow-clip')
 			u-container(v-bind='options' class='overflow-clip origin-top')
-				section-title(class="text-(--ui-bg) -mt-1 md:-mt-2 scroll-slide-animation" hyphens) {{ t('section.studies') }}
+				section-title(class="text-(--ui-bg) -mt-1 md:-mt-2 animate-fill-both animate-ease-in-out animate-to-60 motion-safe:animate-timeline-view motion-safe:-animate-slide-y-100" hyphens) {{ t('section.studies') }}
 
 	div(class='flex flex-col w-full h-full py-24 grow bg-primary')
 		div(v-bind='options' class='px-4 sm:px-6 lg:px-8 gap-8 max-w-7xl mx-auto w-full motion-reduce:pb-24 grow ')
@@ -14,7 +14,7 @@ div(class='overflow-clip min-h-screen flex flex-col relative')
 				:alternate='!mobile '
 				:items='data'
 				:pending
-				class='scroll-slide-reverse-animation'
+				class='animate-fill-both animate-ease-in-out animate-to-60 motion-safe:animate-timeline-view motion-safe:animate-name-[slide-y,fade-in]'
 				subtitle-key='provider'
 				badge-key='type'
 				time-key='startAt'
@@ -61,33 +61,33 @@ const ui = {
 </script>
 
 <style lang="scss" scoped>
-@keyframes slide-from-start {
-  from {
-    transform: translateY(-100%);
-  }
-}
+// @keyframes slide-from-start {
+//   from {
+//     transform: translateY(-100%);
+//   }
+// }
 
-@keyframes slide-from-end {
-  from {
-    opacity: 0;
-    transform: translateY(80%);
-  }
-  to {
-    transform: translateY(0%);
-  }
-}
+// @keyframes slide-from-end {
+//   from {
+//     opacity: 0;
+//     transform: translateY(80%);
+//   }
+//   to {
+//     transform: translateY(0%);
+//   }
+// }
 
-@media (prefers-reduced-motion: no-preference) {
-  .scroll-slide-animation {
-    animation: slide-from-start ease-in-out forwards;
-    animation-timeline: view();
-    animation-range: 0% 80%;
-  }
+// @media (prefers-reduced-motion: no-preference) {
+//   .scroll-slide-animation {
+//     animation: slide-from-start ease-in-out forwards;
+//     animation-timeline: view();
+//     animation-range: 0% 80%;
+//   }
 
-  .scroll-slide-reverse-animation {
-    animation: slide-from-end ease-in-out both;
-    animation-timeline: view();
-    animation-range: 0% 40%;
-  }
-}
+//   .scroll-slide-reverse-animation {
+//     animation: slide-from-end ease-in-out both;
+//     animation-timeline: view();
+//     animation-range: 0% 40%;
+//   }
+// }
 </style>

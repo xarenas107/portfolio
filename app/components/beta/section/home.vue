@@ -1,26 +1,26 @@
 <template lang="pug">
 div(class='bg-gradient-to-b from-(--ui-primary)/10 to-(--ui-bg) max-w-full overflow-clip flex items-center min-h-dvh')
 
-	u-lazy(:delay='250' class='size-full')
+	u-lazy(:delay='500' class='size-full')
 		u-container(v-bind='options' class="flex h-full w-full flex-col gap-4 overflow-visible py-16 pb-24 lg:py-32 relative")
 
-			u-transition(delay='1s' before-enter-class="motion-safe:max-w-0" enter-class='max-w-full' duration='.75s' timing-function="ease-in-out")
+			u-transition(delay='.8s' before-enter-class="motion-safe:max-w-0" enter-class='max-w-full' duration='1.2s' timing-function="ease-in-accelerate")
 				template(#default='{ state, ...props }')
 					div(class='flex justify-center gap-4 transition-all duration-200')
 						h6(class='font-display uppercase font-bold text-2xl max-w-prose sm:text-4xl lg:text-6xl leading-4 text-nowrap text-highlighted') {{ greetings }}
 						u-separator(v-bind='props' color="primary")
 
-			u-transition(delay='.5s' active-class='origin-bottom' before-enter-class="motion-safe:max-h-0" enter-class='max-h-48 sm:max-h-64 lg:max-h-full' duration='.5s' timing-function="ease-in-out")
+			u-transition(delay='.5s' active-class='origin-bottom' before-enter-class="motion-safe:max-h-0" enter-class='max-h-48 sm:max-h-64 lg:max-h-full' duration='.5s' timing-function="ease-in-accelerate")
 					template(#default='{ state, ...props }')
 						span(v-bind='props' class='w-full h-full grow lg:hidden bg-primary rounded-lg')
 
-							u-transition(delay='1.65s' before-enter-class="motion-safe:rotate-x-90" active-class="origin-bottom" duration='.5s' timing-function="ease-in-out")
+							u-transition(delay='1.2s' before-enter-class="motion-safe:opacity-0" active-class="origin-bottom" duration='.5s' timing-function="ease-in-accelerate")
 								template(#default='{ state, ...props }')
-									beta-hero-image(v-bind='props' class='lg:order-1')
+									beta-hero-image(v-bind='props' :src='data.image' :img-attrs class='lg:order-1')
 
 			div(:style='{ "--box-height": ".75em" }' class='flex flex-col gap-x-4 lg:gap-8 grow w-full')
 				div(class="font-display uppercase font-bold text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-10xl text-highlighted")
-					u-transition(delay='1s' before-enter-class="motion-safe:max-w-0" enter-class='max-w-full' duration='1s' timing-function="ease-in-out")
+					u-transition(delay='.8s' active-class='origin-center' before-enter-class="motion-safe:max-w-0" enter-class='max-w-full' duration='1.2s' timing-function="ease-slow")
 						template(#default='{ state, ...props }')
 							div(class='flex place-content-center place-items-center gap-x-3 transition-all duration-200' :class='[state.idle ? "sm:gap-x-3" : "sm:gap-x-4 md:gap-x-4"]')
 								h1 {{  t('im') }}
@@ -28,11 +28,11 @@ div(class='bg-gradient-to-b from-(--ui-primary)/10 to-(--ui-bg) max-w-full overf
 
 								span(v-bind='props' class='h-(--box-height) grow bg-primary rounded-lg')
 
-									u-transition(delay='1.5s' before-enter-class="scale-y-0" duration='.5s' timing-function="ease-in-out")
+									u-transition(delay='1.4s' before-enter-class="motion-safe:opacity-0 motion-safe:drop-shadow-xs" duration='.5s' timing-function="ease-slow")
 										template(#default='{ state, ...props }')
-											beta-hero-image(v-bind='props' class='lg:order-1 hidden lg:flex origin-bottom')
+											beta-hero-image(v-bind='props' :src='data.image' :img-attrs class='lg:order-1 hidden lg:flex')
 
-					u-transition(delay='1s' before-enter-class="motion-safe:max-w-0" enter-class='max-w-full' duration='1s' timing-function="ease-in-out")
+					u-transition(delay='.8s' before-enter-class="motion-safe:max-w-0" enter-class='max-w-full' duration='1s' timing-function="ease-slow")
 						template(#default='{ state, ...props }')
 							div(class='flex flex-wrap sm:flex-nowrap place-content-center gap-x-3 sm:gap-x-4 md:gap-x-6 hyphens-auto place-items-center transition-all duration-200')
 								div(v-for='word, index in data?.job?.split(" ")' class='flex place-content-center place-items-center text-nowrap w-full gap-x-3 sm:gap-x-4 md:gap-x-6 sm:w-auto')
@@ -41,12 +41,12 @@ div(class='bg-gradient-to-b from-(--ui-primary)/10 to-(--ui-bg) max-w-full overf
 
 								span(v-bind='props' class='hidden sm:block shrink grow bg-primary rounded-lg lg:-order-1 h-(--box-height)')
 
-			u-transition(delay='.25s' before-enter-class="motion-safe:opacity-0 motion-safe:translate-y-10" duration='.5s' timing-function="ease-out")
+			u-transition(delay='.25s' before-enter-class="motion-safe:opacity-0 motion-safe:translate-y-10" duration='.5s' timing-function="ease-in-accelerate")
 				template(#default='{ state, ...props }')
 					div(class='flex flex-col md:flex-row gap-6 justify-center')
 						p(v-bind='props' class='text-base text-default text-balance max-w-sm lg:max-w-lg delay-[1s] md:delay-0 h-fit') {{ data?.description }}
 
-						u-transition(delay='1s' before-enter-class="motion-safe:max-w-0" enter-class='max-w-full' duration='1s' timing-function="ease-in-out")
+						u-transition(delay='.8s' before-enter-class="motion-safe:max-w-0" enter-class='max-w-full' duration='1s' timing-function="ease-slow")
 							template(#default='{ state, ...props }')
 								span(v-bind='props' class='hidden md:inline-block grow')
 
@@ -83,6 +83,10 @@ const transition = {
 	name: 'transition-fade'
 }
 
+const imgAttrs = {
+	class: 'drop-shadow-2xl drop-shadow-primary-950'
+}
+
 const navigate = (value: `#${string}`) => {
 	const element = document.querySelector(value)
 	element?.scrollIntoView({ behavior: 'smooth', block: 'start' })
@@ -96,5 +100,4 @@ const { data } = useUser()
 </script>
 
 <style lang="scss" scoped>
-
 </style>

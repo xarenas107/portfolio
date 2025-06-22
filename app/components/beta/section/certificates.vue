@@ -1,7 +1,7 @@
 <template lang="pug">
 div(class='py-24 min-h-screen bg-primary relative overflow-clip place-content-center')
   u-container(v-bind='options' class='flex flex-col gap-16')
-    section-title(:class='ui.title' class="scroll-fade-animation z-40" hyphens) {{ t('section.certificates') }}
+    section-title(:class='ui.title' class="origin-top-left motion-safe:animate-timeline-view motion-safe:animate-name-[slide-y,fade-in] z-40" hyphens) {{ t('section.certificates') }}
 
     div(class='flex flex-col gap-8' )
       u-card-group(:ui='ui.card' color='primary' class='z-20' )
@@ -16,9 +16,7 @@ div(class='py-24 min-h-screen bg-primary relative overflow-clip place-content-ce
                       span(class=' text-xs text-nowrap') {{ item?.provider }}
 
                     div(class='flex gap-2 group flex-wrap')
-                      u-link(v-for='to, index in item.credentials' :to)
-                        u-badge(:ui='ui.badge' size='md' variant='outline') {{ index ? `No. ${ index + 1 }` : "Credential" }}
-                          u-icon(name='i-heroicons-outline:external-link' class='w-4 h-4')
+                      u-button(v-for='to, index in item.credentials' :href="to" :ui='ui.badge' trailing-icon="i-heroicons-outline:external-link" size='md' variant='solid' ) {{ index ? t('credential.no', { number: index + 1 }) : t('credential.name') }}
 
                 template(#footer)
                   div(v-if='item.endAt' class='flex gap-2 text-inverted/80 items-center')
@@ -86,7 +84,7 @@ const ui = {
 		child: 'bg-primary/80 text-inverted'
 	},
 	badge: {
-		base: `w-fit h-fit text-nowrap gap-2 ring-1 ring-inset text-inverted/80 hover:text-inverted ring-default/50 hover:ring-default bg-primary`
+		base: `outline outline-default focus-visible:rounded focus-visible:outline-2 focus-visible:outline-default focus-visible:outline-offset-0`
 	},
 	carousel: {
 		item: 'w-full max-w-80'
@@ -96,24 +94,4 @@ const ui = {
 </script>
 
 <style lang="scss" scoped>
-@keyframes rotate-3d {
-  from {
-    color: transparent;
-    transform: rotate3d(1,0,0, -5deg) translate(-50%,-100%) scale(4) perspective(550px);
-  }
-
-  80% {
-    transform: scale(1);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .scroll-fade-animation {
-    transform-origin: left top;
-    transform-style: preserve-3d;
-    animation: rotate-3d ease-out both;
-    animation-timeline: view();
-    animation-range: 0% 40%;
-  }
-}
 </style>

@@ -21,7 +21,7 @@ primitive(as='ol' class="w-full flex group h-fit motion-reduce:overflow-auto scr
 			:reverse='reverse ? !(index % 2): false'
 			:orientation
 			:alternate
-			class='snap-start min-w-full'
+			class='snap-start min-w-max'
 			)
 </template>
 

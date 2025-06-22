@@ -1,4 +1,5 @@
 @import './fonts';
+@import './animations';
 @import "tailwindcss";
 @import "@nuxt/ui";
 
@@ -42,6 +43,12 @@
 	/* Animation */
 	--animate-float: float 3s ease-in-out infinite;
 
+	/* Timing functions */
+	--ease-out-accelerate: cubic-bezier(0.25, 1, 0.8, 0.8);
+	--ease-in-accelerate: cubic-bezier(1,0,.5,.8);
+	--ease-slow: cubic-bezier(.4,.2,.35,.9);
+	
+
 	/* Shadow */
 	--shadow-smooth: 
 		340px 404px 200px 0px --alpha(var(--ui-color-neutral-950) / 0%), 
@@ -69,6 +76,7 @@
 	paint-order: --value('stroke', 'fill', 'markers');
 }
 
+
 @utility d-* {
 	display: --value('block', 'grid', 'flex', 'none' ,[*]);
 }
@@ -81,17 +89,7 @@
 	contain: --value('none', 'size', 'layout', 'paint', 'strict');
 }
 
-@utility step-start-* {
-	--step-start: --value(integer, [integer]);
-	animation-timing-function: steps(--step-start, --step-position);
-}
-
-@utility step-position-* {
-	--step-position: --value('jump-start', 'jump-end', 'jump-none', 'jump-both', 'start', 'end');
-	animation-timing-function: steps(--step-start, --step-position);
-}
-
-
+/* Support prefers-reduced-opacity */
 @custom-variant opacity-safe {
 	@media (prefers-reduced-transparency: no-preference) {
         @slot
@@ -102,14 +100,4 @@
 	@media (prefers-reduced-transparency: reduce) {
         @slot
     }
-}
-
-
-/* @utility bg-elevated {
-	background-color: color-mix(var(--bg-elevated), --modifier(ratio));
-} */
-
-@keyframes float {
-	0%, 100% { transform: translateY(0) }
-	50% { transform: translateY(-10px) }
 }

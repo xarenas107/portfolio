@@ -50,34 +50,34 @@ const intersect = [
 </script>
 
 <style lang="scss">
-@keyframes scale-full {
-	from, to {
-		margin-left: calc(50% - 4ch);
-	}
-	from, 10% {
-		opacity: 0;
-		color: var(--ui-text);
-	}
-	20%, 60% {
-		scale: 1;
-		color: var(--ui-primary);
-	}
-	50%, 80% {
-		opacity: 1;
-	}
-	to {
-		color: var(--ui-primary);
-		opacity: 0;
-		scale: 200;
-	}
-}
+// @keyframes scale-full {
+// 	from, to {
+// 		margin-left: calc(50% - 4ch);
+// 	}
+// 	from, 10% {
+// 		opacity: 0;
+// 		color: var(--ui-text);
+// 	}
+// 	20%, 60% {
+// 		scale: 1;
+// 		color: var(--ui-primary);
+// 	}
+// 	50%, 80% {
+// 		opacity: 1;
+// 	}
+// 	to {
+// 		color: var(--ui-primary);
+// 		opacity: 0;
+// 		scale: 200;
+// 	}
+// }
 
-@media (prefers-reduced-motion: no-preference) {
-	.mask-animation {
-		transform-origin: center;
-		animation: scale-full ease both;
-		animation-timeline: view();
-		animation-range: 0% 100%
-	}
-}
+// @media (prefers-reduced-motion: no-preference) {
+// 	.mask-animation {
+// 		transform-origin: center;
+// 		animation: scale-full ease both;
+// 		animation-timeline: view();
+// 		animation-range: 0% 100%
+// 	}
+// }
 </style>
