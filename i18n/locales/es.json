@@ -89,6 +89,10 @@
 			}
 		}
 	},
+	"credential": {
+		"name":  "Credencial | Credenciales",
+		"no": "@:credential.name No. { number }"
+	},
 	"color": {
 		"name": "Color | Colores",
 		"option": "@:option.name de color",

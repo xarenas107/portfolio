@@ -16,6 +16,10 @@
 		"sr": "Return to previous page",
 		"home": "Back to home"
 	},
+	"credential": {
+		"name":  "Credential | Credentials",
+		"no": "@:credential.name No. { number }"
+	},
 	"color": {
 		"blue": "Blue",
 		"emerald": "Emerald",
