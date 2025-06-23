@@ -13,7 +13,7 @@ const nuxt = useNuxtApp()
 
 const props = withDefaults(defineProps<Props>(), {
 	throttle: 200,
-	size: 'sm',
+	size: 'xs',
 	color: 'primary'
 })
 

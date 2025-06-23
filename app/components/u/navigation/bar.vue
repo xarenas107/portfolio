@@ -209,7 +209,6 @@ onMounted(() => {
 	recolor()
 	hide()
 
-	const { desktop } = useDisplay()
 	watchThrottled(desktop, (value) => {
 		if (value) menu.value = false
 	}, { throttle: 100 })
