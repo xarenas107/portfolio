@@ -63,7 +63,7 @@ const style = computed(() => {
 
 const ui = {
 	progress: {
-		root: 'fixed top-0 lg:top-auto lg:bottom-0 z-8000 origin-left pointer-events-none transition-transform opacity-(--opacity)',
+		root: 'fixed top-0 top-auto bottom-0 z-8000 origin-left pointer-events-none transition-transform opacity-(--opacity)',
 		indicator: 'rounded-none',
 		base: 'rounded-none bg-accented/50'
 	}
