@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.14.3
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.14.2...v1.14.3)
+
+### 🩹 Fixes
+
+- **navbar:** Avoid resize on small devices ([50c849f](https://github.com/xarenas107/portfolio/commit/50c849f))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.14.2
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.14.1...v1.14.2)
