@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.14.2
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.14.1...v1.14.2)
+
+### 🩹 Fixes
+
+- **navbar:** Temporary disable sticky function ([be607ce](https://github.com/xarenas107/portfolio/commit/be607ce))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.14.1
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.14.0...v1.14.1)
