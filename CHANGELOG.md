@@ -1,6 +1,35 @@
 # Changelog
 
 
+## v1.14.0
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.13.15...v1.14.0)
+
+### 🚀 Enhancements
+
+- **navbar:** Enable sticky-on-scroll ([78d0087](https://github.com/xarenas107/portfolio/commit/78d0087))
+
+### 🩹 Fixes
+
+- **node:** Solve vulnerabilitiesin ([d8afc45](https://github.com/xarenas107/portfolio/commit/d8afc45))
+
+### 💅 Refactors
+
+- Minor optimizations ([8604188](https://github.com/xarenas107/portfolio/commit/8604188))
+
+### 🏡 Chore
+
+- **section:** Hide portfolio projects ([22824d6](https://github.com/xarenas107/portfolio/commit/22824d6))
+- **section:** Hide portfolio projects ([b5428b9](https://github.com/xarenas107/portfolio/commit/b5428b9))
+- **node:** Update dependences ([227bcc4](https://github.com/xarenas107/portfolio/commit/227bcc4))
+- **tailwind:** Add scroll-driven utility classes ([7a9eaaf](https://github.com/xarenas107/portfolio/commit/7a9eaaf))
+- **i18n:** Update packages ([a7b98be](https://github.com/xarenas107/portfolio/commit/a7b98be))
+- **node:** Update dependences ([de8d3e6](https://github.com/xarenas107/portfolio/commit/de8d3e6))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.13.15
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.13.14...v1.13.15)
