@@ -1,93 +1,95 @@
 <template lang="pug">
-u-tooltip(:open='tooltip' class='h-auto' :ui='ui.tooltip')
+//- u-tooltip(:open='tooltip' class='h-auto' :ui='ui.tooltip')
 
-	nav(v-if='active' class="border-muted/50 fixed w-full z-50 transition-[transform background] duration-200 ease" :class='[styles.nav, { "pointer-coarse:translate-y-(--position) pointer-coarse:lg:-translate-y-(--position)": sticky }]' ref='nav')
+nav(v-if='active' class="border-muted/50 fixed w-full z-50 transition-[transform background] duration-200 ease" :class='[styles.nav, { "pointer-coarse:translate-y-(--position) pointer-coarse:lg:-translate-y-(--position)": sticky }]' ref='nav')
 
-		//- Scroll progress bar
-		lazy-u-loader(class='translate-y-full')
+	//- Scroll progress bar
+	lazy-u-loader(class='translate-y-full')
 
-		//- Navbar container
-		div(:class="ui.container")
-			div(class="relative flex h-16 items-center justify-between gap-2")
-				div(class="flex flex-1 items-center sm:items-stretch sm:justify-start")
-					div(v-if='!slot.left' class='flex gap-6')
-						div(v-if='!back' class=" shrink-0 flex gap-2 place-items-center-safe")
-							lazy-favicon(class="h-8 w-auto")
+	//- Navbar container
+	div(:class="ui.container")
+		div(class="relative flex h-16 items-center justify-between gap-4")
+			div(class="flex flex-1 gap-4 sm:gap-1 items-center sm:items-stretch sm:justify-start")
+				div(v-if='!slot.left' class='flex gap-6')
+					div(v-if='!back' class=" shrink-0 flex gap-2 place-items-center-safe")
+						lazy-favicon(class="h-8 w-auto")
 
-						//- u-download-button(v-if='!back' show-label class='lg:hidden')
-						div(v-if='!back' class="lg:flex hidden")
-							//- u-navigation-menu(:items='data' label-key="text" color='primary' unmount-on-hide arrow content-orientation="vertical")
-							div(class="flex gap-1")
-								u-tooltip(v-for='{ icon, text, id, active, kbds, to } in data' :text :kbds :disabled='active')
-									u-navigation-link(v-if='id' @click.prevent='navigate(id)' :href='to' :active :icon :text :aria-current='active' :kbds arrow)
+					//- u-download-button(v-if='!back' show-label class='lg:hidden')
+					div(v-if='!back' class="lg:flex hidden")
+						//- u-navigation-menu(:items='data' label-key="text" color='primary' unmount-on-hide arrow content-orientation="vertical")
+						div(class="flex gap-1")
+							u-tooltip(v-for='{ icon, text, id, active, kbds, to } in data' :text :kbds :disabled='active')
+								u-navigation-link(v-if='id' @click.prevent='navigate(id)' :href='to' :active :icon :text :aria-current='active' :kbds arrow)
 
-						u-navigation-button-back(v-else)
+					u-navigation-button-back(v-else)
 
-					slot(name='left' :menu)
+				lazy-u-button(v-if='!back' v-bind='props' :href="behance?.href" :label="t('section.portfolio')" class='rounded-lg cursor-pointer size-fit' variant='outline' color='primary' trailing-icon="i-heroicons-outline:external-link" size='lg')
 
-				div(class="items-center gap-2 pr-2 sm:ml-6 sm:pr-0 hidden xl:flex")
+				slot(name='left' :menu)
 
-					div(v-if='!slot.right' class='inset-y-0 left-0 flex items-center gap-2 justify-end w-full')
-						u-download-button(square)
-						u-share-button(square)
-						u-language-select
-						u-color-select(square)
-						u-theme-toggle(square)
+			div(class="items-center gap-2 pr-2 sm:ml-6 sm:pr-0 hidden xl:flex")
 
-					slot(name='rigth' :menu)
-
-				div(class="inset-y-0 left-0 flex items-center gap-2 justify-end xl:hidden w-full")
+				div(v-if='!slot.right' class='inset-y-0 left-0 flex items-center gap-2 justify-end w-full')
 					u-download-button(square)
 					u-share-button(square)
+					u-language-select
+					u-color-select(square)
+					u-theme-toggle(square)
 
-					//- Mobile menu, show/hide based on menu state
-					u-drawer(v-model:open='menu' id='mobile-menu' direction='bottom' no-body-styles)
-						template(#header)
-							div(class="flex items-center justify-end")
-								u-button(v-bind='ui.button' @click="toggle()" icon="i-heroicons-outline:x" aria-controls="mobile-menu" color="neutral" size='lg' variant="ghost")
+				slot(name='rigth' :menu)
 
-						template(#body)
-							div(class='flex flex-col gap-8 grow')
+			div(class="inset-y-0 left-0 flex items-center gap-2 justify-end xl:hidden w-full")
+				u-download-button(square)
+				u-share-button(square)
 
-								div(v-if='!back' class='flex flex-col gap-4 lg:hidden')
-									h6(class='text-muted text-bold text-sm') {{ t('navigation.name') }}
+				//- Mobile menu, show/hide based on menu state
+				u-drawer(v-model:open='menu' id='mobile-menu' direction='bottom' no-body-styles)
+					template(#header)
+						div(class="flex items-center justify-end")
+							u-button(v-bind='ui.button' @click="toggle()" icon="i-heroicons-outline:x" aria-controls="mobile-menu" color="neutral" size='lg' variant="ghost")
 
-									ul(class='flex flex-col gap-1')
-										li(v-for='{ icon, text, id, active, to } in data')
-											u-navigation-link(v-if='id' :href='to' @click.prevent='navigate(id)' :active :icon :text :aria-current='active')
+					template(#body)
+						div(class='flex flex-col gap-8 grow')
 
-								div(class='flex flex-col gap-4 grow')
-									h6(class='text-muted text-bold text-sm') {{ t('navigation.settings', 2) }}
+							div(v-if='!back' class='flex flex-col gap-4 lg:hidden')
+								h6(class='text-muted text-bold text-sm') {{ t('navigation.name') }}
 
-									div(class='flex flex-col flex-wrap gap-1 grow w-full place-content-between')
-										u-language-select(class='grow')
-										u-color-select(show-label class='grow')
-										u-theme-toggle(show-label class='grow')
+								ul(class='flex flex-col gap-1')
+									li(v-for='{ icon, text, id, active, to } in data')
+										u-navigation-link(v-if='id' :href='to' @click.prevent='navigate(id)' :active :icon :text :aria-current='active')
 
-						//- Mobile menu button
-						u-button(
-							:aria-expanded="menu"
-							:aria-label='t("menu.sr")'
-							color="neutral"
-							aria-controls="mobile-menu"
-							class="aspect-square hover:bg-neutral-500/10 hover:dark:bg-neutral-400/10"
-							icon='i-heroicons-solid:menu-alt-2'
-							variant='ghost'
-							size='lg'
-							)
-							//- span(class="absolute -inset-0.5")
-							//- span(class="sr-only") {{ t('menu.sr') }}
+							div(class='flex flex-col gap-4 grow')
+								h6(class='text-muted text-bold text-sm') {{ t('navigation.settings', 2) }}
 
-							//- icon menu
-							//- u-icon(class='w-6 h-6' :name='menu ? "i-heroicons-outline:x": "i-heroicons-solid:menu-alt-2"')
+								div(class='flex flex-col flex-wrap gap-1 grow w-full place-content-between')
+									u-language-select(class='grow')
+									u-color-select(show-label class='grow')
+									u-theme-toggle(show-label class='grow')
 
-			slot(:menu :reveal)
+					//- Mobile menu button
+					u-button(
+						:aria-expanded="menu"
+						:aria-label='t("menu.sr")'
+						color="neutral"
+						aria-controls="mobile-menu"
+						class="aspect-square hover:bg-neutral-500/10 hover:dark:bg-neutral-400/10"
+						icon='i-heroicons-solid:menu-alt-2'
+						variant='ghost'
+						size='lg'
+						)
+						//- span(class="absolute -inset-0.5")
+						//- span(class="sr-only") {{ t('menu.sr') }}
 
-	template(#content)
+						//- icon menu
+						//- u-icon(class='w-6 h-6' :name='menu ? "i-heroicons-outline:x": "i-heroicons-solid:menu-alt-2"')
+
+		slot(:menu :reveal)
+
+	//- template(#content)
 		u-transition(delay='.5s' before-enter-class="opacity-0" duration='.25s')
 			template(#default='{ state, ...props }')
-				//- u-container(class='w-dvw items-end flex flex-col')
-				lazy-u-button(v-bind='props' :href="behance?.href" :label="t('section.portfolio')" class='rounded-lg cursor-pointer backdrop-blur size-fit pointer-event-auto' variant='soft' color='neutral' trailing-icon="i-heroicons-outline:external-link" size='xl')
+	//- u-container(class='absolute mt-2 w-dvw items-end flex flex-col anchor-position pointer-events-none left-1/2 -translate-x-1/2')
+		lazy-u-button(v-bind='props' :href="behance?.href" :label="t('section.portfolio')" class='rounded-lg cursor-pointer backdrop-blur size-fit pointer-event-auto' variant='soft' color='neutral' trailing-icon="i-heroicons-outline:external-link" size='xl')
 </template>
 
 <script setup lang="ts">

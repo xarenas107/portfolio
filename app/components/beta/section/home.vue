@@ -2,7 +2,7 @@
 div(class='bg-gradient-to-b from-(--ui-primary)/10 to-(--ui-bg) max-w-full overflow-clip flex items-center min-h-dvh')
 
 	u-lazy(:delay='500' class='size-full')
-		u-container(v-bind='options' class="flex h-full w-full flex-col gap-4 overflow-visible pb-24 py-32 relative")
+		u-container(v-bind='options' class="flex h-full w-full flex-col gap-4 pb-24 py-32 relative")
 
 			u-transition(delay='.8s' before-enter-class="motion-safe:max-w-0" enter-class='max-w-full' duration='1.2s' timing-function="ease-in-accelerate")
 				template(#default='{ state, ...props }')
@@ -57,7 +57,7 @@ div(class='bg-gradient-to-b from-(--ui-primary)/10 to-(--ui-bg) max-w-full overf
 								u-link-action(v-for='item, key in data?.contact' v-bind='item' :key)
 								u-link-action(:title='data?.location' icon='i-material-symbols:location-on-outline')
 
-			//- div(class='w-full bottom-0 absolute left-0 items-center justify-center flex flex-col')
+			div(class='w-full bottom-0 absolute left-0 items-center justify-center flex flex-col')
 				u-button(@click='navigate("#studies")' variant='link' :aria-label='t("go.next")' color='neutral' class='rounded-full cursor-pointer aspect-square')
 					u-icon(name='i-heroicons:arrow-small-down-solid' class="w-8 h-8 motion-safe:animate-bounce")
 </template>
