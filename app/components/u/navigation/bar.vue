@@ -11,10 +11,10 @@ u-tooltip(:open='tooltip' class='h-auto' :ui='ui.tooltip')
 			div(class="relative flex h-16 items-center justify-between gap-2")
 				div(class="flex flex-1 items-center sm:items-stretch sm:justify-start")
 					div(v-if='!slot.left' class='flex gap-6')
-						div(v-if='!back' class=" shrink-0 hidden lg:flex")
+						div(v-if='!back' class=" shrink-0 flex gap-2 place-items-center-safe")
 							lazy-favicon(class="h-8 w-auto")
 
-						u-download-button(v-if='!back' show-label class='lg:hidden')
+						//- u-download-button(v-if='!back' show-label class='lg:hidden')
 						div(v-if='!back' class="lg:flex hidden")
 							//- u-navigation-menu(:items='data' label-key="text" color='primary' unmount-on-hide arrow content-orientation="vertical")
 							div(class="flex gap-1")
@@ -37,6 +37,7 @@ u-tooltip(:open='tooltip' class='h-auto' :ui='ui.tooltip')
 					slot(name='rigth' :menu)
 
 				div(class="inset-y-0 left-0 flex items-center gap-2 justify-end xl:hidden w-full")
+					u-download-button(square)
 					u-share-button(square)
 
 					//- Mobile menu, show/hide based on menu state
@@ -85,7 +86,8 @@ u-tooltip(:open='tooltip' class='h-auto' :ui='ui.tooltip')
 	template(#content)
 		u-transition(delay='.5s' before-enter-class="opacity-0" duration='.25s')
 			template(#default='{ state, ...props }')
-				lazy-u-button(v-bind='props' :href="behance?.href" :label="t('section.portfolio')" class='rounded-full cursor-pointer backdrop-blur' variant='subtle' color='neutral' trailing-icon="i-heroicons-outline:external-link" size='xl')
+				//- u-container(class='w-dvw items-end flex flex-col')
+				lazy-u-button(v-bind='props' :href="behance?.href" :label="t('section.portfolio')" class='rounded-lg cursor-pointer backdrop-blur size-fit pointer-event-auto' variant='soft' color='neutral' trailing-icon="i-heroicons-outline:external-link" size='xl')
 </template>
 
 <script setup lang="ts">
@@ -96,8 +98,8 @@ type Props = {
 }
 
 const slot = useSlots()
-const { t } = useI18n()
 const hash = useHashRoute()
+const { t } = useI18n()
 
 const props = defineProps<Props>()
 
@@ -155,8 +157,8 @@ const recolor = () => {
 	const set = new Set<string>(['backdrop-blur', 'bg-default'])
 
 	// Remove opacity on scroll top
-	if (y.value === 0) set.add('lg:bg-transparent')
-	else set.add('lg:bg-default/80')
+	if (y.value === 0) set.add('bg-transparent')
+	else set.add('bg-default/80')
 
 	styles.nav = Array.from(set).join(' ')
 }
@@ -201,9 +203,11 @@ const ui = {
 		color: 'neutral'
 	},
 	tooltip: {
-		content: 'h-auto bg-transparent ring-transparent ring-0 shadow-none'
+		content: 'h-auto p-0 bg-transparent ring-transparent ring-0 shadow-none'
 	}
 }
+
+const toast = useToast()
 
 onMounted(() => {
 	recolor()
