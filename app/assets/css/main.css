@@ -1,5 +1,6 @@
 @import './fonts';
 @import './animations';
+@import './anchor';
 @import "tailwindcss";
 @import "@nuxt/ui";
 

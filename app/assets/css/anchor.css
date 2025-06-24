@@ -1,0 +1,13 @@
+/* Animation timeline */
+@utility anchor-* {
+	--anchor-name: --value([*]);
+	anchor-name: var(--anchor-name);
+}
+
+@utility anchor-scope {
+	anchor-scope: var(--anchor-name);
+}
+
+@utility anchor-position {
+	position-anchor: var(--anchor-name);
+}
