@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.14.4
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.14.3...v1.14.4)
+
+### 🩹 Fixes
+
+- **portfolio:** Solve minor bugs ([c3dc9f5](https://github.com/xarenas107/portfolio/commit/c3dc9f5))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.14.3
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.14.2...v1.14.3)
