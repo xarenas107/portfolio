@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v1.15.0
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.14.4...v1.15.0)
+
+### 🚀 Enhancements
+
+- **style:** Add `anchor` support uttility classes ([e9dcd06](https://github.com/xarenas107/portfolio/commit/e9dcd06))
+
+### 🏡 Chore
+
+- **portfolio:** Set access from navbar ([10be60e](https://github.com/xarenas107/portfolio/commit/10be60e))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.14.4
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.14.3...v1.14.4)
