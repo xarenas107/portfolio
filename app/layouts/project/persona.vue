@@ -25,7 +25,7 @@ section(v-if='active' class="flex flex-col gap-8")
 			template(#default='{ childClass, containerClass }')
 				div(class='grid grid-cols-auto sm:grid-cols-2 lg:grid-cols-3 gap-4 list-none')
 					ul(v-for='item, index in group' :class='[containerClass]' class='scroll-up-animation')
-						u-card(:class='[index === 0 ? "h-full bg-default text-highlighted" : childClass]' as='li' variant='solid')
+						u-card(:class='[item.highlighted ? "h-full bg-default text-highlighted" : childClass]' as='li' variant='solid')
 							template(#header)
 								div(class='flex gap-4 items-center')
 									u-icon(:name='item.icon' class='size-8')
@@ -78,17 +78,19 @@ const ui = {
 const group = computed(() => {
 	const { statement, goals, frustrations } = options
 	return [
+		// {
+		// 	title: t('project.user.statement'),
+		// 	icon: 'heroicons:information-circle',
+		// 	content: Array.isArray(statement) ? statement : [statement]
+		// },
 		{
-			title: t('project.user.statement'),
-			icon: 'heroicons:information-circle',
-			content: Array.isArray(statement) ? statement : [statement]
-		},
-		{
+			highlighted: false,
 			title: t('project.goal', 2),
 			icon: 'i-heroicons:star',
 			content: Array.isArray(goals) ? goals : [goals]
 		},
 		{
+			highlighted: false,
 			title: t('project.frustration', 2),
 			icon: 'i-heroicons-outline:exclaimation-triangle',
 			content: Array.isArray(frustrations) ? frustrations : [frustrations]

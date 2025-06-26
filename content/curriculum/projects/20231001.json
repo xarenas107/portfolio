@@ -3,7 +3,7 @@
 	"description": "This case study presents the design of a fitness training web application created to complement a gym's services. The application is designed for users with limited technological knowledge who are looking for a simple and intuitive way to achieve their fitness goals. The main objective was to develop a platform that would allow users to create and follow their own training plans in an accessible and motivating way.",
 	"cover": "/project/20231001/cover.webp",
 	"layout": "project-base",
-	"highlighted": true,
+	"highlighted": false,
 	"es": {
 		"title": "Diseño de servicio web de entrenamiento físico",
 		"description": "Este caso de estudio presenta el diseño de una aplicación web de entrenamiento físico creada para complementar los servicios de un gimnasio. La aplicación está diseñada para usuarios con poco conocimiento tecnológico que buscan una manera sencilla e intuitiva de lograr sus metas de fitness. El objetivo principal fue desarrollar una plataforma que permitiera a los usuarios crear y seguir sus propios planes de entrenamiento de manera accesible y motivadora."
@@ -57,12 +57,6 @@
 					["Ocupación", "Profesora"]
 				]
 			}
-		}, {
-		  "name": "project-section-paragraph",
-		  "description": "Based on the information obtained, I created a user journey map, created and validated user stories, and formulated hypotheses until I arrived at the objective statement.",
-		  "es": {
-			"description": "Con base en la información obtenida, creé un mapa de recorrido del usuario, creé y validé historias de usuario, un planteamiento de hipótesis hasta llegar al planteamiento del objetivo."
-		  }
 		}, {
 			"name": "project-section-paragraph",
 			"title": "Wireframing & prototipyng",
