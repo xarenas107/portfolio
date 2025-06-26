@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.15.2
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.15.1...v1.15.2)
+
+### 🩹 Fixes
+
+- **content:** Solve minor content bugs ([e6682fd](https://github.com/xarenas107/portfolio/commit/e6682fd))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.15.1
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.15.0...v1.15.1)
