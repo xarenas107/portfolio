@@ -23,7 +23,7 @@ nav(v-if='active' class="border-muted/50 fixed w-full z-50 transition-[transform
 
 					u-navigation-button-back(v-else)
 
-				lazy-u-button(v-if='!back' v-bind='props' :href="behance?.href" :label="t('section.portfolio')" class='rounded-lg cursor-pointer size-fit' variant='outline' color='primary' trailing-icon="i-heroicons-outline:external-link" size='lg')
+				//- lazy-u-button(v-if='!back' v-bind='props' :href="behance?.href" :label="t('section.portfolio')" class='rounded-lg cursor-pointer size-fit' variant='outline' color='primary' trailing-icon="i-heroicons-outline:external-link" size='lg')
 
 				slot(name='left' :menu)
 

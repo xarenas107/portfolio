@@ -11,6 +11,7 @@ type Props = {
 	delay?: number | string
 	duration?: string | number
 	timingFunction?: string
+	disabled?: boolean
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -19,7 +20,7 @@ const props = withDefaults(defineProps<Props>(), {
 
 const ui = computed(() => {
 	const { beforeEnterClass, enterClass, activeClass } = props
-	if (state.done) return [enterClass, props.class]
+	if (state.done || props.disabled) return [enterClass, props.class]
 
 	const data = new Set([
 		activeClass,
@@ -34,7 +35,7 @@ const ui = computed(() => {
 const style = computed(() => {
 	const { duration, timingFunction } = props
 
-	if (state.done) return ''
+	if (state.done || props.disabled) return ''
 	return `
 		transition-duration: ${parseDuration(duration)}; 
 		transition-timing-function: ${timingFunction};
@@ -57,7 +58,7 @@ const parseDuration = (timeout?: string | number) => {
 const parseTimeout = (timeout?: string | number) => {
 	if (typeof timeout === 'number') return timeout
 
-	const isSeconds = timeout?.includes('s') && !timeout?.includes('ms')
+	const isSeconds = timeout?.endsWith('s') && !timeout?.endsWith('ms')
 	const [value] = timeout?.match(/\d?\.?\d+/) ?? ['0']
 	const number = Number.parseFloat(value)
 	return isSeconds ? number * 1000 : number

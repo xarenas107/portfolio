@@ -1,6 +1,6 @@
 <template lang="pug">
 div
-	u-container(class="min-h-screen py-24 pt-4 sm:pt-6 lg:pt-24 flex flex-col gap-16 relative")
+	u-container(class="min-h-screen py-24 flex flex-col gap-16 relative")
 		div(class='flex flex-col gap-8 z-20')
 			nuxt-picture(v-if='cover' :src='cover' :alt='title' :img-attrs class="w-full sm:aspect-2/1 md:aspect-3/1 rounded-lg ring bg-elevated h-64 lg:h-80 overflow-clip parallel-animation object-cover")
 
