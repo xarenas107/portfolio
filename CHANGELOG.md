@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.15.1
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.15.0...v1.15.1)
+
+### 💅 Refactors
+
+- Minor optimizations ([6c260e4](https://github.com/xarenas107/portfolio/commit/6c260e4))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.15.0
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.14.4...v1.15.0)
