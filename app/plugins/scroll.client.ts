@@ -1,8 +1,9 @@
-export default defineNuxtPlugin((nuxt) => {
+export default defineNuxtPlugin(() => {
 	const hash = useState<string>('to:hash')
 
-	nuxt.hook('page:finish', () => {
+	onNuxtReady(() => {
 		if (!hash.value) return
+
 		const el = document.querySelector(hash.value)
 		if (el) el.scrollIntoView({ behavior: 'smooth' })
 	})
