@@ -1,13 +1,13 @@
 {
 	"cover": "/project/20210401/cover.webp",
 	"layout": "project-base",
-	"en": {
-		"title": "Time management mobile app design",
-		"description": "This project presents the user interface (UI) design of a time-management mobile app, created as part of an Adobe creative challenge. The project focused on creating a fluid and intuitive user experience for essential features such as alarms, timers, and stopwatches, with a focus on aesthetics and ease of use."
-	},
+	"title": "Time management mobile app design",
+	"description": "This project presents the user interface (UI) design of a time-management mobile app, created as part of an Adobe creative challenge. The project focused on creating a fluid and intuitive user experience for essential features such as alarms, timers, and stopwatches, with a focus on aesthetics and ease of use.",
+	"keys": ["UI design"],
 	"es": {
 		"title": "Diseño de aplicación móvil de gestión de tiempo",
-  		"description": "Este proyecto presenta el diseño de la interfaz de usuario (UI) de una aplicación móvil de gestión de tiempo, creada como parte de un desafío creativo de Adobe. El proyecto se centró en la creación de una experiencia de usuario fluida e intuitiva para funcionalidades esenciales como alarmas, temporizadores y cronómetros, con un enfoque en la estética y la facilidad de uso."
+  		"description": "Este proyecto presenta el diseño de la interfaz de usuario (UI) de una aplicación móvil de gestión de tiempo, creada como parte de un desafío creativo de Adobe. El proyecto se centró en la creación de una experiencia de usuario fluida e intuitiva para funcionalidades esenciales como alarmas, temporizadores y cronómetros, con un enfoque en la estética y la facilidad de uso.",
+		"keys": ["Diseño UI"]
 	},
 	"sections": [
 		{

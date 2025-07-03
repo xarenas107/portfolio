@@ -1,13 +1,13 @@
 {
 	"cover": "/project/20241101/cover.webp",
 	"layout": "project-base",
-	"en": {
-		"title": "Mobile app design for a dermatology clinic",
-		"description": "This case study details the design of a mobile app intended to facilitate appointment booking for a dermatology clinic. The main objective was to create an intuitive tool that would allow patients to manage their appointments efficiently, thereby improving the user experience and optimizing the clinic's operations."
-	},
+	"title": "Mobile app design for a dermatology clinic",
+	"description": "This case study details the design of a mobile app intended to facilitate appointment booking for a dermatology clinic. The main objective was to create an intuitive tool that would allow patients to manage their appointments efficiently, thereby improving the user experience and optimizing the clinic's operations.",
+	"keys": ["UI design"],
 	"es": {
 		"title": "Diseño de aplicación móvil para clínica dermatológica",
-  		"description": "Este caso de estudio detalla el diseño de una aplicación móvil destinada a facilitar la reserva de citas para una clínica dermatológica. El objetivo principal fue crear una herramienta intuitiva que permitiera a los pacientes gestionar sus citas de manera eficiente, mejorando así la experiencia del usuario y optimizando la operación de la clínica."
+  		"description": "Este caso de estudio detalla el diseño de una aplicación móvil destinada a facilitar la reserva de citas para una clínica dermatológica. El objetivo principal fue crear una herramienta intuitiva que permitiera a los pacientes gestionar sus citas de manera eficiente, mejorando así la experiencia del usuario y optimizando la operación de la clínica.",
+		"keys": ["Diseño UI"]
 	},
 	"sections": [
 		{

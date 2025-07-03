@@ -1,22 +1,108 @@
 {
 	"cover": "/project/20210101/cover.webp",
 	"layout": "project-base",
-	"title": "Branding, signage, and website design for the Peruvian-Cuban Clinic",
-	"description": "In a competitive healthcare landscape, the Peruvian Cuban Medical Office needed to differentiate itself and clearly communicate its specialized services. The challenge was to create a visual identity that was both modern and reassuring, while also developing a digital presence that was intuitive and informative for patients seeking specialized medical care.",
+	"highlighted": true,
+	"keys": ["Visual identity","Signage", "Web design", "Front-end development"],
+	"title": "Branding, signage, and website design for CPC",
+	"description": "<span>CPC (Consultorio Peruano Cubano) is a medical center located in Lima, Peru. Our core services focus on pain management and ozone therapy.We also provide personalized, data-backed educational guidance to help new medical professionals entering the field.</span> <span>In a competitive healthcare landscape, the Peruvian Cuban Medical Office needed to differentiate itself and clearly communicate its specialized services. The challenge was to create a visual identity that was both modern and reassuring, while also developing a digital presence that was intuitive and informative for patients seeking specialized medical care.</span>",
 	"es": {
-		"title": "Diseño de marca, señalética y sitio web para el Consultorio Peruano Cubano",
-		"description": "En un panorama sanitario competitivo, el Consultorio Médico Peruano Cubano necesitaba diferenciarse y comunicar con claridad sus servicios especializados. El reto consistía en crear una identidad visual moderna y a la vez tranquilizadora, a la vez que desarrollar una presencia digital intuitiva e informativa para los pacientes que buscaban atención médica especializada."
+		"title": "Identidad visual, señalética y sitio web para CPC",
+		"description": "<p>CPC (Consultorio Peruano Cubano) es un centro médico ubicado en Lima, Perú. Nuestros servicios principales giran en torno a tratamientos del dolor y ozonoterapia. También proporciona orientación pedagógica personalizada y respaldada por datos para ayudar a nuevos profesionales de la medicina que desean empezar en este campo.</p> <p>En un panorama sanitario competitivo, el Consultorio Médico Peruano Cubano necesitaba diferenciarse y comunicar con claridad sus servicios especializados. El reto consistía en crear una identidad visual moderna y a la vez tranquilizadora, a la vez que desarrollar una presencia digital intuitiva e informativa para los pacientes que buscaban atención médica especializada.</p>",
+		"keys": ["Diseño de identidad","Señalética", "Diseño web", "Desarrollo front-end"]
 	},
 	"sections": [
 		{
-			"name": "project-section-paragraph",
-			"title": "Visual brand and signage",
-			"description": "The logo design ingeniously combines the initials of the company with a graphic representation of the ozone molecule, which is one of its main treatments fields. The visual identity was extended to all physical touchpoints, including signage for the medical office. <br> This ensures a consistent brand experience for patients from the moment they arrive.",
-			"aspect-ratio": "3/1",
-			"src": "/project/20210101/brand/1.webp",
+			"name": "project-voice",
+			"title": "Verbal identity",
+			"columns": 2,
+			"content": "<p>The tone of voice should be professional and reassuring, communicating in a mostly formal and serious manner to build trust and demonstrate authority in the healthcare field, but without being intimidating or cold. With a practical and direct approach, the focus should be on providing clear, useful, and decisive information for the patient.</p> <p>This tone seeks balance, always being respectful but close enough for communication to be fluid and human, prioritizing clarity and efficiency over enthusiastic or overly elaborate language.</p>",
+			"sliders": [
+				[["Formal", "Casual"], 25],
+				[["Serious", "Playful"], 15],
+				[["Respectful", "Irreverent"], 40],
+				[["Enthusiastic", "Practical"], 70]
+			],
 			"es": {
-				"title": "Marca visual y señalética",
-				"description": "El diseño del logotipo combina ingeniosamente las iniciales de la empresa con una representación gráfica de la molécula de ozono, que es uno de sus campos de tratamientos principales. La identidad visual se extendió a todos los puntos de contacto físicos, incluida la señalización para el consultorio médico. Esto ingresa a la experiencia de marca constante para los pacientes desde el momento en que llegan."
+				"title": "Identidad verbal",
+				"content": "<p>El tono de voz debe ser profesional y tranquilizador, comunicar de una manera mayormente formal y seria para generar confianza y demostrar autoridad en el campo de la salud, pero sin llegar a ser intimidante o frío. Con un enfoque práctico y directo, debe centrarse en proporcionar información clara, útil y resolutiva para el paciente.</p> <p>Este tono busca un equilibrio, siendo siempre respetuoso pero lo suficientemente cercano para que la comunicación sea fluida y humana, priorizando la claridad y la eficiencia por encima de un lenguaje entusiasta o demasiado elaborado.</p>",
+				"sliders": [
+					[["Formal", "Casual"], 25],
+					[["Serio", "Juguetón"], 15],
+					[["Respetuoso", "Irreverente"], 40],
+					[["Entusiasta", "Práctico"], 70]
+				]
+			}
+		},
+		{
+			"name": "project-section-paragraph",
+			"title": "Brand values",
+			"description": "CPC's brand values ​​focus on professionalism, excellence, and client focus.",
+			"content": "<p><strong>Professionalism</strong>: The cornerstone of our interaction and delivery. It entails rigorous adherence to the highest ethical and conduct standards in all of our dealings. We demonstrate professionalism through our expertise, accountability, reliability, and respectful and transparent approach to clients, partners, and team members. We are committed to maintaining confidentiality, meeting deadlines, and communicating clearly and concisely, ensuring that every interaction and project is handled with the utmost integrity and competence.</p> <p><strong>Excellence</strong>: We are dedicated to delivering unmatched quality in all of our projects and interactions. At CPC, excellence is our standard, from the work we produce to the way we serve our clients.</p> <p><strong>Customer focus</strong>: Our clients are at the heart of everything we do. We prioritize understanding and meeting their needs by listening carefully and customizing our solutions to address their unique challenges.</p>",
+			"smallTitle": true,
+			"columns": 2,
+			"es": {
+				"title": "Valores de la marca",
+				"description": "Los valores de marca de CPC se centran en la profesionalidad, excelencia y la orientación al cliente.",
+				"content": "<p><strong>Profesionalidad</strong>: La piedra angular de nuestra interacción y entrega. Implica la adhesión rigurosa a los más altos estándares éticos y de conducta en todas nuestras operaciones. Demostramos profesionalidad a través de nuestra experiencia, responsabilidad, fiabilidad, y un trato respetuoso y transparente con clientes, socios y equipo. Nos comprometemos a mantener la confidencialidad, cumplir los plazos y comunicar de forma clara y concisa, asegurando que cada interacción y proyecto se gestione con la máxima integridad y competencia.</p> <p><strong>Excelencia</strong>: Nos dedicamos a ofrecer una calidad inigualable en todos nuestros proyectos e interacciones. En CPC, la excelencia es nuestro estándar, desde el trabajo que producimos hasta la forma en que servimos a nuestros clientes.</p> <p><strong>Orientación al cliente</strong>: Nuestros clientes son el centro de todo lo que hacemos. Priorizamos la comprensión y la satisfacción de sus necesidades escuchando atentamente y personalizando nuestras soluciones para abordar sus desafíos únicos.</p>"
+			}
+		},
+		{
+			"name": "project-section-paragraph",
+			"title": "Visual identity",
+			"es": {
+				"title": "Identidad visual"
+			}
+		},
+		{
+			"name": "project-responsive",
+			"title": "Brand construction",
+			"smallTitle": true,
+			"description": "The logo design cleverly combines the company's initials with a graphic representation of the ozone molecule, one of its primary treatment areas.",
+			"content": "<p>The logo features a custom typeface with partially rounded character ends. Our logo is intended for use in communications, or when speaking to audiences outside our immediate ecosystem—basically, in any situation with less instant brand recognition. It's the most formal symbol of our brand.</p> <p>When using the brand, it is important to ensure a generous margin that allows the logo to maintain a strong presence in any context.</p>",
+			"aspect-ratio": "1/3",
+			"force-contrast": true,
+			"src": [
+				"/project/20210101/brand/grid.png", 
+				"/project/20210101/brand/logotype.png",
+				"/project/20210101/brand/spacing.png"
+			],
+			"es": {
+				"title": "Construcción de la marca",
+				"description": "El diseño del isotipo combina ingeniosamente las iniciales de la empresa con una representación gráfica de la molécula de ozono, que es uno de sus campos de tratamientos principales.",
+				"content": "<p>El logotipo presenta una tipografía personalizada donde se redondean parcialmente las terminaciones de los caracteres. Nuestro logotipo debe utilizarse en comunicaciones, o al hablar con audiencias fuera de nuestro ecosistema inmediato, básicamente en cualquier situación con menor reconocimiento instantáneo de la marca. Es el símbolo más formal de nuestra marca.</p> <p>Al usar la marca es importante asegurar un margen generoso que permita al logo mantener una presencia fuerte en cualquier contexto.</p>"
+			}
+		}, {
+			"name": "project-section-paragraph",
+			"title": "Signage",
+			"es": {
+				"title": "Señalética"	
+			}
+		},{
+			"name": "project-grid",
+			"title": "Grid",
+			"smallTitle": true,
+			"force-contrast": true,
+			"aspect-ratio": "1",
+			"description": "The visual identity extends to all physical touchpoints, including signage, built on a 21x21 grid.",
+			"src": [
+				"/project/20210101/signage/grid.webp",
+				"/project/20210101/signage/icons.webp"
+			],
+			"es": {
+				"title": "Retícula",
+				"description": "La identidad visual se extiende a todos los puntos de contacto físicos, incluida la señalización, construida en una retícula de 21x21."
+				
+			}
+		}, {
+			"name": "project-section-paragraph",
+			"description": "This ensures a consistent brand experience for patients from the moment they arrive at the facility.",
+			"smallTitle": true,
+			"fit": "cover",
+			"aspect-ratio": "3/1",
+			"src": "/project/20210101/signage/2.webp",
+			"es": {
+				"description": "Esto garantiza una la experiencia de marca constante para los pacientes desde el momento en que llegan al local."
+				
 			}
 		}, {
 			"name": "project-section-paragraph",
@@ -47,7 +133,7 @@
 			"alt": "Multi device view",
 			"background": "/project/20210101/desktop/1.webp",
 			"src": [
-			"/project/20210101/mobile/1.webp"
+				"/project/20210101/mobile/1.webp"
 			],
 			"es": {
 				"alt": "Vista de diseño multidispositivo",

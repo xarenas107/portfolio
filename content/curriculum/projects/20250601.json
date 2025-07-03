@@ -1,13 +1,13 @@
 {
 	"cover": "/project/20250601/cover.webp",
 	"layout": "project-base",
-	"en": {
-		"title": "Application design to promote sustainable mobility in Barcelona",
-		"description": "Collectibus is an innovative gamification project designed to encourage the use of eco-friendly public transportation and contribute to reducing car use in the city of Barcelona. Through a system of digital collectibles and challenges, the app seeks to transform daily bus commutes into an engaging and rewarding experience, thus promoting more sustainable mobility habits."
-	},
+	"title": "Application design to promote sustainable mobility in Barcelona",
+	"description": "Collectibus is an innovative gamification project designed to encourage the use of eco-friendly public transportation and contribute to reducing car use in the city of Barcelona. Through a system of digital collectibles and challenges, the app seeks to transform daily bus commutes into an engaging and rewarding experience, thus promoting more sustainable mobility habits.",
+	"keys": ["UI Design", "Gamification"],
 	"es": {
 		"title": "Diseño de aplicación para fomentar una movilidad sostenible en Barcelona",
-  		"description": "Collectibus es un proyecto innovador de gamificación diseñado para incentivar el uso del transporte público ecológico y contribuir a la reducción del uso del coche particular en la ciudad de Barcelona. A través de un sistema de coleccionables digitales y desafíos, la aplicación busca transformar los trayectos diarios en autobús en una experiencia atractiva y gratificante, fomentando así hábitos de movilidad más sostenibles."
+  		"description": "Collectibus es un proyecto innovador de gamificación diseñado para incentivar el uso del transporte público ecológico y contribuir a la reducción del uso del coche particular en la ciudad de Barcelona. A través de un sistema de coleccionables digitales y desafíos, la aplicación busca transformar los trayectos diarios en autobús en una experiencia atractiva y gratificante, fomentando así hábitos de movilidad más sostenibles.",
+		"keys": ["Diseño UI", "Gamificación"]
 	},
 	"sections": [
 		{

@@ -2,11 +2,13 @@
 	"title": "Fitness coaching web service design",
 	"description": "This case study presents the design of a fitness training web application created to complement a gym's services. The application is designed for users with limited technological knowledge who are looking for a simple and intuitive way to achieve their fitness goals. The main objective was to develop a platform that would allow users to create and follow their own training plans in an accessible and motivating way.",
 	"cover": "/project/20231001/cover.webp",
+	"keys": ["UX case study", "UI design"],
 	"layout": "project-base",
 	"highlighted": false,
 	"es": {
 		"title": "Diseño de servicio web de entrenamiento físico",
-		"description": "Este caso de estudio presenta el diseño de una aplicación web de entrenamiento físico creada para complementar los servicios de un gimnasio. La aplicación está diseñada para usuarios con poco conocimiento tecnológico que buscan una manera sencilla e intuitiva de lograr sus metas de fitness. El objetivo principal fue desarrollar una plataforma que permitiera a los usuarios crear y seguir sus propios planes de entrenamiento de manera accesible y motivadora."
+		"description": "Este caso de estudio presenta el diseño de una aplicación web de entrenamiento físico creada para complementar los servicios de un gimnasio. La aplicación está diseñada para usuarios con poco conocimiento tecnológico que buscan una manera sencilla e intuitiva de lograr sus metas de fitness. El objetivo principal fue desarrollar una plataforma que permitiera a los usuarios crear y seguir sus propios planes de entrenamiento de manera accesible y motivadora.",
+		"keys": ["UX case study", "UI design", "Front-end development"]
 	},
 	"sections": [
 		{

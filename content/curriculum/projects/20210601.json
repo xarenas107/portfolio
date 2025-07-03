@@ -3,10 +3,12 @@
 	"layout": "project-base",
 	"title": "Design of a multi-device web platform for managing medical records",
 	"description": "This case study presents the design of Hiscloud, a multi-device web platform created for the remote management of electronic medical records in healthcare centers. The main objective was to develop a secure and efficient solution that would allow healthcare professionals to access and manage patient information from any location and device, thus optimizing clinical and administrative processes.",
+	"keys": ["UX case study", "UI design", "Front-end development"],
 	"highlighted": true,
 	"es": {
 		"title": "Diseño de plataforma web multi-dispositivo para la gestión de historias clínicas",
-  		"description": "Este caso de estudio presenta el diseño de Hiscloud, una plataforma web multi-dispositivo creada para la gestión remota de historias clínicas electrónicas en centros de salud. El objetivo principal fue desarrollar una solución segura y eficiente que permitiera a los profesionales de la salud acceder y gestionar la información de los pacientes desde cualquier lugar y dispositivo, optimizando así los procesos clínicos y administrativos."
+  		"description": "Este caso de estudio presenta el diseño de Hiscloud, una plataforma web multi-dispositivo creada para la gestión remota de historias clínicas electrónicas en centros de salud. El objetivo principal fue desarrollar una solución segura y eficiente que permitiera a los profesionales de la salud acceder y gestionar la información de los pacientes desde cualquier lugar y dispositivo, optimizando así los procesos clínicos y administrativos.",
+		"keys": ["Caso de estudio UX", "Diseño UI", "Desarrollo front-end"]
 	},
 	"sections": [
 		{

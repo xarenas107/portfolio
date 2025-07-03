@@ -3,11 +3,13 @@
 	"title": "Sales app and website design for a karate school",
 	"description": "<p>This case study presents the design of an e-commerce mobile and web application for 'Karat,' a karate school in Lima, Peru, that also operates as a sports equipment store. The project's primary objective was to create an intuitive platform that would allow users to easily purchase sports equipment and track the status of their orders.</p> <p>My key responsibilities encompassed conducting user interviews to understand core needs, developing both paper and digital wireframes, creating low and high-fidelity prototypes, performing usability studies to gather user feedback, ensuring comprehensive accessibility, and continuously iterating on designs to optimize the user experience. </p>",
 	"highlighted": true,
+	"keys": ["UX case study","UI design"],
 	"pinned": true,
 	"cover": "/project/20210201/cover.webp",
 	"es": {
 		"title": "Diseño de aplicación de ventas y sitio web para escuela de karate",
-		"description": "<p>Este caso de estudio presenta el diseño de una aplicación móvil y web de comercio electrónico para 'Karat', una escuela de karate en Lima, Perú, que también opera como tienda de equipos deportivos.  El objetivo principal del proyecto fue crear una plataforma intuitiva que permitiera a los usuarios comprar fácilmente equipos deportivos y rastrear el estado de sus pedidos.</p> <p>Mis principales responsabilidades incluyeron realizar entrevistas a usuarios para comprender sus necesidades clave, desarrollar wireframes tanto en papel como digitales, crear prototipos de baja y alta fidelidad, realizar estudios de usabilidad para recopilar comentarios de los usuarios, garantizar una accesibilidad integral y la iteración continua de los diseños para optimizar la experiencia del usuario. </p>"
+		"description": "<p>Este caso de estudio presenta el diseño de una aplicación móvil y web de comercio electrónico para 'Karat', una escuela de karate en Lima, Perú, que también opera como tienda de equipos deportivos.  El objetivo principal del proyecto fue crear una plataforma intuitiva que permitiera a los usuarios comprar fácilmente equipos deportivos y rastrear el estado de sus pedidos.</p> <p>Mis principales responsabilidades incluyeron realizar entrevistas a usuarios para comprender sus necesidades clave, desarrollar wireframes tanto en papel como digitales, crear prototipos de baja y alta fidelidad, realizar estudios de usabilidad para recopilar comentarios de los usuarios, garantizar una accesibilidad integral y la iteración continua de los diseños para optimizar la experiencia del usuario. </p>",
+		"keys": ["Caso de estudio UX","Diseño UI"]
 	},
 	"sections": [
 		{

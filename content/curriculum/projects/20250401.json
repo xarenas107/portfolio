@@ -1,13 +1,13 @@
 {
 	"cover": "/project/20250401/cover.webp",
 	"layout": "project-base",
-	"en": {
-		"title": "Personal finance service panel design",
-		"description": "The main objective of this project was to cease an intuitive and functional user interface that allowed users to have clear and efficient control over their finances, facilitating the Transaccionns registry, data visualization and financial decision making."
-	},
+	"title": "Personal finance service panel design",
+	"description": "The main objective of this project was to cease an intuitive and functional user interface that allowed users to have clear and efficient control over their finances, facilitating the Transaccionns registry, data visualization and financial decision making.",
+	"keys": ["UI Design"],
 	"es": {
 		"title": "Diseño de panel de servicio de finanzas personales",
-  		"description": "El objetivo principal de este proyecto fue crear una interfaz de usuario intuitiva y funcional que permitiera a los usuarios tener un control claro y eficiente sobre sus finanzas, facilitando el registro de transacciones, la visualización de datos y la toma de decisiones financieras."
+  		"description": "El objetivo principal de este proyecto fue crear una interfaz de usuario intuitiva y funcional que permitiera a los usuarios tener un control claro y eficiente sobre sus finanzas, facilitando el registro de transacciones, la visualización de datos y la toma de decisiones financieras.",
+		"keys": ["Diseño UI"]
 	},
 	"sections": [
 		{
