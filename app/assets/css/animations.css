@@ -119,3 +119,19 @@
 	from, to { transform: translateY(0) }
 	50% { transform: translateY(-1rem) }
 }
+
+
+@keyframes text {
+	from, to {
+		background: linear-gradient(90deg, var(--ui-text) 0 0) 0 / calc(var(--characters) * 1ch) var(--ui-text-dimmed);
+		background-repeat: no-repeat;
+
+		-webkit-background-clip: text;
+		-moz-background-clip: text;
+		background-clip: text;
+
+		color: transparent;
+	}
+	from { background-size: 0 }
+	to { background-size: 100% }
+}

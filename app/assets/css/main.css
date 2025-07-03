@@ -73,6 +73,18 @@
 	--tw-text-stroke-color: --value(--color-*, [--color-*], [color], 'currentColor', [*]);
 }
 
+@utility column-* {
+	column-count: --value(integer, [*]);
+}
+
+@utility column-gap-* {
+	column-gap: calc(var(--spacing) * --value(integer));
+}
+
+@utility object-fit-* {
+	object-fit:  --value("contain", "cover", "fill", "none", "scale-down", [*])
+}
+
 @utility paint-order-* {
 	paint-order: --value('stroke', 'fill', 'markers');
 }
