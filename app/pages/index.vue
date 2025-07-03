@@ -15,6 +15,8 @@ beta-section-skills(v-intersect='intersect' :scale-down ref='section')#skills
 
 beta-section-projects(v-if='portfolio' v-intersect='intersect' :scale-down ref='section')#portfolio
 beta-section-footer(:scale-down)
+
+lazy-cursor(:content='user.name' :delay="2000" :target)
 </template>
 
 <script lang="ts" setup>
@@ -34,8 +36,11 @@ const { data } = useNavigation()
 const portfolio = computed(() => data.value.find(({ id }) => id === 'portfolio'))
 
 // const { t } = useI18n()
+const { data: user } = useUser()
 const hash = useHashRoute()
 const section = ref(null)
+
+const target = computed(() => `${hash.value} [data-cursor="true"]`)
 
 const intersect = [
 	(entries: IntersectionObserverEntry[]) => {
@@ -43,8 +48,8 @@ const intersect = [
 			if (isIntersecting) hash.value = target.id
 		})
 	}, {
-		// rootMargin: '5%',
-		threshold: 0.5
+		rootMargin: '32px',
+		threshold: 0.3
 	}
 ]
 </script>

@@ -32,29 +32,31 @@ onMounted(async () => {
 	const { mobile } = useDisplay()
 
 	const sequence = async () => {
-		if (props.target.includes('#home')) {
-			await animate(selector, {
-				left: Math.round(Math.random() * outerWidth.value),
-				top: Math.round(Math.random() * outerHeight.value)
-			}, { duration: 0.1 }).finished
-		}
+		await animate(selector, {
+			left: Math.round(Math.random() * outerWidth.value),
+			top: Math.round(Math.random() * outerHeight.value + y.value)
+		}, { duration: 0.1 }).finished
 
 		await animate(`#${id}`, { opacity: 1 }, { duration: 0.2 }).finished
-
-		if (props.target.includes('#home')) {
-			await animate(selector, {
-				left: Math.round(left.value + x.value + width.value / 2),
-				top: Math.round(top.value + y.value + height.value / 4)
-			}, { duration: 1, delay: 0.2, ease: 'easeInOut' }).finished
-			await animate(selector, { scale: 0.8 }, { duration: 0.1, ease: 'easeOut' }).finished
-			await animate(selector, { scale: 1 }, { duration: 0.1, ease: 'easeOut' }).finished
-			await animate(props.target, { color: 'var(--ui-primary)' }, { duration: 0.2, ease: 'easeOut' }).finished
-		}
-
 		await move()
 	}
 
 	const move = async () => {
+		if (props.target.includes('#home')) {
+			const color = 'var(--ui-primary)'
+			const html = document.querySelector<HTMLElement>(props.target)
+			if (html && html?.style.color !== color) {
+				await animate(selector, {
+					left: Math.round(left.value + x.value + width.value / 2),
+					top: Math.round(top.value + y.value + height.value / 4)
+				}, { duration: 1, delay: 0.2, ease: 'easeInOut' }).finished
+
+				await animate(selector, { scale: 0.8 }, { duration: 0.1, ease: 'easeOut' }).finished
+				await animate(selector, { scale: 1 }, { duration: 0.1, ease: 'easeOut' }).finished
+				await animate(html, { color }, { duration: 0.2, ease: 'easeOut' }).finished
+			}
+		}
+
 		const inset = mobile.value ? width.value / 4 : 0
 
 		await animate(selector, {
@@ -65,20 +67,10 @@ onMounted(async () => {
 
 	await sequence()
 
-	// watch(element, async (target) => {
-	// 	if (!target) return
-
-	// 	const { scrollX, scrollY } = window
-	// 	const { left = 0, top = 0, width = 0, height = 0 } = target?.getBoundingClientRect() || {}
-
-	// 	await animate(`#${id}`, {
-	// 		left: Math.round(left + scrollX + width),
-	// 		top: Math.round(top + scrollY + height / 2)
-	// 	}, { duration: 0.6, ease: 'easeInOut' }).finished
-	// })
-
-	window.addEventListener('scroll', move, { passive: true })
-	window.addEventListener('resize', move, { passive: true })
+	const events = ['scroll', 'resize']
+	for (const event of events) {
+		useEventListener(window, event, move, { passive: true })
+	}
 })
 </script>
 

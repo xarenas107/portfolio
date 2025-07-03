@@ -1,5 +1,5 @@
 <template lang='pug'>
-div(class='bg-default selection:bg-inverted selection:text-(--ui-bg)')
+div(class='bg-default selection:bg-inverted selection:text-(--ui-bg) overflow-x-clip max-w-dvw')
 	slot
 </template>
 
