@@ -35,8 +35,8 @@ div(class='bg-gradient-to-b from-(--ui-primary)/10 to-(--ui-bg) max-w-full overf
 					u-transition(delay='.8s' before-enter-class="motion-safe:max-w-0" enter-class='max-w-full' duration='1s' timing-function="ease-slow")
 						template(#default='{ state, ...props }')
 							div(class='flex flex-wrap sm:flex-nowrap place-content-center gap-x-3 sm:gap-x-4 md:gap-x-6 hyphens-auto place-items-center transition-all duration-200')
-								div(v-for='word, index in data?.job?.split(" ")' class='flex place-content-center place-items-center text-nowrap w-full gap-x-3 sm:gap-x-4 md:gap-x-6 sm:w-auto')
-									h1 {{ word }}
+								div(v-for='word, index in data?.job?.split(" ")' class='flex place-content-center place-items-center text-nowrap w-full gap-x-3 sm:gap-x-4 md:gap-x-6 sm:w-auto text-default')
+									h1(:data-cursor='index != 0') {{ word }}
 									span(v-bind='props' class='grow lg:-order-1 h-(--box-height) sm:hidden bg-primary rounded-lg')
 
 								span(v-bind='props' class='hidden sm:block shrink grow bg-primary rounded-lg lg:-order-1 h-(--box-height)')
@@ -79,18 +79,18 @@ const options = computed(() => {
 
 const { t } = useI18n()
 
-const transition = {
-	name: 'transition-fade'
-}
+// const transition = {
+// 	name: 'transition-fade'
+// }
 
 const imgAttrs = {
 	class: 'drop-shadow-2xl drop-shadow-primary-950'
 }
 
-const navigate = (value: `#${string}`) => {
-	const element = document.querySelector(value)
-	element?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-}
+// const navigate = (value: `#${string}`) => {
+// 	const element = document.querySelector(value)
+// 	element?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+// }
 
 const greetings = useGreetings()
 const show = shallowRef(false)

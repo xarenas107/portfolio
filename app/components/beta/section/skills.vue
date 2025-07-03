@@ -1,7 +1,7 @@
 <template lang="pug">
-div(class='relative overflow-clip bg-default py-24')
-  div(v-bind='options' class='motion-safe:sticky motion-safe:top-1/3')
-    section-title(:class='ui.title' class='origin-top-left motion-safe:animate-from-[cover,20%] motion-safe:animate-to-[40%,50%] motion-safe:animate-timeline-view motion-safe:animate-fill-both motion-safe:animate-name-[zoom-out,fade-out]' hyphens) {{  t('section.skills') }}
+div(class='relative min-h-16 overflow-clip bg-default py-24')
+  div(v-bind='options' class='motion-safe:sticky motion-safe:top-1/3 flex items-start')
+    section-title(:class='ui.title' class='origin-top-left motion-safe:animate-from-[cover,20%] motion-safe:animate-to-[40%,50%] motion-safe:animate-timeline-view motion-safe:animate-fill-both motion-safe:animate-name-[zoom-out,fade-out]' data-cursor="true" hyphens) {{  t('section.skills') }}
 
   u-container(v-bind='options' as='ul' class='grid grid-rows-1 grid-cols-1 sm:grid-rows-2 sm:grid-cols-2 lg:grid-rows-3 lg:grid-cols-3 gap-16 pt-8 sm:pt-12 md:pt-20 lg:pt-24 xl:pt-32 z-20 lg:m-auto')
     li(v-for='item, index in data' class='lg:col-start-(--place) lg:row-start-(--place) motion-safe:animate-timeline-view animate-ease animate-fill-both animate-from-20 animate-to-60 motion-safe:animate-name-[fade-in]' :style='{ "--place": index + 1 }')
@@ -37,6 +37,6 @@ const parse = (array: string[] = []) => {
 }
 
 const ui = {
-	title: 'text-default motion-safe:opacity-10 px-4 sm:px-6 lg:px-8 m-auto max-w-7xl'
+	title: 'text-default motion-safe:opacity-10 px-4 sm:px-6 lg:px-8 max-w-7xl'
 }
 </script>

@@ -2,7 +2,7 @@
 div(class='w-full py-24 min-h-screen flex flex-col gap-16 relative overflow-clip')
 
 	div(v-bind='options' class='flex px-4 sm:px-6 lg:px-8 gap-8 max-w-7xl mx-auto scroll-slide-animation')
-		section-title(v-for='index in 6' :class='index % 2 ? "text-stroke paint-order-stroke text-default" : ui.title') {{ t('section.portfolio') }}
+		section-title(v-for='index in 6' :class='index % 2 ? "text-stroke paint-order-stroke text-default" : ui.title' :data-cursor="index === 2") {{ t('section.portfolio') }}
 
 	u-container(:ui='ui.container')
 		//- u-input(placeholder="Search project" size="xl" icon='i-heroicons:magnifying-glass' class='max-w-prose' variant='soft' name='search')
@@ -11,12 +11,14 @@ div(class='w-full py-24 min-h-screen flex flex-col gap-16 relative overflow-clip
 			template(#default='{ containerClass, childClass }')
 				div(class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grid-flow-row-dense auto-rows-fr auto-cols-fr gap-4")
 
-					u-link(v-for='{ id, cover, title, highlighted, pinned } in data' @click.prevent='open' :href='`/project/${id}`' :class='[containerClass, { "row-span-2": highlighted, "-order-1": pinned }]' :id class="h-auto flex flex-col gap-2 max-w-full rounded-lg cursor-pointer relative group/item scroll-up-animation focus:focus-visible:outline-2 focus:focus-visible:outline-inverted focus:focus-visible:outline-offset-2" )
+					u-link(v-for='{ id, cover, title, highlighted, pinned, keys } in data' @click.prevent='open' :href='`/project/${id}`' :class='[containerClass, { "row-span-2": highlighted, "-order-1": pinned }]' :id class="h-auto flex flex-col gap-2 max-w-full rounded-lg cursor-pointer relative group/item scroll-up-animation focus:focus-visible:outline-2 focus:focus-visible:outline-inverted focus:focus-visible:outline-offset-2" )
 						nuxt-picture(:src='cover' :alt='title' :class='[childClass]' :img-attrs class='object-cover rounded-lg overflow-clip pointer-events-none')
 
 						div(class='absolute pointer-coarse:hidden z-20 top-0 left-0 w-[100%] h-[100%] p-2 sm:p-4 bg-(--ui-bg-accented)/70 place-content-end-safe opacity-0 group-focus-visible/item:opacity-100 group-hover/item:opacity-100 rounded-lg border backdrop-blur-xs transition-all duration-400 ease-out pointer-events-none group-hover/item:view-transition-name-[overlay]')
-							div(class='flex flex-col gap-2 opacity-0 translate-y-24 group-focus-visible/item:translate-y-0 group-hover/item:translate-y-0 group-focus-visible/item:opacity-100 group-hover/item:opacity-100 transition-transform duration-400 ease-out h-full place-center justify-center p-4')
+							div(class='flex flex-col gap-4 opacity-0 translate-y-24 group-focus-visible/item:translate-y-0 group-hover/item:translate-y-0 group-focus-visible/item:opacity-100 group-hover/item:opacity-100 transition-transform duration-400 ease-out h-full place-center justify-center p-4')
 								h4(class='text-default font-bold max-w-prose text-balance line-clamp-6') {{ title }}
+								div(class='flex gap-1 flex-wrap')
+									u-badge(v-for='label in keys' :label variant='outline' color='neutral' class='bg-transparent ring-inverted')
 						h6(class='text-default text-sm max-w-prose hidden pointer-coarse:block') {{ title }}
 </template>
 

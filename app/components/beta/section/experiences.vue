@@ -1,8 +1,8 @@
 <template lang="pug">
-div(class='overflow-clip bg-primary relative flex motion-safe:min-h-screen flex-col')
+div(class='overflow-clip min-h-16 bg-primary relative flex motion-safe:min-h-screen flex-col')
 	div(class='h-64 w-full bg-primary flex')
 		u-container(v-bind='options' class='h-full w-full origin-bottom items-end flex')
-			section-title(:class='ui.title' class="animate-fill-both animate-ease-in-out animate-to-60 motion-safe:animate-timeline-view motion-safe:animate-slide-y-100" hyphens) {{  t('section.experience', 2) }}
+			section-title(:class='ui.title' class="animate-fill-both animate-ease-in-out animate-to-60 motion-safe:animate-timeline-view motion-safe:animate-slide-y-100" data-cursor="true" hyphens) {{  t('section.experience', 2) }}
 
 	div(class='relative flex w-full bg-default h-full motion-safe:min-h-[150vh] py-24 grow motion-reduce:overflow-auto scroll-hidden')
 		div(v-bind='options' class='px-4 sm:px-6 motion-reduce:pr-0 motion-reduce:sm:pr-0 motion-reduce:lg:pr-0 max-w-7xl lg:px-8 gap-8 mx-auto w-full grow')

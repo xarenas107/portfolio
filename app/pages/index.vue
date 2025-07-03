@@ -28,12 +28,12 @@ type Props = {
 	scaleDown?: boolean
 }
 
-const { data } = useNavigation()
-const portfolio = computed(() => data.value.find(({ id }) => id === 'portfolio'))
-// await new Promise(resolve => setTimeout(resolve, 10))
 defineProps<Props>()
 
-const { t } = useI18n()
+const { data } = useNavigation()
+const portfolio = computed(() => data.value.find(({ id }) => id === 'portfolio'))
+
+// const { t } = useI18n()
 const hash = useHashRoute()
 const section = ref(null)
 
@@ -43,8 +43,8 @@ const intersect = [
 			if (isIntersecting) hash.value = target.id
 		})
 	}, {
-		rootMargin: '5%',
-		threshold: 0.25
+		// rootMargin: '5%',
+		threshold: 0.5
 	}
 ]
 </script>

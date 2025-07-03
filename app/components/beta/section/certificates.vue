@@ -1,10 +1,10 @@
 <template lang="pug">
 div(class='py-24 min-h-screen bg-primary relative overflow-clip place-content-center')
   u-container(v-bind='options' class='flex flex-col gap-16')
-    section-title(:class='ui.title' class="origin-top-left motion-safe:animate-timeline-view motion-safe:animate-name-[slide-y,fade-in] z-40" hyphens) {{ t('section.certificates') }}
+    section-title(:class='ui.title' class="origin-top-left motion-safe:animate-timeline-view motion-safe:animate-name-[slide-y,fade-in] z-20" data-cursor="true" hyphens) {{ t('section.certificates') }}
 
     div(class='flex flex-col gap-8' )
-      u-card-group(:ui='ui.card' color='primary' class='z-20' )
+      u-card-group(:ui='ui.card' color='primary' class='z-10' )
         template(#default='{ childClass, containerClass }')
           u-carousel(v-if='data?.length' @select='control.select' v-slot="{ item }" :items='data' :ui="ui.carousel" :auto-scroll='play' :start-index='1' class='min-w-dvw left-1/2 -translate-x-1/2' align='start' ref="carousel" loop)
             div(:class='containerClass' class='h-80 ml-4 sm:ml-6 lg:ml-8')
