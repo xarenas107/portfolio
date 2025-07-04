@@ -2,11 +2,7 @@
 section(class="flex flex-col gap-16")
 	nuxt-layout(v-if='title || description' name='project-section-paragraph' :title :description :content :columns small-title)
 
-	div(class='flex w-full relative content-between rounded-lg gap-4 bg-elevated items-center justify-center p-4 lg:p-8 aspect-video')
-		div(v-if='background' class='absolute top-0 left-0 rounded-lg grow size-full object-cover object-top opacity-20 overflow-clip')
-			nuxt-picture(:src='background' :img-attrs alt='' class='bg-elevated')
-
-		div(v-if='images.length' class='flex gap-4 z-5')
+		div(v-if='images.length' class='grid grid-cols-2 sm:grid-cols-4 gap-4')
 			nuxt-picture(v-for='image in images' v-bind='image')
 	</template>
 
@@ -18,7 +14,6 @@ type Props = {
 	aspectRatio?: `${number}/${number}` | number | 'auto'
 	title?: string
 	description?: string
-	forceContrast?: boolean
 	fit?: string
 	content?: string
 	columns?: number
@@ -31,27 +26,22 @@ const props = withDefaults(defineProps<Props>(), {
 })
 
 const images = computed(() => {
-	const { forceContrast, aspectRatio, fit } = props
+	const { fit } = props
 
 	return props.src?.map((src = '', index = 0) => {
 		return {
 			id: `${index}`,
 			class: {
-				'aspect-(--aspect) light:opacity-(--opacity) dark:brightness-(--opacity) object-contain overflow-clip bg-accented': !forceContrast,
-				'bg-primary': forceContrast,
-				'rounded-lg grow mt-(--top) max-w-24 h-2/3 sm:max-w-32 md:max-w-40 lg:max-w-48 lg:max-h-120 ring ring-accented overflow-clip object-cover shadow-smooth': true
+				'rounded-lg grow ring ring-accented overflow-clip object-cover shadow-smooth bg-primary': true
 			},
 			style: {
-				'--aspect': `${aspectRatio}`,
-				'--opacity': `100%`,
 				'--top': `${index * 10}%`,
 				'--z-index': `${-index}`,
 				'--fit': fit
 			},
 			imgAttrs: {
 				class: {
-					'light:invert-100': forceContrast,
-					'size-full object-cover': true
+					'size-full object-cover light:invert-100': true
 				},
 				width: '',
 				height: '800'
@@ -61,12 +51,6 @@ const images = computed(() => {
 		}
 	})
 })
-
-const imgAttrs = {
-	class: 'size-full object-cover object-top',
-	width: '1200',
-	height:	''
-}
 </script>
 
 <style lang="scss" scoped>

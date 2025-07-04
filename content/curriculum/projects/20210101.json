@@ -2,13 +2,13 @@
 	"cover": "/project/20210101/cover.webp",
 	"layout": "project-base",
 	"highlighted": true,
-	"keys": ["Visual identity","Signage", "Web design", "Front-end development"],
-	"title": "Branding, signage, and website design for CPC",
+	"keys": ["Visual identity", "Web design", "Front-end development"],
+	"title": "Branding, and website design for CPC",
 	"description": "<span>CPC (Consultorio Peruano Cubano) is a medical center located in Lima, Peru. Our core services focus on pain management and ozone therapy.We also provide personalized, data-backed educational guidance to help new medical professionals entering the field.</span> <span>In a competitive healthcare landscape, the Peruvian Cuban Medical Office needed to differentiate itself and clearly communicate its specialized services. The challenge was to create a visual identity that was both modern and reassuring, while also developing a digital presence that was intuitive and informative for patients seeking specialized medical care.</span>",
 	"es": {
-		"title": "Identidad visual, señalética y sitio web para CPC",
+		"title": "Identidad visual y sitio web para CPC",
 		"description": "<p>CPC (Consultorio Peruano Cubano) es un centro médico ubicado en Lima, Perú. Nuestros servicios principales giran en torno a tratamientos del dolor y ozonoterapia. También proporciona orientación pedagógica personalizada y respaldada por datos para ayudar a nuevos profesionales de la medicina que desean empezar en este campo.</p> <p>En un panorama sanitario competitivo, el Consultorio Médico Peruano Cubano necesitaba diferenciarse y comunicar con claridad sus servicios especializados. El reto consistía en crear una identidad visual moderna y a la vez tranquilizadora, a la vez que desarrollar una presencia digital intuitiva e informativa para los pacientes que buscaban atención médica especializada.</p>",
-		"keys": ["Diseño de identidad","Señalética", "Diseño web", "Desarrollo front-end"]
+		"keys": ["Diseño de identidad", "Diseño web", "Desarrollo front-end"]
 	},
 	"sections": [
 		{
@@ -70,39 +70,6 @@
 				"title": "Construcción de la marca",
 				"description": "El diseño del isotipo combina ingeniosamente las iniciales de la empresa con una representación gráfica de la molécula de ozono, que es uno de sus campos de tratamientos principales.",
 				"content": "<p>El logotipo presenta una tipografía personalizada donde se redondean parcialmente las terminaciones de los caracteres. Nuestro logotipo debe utilizarse en comunicaciones, o al hablar con audiencias fuera de nuestro ecosistema inmediato, básicamente en cualquier situación con menor reconocimiento instantáneo de la marca. Es el símbolo más formal de nuestra marca.</p> <p>Al usar la marca es importante asegurar un margen generoso que permita al logo mantener una presencia fuerte en cualquier contexto.</p>"
-			}
-		}, {
-			"name": "project-section-paragraph",
-			"title": "Signage",
-			"es": {
-				"title": "Señalética"	
-			}
-		},{
-			"name": "project-grid",
-			"title": "Grid",
-			"smallTitle": true,
-			"force-contrast": true,
-			"aspect-ratio": "1",
-			"description": "The visual identity extends to all physical touchpoints, including signage, built on a 21x21 grid.",
-			"src": [
-				"/project/20210101/signage/grid.webp",
-				"/project/20210101/signage/icons.webp"
-			],
-			"es": {
-				"title": "Retícula",
-				"description": "La identidad visual se extiende a todos los puntos de contacto físicos, incluida la señalización, construida en una retícula de 21x21."
-				
-			}
-		}, {
-			"name": "project-section-paragraph",
-			"description": "This ensures a consistent brand experience for patients from the moment they arrive at the facility.",
-			"smallTitle": true,
-			"fit": "cover",
-			"aspect-ratio": "3/1",
-			"src": "/project/20210101/signage/2.webp",
-			"es": {
-				"description": "Esto garantiza una la experiencia de marca constante para los pacientes desde el momento en que llegan al local."
-				
 			}
 		}, {
 			"name": "project-section-paragraph",

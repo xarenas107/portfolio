@@ -1,40 +1,71 @@
 <template lang="pug">
-section(class="flex flex-col gap-8")
-	div(class='flex flex-col gap-2 w-full')
-		h4(v-if='title' v-bind='ui.title' class='text-balance flex gap-2 font-display uppercase') {{ title }}
-		article(v-if='description' style='--characters: 120' class='max-w-prose text-base sm:text-lg text-balance space-y-4')
-			span(class="text-animation" class='space-y-4' v-html='description')
+section(class="flex flex-col" :class='ui.container')
+	div(class='flex flex-col gap-8 w-full')
+		article(v-if='description || title' :class='{ "max-w-prose": !columns }' class='text-base sm:text-lg text-balance gap-4 flex flex-col')
+			h4(v-if='title' v-bind='ui.title') {{ title }}
+			//- p(:style='{ "--characters": description?.length }' class="motion-safe:animate-timeline-view motion-safe:animate-from-10 motion-safe:animate-to-40  motion-safe:animate-fill-both motion-safe:animate-duration-100 motion-safe:animate-name-[text] space-y-4 inline" v-html='description')
+			p(v-if='description' :style v-bind="ui.content" v-html='description')
+			p(v-if='content' :style v-bind="ui.content" v-html='content' class='md:columns-(--columns) gap-12')
 
-	nuxt-picture(v-if='src' :src v-bind='ui.image' class='w-full h-fit rounded-lg grow object-center ring bg-elevated object-cover overflow-clip scroll-up-animation')
+		nuxt-img(v-if='src' :src v-bind='ui.image')
+
+		slot()
 </template>
 
 <script lang="ts" setup>
 type Props = {
 	title?: string
 	description?: string
+	content?: string
 	smallTitle?: boolean
 	aspectRatio?: string
 	src?: string
+	sticky?: boolean
+	columns?: number
+	fit?: 'contain' | 'cover' | 'fill'
+	forceContrast?: boolean
 }
 
 const props = withDefaults(defineProps<Props>(), {
-	aspectRatio: '16/9'
+	aspectRatio: '16/9',
+	fit: 'contain'
+})
+
+const style = computed(() => {
+	return {
+		'--characters': props.description?.length,
+		'--columns': props.columns
+	}
 })
 
 const ui = computed(() => {
+	const { smallTitle, sticky, aspectRatio, fit } = props
 	return {
+		container: {
+			relative: sticky
+		},
 		title: {
-			class: props.smallTitle ? 'font-semibod text-2xl' : 'font-bold text-2xl md:text-4xl lg:text-6xl xl:text-6xl'
+			class: {
+				'font-semibold text-2xl md:text-4xl': smallTitle,
+				'font-bold text-4xl md:text-6xl': !smallTitle,
+				'sticky top-16 bg-default border-b border-default pb-2 pt-4 z-10': sticky,
+				'text-balance flex gap-2 font-display uppercase': true
+			}
+		},
+		content: {
+			class: {
+				'text-lg text-default space-y-4': true
+			}
 		},
 		image: {
-			class: 'aspect-(--aspect)',
-			imgAttrs: {
-				class: 'size-full object-cover',
-				width: '1200',
-				height: ''
+			class: {
+				'aspect-(--aspect) object-fit-(--fit) max-h-2/3 grow bg-elevated rounded-lg': true
 			},
+			width: '1200',
+			height: '',
 			style:	{
-				'--aspect': props.aspectRatio
+				'--aspect': aspectRatio,
+				'--fit': fit
 			}
 		}
 	}
@@ -48,26 +79,8 @@ const ui = computed(() => {
 		opacity: 0;
     }
 }
-@keyframes text {
-	from { background-size: 0 }
-	to { background-size: 100% }
-}
 
 @media (prefers-reduced-motion: no-preference) {
-  .text-animation {
-	background: linear-gradient(90deg, var(--ui-text) 0 0) 0 / calc(var(--characters) * 1ch) var(--ui-text-dimmed);
-	background-repeat: no-repeat;
-
-	-webkit-background-clip: text;
-	-moz-background-clip: text;
-	background-clip: text;
-
-	color: transparent;
-    animation: text .1s steps(var(--characters, 100)) both;
-    animation-timeline: view();
-	animation-range: 10% 40%;
-  }
-
   .scroll-up-animation {
     animation: scroll-up ease-in forwards;
     animation-timeline: view();
