@@ -5,6 +5,6 @@ export default defineNuxtPlugin(() => {
 		if (!hash.value) return
 
 		const el = document.querySelector(hash.value)
-		if (el) el.scrollIntoView({ behavior: 'smooth' })
+		if (el) el.scrollIntoView({ behavior: 'auto' })
 	})
 })
