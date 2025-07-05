@@ -1,6 +1,44 @@
 # Changelog
 
 
+## v1.16.0
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.15.2...v1.16.0)
+
+### 🚀 Enhancements
+
+- Add new `figma like` cursor animation ([63dd686](https://github.com/xarenas107/portfolio/commit/63dd686))
+- **projects:** Add keywords description ([30390d5](https://github.com/xarenas107/portfolio/commit/30390d5))
+- **projects:** Add keywords description ([ce4889f](https://github.com/xarenas107/portfolio/commit/ce4889f))
+
+### 🩹 Fixes
+
+- **scroll:** Solve missing initial scroll ([c38d972](https://github.com/xarenas107/portfolio/commit/c38d972))
+- Solve minor cursor animation bugs ([2b1ff83](https://github.com/xarenas107/portfolio/commit/2b1ff83))
+- **cursor:** Solve minor bugs ([3e12ad3](https://github.com/xarenas107/portfolio/commit/3e12ad3))
+- **scroll:** Solve minor bugs ([08b03e9](https://github.com/xarenas107/portfolio/commit/08b03e9))
+- **i18n:** Solve wrong translations ([d82e75a](https://github.com/xarenas107/portfolio/commit/d82e75a))
+
+### 💅 Refactors
+
+- Code optimizations ([9d281c2](https://github.com/xarenas107/portfolio/commit/9d281c2))
+
+### 🏡 Chore
+
+- **projects:** Added new assets ([8414448](https://github.com/xarenas107/portfolio/commit/8414448))
+- **projects:** Added new assets ([44e6eee](https://github.com/xarenas107/portfolio/commit/44e6eee))
+- Disabled `it's me` tooltip ([1a99728](https://github.com/xarenas107/portfolio/commit/1a99728))
+- **project:** Add `voice` layout ([28b8683](https://github.com/xarenas107/portfolio/commit/28b8683))
+- Minor updates ([a56a634](https://github.com/xarenas107/portfolio/commit/a56a634))
+- **node:** Update dependences ([e317311](https://github.com/xarenas107/portfolio/commit/e317311))
+- Disable `keppalive` in certain pages ([26472f7](https://github.com/xarenas107/portfolio/commit/26472f7))
+- **a11y:** Minor improvements ([189b409](https://github.com/xarenas107/portfolio/commit/189b409))
+- **node:** Update dependences ([5e6119f](https://github.com/xarenas107/portfolio/commit/5e6119f))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.15.2
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.15.1...v1.15.2)
