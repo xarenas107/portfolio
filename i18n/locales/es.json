@@ -120,13 +120,13 @@
 		"name": "Retroceder",
 		"sr": "Retrocede a la página anterior",
 		"home": "Volver al inicio"
-	},
+	},	
 	"section": {
 		"name": "Sección | Secciones",
 		"home": "Inicio",
-		"experience": "Experience",
+		"experience": "Experiencia",
 		"certificates": "Certificados",
-		"skills": "Skills",
+		"skills": "Habilidades",
 		"studies": "Estudios",
 		"projects": "Proyectos",
 		"portfolio": "Portafolio"

@@ -2,9 +2,7 @@
 	"id": "experience",
 	"order": 4,
 	"icon": "i-heroicons-outline:chart-bar",
-	"en": {
-		"title": "Experience"
-	},
+	"title": "Experience",
 	"es": {
 		"title": "Experiencia"
 	}
