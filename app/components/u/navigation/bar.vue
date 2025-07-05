@@ -156,11 +156,11 @@ const { y, directions, arrivedState } = useWindowScroll({
 })
 
 const recolor = () => {
-	const set = new Set<string>(['backdrop-blur', 'bg-default'])
+	const set = new Set<string>(['transparency-safe:backdrop-blur', 'bg-default'])
 
 	// Remove opacity on scroll top
 	if (y.value === 0) set.add('bg-transparent')
-	else set.add('bg-default/80')
+	else set.add('transparency-safe:bg-default/80')
 
 	styles.nav = Array.from(set).join(' ')
 }

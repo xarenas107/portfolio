@@ -24,7 +24,7 @@ section(v-if='active' class="flex flex-col gap-8")
 		u-card-group(:ui='ui.card' as='div')
 			template(#default='{ childClass, containerClass }')
 				div(class='grid grid-cols-auto sm:grid-cols-2 lg:grid-cols-3 gap-4 list-none')
-					ul(v-for='item, index in group' :class='[containerClass]' class='scroll-up-animation')
+					ul(v-for='item, index in group' :class='[containerClass]')
 						u-card(:class='[item.highlighted ? "h-full bg-default text-highlighted" : childClass]' as='li' variant='solid')
 							template(#header)
 								div(class='flex gap-4 items-center')
@@ -100,14 +100,14 @@ const group = computed(() => {
 </script>
 
 <style lang="scss" scoped>
-@keyframes scroll-up {
-    from { opacity: 0 }
-}
-@media (prefers-reduced-motion: no-preference) {
-	.scroll-up-animation {
-		animation: scroll-up ease-in forwards;
-		animation-timeline: view();
-		animation-range: entry;
-	}
-}
+// @keyframes scroll-up {
+//     from { opacity: 0 }
+// }
+// @media (prefers-reduced-motion: no-preference) {
+// 	.scroll-up-animation {
+// 		animation: scroll-up ease-in forwards;
+// 		animation-timeline: view();
+// 		animation-range: entry;
+// 	}
+// }
 </style>

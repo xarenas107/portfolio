@@ -5,7 +5,7 @@ section(v-if='active' class="flex flex-col gap-8")
 	u-card-group(:ui='ui.card' v-if='items?.length')
 		template(#default='{ childClass, containerClass }')
 			div(class='grid grid-cols-auto sm:grid-cols-2 lg:grid-cols-3 gap-4 flex-wrap')
-				div( v-for='{ title, description, icon } of items' :class='[containerClass]' class='scroll-up-animation')
+				div( v-for='{ title, description, icon } of items' :class='[containerClass]')
 					nuxt-layout(name='project-section-card' :content='description' :title :icon :class='childClass' variant='solid')
 </template>
 
@@ -43,14 +43,14 @@ const ui = {
 </script>
 
 <style lang="scss" scoped>
-@keyframes scroll-up {
-    from { opacity: 0 }
-}
-@media (prefers-reduced-motion: no-preference) {
-	.scroll-up-animation {
-		animation: scroll-up ease-in forwards;
-		animation-timeline: view();
-		animation-range: entry;
-	}
-}
+// @keyframes scroll-up {
+//     from { opacity: 0 }
+// }
+// @media (prefers-reduced-motion: no-preference) {
+// 	.scroll-up-animation {
+// 		animation: scroll-up ease-in forwards;
+// 		animation-timeline: view();
+// 		animation-range: entry;
+// 	}
+// }
 </style>

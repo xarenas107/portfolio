@@ -103,13 +103,13 @@
 }
 
 /* Support prefers-reduced-opacity */
-@custom-variant opacity-safe {
+@custom-variant transparency-safe {
 	@media (prefers-reduced-transparency: no-preference) {
         @slot
     }
 }
 
-@custom-variant opacity-reduce {
+@custom-variant transparency-reduce {
 	@media (prefers-reduced-transparency: reduce) {
         @slot
     }

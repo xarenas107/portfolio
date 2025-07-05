@@ -52,7 +52,7 @@ const move = async () => {
 
 			await animate(cursor, { scale: 0.8 }, { duration: 0.1, ease: 'easeOut' }).finished
 			await animate(cursor, { scale: 1 }, { duration: 0.1, ease: 'easeOut' }).finished
-			await animate(element.value, { color }, { duration: 0.2, ease: 'easeOut' }).finished
+			await animate(element.value, { '--color': color }, { duration: 0 }).finished
 		}
 	}
 
