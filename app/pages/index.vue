@@ -13,7 +13,7 @@ beta-section-skills(v-intersect='intersect' :scale-down ref='section')#skills
 	div(class="w-full px-4 sm:px-6 lg:px-8 m-auto max-w-7xl")
 		section-title(v-intersect='intersect' class='sticky top-1/2 -translate-y-1/2 leading-0 mask-animation !block grow' hyphens) {{ t('section.portfolio') }}
 
-beta-section-projects(v-if='portfolio' v-intersect='intersect' :scale-down ref='section')#portfolio
+beta-section-projects(v-intersect='intersect' :scale-down ref='section')#portfolio
 beta-section-footer(:scale-down)
 
 lazy-cursor(:content='user.name' :delay="2000" :target)
@@ -22,7 +22,7 @@ lazy-cursor(:content='user.name' :delay="2000" :target)
 <script lang="ts" setup>
 definePageMeta({
 	navbar: true,
-	keepalive: true,
+	keepalive: false,
 	viewTransition: false
 })
 
@@ -30,10 +30,10 @@ type Props = {
 	scaleDown?: boolean
 }
 
-defineProps<Props>()
+const props = defineProps<Props>()
 
-const { data } = useNavigation()
-const portfolio = computed(() => data.value.find(({ id }) => id === 'portfolio'))
+// const { data } = useNavigation()
+// const portfolio = computed(() => data.value.find(({ id }) => id === 'portfolio'))
 
 // const { t } = useI18n()
 const { data: user } = useUser()

@@ -5,7 +5,7 @@ nuxt-page
 <script lang="ts" setup>
 definePageMeta({
 	redirect: '/',
-	keepalive: true,
+	keepalive: false,
 	viewTransition: false
 })
 </script>
