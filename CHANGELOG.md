@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v1.17.0
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.16.1...v1.17.0)
+
+### 🚀 Enhancements
+
+- Add `figma comment` ([c5201a7](https://github.com/xarenas107/portfolio/commit/c5201a7))
+
+### 🏡 Chore
+
+- **node:** Update dependences ([58c1934](https://github.com/xarenas107/portfolio/commit/58c1934))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.16.1
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.16.0...v1.16.1)
