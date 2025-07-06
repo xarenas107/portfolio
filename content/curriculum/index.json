@@ -1,5 +1,7 @@
 {
 	"name": "Xavier",
+	"fullname": "Xavier Arenas",
+	"comment": "Hi! It's me. Thanks for visiting my site. This project is open source, you can check it out on my Github profile.",
 	"image": "/hero/human.webp",
 	"resume": {
 		"href": "https://drive.google.com/uc?export=download&id=1g7QjIoIQJq0Uny3fjnh-6XTl6Yal60WQ",
@@ -11,7 +13,8 @@
 	"es": {
 		"description": "Diseñador de gráfico especializado en UX/UI y desarrollador front-end con más de 8 años de experiencia con capacidad demostrada en aprovechar los principios de diseño UX/UI y la investigación de usuarios para crear interfaces de usuario intuitivas y experiencias digitales impactantes.",
 		"job": "Diseñador UX-UI",
-		"location": "Barcelona, España"
+		"location": "Barcelona, España",
+		"comment": "Hola! Soy yo. Gracias por visitar mi sitio. Este proyecto es de código abierto, puedes verlo mi perfil de Github."
 	},
 	"portfolio": [{
 			"title": "LinkedIn",
