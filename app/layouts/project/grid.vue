@@ -32,7 +32,8 @@ const images = computed(() => {
 		return {
 			id: `${index}`,
 			class: {
-				'rounded-lg grow ring ring-accented overflow-clip object-cover shadow-smooth bg-primary': true
+				'rounded-lg grow ring overflow-clip object-cover bg-elevated': true,
+				'last:col-span-2 sm:last:col-span-1': props.src.length % 2
 			},
 			style: {
 				'--top': `${index * 10}%`,
@@ -41,7 +42,12 @@ const images = computed(() => {
 			},
 			imgAttrs: {
 				class: {
-					'size-full object-cover light:invert-100': true
+					'size-full object-cover': true
+				},
+				style: {
+					overflow: 'hidden',
+					filter: 'drop-shadow(0 100dvh 0 var(--ui-text))',
+					transform: 'translateY(-100dvh)'
 				},
 				width: '',
 				height: '800'

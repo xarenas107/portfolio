@@ -17,7 +17,7 @@
 
 @utility animate-timeline-* {
 	--animation-timeline: --value([*]);
-	--animation-timeline: --value('view', 'root')();
+	--animation-timeline: --value('view', 'root', 'scroll')();
 	--animation-timeline: --value('auto', 'none', 'initial', 'unset');
 	animation-timeline: var(--animation-timeline)
 }
@@ -134,4 +134,16 @@
 	}
 	from { background-size: 0 }
 	to { background-size: 100% }
+}
+
+@keyframes width-in {
+	from {
+		width: 0%
+	}
+}
+
+@keyframes height-in {
+	from {
+		height: 0%
+	}
 }

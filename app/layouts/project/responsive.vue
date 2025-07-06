@@ -38,7 +38,7 @@ const images = computed(() => {
 			id: `${index}`,
 			class: {
 				'aspect-(--aspect) light:opacity-(--opacity) dark:brightness-(--opacity) object-contain overflow-clip bg-accented': !forceContrast,
-				'bg-primary': forceContrast,
+				'bg-inverted': forceContrast,
 				'rounded-lg grow mt-(--top) max-w-24 h-2/3 sm:max-w-32 md:max-w-40 lg:max-w-48 lg:max-h-120 ring ring-accented overflow-clip object-cover shadow-smooth': true
 			},
 			style: {

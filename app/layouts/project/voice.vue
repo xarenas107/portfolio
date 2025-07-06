@@ -9,7 +9,12 @@ section(class="flex flex-col gap-16 relative")
 				class='text-muted text-base'
 				:class='{ "order-1": index > 0, "font-medium text-highlighted": value >= 50 && index > 0 || value < 50 && index === 0 }'
 			) {{ key }}
-			u-progress(:model-value='value' :max='100' class='grow')
+
+			//- u-progress(:model-value='value' :max='100' class='grow')
+
+			div(class='h-2 w-full flex gap-2')
+				span(class='h-full w-(--width) max-w-full bg-primary rounded-full' :style='{ "--width": `${value}%` }')
+				span(class='h-full bg-accented grow rounded-full')
 	</template>
 
 <script lang="ts" setup>

@@ -54,12 +54,12 @@
 			}
 		},
 		{
-			"name": "project-responsive",
+			"name": "project-grid",
 			"title": "Brand construction",
 			"smallTitle": true,
 			"description": "The logo design cleverly combines the company's initials with a graphic representation of the ozone molecule, one of its primary treatment areas.",
 			"content": "<p>The logo features a custom typeface with partially rounded character ends. Our logo is intended for use in communications, or when speaking to audiences outside our immediate ecosystem—basically, in any situation with less instant brand recognition. It's the most formal symbol of our brand.</p> <p>When using the brand, it is important to ensure a generous margin that allows the logo to maintain a strong presence in any context.</p>",
-			"aspect-ratio": "1/3",
+			"aspect-ratio": "1/1",
 			"force-contrast": true,
 			"src": [
 				"/project/20210101/brand/grid.png", 

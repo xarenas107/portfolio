@@ -2,8 +2,8 @@
 section(class="flex flex-col gap-16")
 	nuxt-layout(v-if='title || description' :title :description :small-title name='project-section-paragraph')
 
-	div(class='flex w-full relative content-between z-10 grow shrink rounded-lg gap-2 lg:gap-4 justify-center flex-col sm:flex-row items-center sm:items-start -space-y-32 sm:space-y-0 sm:-space-x-32 sm:p-8 sm:bg-elevated')
-		nuxt-picture(v-for='image in images' v-bind='image' class='max-w-full sm:max-w-64 md:max-w-72 lg:max-w-100 w-full rounded-lg shadow-smooth ring ring-accented object-cover overflow-clip')
+	div(class='flex w-full relative content-between z-10 grow shrink rounded-lg gap-2 lg:gap-4 justify-center flex-col sm:flex-row items-center sm:items-start -space-y-[30%] sm:space-y-0 sm:-space-x-[40%]')
+		nuxt-picture(v-for='image in images' v-bind='image' class='max-w-full w-full rounded-lg shadow-smooth ring object-cover overflow-clip')
 </template>
 
 <script lang="ts" setup>
