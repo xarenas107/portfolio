@@ -6,7 +6,7 @@ export default <NuxtConfig['nitro']>{
 		crawlLinks: true
 	},
 	experimental: {
-		websocket: true,
+		// websocket: true,
 		openAPI: true
 	},
 	hub: {
