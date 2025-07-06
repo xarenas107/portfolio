@@ -3,7 +3,7 @@ nuxt-route-announcer
 //- nuxt-loading-indicator(:hide-delay='500' color="primary")
 
 u-app(:locale)
-	nuxt-layout
+	nuxt-layout(class='relative')
 		u-navigation-bar(v-model:open='menu' :active='!!route.meta.navbar' :back='route.meta.navbar === "back"')
 
 		//- nuxt-layout(name='animate-skew')

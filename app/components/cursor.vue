@@ -1,5 +1,5 @@
 <template lang="pug">
-div(class='fixed z-20 top-0 left-0 w-dvw min-h-dvh h-(--height) pointer-events-none overflow-hidden' :style)
+div(class='absolute z-20 top-0 left-0 size-full pointer-events-none overflow-hidden')
 	div(class="absolute" :style='{ opacity: 0 }' :id)
 		svg(xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" class="absolute top-0 left-0 text-inverted")
 			path(class='fill-primary stroke-default stroke-1' stroke-linecap="round" stroke-linejoin="round" d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z")
@@ -19,8 +19,8 @@ const props = withDefaults(defineProps<Props>(), {
 	delay: 1000
 })
 
-const id = useId()
-const selector = `#${id}`
+const id = shallowRef(useId())
+const selector = `#${id.value}`
 
 const element = shallowRef(document.querySelector<HTMLElement>(props.target))
 const { left, top, width, height } = useElementBounding(element)
@@ -38,7 +38,7 @@ const move = async () => {
 	const cursor = document.querySelector<HTMLElement>(selector)
 	if (!cursor) return
 
-	if (cursor?.style.opacity === '0') {
+	if (cursor?.style.getPropertyValue('opacity') === '0') {
 		await animate(cursor, {
 			left: Math.round(Math.random() * outerWidth.value + x.value),
 			top: Math.round(Math.random() * outerHeight.value + y.value)
@@ -118,30 +118,30 @@ onMounted(async () => {
 const unwatch = watch([y, outerWidth, outerHeight], async () => await move())
 onUnmounted(() => unwatch())
 
-const useScrollSize = () => {
-	const { scrollHeight = 0, scrollWidth = 0 } = document.documentElement
+// const useScrollSize = () => {
+// 	const { scrollHeight = 0, scrollWidth = 0 } = document.documentElement
 
-	const width = shallowRef(scrollWidth)
-	const height = shallowRef(scrollHeight)
+// 	const width = shallowRef(scrollWidth)
+// 	const height = shallowRef(scrollHeight)
 
-	const update = () => {
-		const { scrollHeight, scrollWidth } = document.documentElement
-		height.value = scrollHeight || 0
-		width.value = scrollWidth || 0
-	}
+// 	const update = () => {
+// 		const { scrollHeight, scrollWidth } = document.documentElement
+// 		height.value = scrollHeight || 0
+// 		width.value = scrollWidth || 0
+// 	}
 
-	onNuxtReady(update)
-	onUpdated(update)
+// 	onNuxtReady(update)
+// 	onUpdated(update)
 
-	return [width, height] as const
-}
+// 	return [width, height] as const
+// }
 
-const [_, scrollHeight] = useScrollSize()
-const style = computed(() => {
-	return {
-		'--height': `${scrollHeight.value}px`
-	}
-})
+// const [_, scrollHeight] = useScrollSize()
+// const style = computed(() => {
+// 	return {
+// 		'--height': `${scrollHeight.value}px`
+// 	}
+// })
 </script>
 
 <style lang="scss" scoped></style>
