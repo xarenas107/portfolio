@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v1.17.8
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.17.7...v1.17.8)
+
+### 🩹 Fixes
+
+- **content:** Solve content inconsistences ([5cfab5f](https://github.com/xarenas107/portfolio/commit/5cfab5f))
+
+### 🏡 Chore
+
+- **node:** Update dependences ([d651988](https://github.com/xarenas107/portfolio/commit/d651988))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.17.7
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.17.6...v1.17.7)
