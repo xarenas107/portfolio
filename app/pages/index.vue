@@ -40,7 +40,7 @@ const { data: user } = useUser()
 const hash = useHashRoute()
 const section = ref(null)
 
-const target = computed(() => `${hash.value} [data-cursor="true"]`)
+const target = computed(() => `${hash.value || '#home'} [data-cursor="true"]`)
 
 const intersect = [
 	(entries: IntersectionObserverEntry[]) => {
