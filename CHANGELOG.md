@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v1.17.5
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.17.4...v1.17.5)
+
+### 🩹 Fixes
+
+- **cursor:** Solve minor bugs ([d2ed1e8](https://github.com/xarenas107/portfolio/commit/d2ed1e8))
+
+### 🤖 CI
+
+- Add nuxthub workflow ([d2ec4dd](https://github.com/xarenas107/portfolio/commit/d2ec4dd))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.17.4
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.17.3...v1.17.4)
