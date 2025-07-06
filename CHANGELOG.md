@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.17.3
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.17.2...v1.17.3)
+
+### 🏡 Chore
+
+- **nitro:** Disable `websocket` ([d3b2a3a](https://github.com/xarenas107/portfolio/commit/d3b2a3a))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.17.2
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.17.1...v1.17.2)
