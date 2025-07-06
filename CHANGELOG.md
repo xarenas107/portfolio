@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.17.2
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.17.1...v1.17.2)
+
+### 🏡 Chore
+
+- **nitro:** Update config ([efb3c59](https://github.com/xarenas107/portfolio/commit/efb3c59))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.17.1
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.17.0...v1.17.1)
