@@ -56,7 +56,7 @@ const [play, toggle] = useToggle(!reduce.value)
 const icon = computed(() => !play.value ? 'i-line-md:play' : 'i-line-md:pause')
 
 watchThrottled(reduce, (value) => {
-	if (value) play.value = false
+	if (value) toggle(false)
 }, { throttle: 100 })
 
 const carousel = useTemplateRef('carousel')

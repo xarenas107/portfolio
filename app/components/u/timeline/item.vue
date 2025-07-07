@@ -3,7 +3,7 @@ div(:class='[{ grow }, styles.column]' class="grid")
 	div(v-if='alternate' :class='[ui.container, styles.size, styles.spacing, { "order-1": alternate && reverse }]')
 		//- div(class='bg-elevated/50 size-full rounded-lg')
 
-	div(class='flex shrink justify-center items-center relative' :class='horizontal ?  "row-auto" : "col-span-1 flex-col w-fit"')
+	div(class='flex gap-2 shrink justify-center items-center relative' :class='horizontal ?  "row-auto" : "col-span-1 flex-col w-fit"')
 		u-separator(
 			v-if='progress > 0'
 			:class='horizontal ? "left-0 divider" : "mt-4 top-0 divider-vertical"'
@@ -13,11 +13,12 @@ div(:class='[{ grow }, styles.column]' class="grid")
 			class='absolute grow z-20'
 			)
 
-		u-separator(:orientation :class='[{ "invisible": !lineStart }, horizontal ? "hidden" : "h-4" ]' :ui='styles.divider')
+		u-separator(:orientation :class='[{ "hidden": !lineStart }, horizontal ? "w-4" : "h-4 block invisible" ]' :ui='styles.divider')
 
 		div(class='relative')
 			span(v-if='current' class='motion-safe:animate-ping absolute inline-flex size-full rounded-full' :class='ui.dot')
 			u-timeline-dot(:class='ui.dot' class='z-40')
+
 		u-separator(:ui='styles.divider' :orientation :class='{ "invisible": !lineEnd }')
 
 	div(:class='[ui.container, styles.spacing, styles.size, { "-order-1": alternate && reverse }]')
