@@ -51,7 +51,7 @@ const move = async () => {
 		if (!state.comment) {
 			const comment = document.querySelector<HTMLElement>('#comment')
 
-			if (!state.comment && comment) {
+			if (comment?.checkVisibility()) {
 				// await animate(comment, {
 				// 	left: Math.round(Math.random() * outerWidth.value + x.value),
 				// 	top: Math.round(Math.random() * outerHeight.value + y.value + 64)
@@ -79,33 +79,35 @@ const move = async () => {
 		}
 	}
 
-	if (props.target.includes('#home')) {
-		if (element.value && !state.color) {
-			await animate(cursor, {
-				left: Math.round(left.value + x.value + width.value / 2),
-				top: Math.round(top.value + y.value + height.value / 4)
-			}, { duration: 1, delay: 0.2, ease: 'easeInOut' }).finished
+	if (element.value?.checkVisibility()) {
+		if (props.target.includes('#home')) {
+			if (!state.color) {
+				await animate(cursor, {
+					left: Math.round(left.value + x.value + width.value / 2),
+					top: Math.round(top.value + y.value + height.value / 4)
+				}, { duration: 1, delay: 0.2, ease: 'easeInOut' }).finished
 
-			await animate(cursor, { scale: 0.8 }, { duration: 0.1, ease: 'easeOut' }).finished
-			await animate(cursor, { scale: 1 }, { duration: 0.1, ease: 'easeOut' }).finished
-			await animate(element.value, { '--color': 'var(--ui-primary)' }).finished
+				await animate(cursor, { scale: 0.8 }, { duration: 0.1, ease: 'easeOut' }).finished
+				await animate(cursor, { scale: 1 }, { duration: 0.1, ease: 'easeOut' }).finished
+				await animate(element.value, { '--color': 'var(--ui-primary)' }).finished
 
-			const inset = mobile.value ? width.value / 4 : 0
-			await animate(cursor, {
-				left: Math.round(left.value + x.value + width.value - inset),
-				top: Math.round(top.value + y.value + height.value / 2)
-			}, { duration: 0.8, ease: 'easeOut' }).finished
+				const inset = mobile.value ? width.value / 4 : 0
+				await animate(cursor, {
+					left: Math.round(left.value + x.value + width.value - inset),
+					top: Math.round(top.value + y.value + height.value / 2)
+				}, { duration: 0.8, ease: 'easeOut' }).finished
 
-			state.color = true
+				state.color = true
+			}
 		}
+
+		const inset = mobile.value ? width.value / 4 : 0
+
+		await animate(cursor, {
+			left: Math.round(left.value + x.value + width.value - inset),
+			top: Math.round(top.value + y.value + height.value / 2)
+		}).finished
 	}
-
-	const inset = mobile.value ? width.value / 4 : 0
-
-	await animate(cursor, {
-		left: Math.round(left.value + x.value + width.value - inset),
-		top: Math.round(top.value + y.value + height.value / 2)
-	}).finished
 }
 
 onMounted(async () => {
