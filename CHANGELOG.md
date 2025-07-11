@@ -1,6 +1,25 @@
 # Changelog
 
 
+## v1.17.9
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.17.8...v1.17.9)
+
+### 🩹 Fixes
+
+- **cursor:** Solve missing animation target ([b3464af](https://github.com/xarenas107/portfolio/commit/b3464af))
+- **locale:** Solve unwanted animation in certain cases ([1aa63fe](https://github.com/xarenas107/portfolio/commit/1aa63fe))
+
+### 🏡 Chore
+
+- **node:** Update dependences ([1e2195d](https://github.com/xarenas107/portfolio/commit/1e2195d))
+- **style:** Minor changes ([81dcd31](https://github.com/xarenas107/portfolio/commit/81dcd31))
+- **node:** Update dependences ([a159c87](https://github.com/xarenas107/portfolio/commit/a159c87))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.17.8
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.17.7...v1.17.8)
