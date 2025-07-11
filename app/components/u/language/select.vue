@@ -19,6 +19,7 @@ const target = useTemplateRef('element')
 
 const text = computed(() => t('language.select'))
 const update = async (value: typeof locale['value']) => {
+	if (locale.value === value) return
 	const element = target.value
 
 	useRadialTransition(element, async () => {
