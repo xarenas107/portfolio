@@ -1,10 +1,8 @@
 <template lang="pug">
-//- u-tooltip(:open='tooltip' class='h-auto' :ui='ui.tooltip')
-
 nav(v-if='active' class="fixed w-full z-50 transition-[transform background] duration-200 ease" :class='[styles.nav, { "pointer-coarse:translate-y-(--position) pointer-coarse:lg:-translate-y-(--position)": sticky }]' ref='nav')
 
 	//- Scroll progress bar
-	lazy-u-loader(class='translate-y-full bg-default/80 border-default')
+	lazy-u-loader(class='translate-y-full border-default/80 bg-default/80')
 
 	//- Navbar container
 	div(:class="ui.container")

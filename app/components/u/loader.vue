@@ -1,8 +1,8 @@
 <template lang='pug'>
 //- u-progress(:model-value='progress' :max='scroll.max' :ui="ui.progress" :color :size :style  animation='carousel')
 div(class='h-1 w-full fixed top-auto bottom-0 z-8000 origin-left pointer-events-none transition-transform flex gap-2 animate-timeline-scroll animate-from-0 animate-to-2 animate-name-[height-in,fade-in] animate-fill-both')
-	span(class='h-full w-1/1 bg-primary rounded-e-full animate-timeline-scroll animate-from-0 animate-to-100 animate-name-[width-in] animate-fill-both')
-	span(class='h-full bg-elevated grow rounded-s-full')
+	span(class='h-full w-1/1 bg-inverted rounded-e-full animate-timeline-scroll animate-from-0 animate-to-100 animate-name-[width-in] animate-fill-both')
+	span(class='h-full bg-accented grow rounded-s-full')
 </template>
 
 <script lang='ts' setup>
