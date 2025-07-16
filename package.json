@@ -63,7 +63,7 @@
     "@iconify-json/lucide": "^1.2.57",
     "@iconify-json/material-symbols": "^1.2.29",
     "@iconify-json/svg-spinners": "^1.2.2",
-    "@intlify/core": "^11.1.7",
+    "@intlify/core": "^11.1.10",
     "@intlify/core-base": "^11.1.7",
     "@nuxt/devtools": "^2.6.2",
     "@nuxt/eslint-config": "^1.5.2",
