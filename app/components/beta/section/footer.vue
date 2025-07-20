@@ -1,12 +1,12 @@
 <template lang="pug">
-div(class='bg-default border-t border-accented pb-16 lg:pb-0')
-    u-container(v-bind='options' class='py-4 lg:py-8 flex flex-col sm:flex-row flex-wrap gap-8 sm:justify-between w-full')
-        div(class='flex gap-x-6 gap-y-3 flex-wrap')
+div(class='bg-default border-t border-accented')
+    u-container(v-bind='options' class='py-4 sm:py-6 lg:py-8 flex flex-col sm:flex-row flex-wrap gap-8 sm:justify-between w-full')
+        div(class='flex gap-4 flex-wrap items-center')
             favicon(class='w-10')
 
-            div(class='flex flex-col grow')
-                h5(class='text-xl font-black text-highlighted grow') {{ data?.name }}
-                h6(class='text-sm font-semibold text-muted grow') {{ data?.job }}
+            div(class='flex flex-col gap-1')
+                h5(class='text-xl font-black text-highlighted') {{ data?.name }}
+                h6(class='text-sm font-semibold text-muted') {{ data?.job }}
 
         div(class='flex gap-y-3 gap-x-6 flex-wrap max-w-sm')
             u-link-action(v-for='item in data?.portfolio' v-bind='item')

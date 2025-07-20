@@ -1,5 +1,5 @@
 <template lang='pug'>
-main(class="min-h-screen w-full")
+main(class="min-h-screen w-dvw")
     slot
 </template>
 

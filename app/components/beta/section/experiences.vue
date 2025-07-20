@@ -7,7 +7,7 @@ div(class='overflow-clip min-h-16 bg-primary relative flex motion-safe:min-h-scr
 	div(class='relative flex w-full bg-default h-full motion-safe:min-h-[150vh] py-24 grow motion-reduce:overflow-auto scroll-hidden')
 		div(v-bind='options' class='px-4 sm:px-6 motion-reduce:pr-0 motion-reduce:sm:pr-0 motion-reduce:lg:pr-0 max-w-7xl lg:px-8 gap-8 mx-auto w-full grow')
 
-			u-timeline(
+			timeline(
 				:ui='ui.timeline'
 				:items='data'
 				:style

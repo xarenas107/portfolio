@@ -17,11 +17,11 @@ div(:class='[{ grow }, styles.column]' class="grid")
 
 		div(class='relative')
 			span(v-if='current' class='motion-safe:animate-ping absolute inline-flex size-full rounded-full' :class='ui.dot')
-			u-timeline-dot(:class='ui.dot' class='z-40')
+			timeline-dot(:class='ui.dot' class='z-40')
 
 		u-separator(:ui='styles.divider' :orientation :class='{ "invisible": !lineEnd }')
 
-	div(:class='[ui.container, styles.spacing, styles.size, { "-order-1": alternate && reverse }]')
+	div(:class='[ui.container, styles.spacing, { "-order-1": alternate && reverse }]')
 		div(class='flex flex-col gap-0')
 			div(v-if='title' class='flex gap-4')
 				div
@@ -40,8 +40,6 @@ div(:class='[{ grow }, styles.column]' class="grid")
 				span(v-if='current') {{  t('time.now') }}
 				nuxt-time(v-else-if='endAt' :datetime='endAt' v-bind='options')
 				span(v-if='location') {{ `, ${location}` }}
-
-			//- div(class='bg-elevated/50 size-full rounded-lg min-h-2/ aspect-16/9')
 </template>
 
 <script lang='ts' setup>
@@ -98,20 +96,12 @@ const styles = computed(() => {
 			border: props.ui?.divider || 'border-neutral-700 dark:border-primary-300'
 		},
 		align: 'place-items-end text-end',
-		size: {
-			// 'h-5/12 row-span-1': props.alternate && horizontal.value,
-			// 'w-5/12 col-span-1': props.alternate && !horizontal.value,
-			// 'row-auto': !props.alternate && horizontal.value,
-			// 'col-span-5': !props.alternate && !horizontal.value
-		},
 		spacing: horizontal.value ? 'mr-10' : 'mb-10',
 		column: {
 			'gap-6': true,
 			'grid-flow-col-dense grid-cols-[auto_1fr]': !horizontal.value,
-			// 'grid-flow-col': !horizontal.value,
 			'grid-rows-[auto_1fr]': horizontal.value,
 			'odd:grid-rows-[1fr_auto_1fr]': props.alternate
-			// 'odd:grid-cols-[1fr_auto_1fr]': !horizontal.value && props.alternate
 		},
 		animation: 'fade-bottom-animation'
 	}

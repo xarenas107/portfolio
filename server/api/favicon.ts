@@ -1,4 +1,4 @@
-import { z } from 'zod/v4'
+import { z } from 'zod'
 
 const schema = z.union([
 	z.string().regex(/^([A-F0-9]{6}|[A-F0-9]{3})$/i).transform(value => `#${value}`),

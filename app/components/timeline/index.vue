@@ -3,7 +3,7 @@ primitive(as='ol' class="w-full flex group h-fit motion-reduce:overflow-auto scr
 	slot(v-if='slot.default' v-for='item, index in data' :item :index :orientation :alternate :lazy)
 
 	u-lazy(v-else v-for='item, index in data' :class='{ grow: index + 1 === items.length }' :disabled='!lazy' class="flex" as='li')
-		u-timeline-item(
+		timeline-item(
 			v-model:progress="percents[index]"
 			:title='item[titleKey]'
 			:subtitle='item[subtitleKey]'
