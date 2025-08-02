@@ -1,10 +1,8 @@
 {
-   "en": {
-	   "provider": "Peruvian Cuban Office",
-      "job": "Visual communication designer",
-      "description": "Creation of visual identity, brand manual, signage and website. Development of a web platform for the management of medical records in the center.",
-      "location": "Peru"
-   },
+   "provider": "Peruvian Cuban Office",
+   "job": "Visual communication designer",
+   "description": "Creation of visual identity, brand manual, signage and website. Development of a web platform for the management of medical records in the center.",
+   "location": "Peru",
    "es": {
       "provider": "Consultorio Peruano Cubano",
       "job": "Diseñador de comunicación visual",

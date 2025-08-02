@@ -4,7 +4,7 @@ export default () => {
 	const { locale } = useI18n()
 
 	const key = 'experiences'
-	const fields = ['provider', 'abbreviation', 'active', 'description', 'startAt', 'endAt', 'location', 'current', 'job'] as const
+	const fields = ['provider', 'abbreviation', 'active', 'description', 'startAt', 'endAt', 'location', 'current', 'job', 'href'] as const
 
 	const { data, execute, status } = useLazyAsyncData(key, async () => {
 		const response = await queryCollection(key)

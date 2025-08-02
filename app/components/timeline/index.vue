@@ -21,6 +21,7 @@ primitive(as='ol' class="w-full flex group h-fit motion-reduce:overflow-auto scr
 			:reverse='reverse ? !(index % 2): false'
 			:orientation
 			:alternate
+			:href='item.href'
 			class='snap-start min-w-max h-full'
 			)
 </template>
@@ -37,6 +38,7 @@ type Item<T = any> = {
 	time?: string
 	content?: string
 	location?: string
+	href?: string
 } & {
 	[key: string]: T
 }

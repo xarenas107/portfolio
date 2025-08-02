@@ -1,9 +1,8 @@
 {
-   "en": {
-      "job": "Product designer",
-      "description": "User interface design for the Cupra Lunar Rebel and redesign of front panel interfaces for Seat/Cupra, improving driver interaction and brand perception.",
-      "location": "Barcelona, Spain"
-   },
+   "job": "Product designer",
+   "description": "User interface design for the Cupra Lunar Rebel and redesign of front panel interfaces for Seat/Cupra, improving driver interaction and brand perception.",
+   "location": "Barcelona, Spain",
+   "href": "https://thenorthstudio.com",
    "es": {
       "job": "Designer de producto",
       "description": "Diseño de interfaz de usuario para el Cupra Lunar Rebel y rediseño de interfaces de paneles frontales en Seat/Cupra, mejorando la interacción del conductor y la percepción de marca.",

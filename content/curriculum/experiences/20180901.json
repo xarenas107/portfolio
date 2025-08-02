@@ -1,9 +1,7 @@
 {
-   "en": {
-	   "provider": "Faculty of communication",
-      "job": "Visual communication designer",
-      "description": "Creation of brand and website for Nexos (TV channel), Ecoescuela and others."
-   },
+   "provider": "Faculty of communication",
+   "job": "Visual communication designer",
+   "description": "Creation of brand and website for Nexos (TV channel), Ecoescuela and others.",
    "es": {
       "provider": "Facultad de Comunicación",
       "job": "Diseñador de comunicación visual",

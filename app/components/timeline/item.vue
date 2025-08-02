@@ -1,6 +1,6 @@
 <template lang='pug'>
 div(:class='[{ grow }, styles.column]' class="grid")
-	div(v-if='alternate' :class='[ui.container, styles.size, styles.spacing, { "order-1": alternate && reverse }]')
+	div(v-if='alternate' :class='[ui.container, styles.spacing, { "order-1": alternate && reverse }]')
 		//- div(class='bg-elevated/50 size-full rounded-lg')
 
 	div(class='flex gap-2 shrink justify-center items-center relative' :class='horizontal ?  "row-auto" : "col-span-1 flex-col w-fit"')
@@ -24,8 +24,9 @@ div(:class='[{ grow }, styles.column]' class="grid")
 	div(:class='[ui.container, styles.spacing, { "-order-1": alternate && reverse }]')
 		div(class='flex flex-col gap-0')
 			div(v-if='title' class='flex gap-4')
-				div
+				primitive(:as='href ? "a" : "div"' :href class='flex gap-2 items-center')
 					h3(class="text-xl font-bold text-balance w-auto" :class='ui.text') {{ title }}
+					u-icon(v-if='href' name='i-heroicons:arrow-up-right-solid')
 				div(class='grow')
 					u-badge(v-if='badge' :label='badge' :ui='ui.badge' size='md' variant='subtle' class='h-fit text-nowrap')
 
@@ -40,9 +41,13 @@ div(:class='[{ grow }, styles.column]' class="grid")
 				span(v-if='current') {{  t('time.now') }}
 				nuxt-time(v-else-if='endAt' :datetime='endAt' v-bind='options')
 				span(v-if='location') {{ `, ${location}` }}
+
+		nuxt-link(v-if='href' :href no-rel) {{ href }}
 </template>
 
 <script lang='ts' setup>
+import { Primitive } from 'reka-ui'
+
 type Props = {
 	title?: string
 	subtitle?: string
@@ -54,6 +59,7 @@ type Props = {
 	endAt?: string | number | Date
 	location?: string
 	current?: boolean
+	href?: string
 	ui?: {
 		text?: string
 		badge?: Record<string, unknown>

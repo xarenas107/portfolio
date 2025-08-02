@@ -1,9 +1,7 @@
 {
-   "en": {
-      "job": "UI designer",
-      "description": "Redesign of core e-commerce features that contributed to increased user retention and production of impactful animations and graphics for digital media, which generated a higher click-through rate.",
-      "location": "Peru"
-   },
+   "job": "UI designer",
+   "description": "Redesign of core e-commerce features that contributed to increased user retention and production of impactful animations and graphics for digital media, which generated a higher click-through rate.",
+   "location": "Peru",
    "es": {
       "job": "Diseñador UI",
       "description": "Rediseño de funcionalidades escenciales de ecommerce que contribuyó al incremento del ratio de retención de usuarios y producción de animaciones y materiales gráficos impactantes para medios digitales, lo que generó una mayor tasa de clics.",
