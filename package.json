@@ -74,10 +74,10 @@
     "@nuxt/eslint-config": "^1.8.0",
     "changelogen": "^0.6.2",
     "eslint": "^9.33.0",
-    "oxc-parser": "^0.78.0",
+    "oxc-parser": "^0.82.1",
     "pug": "^3.0.3",
-    "sass": "^1.89.2",
-    "sass-embedded": "^1.89.2",
+    "sass": "^1.90.0",
+    "sass-embedded": "^1.90.0",
     "unconfig": "^7.3.2",
     "wrangler": "^4.30.0"
   }
