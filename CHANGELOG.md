@@ -1,6 +1,26 @@
 # Changelog
 
 
+## v1.17.10
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.17.9...v1.17.10)
+
+### 🩹 Fixes
+
+- **experience:** Solve wrong content ([b8d1902](https://github.com/xarenas107/portfolio/commit/b8d1902))
+
+### 🏡 Chore
+
+- Upgrade to `Nuxt 4` ([36e5b75](https://github.com/xarenas107/portfolio/commit/36e5b75))
+- Upgrade to `Nuxt 4` ([0366365](https://github.com/xarenas107/portfolio/commit/0366365))
+- Add `ai` rules ([92552bb](https://github.com/xarenas107/portfolio/commit/92552bb))
+- Update dependences ([0753be2](https://github.com/xarenas107/portfolio/commit/0753be2))
+- Update dependences ([d7391db](https://github.com/xarenas107/portfolio/commit/d7391db))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.17.9
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.17.8...v1.17.9)
