@@ -1,7 +1,7 @@
-import type { NuxtConfig } from '@nuxt/schema'
+import type { ModuleOptions } from '@nuxt/ui'
 
-export default <NuxtConfig['ui']>{
+export default {
 	// theme: {
 	// 	colors: ['slate', 'orange', 'yellow', 'emerald', 'indigo', 'rose']
 	// }
-}
+} satisfies Partial<ModuleOptions>

@@ -1,5 +1,5 @@
 import type { NuxtConfig } from '@nuxt/schema'
 
-export default <NuxtConfig['vite']>{
+export default {
 	plugins: []
-}
+} satisfies Partial<NuxtConfig['vite']>

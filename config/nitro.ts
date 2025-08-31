@@ -1,15 +1,11 @@
 import type { NuxtConfig } from '@nuxt/schema'
 
-export default <NuxtConfig['nitro']>{
+export default {
 	prerender: {
 		routes: ['/'],
 		crawlLinks: true
 	},
 	experimental: {
-		// websocket: true,
 		openAPI: true
-	},
-	hub: {
-		workers: true
 	}
-}
+} satisfies Partial<NuxtConfig['nitro']>

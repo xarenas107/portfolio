@@ -1,7 +1,7 @@
-import type { NuxtConfig } from '@nuxt/schema'
+import type { ModuleOptions } from '@nuxtjs/color-mode'
 
-export default <NuxtConfig['colorMode']>{
+export default {
 	storageKey: 'color-scheme',
 	fallback: 'dark',
 	preference: 'system'
-}
+} satisfies Partial<ModuleOptions>

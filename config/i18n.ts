@@ -1,11 +1,10 @@
-import type { NuxtConfig } from '@nuxt/schema'
+import type { ModuleOptions } from '@nuxtjs/i18n'
 
-export default <NuxtConfig['i18n']>{
+export default {
 	baseUrl: process.env.NUXT_PUBLIC_SITE_URL,
 	experimental: { typedOptionsAndMessages: 'all' },
 	strategy: 'no_prefix',
 	defaultLocale: 'en',
-	lazy: true,
 	locales: [
 		{
 			name: 'English',
@@ -21,9 +20,6 @@ export default <NuxtConfig['i18n']>{
 			file: 'es.json'
 		}
 	],
-	bundle: {
-		optimizeTranslationDirective: false
-	},
 	langDir: 'locales',
 	compilation: {
 		escapeHtml: true
@@ -34,4 +30,4 @@ export default <NuxtConfig['i18n']>{
 		cookieKey: 'locale',
 		redirectOn: 'root'
 	}
-}
+} satisfies Partial<ModuleOptions>

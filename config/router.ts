@@ -1,7 +1,7 @@
 import type { NuxtConfig } from '@nuxt/schema'
 
-export default <NuxtConfig['router']>{
+export default {
 	options: {
 		scrollBehaviorType: 'smooth'
 	}
-}
+} satisfies Partial<NuxtConfig['router']>

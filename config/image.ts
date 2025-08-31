@@ -1,6 +1,6 @@
-import type { NuxtConfig } from '@nuxt/schema'
+import type { ModuleOptions } from '@nuxt/image'
 
-export default <NuxtConfig['image']>{
+export default {
 	presets: {
 		cover: {
 			modifiers: {
@@ -9,4 +9,4 @@ export default <NuxtConfig['image']>{
 			}
 		}
 	}
-}
+} satisfies Partial<ModuleOptions>

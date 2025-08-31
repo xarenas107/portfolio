@@ -1,7 +1,4 @@
-import type { NuxtConfig } from '@nuxt/schema'
+import type { ModuleOptions } from '@nuxt/content'
 
-export default <NuxtConfig['content']>{
-	experimental: {
-		search: 'true'
-	}
-}
+export default {
+} satisfies Partial<ModuleOptions>

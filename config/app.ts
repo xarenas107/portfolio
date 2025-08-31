@@ -1,6 +1,6 @@
 import type { NuxtConfig } from '@nuxt/schema'
 
-export default <NuxtConfig['app']>{
+export default {
 	head: {
 		link: [
 			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico', sizes: '48x48', media: '(prefers-color-scheme: light)' },
@@ -23,4 +23,4 @@ export default <NuxtConfig['app']>{
 			link: [{ rel: 'icon', type: 'image/svg+xml', href: '/icons/favicon-adaptative.svg' }]
 		}
 	}
-}
+} satisfies Partial<NuxtConfig['app']>
