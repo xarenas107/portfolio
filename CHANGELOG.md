@@ -1,6 +1,10 @@
 # Changelog
 
 
+## v1.17.14
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.17.13...v1.17.14)
+
 ## v1.17.13
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.17.12...v1.17.13)
