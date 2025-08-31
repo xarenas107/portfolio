@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v1.17.13
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.17.12...v1.17.13)
+
+### 🏡 Chore
+
+- Update dependencies and configuration for Nuxt 4 compatibility ([c8f2cd6](https://github.com/xarenas107/portfolio/commit/c8f2cd6))
+- Restore removed dependencies and update app configuration ([0b1ec7d](https://github.com/xarenas107/portfolio/commit/0b1ec7d))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.17.12
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.17.11...v1.17.12)
