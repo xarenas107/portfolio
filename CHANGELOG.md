@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.17.15
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.17.14...v1.17.15)
+
+### 🏡 Chore
+
+- Update dependencies and add scrollbar styles ([0581df3](https://github.com/xarenas107/portfolio/commit/0581df3))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.17.14
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.17.13...v1.17.14)
