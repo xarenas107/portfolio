@@ -1,14 +1,19 @@
 {
+	"nuxtSiteConfig": {
+		"name": "Xavier Arenas",
+		"description": "Diseñador de producto",
+		"keywords": "UX, UI, Designer, Portfolio, Resume, Curriculum Vitae, User Experience, User Interface, Design, Digital, Web, Mobile, App, Freelance"
+	},
 	"im": "Soy",
 	"itsme": "Este soy yo",
 	"portfolio": "Portafolio | Portafolios",
 	"app": {
-		"name": "@:portfolio",
+		"name": "Portfolio",
 		"description": "Curriculum Vitae"
 	},
 		"resume": {
 		"name": "Resumen | Resumenes",
-		"download": "Descargar @.lower:resume.name"
+		"download": "Descargar resumen"
 	},
 	"greetings": {
 		"hi": "¡Hola!",
@@ -25,8 +30,8 @@
 	},
 	"language": {
 		"name": "Idioma | Idiomas",
-		"option": "@:option.name de idioma",
-		"select": "Selecciona un @.lower:language.name"
+		"option": "Opciones de idioma",
+		"select": "Selecciona un idioma"
 	},
 	"search": {
 		"empty": "No se encontraron datos"
@@ -50,7 +55,7 @@
 		"parameter": "Parámetro | Parámetros",
 		"participant": "Participante | Participantes",
 		"product": "Producto | Productos",
-		"research": "Investigaqción",
+		"research": "Investigación",
 		"sitemap": "Mapa del sitio | Mapas del sitio",
 		"summary": "Resumen",
 		"time": "Tiempo",
@@ -58,13 +63,13 @@
 			"wireframe": "Estructura digital",
 			"prototype": {
 				"name": "Prototipo | Prototipos",
-				"high": "@:project.design.prototype.name de alta fidelidad",
-				"low": "@:project.design.prototype.name de baja fidelidad",
+				"high": "Prototipo de alta fidelidad",
+				"low": "Prototipo de baja fidelidad",
 				"usability": {
 					"name": "Usabilidad",
 					"study": {
-						"name": "@:project.design.usability.study.name de @.lower:project.design.usability.name",
-						"type": "Tipo de @.lower:project.design.usability.study.name"
+						"name": "Estudio de usabilidad",
+						"type": "Tipo de estudio"
 					}
 				}
 			}
@@ -75,7 +80,7 @@
 			"family": "Familia | Familias",
 			"hometown": "Lugar de residencia",
 			"job": "Trabajo | Trabajos",
-			"research": "@:project.research de usuario",
+			"research": "Investigación",
 			"statement": "Declaración del problema",
 			"journey": {
 				"action": "Acción | Acciones",
@@ -91,11 +96,11 @@
 	},
 	"credential": {
 		"name":  "Credencial | Credenciales",
-		"no": "@:credential.name No. { number }"
+		"no": "Credencial No. { number }"
 	},
 	"color": {
 		"name": "Color | Colores",
-		"option": "@:option.name de color",
+		"option": "Opción de color",
 		"blue": "Azul",
 		"red": "Rojo",
 		"orange": "Naranja",
@@ -133,8 +138,8 @@
 	},
 		"go": {
 			"name": "Ir a",
-			"top": "@:go top",
-			"next": "@:go próxima @.lower:section.name"
+			"top": "Ir al inicio",
+			"next": "Ir a la próxima sección"
 	},
 	"control": {
 		"play": "Reproducir",

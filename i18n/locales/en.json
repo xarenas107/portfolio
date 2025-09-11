@@ -1,15 +1,20 @@
 {
+	"nuxtSiteConfig": {
+		"name": "Xavier Arenas",
+		"description": "Product designer",
+		"keywords": "UX, UI, Designer, Portfolio, Resume, Curriculum Vitae, User Experience, User Interface, Design, Digital, Web, Mobile, App, Freelance"
+	},
 	"im": "I'm",
 	"itsme": "This is me",
 	"portfolio": "Portfolio | Portfolios",
 	"presentation": "My name is { name } and I'm a { job }",
 	"resume": {
 		"name": "Resume | Resumes",
-		"download": "Download @.lower:resume.name"
+		"download": "Download resume"
 	},
 	"app": {
 		"description": "Curriculum Vitae",
-		"name": "@:portfolio"
+		"name": "Portfolio"
 	},
 	"back": {
 		"name": "Back",
@@ -18,14 +23,14 @@
 	},
 	"credential": {
 		"name":  "Credential | Credentials",
-		"no": "@:credential.name No. { number }"
+		"no": "Credential No. { number }"
 	},
 	"color": {
 		"blue": "Blue",
 		"emerald": "Emerald",
 		"indigo": "Indigo",
 		"name": "Color | Colors",
-		"option": "Color @.lower:option.name",
+		"option": "Color options",
 		"orange": "Orange",
 		"red": "Red",
 		"rose": "Rose",
@@ -45,8 +50,8 @@
 	},
 	"language": {
 		"name": "Language | Languages",
-		"option": "Language @.lower:option.name",
-		"select": "Select your @.lower:language.name"
+		"option": "Language options",
+		"select": "Select your language"
 	},
 	"menu": {
 		"sr": "Open main menu"
@@ -89,9 +94,9 @@
 			}
 		},
 		"overview": {
-			"duration": "@:project.name duration",
-			"goal": "The @.lower:project.goal",
-			"name": "@:project.name overview",
+			"duration": "Project duration",
+			"goal": "The goal",
+			"name": "Project overview",
 			"problem": "The problem",
 			"product": "The product",
 			"responsability": "Responsability | Responsabilities",
@@ -104,7 +109,7 @@
 			"hometown": "Hometown",
 			"job": "Job | Jobs",
 			"name": "Understanding the user",
-			"research": "User @.lower:project.research",
+			"research": "User research",
 			"statement": "Problem statement",
 			"journey": {
 				"action": "Action | Actions",
@@ -133,8 +138,8 @@
 	},
 	"go": {
 		"name": "Go to",
-		"top": "@:go top",
-		"next": "@:go next @.lower:section.name"
+		"top": "Go to top",
+		"next": "Go to next section"
 	},
 	"control": {
 		"play": "Play",

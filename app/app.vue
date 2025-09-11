@@ -13,7 +13,7 @@ u-app(:locale)
 <script lang="ts" setup>
 import * as locales from '@nuxt/ui/locale'
 
-const { locale: current } = useI18n()
+const { locale: current } = useTranslation()
 const locale = computed(() => locales[current.value])
 const route = useRoute()
 

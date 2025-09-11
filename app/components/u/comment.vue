@@ -22,7 +22,7 @@ type Props = {
 	content?: string
 }
 
-const { d, locale } = useI18n()
+const { locale } = useTranslation()
 
 const comment = useTemplateRef('comment')
 const [open, toggle] = useToggle()

@@ -1,5 +1,5 @@
 export default () => {
-	const { locale, t } = useI18n()
+	const { locale } = useTranslation()
 
 	const key = 'skills'
 	const { data, execute, status } = useLazyAsyncData(key, async () => {

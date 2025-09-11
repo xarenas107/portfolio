@@ -1,6 +1,7 @@
 @import './fonts';
 @import './animations';
 @import './anchor';
+@import './scrollbar';
 @import "tailwindcss";
 @import "@nuxt/ui";
 

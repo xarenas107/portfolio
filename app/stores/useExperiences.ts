@@ -1,7 +1,7 @@
 import type { ExperiencesCollectionItem } from '@nuxt/content'
 
 export default () => {
-	const { locale } = useI18n()
+	const { locale } = useTranslation()
 
 	const key = 'experiences'
 	const fields = ['provider', 'abbreviation', 'active', 'description', 'startAt', 'endAt', 'location', 'current', 'job', 'href'] as const

@@ -1,6 +1,6 @@
 export default (id: ComputedRef<string> | Ref<string>) => {
 	const _id = unref(id)
-	const { locale, localeCodes } = useI18n()
+	const { locale, localeCodes } = useTranslation()
 	const key = 'projects'
 	const fields = ['title', 'description', 'cover', 'stem', 'id', 'sections', 'layout'] as const
 

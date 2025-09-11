@@ -1,7 +1,7 @@
 import type { CertificatesCollectionItem } from '@nuxt/content'
 
 export default () => {
-	const { locale, t } = useI18n()
+	const { locale } = useTranslation()
 
 	const key = 'certificates'
 	const fields = ['title', 'provider', 'image', 'credentials', 'startAt', 'stem', 'endAt', 'active'] as const

@@ -1,7 +1,7 @@
 import type { ProjectsCollectionItem } from '@nuxt/content'
 
 export default () => {
-	const { locale } = useI18n()
+	const { locale } = useTranslation()
 	const key = 'projects'
 	const fields = ['title', 'description', 'cover', 'stem', 'id', 'highlighted', 'pinned', 'active', 'keys'] as const
 

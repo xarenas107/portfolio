@@ -1,5 +1,5 @@
 export default () => {
-	const { locale, localeCodes } = useI18n()
+	const { locale, localeCodes } = useTranslation()
 	const hash = useHashRoute()
 
 	const key = 'sections'

@@ -1,7 +1,7 @@
 import type { UserCollectionItem } from '@nuxt/content'
 
 export default () => {
-	const { locale } = useI18n()
+	const { locale } = useTranslation()
 	const key = 'user'
 	const fields = ['name', 'fullname', 'comment', 'description', 'job', 'location', 'portfolio', 'contact', 'resume', 'image'] as const
 

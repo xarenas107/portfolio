@@ -41,7 +41,7 @@ const props = defineProps<Props>()
 const motion = usePreferredReducedMotion()
 const reduce = computed(() => motion.value === 'reduce')
 
-const { t, locale } = useI18n()
+const { t, locale } = useTranslation()
 const options = computed(() => {
 	const base = 'transition-transform duration-200 ease-out'
 

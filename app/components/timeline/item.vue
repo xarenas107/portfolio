@@ -93,7 +93,7 @@ const props = withDefaults(defineProps<Props>(), {
 	})
 })
 
-const { t, locale } = useI18n()
+const { t, locale } = useTranslation()
 const progress = defineModel('progress', { default: 0 })
 const horizontal = computed(() => props.orientation === 'horizontal')
 const styles = computed(() => {

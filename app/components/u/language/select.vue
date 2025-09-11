@@ -13,20 +13,20 @@ client-only()
 </template>
 
 <script lang='ts' setup>
-const { t, locales, locale, getLocaleMessage, setLocale, setLocaleCookie } = useI18n()
+const { t, locale, locales } = useTranslation()
 
 const target = useTemplateRef('element')
 
 const text = computed(() => t('language.select'))
-const update = async (value: typeof locale['value']) => {
+const update = async (value: string) => {
 	if (locale.value === value) return
 	const element = target.value
 
 	useRadialTransition(element, async () => {
-		const messages = getLocaleMessage(value)
-		const cached = Object.keys(messages)
-		if (!cached.length) await setLocale(value)
-		setLocaleCookie(value)
+		// const messages = getLocaleMessage(value)
+		// const cached = Object.keys(messages)
+		// if (!cached.length) await setLocale(value)
+		// setLocaleCookie(value)
 		locale.value = value
 	})
 }

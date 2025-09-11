@@ -4,7 +4,7 @@ div(class='bg-default selection:bg-inverted selection:text-(--ui-bg) overflow-x-
 </template>
 
 <script setup lang="ts">
-const { t, locale } = useI18n()
+const { t, locale } = useTranslation()
 const head = useLocaleHead()
 const app = useAppConfig()
 const { theme } = useTailwind()
@@ -29,8 +29,7 @@ useSeoMeta({
 	titleTemplate: `${app.name} - ${app.author.name}`,
 	description: () => t('app.description'),
 	themeColor: () => color.value,
-	// ogImage: () => href.value,
-	ogImage: () => '/icons/favicon.webp',
+	ogImage: () => href.value,
 	ogImageAlt: title,
 	ogLocale: locale,
 	ogLocaleAlternate: 'en',

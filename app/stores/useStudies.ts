@@ -1,7 +1,7 @@
 import type { StudiesCollectionItem } from '@nuxt/content'
 
 export default () => {
-	const { locale } = useI18n()
+	const { locale } = useTranslation()
 
 	const key = 'studies'
 	const fields = ['title', 'provider', 'type', 'location', 'startAt', 'endAt', 'active', 'current'] as const

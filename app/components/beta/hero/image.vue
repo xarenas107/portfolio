@@ -16,7 +16,7 @@ type Props = {
 	imgAttrs?: ImgHTMLAttributes
 }
 
-const { t } = useI18n()
+const { t } = useTranslation()
 // const reduceMotion = usePreferredReducedMotion()
 // const target = useTemplateRef<HTMLImageElement>('image')
 // const tooltip = useTemplateRef('tooltip')
