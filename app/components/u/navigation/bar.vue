@@ -50,14 +50,14 @@ nav(v-if='active' class="fixed w-full z-50 transition-[transform background] dur
 						div(class='flex flex-col gap-8 grow')
 
 							div(v-if='!back' class='flex flex-col gap-4 lg:hidden')
-								h6(class='text-muted text-bold text-sm') {{ t('navigation.name') }}
+								h6(class='text-muted text-bold text-sm') {{ tc('navigation.name') }}
 
 								ul(class='flex flex-col gap-1')
 									li(v-for='{ icon, text, id, active, to } in data')
 										u-navigation-link(v-if='id' :href='to' @click.prevent='navigate(id)' :active :icon :text :aria-current='active')
 
 							div(class='flex flex-col gap-4 grow')
-								h6(class='text-muted text-bold text-sm') {{ t('navigation.settings', 2) }}
+								h6(class='text-muted text-bold text-sm') {{ tc('navigation.settings', 2) }}
 
 								div(class='flex flex-col flex-wrap gap-1 grow w-full place-content-between')
 									u-language-select(class='grow')
@@ -99,7 +99,7 @@ type Props = {
 
 const slot = useSlots()
 const hash = useHashRoute()
-const { t } = useI18n()
+const { t, tc } = useTranslation()
 
 const props = defineProps<Props>()
 

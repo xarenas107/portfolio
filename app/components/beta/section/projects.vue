@@ -78,6 +78,3 @@ const imgAttrs = {
 	height: '400'
 }
 </script>
-
-<style lang='scss'>
-</style>

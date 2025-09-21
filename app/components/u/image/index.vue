@@ -14,6 +14,3 @@ withDefaults(defineProps<Props>(), {
 	src: () => '/'
 })
 </script>
-
-<style lang='scss' scoped>
-</style>

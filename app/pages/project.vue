@@ -1,5 +1,6 @@
 <template lang="pug">
-nuxt-page
+client-only
+	nuxt-page
 </template>
 
 <script lang="ts" setup>

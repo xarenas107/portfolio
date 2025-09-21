@@ -58,7 +58,7 @@ type Props = {
 
 const options = defineProps<Props>()
 
-const { t } = useI18n()
+const { t, tc } = useTranslation()
 
 const ui = {
 	title: 'text-inverted',
@@ -85,29 +85,16 @@ const group = computed(() => {
 		// },
 		{
 			highlighted: false,
-			title: t('project.goal', 2),
+			title: tc('project.goal', 2),
 			icon: 'i-heroicons:star',
 			content: Array.isArray(goals) ? goals : [goals]
 		},
 		{
 			highlighted: false,
-			title: t('project.frustration', 2),
+			title: tc('project.frustration', 2),
 			icon: 'i-heroicons-outline:exclaimation-triangle',
 			content: Array.isArray(frustrations) ? frustrations : [frustrations]
 		}
 	]
 })
 </script>
-
-<style lang="scss" scoped>
-// @keyframes scroll-up {
-//     from { opacity: 0 }
-// }
-// @media (prefers-reduced-motion: no-preference) {
-// 	.scroll-up-animation {
-// 		animation: scroll-up ease-in forwards;
-// 		animation-timeline: view();
-// 		animation-range: entry;
-// 	}
-// }
-</style>

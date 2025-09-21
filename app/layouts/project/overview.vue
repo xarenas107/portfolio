@@ -41,16 +41,3 @@ const ui = {
 	button: 'text-inverted bg-default/10 ring-default/20 hover:bg-default/20 aspect-square place-content-center rounded-full cursor-pointer'
 }
 </script>
-
-<style lang="scss" scoped>
-// @keyframes scroll-up {
-//     from { opacity: 0 }
-// }
-// @media (prefers-reduced-motion: no-preference) {
-// 	.scroll-up-animation {
-// 		animation: scroll-up ease-in forwards;
-// 		animation-timeline: view();
-// 		animation-range: entry;
-// 	}
-// }
-</style>

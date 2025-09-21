@@ -41,6 +41,3 @@ const options = computed(() => {
 	}
 })
 </script>
-
-<style lang='scss' scoped>
-</style>

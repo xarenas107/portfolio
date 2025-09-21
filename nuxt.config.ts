@@ -56,7 +56,7 @@ export default defineNuxtConfig({
 		// 'nuxt-og-image',
 		'nuxt-link-checker'
 	],
-	ssr: false,
+	// ssr: false,
 	imports: {
 		dirs: ['./stores']
 	},

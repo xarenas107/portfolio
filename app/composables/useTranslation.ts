@@ -1,9 +1,10 @@
 type LocaleCode = 'en' | 'es'
+type Params = number | Record<string, string | number | boolean>
 
 export default () => {
-	const { $t, getLocaleName, switchLocale, getLocales, defaultLocale, getLocale } = useI18n()
+	const { tc, switchLocale, getLocales, defaultLocale, getLocale } = useI18n()
 
-	const t = (key: string, params?: Record<string, string | number | boolean>) => $t(key, params) as string
+	const t = (key: string, params: Params = 1) => tc(key, params)
 
 	const locale = computed({
 		get: () => (getLocale() || defaultLocale() || 'en') as LocaleCode,
@@ -16,5 +17,5 @@ export default () => {
 		return list.map(locale => locale.code) as LocaleCode[]
 	})
 
-	return { t, locale, localeCodes, locales }
+	return { t, locale, localeCodes, locales, tc: t }
 }

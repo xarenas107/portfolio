@@ -1,11 +1,11 @@
 {
    "job": "UI designer",
-   "description": "Redesign of core e-commerce features that contributed to increased user retention and production of impactful animations and graphics for digital media, which generated a higher click-through rate.",
-   "location": "Peru",
+   "description": "To address the low user retention rate, I analyzed data and user feedback to identify the main issues in the online store's purchasing process. Subsequently, I designed and implemented a simplified three-step checkout process, which resulted in a 9% increase in user retention within six months.",
+   "location": "Lima, Peru",
    "es": {
       "job": "Diseñador UI",
-      "description": "Rediseño de funcionalidades escenciales de ecommerce que contribuyó al incremento del ratio de retención de usuarios y producción de animaciones y materiales gráficos impactantes para medios digitales, lo que generó una mayor tasa de clics.",
-      "location": "Perú"
+      "description": "Para solucionar el bajo índice de retención de usuarios, analicé los datos y las opiniones de los usuarios a fin de identificar los principales problemas en el proceso de compra de la tienda en línea. Posteriormente, diseñé e implementé un proceso de pago simplificado en tres pasos, lo que resultó en un aumento del 9% en la retención de usuarios en un plazo de seis meses.",
+      "location": "Lima, Perú"
    },
    "provider": "Aurela",
    "startAt": "2023-06-01",

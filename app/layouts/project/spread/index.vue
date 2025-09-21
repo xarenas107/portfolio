@@ -62,21 +62,3 @@ const images = computed(() => {
 	})
 })
 </script>
-
-<style lang="scss" scoped>
-@keyframes rotate {
-  from {
-	margin: 0;
-	box-shadow: 0 0 transparent;
-	filter: unset
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .spread-animation {
-    animation: rotate ease-out both v-bind(direction);
-    animation-timeline: view();
-    animation-range: 20% 40%;
-  }
-}
-</style>

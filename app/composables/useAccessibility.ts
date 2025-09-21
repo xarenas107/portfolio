@@ -1,35 +1,36 @@
 export const useAccessibility = () => {
-	const { t } = useI18n()
+	const { t } = useTranslation()
 
 	const focusTrap = (element: HTMLElement) => {
-		const focusableElements = element.querySelectorAll(
-			'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-		)
-		const firstElement = focusableElements[0] as HTMLElement
-		const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement
+		if (!import.meta.client) return
 
-		const handleKeyDown = (event: KeyboardEvent) => {
-			if (event.key === 'Tab') {
-				if (event.shiftKey) {
-					if (document.activeElement === firstElement) {
+		const list = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+		const elements = element.querySelectorAll<HTMLElement>(list)
+		const firstElement = elements[0]
+
+		const unwatch = useEventListener('keydown', (event) => {
+			const last = elements.length - 1
+			const lastElement = elements[last]
+			const { activeElement } = document
+			const { key, shiftKey } = event
+
+			if (key === 'Tab') {
+				if (shiftKey) {
+					if (activeElement === firstElement) {
 						event.preventDefault()
-						lastElement.focus()
+						lastElement?.focus()
 					}
 				} else {
-					if (document.activeElement === lastElement) {
+					if (activeElement === lastElement) {
 						event.preventDefault()
-						firstElement.focus()
+						firstElement?.focus()
 					}
 				}
 			}
-		}
+		})
 
-		element.addEventListener('keydown', handleKeyDown)
 		firstElement?.focus()
-
-		return () => {
-			element.removeEventListener('keydown', handleKeyDown)
-		}
+		return unwatch
 	}
 
 	const announceToScreenReader = (message: string, priority: 'polite' | 'assertive' = 'polite') => {
@@ -49,16 +50,21 @@ export const useAccessibility = () => {
 	}
 
 	const skipToContent = () => {
+		if (!import.meta.client) return
+		const target = document.querySelector('a[href="#main-content"]')
+		if (target) return
+
 		const skipLink = document.createElement('a')
 		skipLink.href = '#main-content'
 		skipLink.textContent = t('accessibility.skipToContent')
-		skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-primary-foreground px-4 py-2 rounded'
-
+		skipLink.classList.add('sr-only', 'focus:not-sr-only')
 		document.body.insertBefore(skipLink, document.body.firstChild)
 	}
 
 	const handleKeyboardNavigation = (callback: (direction: 'next' | 'prev') => void) => {
-		const handleKeyDown = (event: KeyboardEvent) => {
+		if (!import.meta.client) return
+
+		const unwatch = useEventListener('keydown', (event) => {
 			switch (event.key) {
 				case 'ArrowRight':
 				case 'ArrowDown':
@@ -71,15 +77,8 @@ export const useAccessibility = () => {
 					callback('prev')
 					break
 			}
-		}
-
-		onMounted(() => {
-			document.addEventListener('keydown', handleKeyDown)
 		})
-
-		onUnmounted(() => {
-			document.removeEventListener('keydown', handleKeyDown)
-		})
+		onBeforeUnmount(() => unwatch())
 	}
 
 	return {
@@ -88,4 +87,4 @@ export const useAccessibility = () => {
 		skipToContent,
 		handleKeyboardNavigation
 	}
-} 
+}

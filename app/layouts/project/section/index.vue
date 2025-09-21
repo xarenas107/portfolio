@@ -11,10 +11,3 @@ type Props = {
 
 defineProps<Props>()
 </script>
-
-<style lang='scss' scoped>
-::view-transition-old(h1),
-::view-transition-new(h1) {
-  width: auto;
-}
-</style>

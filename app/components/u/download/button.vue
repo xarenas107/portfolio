@@ -14,12 +14,9 @@ const props = withDefaults(defineProps<Props>(), {
 	type: () => 'button'
 })
 
-const { t } = useI18n()
+const { t } = useTranslation()
 
 const text = computed(() => t('resume.download'))
 const label = computed(() => props.showLabel ? text.value : undefined)
 const { data } = useUser()
 </script>
-
-<style lang='scss' scoped>
-</style>

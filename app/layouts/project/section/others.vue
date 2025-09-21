@@ -1,6 +1,6 @@
 <template lang="pug">
 section(class='flex flex-col gap-8')
-	h4(class='text-2xl font-semibold flex items-center font-display text-muted') {{ t('other', 2)}}
+	h4(class='text-2xl font-semibold flex items-center font-display text-muted') {{ tc('other', 2)}}
 
 	u-card-group(:ui='ui.card')
 		template(#default='{ childClass, containerClass }')
@@ -17,7 +17,7 @@ type Props = {
 }
 
 defineProps<Props>()
-const { t } = useI18n()
+const { tc } = useTranslation()
 const { data } = useProjects()
 const route = useRoute()
 
@@ -66,6 +66,3 @@ const imgAttrs = {
 	height: '160'
 }
 </script>
-
-<style lang="scss" scoped>
-</style>

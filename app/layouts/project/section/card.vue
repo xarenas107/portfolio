@@ -24,6 +24,3 @@ withDefaults(defineProps<Props>(), {
 	active: true
 })
 </script>
-
-<style lang='scss' scoped>
-</style>

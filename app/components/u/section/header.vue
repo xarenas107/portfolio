@@ -11,6 +11,3 @@ withDefaults(defineProps<Props>(), {
 	weight: () => 'medium'
 })
 </script>
-
-<style lang='scss' scoped>
-</style>

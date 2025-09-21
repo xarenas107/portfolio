@@ -52,7 +52,3 @@ const focus = (event: MouseEvent) => {
 	comment.value?.focus()
 }
 </script>
-
-<style lang="scss" scoped>
-
-</style>

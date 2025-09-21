@@ -23,5 +23,3 @@ const ui = computed(() => {
 	return { base, highlight }
 })
 </script>
-
-<style lang="scss" scoped></style>

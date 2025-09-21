@@ -32,6 +32,3 @@ const state = computed(() => {
 
 const toggle = (value: string, event: MouseEvent) => emit('change', value, event)
 </script>
-
-<style lang='scss' scoped>
-</style>

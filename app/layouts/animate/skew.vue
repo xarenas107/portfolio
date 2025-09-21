@@ -83,6 +83,3 @@ onMounted(() => {
 	state.scroll = window.scrollY
 })
 </script>
-
-<style lang='scss'>
-</style>

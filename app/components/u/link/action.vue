@@ -28,6 +28,3 @@ const classes = computed(() => {
 	return text
 })
 </script>
-
-<style lang='scss' scoped>
-</style>

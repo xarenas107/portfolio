@@ -1,11 +1,11 @@
 {
    "job": "Product designer",
-   "description": "Led UI/UX redesign and participated in the front-end development of a CRM platform, resulting in a 12% increase in MRR, a 10% reduction in churn, and a 21% increase in conversion rate.",
-   "href": "https://wipass.ia",
+   "description": "Led the UX/UI redesign and participated in the front-end development of a CRM platform, resulting in a 12% increase in MRR, a 10% reduction in churn rate, and a 21% increase in conversion rate.",
+   "href": "https://wipass.ai",
    "location": "Barcelona, Spain",
    "es": {
       "job": "Diseñador de producto",
-      "description": "Led UI/UX redesign and participated in the front-end development of a CRM platform, resulting in a 12% increase in MRR, a 10% reduction in churn, and a 21% increase in conversion rate.",
+      "description": "Dirigí el rediseño de la UX/UI y participé en el desarrollo del frontend de una plataforma CRM, lo que resultó en un aumento del 12% en los ingresos recurrentes mensuales, una reducción del 10% en la tasa de abandono y un aumento del 21% en la tasa de conversión.",
       "location": "Barcelona, España"
    },
    "provider": "Wipass",

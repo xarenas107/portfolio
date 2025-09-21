@@ -1,7 +1,7 @@
 <template lang='pug'>
 client-only()
 	template(#fallback)
-		u-skeleton(class='min-w-32 h-8 rounded-lg bg-inverted/50 w-full')
+		u-skeleton(class='min-w-32 h-8 rounded-lg bg-inverted/15 w-full')
 
 	u-tooltip(:text :open='!popover && hover')
 		div(v-hover='change')
@@ -35,6 +35,3 @@ const change = (value: boolean) => hover.value = value
 const hover = shallowRef(false)
 const popover = shallowRef(false)
 </script>
-
-<style lang='scss' scoped>
-</style>

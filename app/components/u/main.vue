@@ -5,6 +5,3 @@ main(class="min-h-screen w-dvw")
 
 <script lang='ts' setup>
 </script>
-
-<style lang='scss' scoped>
-</style>

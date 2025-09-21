@@ -1,7 +1,7 @@
 <template lang='pug'>
 client-only()
 	template(#fallback)
-		u-skeleton(class='w-8 h-8 aspect-square rounded-lg bg-inverted/50')
+		u-skeleton(class='size-8 aspect-square rounded-lg bg-inverted/15')
 
 	u-tooltip(:text)
 		u-button(@click='toggle' :label :aria-label='text' icon='i-heroicons-outline:share' variant='ghost' color='neutral' size='lg' :class='[{ "aspect-square place-content-center": square }]' class='hover:bg-inverted/10 cursor-pointer focus-visible:bg-inverted/10 focus:focus-visible:ring-2 focus:focus-visible:ring-inverted')
@@ -19,7 +19,7 @@ const props = withDefaults(defineProps<Props>(), {
 	type: () => 'button'
 })
 
-const { t } = useI18n()
+const { t } = useTranslation()
 
 const text = computed(() => t('share.name'))
 const label = computed(() => props.showLabel ? text.value : undefined)
@@ -35,6 +35,3 @@ const toggle = () => {
 	})
 }
 </script>
-
-<style lang='scss' scoped>
-</style>

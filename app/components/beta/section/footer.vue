@@ -29,6 +29,3 @@ const options = computed(() => {
 })
 const { data } = useUser()
 </script>
-
-<style lang="scss" scoped>
-</style>

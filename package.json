@@ -41,7 +41,6 @@
     "@nuxt/image": "^1.11.0",
     "@nuxt/ui": "^3.3.3",
     "@nuxthub/core": "^0.9.0",
-    "@nuxtjs/i18n": "^10.1.0",
     "@nuxtjs/robots": "^5.5.1",
     "@nuxtjs/sitemap": "^7.4.3",
     "@unhead/shared": "^2.0.14",
@@ -51,12 +50,11 @@
     "motion-v": "^1.7.1",
     "nuxt": "^4.1.1",
     "nuxt-i18n-micro": "^1.95.0",
-    "nuxt-link-checker": "^4.3.1",
     "nuxt-og-image": "^5.1.9",
     "nuxt-seo-utils": "^7.0.14",
     "vue": "^3.5.21",
     "vue-router": "^4.5.1",
-    "zod": "^4.1.5"
+    "zod": "^4.1.11"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",
@@ -72,11 +70,10 @@
     "@vue/language-plugin-pug": "^3.0.6",
     "changelogen": "^0.6.2",
     "eslint": "^9.35.0",
-    "oxc-parser": "^0.87.0",
+    "nuxt-link-checker": "^4.3.2",
+    "oxc-parser": "^0.90.0",
     "pug": "^3.0.3",
-    "sass": "^1.92.1",
-    "sass-embedded": "^1.92.1",
     "unconfig": "^7.3.3",
-    "wrangler": "^4.34.0"
+    "wrangler": "^4.38.0"
   }
 }

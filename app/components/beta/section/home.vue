@@ -79,11 +79,7 @@ const options = computed(() => {
 	}
 })
 
-const { t } = useI18n()
-
-// const transition = {
-// 	name: 'transition-fade'
-// }
+const { t } = useTranslation()
 
 const imgAttrs = {
 	class: 'drop-shadow-2xl drop-shadow-primary-950'
@@ -100,6 +96,3 @@ onMounted(() => show.value = true)
 
 const { data } = useUser()
 </script>
-
-<style lang="scss" scoped>
-</style>

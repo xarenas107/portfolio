@@ -9,7 +9,7 @@ section(v-if='active' class="flex flex-col gap-8")
 		table(class='text-sm table-auto flex flex-col w-max lg:w-auto max-w-7xl')
 			thead(class='border-b py-2 border-neutral-400 dark:border-neutral-600')
 				tr(class="gap-2 text-left grid grid-cols-6")
-					th(class='snap-start snap-always') {{  t('project.user.journey.action') }}
+					th(class='snap-start snap-always') {{  tc('project.user.journey.action', 2) }}
 					th(v-for="item in table?.action" class='snap-start') {{ item }}
 
 			tbody(class='opacity-80 font-sans')
@@ -20,12 +20,12 @@ section(v-if='active' class="flex flex-col gap-8")
 							li(class='list-item' v-for='task in tasks') {{ task }}
 
 				tr(class="gap-2 py-2 border-b border-neutral-400 dark:border-neutral-600 grid grid-cols-6")
-					td {{  t('project.user.journey.emotion', 2) }}
+					td {{  tc('project.user.journey.emotion', 2) }}
 					td(v-for="emotions in table?.emotion" class='gap-1 text-balance')
 						p(v-for='emotion in emotions') {{ emotion }}
 
 				tr(class="py-2 gap-2 grid grid-cols-6")
-					td {{  t('project.user.journey.opportunities', 2) }}
+					td {{  tc('project.user.journey.opportunities', 2) }}
 					td(v-for="opportunities in table?.opportunity" class='gap-1 text-balance')
 						p(v-for='opportunity in opportunities') {{ opportunity }}
 </template>
@@ -45,8 +45,5 @@ type Props = {
 const props = withDefaults(defineProps<Props>(), {
 })
 
-const { t } = useI18n()
+const { t, tc } = useTranslation()
 </script>
-
-<style lang="scss" scoped>
-</style>

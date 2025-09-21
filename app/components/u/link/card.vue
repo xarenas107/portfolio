@@ -26,6 +26,3 @@ const lclass = computed(() => {
 	return color
 })
 </script>
-
-<style lang='scss' scoped>
-</style>

@@ -1,13 +1,13 @@
 {
    "provider": "Peruvian Cuban Office",
    "job": "Visual communication designer",
-   "description": "Creation of visual identity, brand manual, signage and website. Development of a web platform for the management of medical records in the center.",
-   "location": "Peru",
+   "description": "Engineered a secure web platform to replace an inefficient paper-based system, which reduced average patient record retrieval time by 62% and cut administrative workload by 32%.",
+   "location": "Lima, Peru",
    "es": {
       "provider": "Consultorio Peruano Cubano",
       "job": "Diseñador de comunicación visual",
-      "description": "Creación de identidad visual, manual de marca, señalética y sitio web de la empresa. Desarrollo de una plataforma web para la gestión de historias clínicas en el centro.",
-      "location": "Perú"
+      "description": "Diseñé una plataforma web segura para reemplazar un sistema ineficiente basado en papel, lo que redujo el tiempo promedio de acceso a los registros de los pacientes en un 62% y disminuyó la carga de trabajo administrativo en un 32%.",
+      "location": "Lima, Perú"
    },
    "abbreviation": "XAGYO 3",
    "startAt": "2019-12-01",

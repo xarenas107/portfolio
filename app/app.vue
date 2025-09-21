@@ -5,7 +5,6 @@ nuxt-route-announcer
 u-app(:locale)
 	nuxt-layout(class='relative')
 		u-navigation-bar(v-model:open='menu' :active='!!route.meta.navbar' :back='route.meta.navbar === "back"')
-
 		//- nuxt-layout(name='animate-skew')
 		nuxt-page(:scale-down='menu')
 </template>
@@ -19,7 +18,3 @@ const route = useRoute()
 
 const menu = shallowRef(false)
 </script>
-
-<style lang='scss'>
-@use '@/assets/scss/styles';
-</style>

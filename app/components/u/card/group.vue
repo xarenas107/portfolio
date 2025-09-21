@@ -116,6 +116,3 @@ onMounted(() => {
 	useEventListener('mousemove', on.mousemove)
 })
 </script>
-
-<style lang='scss'>
-</style>

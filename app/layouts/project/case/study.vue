@@ -2,10 +2,6 @@
 u-container(class="min-h-screen py-24 flex flex-col gap-16 lg:gap-24 relative")
 	div(class='flex flex-col gap-6')
 		u-card(class='aspect-[10/4] w-full relative overflow-clip flex items-end')
-			//- div(v-if='image' class='w-full h-full absolute z-10 left-0 top-0')
-			//- nuxt-img(v-if='image' :src='image' :alt='title' class="object-cover w-full h-full absolute top-0 left-0 placeholder-active")
-			//- u-placeholder(class='aspect-w-12 aspect-h-4 w-full rounded-lg placeholder-active')
-
 			section-title(class='z-20 relative text-neutral-100 dark:text-neutral-950 -ml-6 -mb-9 sm:-ml-8 sm:-mb-14 max-w-prose') {{ title }}
 		h4(class="text-base sm:text-lg max-w-sm lg:max-w-lg text-balance") {{ description }}
 
@@ -21,7 +17,7 @@ u-container(class="min-h-screen py-24 flex flex-col gap-16 lg:gap-24 relative")
 			p(class='text-base max-w-prose') {{ user?.summary }}
 
 		article(class='flex gap-6 flex-col')
-			h4(class='text-2xl lg:text-4xl font-semibold flex items-center') {{ t('project.painPoint', 2) }}
+			h4(class='text-2xl lg:text-4xl font-semibold flex items-center') {{ tc('project.painPoint', 2) }}
 
 			div(class='grid lg:grid-cols-2 gap-4 grow')
 				u-card(v-for='[title, content] in user?.painPoints' name='project-section-card' class='ring-1 bg-neutral-200')
@@ -39,11 +35,11 @@ u-container(class="min-h-screen py-24 flex flex-col gap-16 lg:gap-24 relative")
 
 					div(class='grid grid-cols-auto sm:grid-cols-2 lg:grid-cols-3 gap-4')
 						nuxt-layout(name='project-section-card' :title="t('project.user.statement')" :content='user?.persona?.statement' class='sm:col-span-2 lg:col-auto bg-neutral-300 dark:bg-neutral-800')
-						nuxt-layout(name='project-section-card' :title="t('project.goal', 2)" class='bg-neutral-300 dark:bg-neutral-800')
+						nuxt-layout(name='project-section-card' :title="t('project.goal', { count: 2 })" class='bg-neutral-300 dark:bg-neutral-800')
 							ul(class='list-disc text-base opacity-80 list-inside flex flex-col gap-2 text-balance')
 								li(v-for='item in user?.persona?.goals') {{ item }}
 
-						nuxt-layout(name='project-section-card' :title="t('project.frustration', 2)" class='bg-neutral-300 dark:bg-neutral-800')
+						nuxt-layout(name='project-section-card' :title="tc('project.frustration', 2)" class='bg-neutral-300 dark:bg-neutral-800')
 							ul(class='list-disc text-base opacity-80 list-inside flex flex-col gap-2 text-balance')
 								li(v-for='item in user?.persona?.frustrations') {{ item }}
 
@@ -70,12 +66,12 @@ u-container(class="min-h-screen py-24 flex flex-col gap-16 lg:gap-24 relative")
 								li(class='list-item' v-for='task in tasks') {{ task }}
 
 					tr(class="gap-2 py-2 border-b border-neutral-400 dark:border-neutral-600 grid grid-cols-6")
-						td {{  t('project.user.journey.emotion', 2) }}
+						td {{  tc('project.user.journey.emotion', 2) }}
 						td(v-for="emotions in user?.persona?.journey?.map?.emotion" class='gap-1 text-balance')
 							p(v-for='emotion in emotions') {{ emotion }}
 
 					tr(class="py-2 gap-2 grid grid-cols-6")
-						td {{  t('project.user.journey.opportunities', 2) }}
+						td {{  tc('project.user.journey.opportunities', 2) }}
 						td(v-for="opportunities in user?.persona?.journey?.map?.opportunity" class='gap-1 text-balance')
 							p(v-for='opportunity in opportunities') {{ opportunity }}
 
@@ -128,7 +124,10 @@ type Props = {
 	}
 	design?: {
 		wireframe?: {
-			content?: string[]
+			items?: {
+				content?: string
+				images?: string[]
+			}[]
 		}
 	}
 }
@@ -173,7 +172,7 @@ const overview = computed(() => {
 	]
 })
 
-const { t } = useI18n()
+const { t, tc } = useTranslation()
 
 const ui = {
 	card: {
@@ -189,15 +188,3 @@ const ui = {
 	}
 }
 </script>
-
-<style lang="scss" scoped>
-.placeholder-active {
-	view-transition-name: selected-project;
-}
-
-::view-transition-old(selected-project),
-::view-transition-new(selected-project) {
-	width: auto;
-	height: 20px
-}
-</style>

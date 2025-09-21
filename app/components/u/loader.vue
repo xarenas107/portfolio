@@ -92,6 +92,3 @@ div(class='h-1 w-full fixed top-auto bottom-0 z-8000 origin-left pointer-events-
 // 	}, props.throttle)
 // })
 </script>
-
-<style lang='scss' scoped>
-</style>

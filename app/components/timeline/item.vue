@@ -1,13 +1,11 @@
 <template lang='pug'>
 div(:class='[{ grow }, styles.column]' class="grid")
 	div(v-if='alternate' :class='[ui.container, styles.spacing, { "order-1": alternate && reverse }]')
-		//- div(class='bg-elevated/50 size-full rounded-lg')
 
 	div(class='flex gap-2 shrink justify-center items-center relative' :class='horizontal ?  "row-auto" : "col-span-1 flex-col w-fit"')
 		u-separator(
 			v-if='progress > 0'
-			:class='horizontal ? "left-0 divider" : "mt-4 top-0 divider-vertical"'
-			:style='`--progress: ${progress}%`'
+			:class='horizontal ? "left-0" : "mt-4 top-0"'
 			:orientation
 			:ui='styles.divider'
 			class='absolute grow z-20'
@@ -30,10 +28,10 @@ div(:class='[{ grow }, styles.column]' class="grid")
 				div(class='grow')
 					u-badge(v-if='badge' :label='badge' :ui='ui.badge' size='md' variant='subtle' class='h-fit text-nowrap')
 
-			h4(v-if='subtitle' class="text-base font-semibold opacity-80" :class='ui.text') {{ subtitle }}
+			h4(v-if='subtitle' class="text-base font-semibold opacity-80" :class='ui.text' v-html='subtitle')
 
 		div(class='flex flex-col gap-4')
-			p(v-if='content' :class='ui.text' class='text-base opacity-80') {{ content }}
+			p(v-if='content' :class='ui.text' class='text-base opacity-80 space-y-3' v-html="content")
 
 			div(:class='ui.text' class='text-sm opacity-60 uppercase gap-2')
 				nuxt-time(:datetime='startAt' v-bind='options')
@@ -42,7 +40,7 @@ div(:class='[{ grow }, styles.column]' class="grid")
 				nuxt-time(v-else-if='endAt' :datetime='endAt' v-bind='options')
 				span(v-if='location') {{ `, ${location}` }}
 
-		nuxt-link(v-if='href' :href no-rel) {{ href }}
+		//- nuxt-link(v-if='href' :href no-rel) {{ href }}
 </template>
 
 <script lang='ts' setup>
@@ -148,32 +146,3 @@ const ui = computed(() => {
 	}
 })
 </script>
-
-<style lang='scss' scoped>
-.divider {
-    width: var(--progress);
-    &-vertical { height: var(--progress) }
-}
-
-.grid {
-  &-cols {
-    &-timeline {
-        grid-template-columns: auto 1fr;
-
-        &-alternate {
-            grid-template-columns: 1fr auto 1fr;
-        }
-    }
-  }
-
-  &-rows {
-    &-timeline {
-        grid-template-rows: auto 1fr;
-
-        &-alternate {
-            grid-template-rows: 1fr auto 1fr;
-        }
-    }
-  }
-}
-</style>

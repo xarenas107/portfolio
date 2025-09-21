@@ -21,5 +21,3 @@ enable.forEach(callback => callback(() => active.value = true))
 const disable = [onBeforeUnmount, onDeactivated]
 disable.forEach(callback => callback(() => active.value = false))
 </script>
-
-<style lang="scss" scoped></style>

@@ -22,7 +22,7 @@ const props = withDefaults(defineProps<Props>(), {
 const id = shallowRef(useId())
 const selector = `#${id.value}`
 
-const element = shallowRef(document.querySelector<HTMLElement>(props.target))
+const element = shallowRef<HTMLElement | null>(null)
 const { left, top, width, height } = useElementBounding(element)
 const { width: outerWidth, height: outerHeight } = useWindowSize()
 const { x, y } = useWindowScroll()
@@ -145,5 +145,3 @@ onUnmounted(() => unwatch())
 // 	}
 // })
 </script>
-
-<style lang="scss" scoped></style>

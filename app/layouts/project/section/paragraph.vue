@@ -71,20 +71,3 @@ const ui = computed(() => {
 	}
 })
 </script>
-
-<style lang="scss" scoped>
-@keyframes scroll-up {
-    from {
-		object-position: center -10dvh;
-		opacity: 0;
-    }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .scroll-up-animation {
-    animation: scroll-up ease-in forwards;
-    animation-timeline: view();
-    animation-range: entry;
-  }
-}
-</style>

@@ -26,6 +26,3 @@ const style = computed(() => {
 	}
 })
 </script>
-
-<style lang='scss'>
-</style>

@@ -1,7 +1,7 @@
 <template lang='pug'>
 client-only()
 	template(#fallback)
-		u-skeleton(class='w-8 h-8 aspect-square rounded-lg bg-inverted/50')
+		u-skeleton(class='w-8 h-8 aspect-square rounded-lg bg-inverted/15')
 	u-tooltip(:text :open='!popover && hover')
 		u-popover(:items v-model:open="popover")
 			template(#default='{ open }')
@@ -21,11 +21,11 @@ type Props = {
 
 const props = defineProps<Props>()
 
-const { t } = useI18n()
+const { t, tc } = useTranslation()
 const app = useAppConfig()
 const colors = ['slate', 'orange', 'yellow', 'emerald', 'indigo', 'rose']
 
-const text = computed(() => t('color.option', 2))
+const text = computed(() => tc('color.option', 2))
 const items = computed(() => {
 	return [...colors].map(color => ({
 		active: app.ui.colors.primary === color,
@@ -55,6 +55,3 @@ const change = (value: boolean) => hover.value = value
 const hover = shallowRef(false)
 const popover = shallowRef(false)
 </script>
-
-<style lang='scss' scoped>
-</style>

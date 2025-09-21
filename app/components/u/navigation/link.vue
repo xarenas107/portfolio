@@ -2,10 +2,10 @@
 div
 	client-only
 		template(#fallback)
-			u-skeleton(class='min-w-28 h-8 rounded-lg bg-inverted/50')
+			u-skeleton(class='min-w-28 h-8 rounded-lg bg-inverted/15')
 
-		u-link(@click='click' :href :aria-current :class='[state]' class="rounded-lg px-3 py-2 flex gap-1.5 text-sm font-medium cursor-pointer relative focus-visible:bg-inverted/10 focus:focus-visible:outline-inverted" ref='link')
-			u-icon(v-if='icon' :name='icon' class='w-5 h-5 flex-shrink-0 relative')
+		u-link(@click='click' :href :aria-current :class='[state]' class="rounded-lg px-3 py-2 flex gap-1.5 text-sm font-medium cursor-pointer relative focus-visible:bg-inverted/10 focus:focus-visible:outline-inverted" ref='link' data-allow-mismatch='class')
+			u-icon(v-if='icon' :name='icon' class='size-5 flex-shrink-0 relative')
 			span(v-if='text') {{ text }}
 			slot
 </template>
@@ -52,6 +52,3 @@ const { current } = useMagicKeys({
 	}
 })
 </script>
-
-<style lang="scss" scoped>
-</style>
