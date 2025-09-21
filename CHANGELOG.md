@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.17.16
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.17.15...v1.17.16)
+
+### 🏡 Chore
+
+- Update package dependencies and remove unused locales ([a131bf8](https://github.com/xarenas107/portfolio/commit/a131bf8))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.17.15
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.17.14...v1.17.15)
