@@ -74,6 +74,6 @@
     "oxc-parser": "^0.90.0",
     "pug": "^3.0.3",
     "unconfig": "^7.3.3",
-    "wrangler": "^4.38.0"
+    "wrangler": "^4.59.1"
   }
 }
