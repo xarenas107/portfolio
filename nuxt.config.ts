@@ -54,21 +54,21 @@ export default defineNuxtConfig({
 		// '@nuxtjs/i18n',
 		'nuxt-i18n-micro',
 		// 'nuxt-og-image',
-		'nuxt-link-checker'
+		'nuxt-link-checker',
 	],
 	// ssr: false,
 	imports: {
-		dirs: ['./stores']
+		dirs: ['./stores'],
 	},
 	devtools: {
 		enabled: true,
 		vscode: {
-			enabled: true
-		}
+			enabled: true,
+		},
 	},
 	css: ['~/assets/css/main.css'],
 	future: {
-		compatibilityVersion: 4
+		compatibilityVersion: 4,
 	},
-	compatibilityDate: '2025-07-20'
+	compatibilityDate: '2026-03-15',
 })
