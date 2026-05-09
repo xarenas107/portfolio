@@ -37,7 +37,6 @@ useSeoMeta({
 	twitterTitle: title,
 	twitterDescription: () => t('app.description'),
 	twitterImage: () => href.value,
-	// twitterImage: () => '/hero/human.webp',
 	twitterCard: 'player'
 })
 

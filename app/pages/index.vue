@@ -4,15 +4,6 @@ beta-section-studies(v-intersect='intersect' :scale-down ref='section')#studies
 beta-section-certificates(v-intersect='intersect' :scale-down ref='section')#certificates
 beta-section-experiences(v-intersect='intersect' :scale-down ref='section')#experiences
 beta-section-skills(v-intersect='intersect' :scale-down ref='section')#skills
-
-//- div(class='relative w-full min-h-[200svh] flex items-center justify-center overflow-clip motion-reduce:hidden py-24 bg-default')
-//- 	div(class="scale-animation rounded-full bg-(--ui-bg-elevated)/50 p-8 aspect-square")
-//- 		div(class="h-4 w-4 mask-animation bg-elevated rounded-full relative")
-
-//- div(class='relative w-full h-[400svh] flex overflow-clip motion-reduce:hidden bg-gradient-to-t from-(--ui-primary)/10 to-(--ui-bg)')
-	div(class="w-full px-4 sm:px-6 lg:px-8 m-auto max-w-7xl")
-		section-title(v-intersect='intersect' class='sticky top-1/2 -translate-y-1/2 leading-0 mask-animation !block grow' hyphens) {{ t('section.portfolio') }}
-
 beta-section-projects(v-intersect='intersect' :scale-down ref='section')#portfolio
 beta-section-footer(:scale-down)
 
@@ -31,11 +22,6 @@ type Props = {
 }
 
 const props = defineProps<Props>()
-
-// const { data } = useNavigation()
-// const portfolio = computed(() => data.value.find(({ id }) => id === 'portfolio'))
-
-// const { t } = useI18n()
 const { data: user } = useUser()
 const hash = useHashRoute()
 const section = ref(null)

@@ -23,12 +23,12 @@ div(class='py-24 min-h-screen bg-primary relative overflow-clip place-content-ce
                     u-icon(name='heroicons-outline:clock' class='w-5 h-5')
                     nuxt-time(:datetime="item.endAt" :locale class='uppercase text-xs' month='long' year='numeric')
 
-                nuxt-picture(v-if='item.image' :src='item.image' :alt='item.provider' :img-attrs class='-z-20 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-10 w-[10rem] rounded-lg overflow-clip pointer-events-none light:invert')
+                nuxt-picture(v-if='item.image' :src='item.image' :alt='item.provider' :img-attrs class='-z-20 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-10 w-40 rounded-lg overflow-clip pointer-events-none light:invert')
 
       div(class='flex gap-2 items-center')
         u-button(@click='control.prev' icon='i-line-md:chevron-left' :aria-label='t("control.prev")' variant='outline' color='neutral' size="xl" :class='ui.button')
 
-        u-button(@click='toggle()' :icon :aria-label='t("control.play")' variant='solid' color='neutral' size="xl" class='bg-default hover:bg-accented text-primary ring-default aspect-square place-content-center rounded-full motion-reduce:hidden cursor-pointer focus-visible:outline-default focus-visible:outline-2 focus-visible:outline-offset-2')
+        u-button(@click='toggle()' :icon :aria-label='t("control.play")' variant='solid' color='neutral' size="xl" class='bg-default hover:bg-default/80 active:bg-default/60 text-primary ring-default aspect-square place-content-center rounded-full motion-reduce:hidden cursor-pointer focus-visible:outline-default focus-visible:outline-2 focus-visible:outline-offset-2')
 
         u-button(@click='control.next' icon='i-line-md:chevron-right' :aria-label='t("control.next")' variant='outline' color='neutral' size="xl" :class='ui.button')
 </template>
@@ -89,6 +89,6 @@ const ui = {
 	carousel: {
 		item: 'w-full max-w-80'
 	},
-	button: 'text-inverted bg-default/10 ring-default/20 hover:bg-default/20 aspect-square place-content-center rounded-full cursor-pointer focus-visible:bg-default/20 focus:focus-visible:ring-offset-primary focus:focus-visible:ring-2 focus-visible:ring-default focus-visible:outline-primary'
+	button: 'text-inverted bg-default/10 ring-default/20 hover:bg-default/20 active:bg-default/10 aspect-square place-content-center rounded-full cursor-pointer focus-visible:bg-default/20 focus:focus-visible:ring-offset-primary focus:focus-visible:ring-2 focus-visible:ring-default focus-visible:outline-primary'
 }
 </script>

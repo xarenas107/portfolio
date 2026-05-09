@@ -1,8 +1,8 @@
 <template lang="pug">
-div(class='bg-gradient-to-b from-(--ui-primary)/10 to-(--ui-bg) max-w-full flex items-center min-h-dvh')
+div(class='bg-linear-to-b from-(--ui-primary)/10 to-default max-w-full flex items-center min-h-dvh')
 
 	u-lazy(delay='.5s' class='size-full' before-enter-class='opacity-0 translate-y-12' timing-function="ease-in-accelerate")
-		u-container(v-bind='options' class="flex h-full w-full flex-col gap-4 pb-24 py-32 relative")
+		u-container(v-bind='options' class="flex h-full w-full flex-col gap-4 pb-24 py-32 lg:pt-56 relative")
 
 			u-transition(delay='.8s' before-enter-class="motion-safe:max-w-0" enter-class='max-w-full' duration='1.2s' timing-function="ease-in-accelerate")
 				template(#default='{ state, ...props }')
@@ -44,7 +44,7 @@ div(class='bg-gradient-to-b from-(--ui-primary)/10 to-(--ui-bg) max-w-full flex 
 			u-transition(delay='.25s' before-enter-class="motion-safe:opacity-0 motion-safe:translate-y-10" duration='.5s' timing-function="ease-in-accelerate")
 				template(#default='{ state, ...props }')
 					div(class='flex flex-col md:flex-row gap-6 justify-center')
-						p(v-bind='props' class='text-base text-default text-balance max-w-sm lg:max-w-lg delay-[1s] md:delay-0 h-fit') {{ data?.description }}
+						p(v-bind='props' class='text-base text-default text-balance max-w-sm lg:max-w-lg delay-1000 md:delay-0 h-fit') {{ data?.description }}
 
 						u-transition(delay='.8s' before-enter-class="motion-safe:max-w-0" enter-class='max-w-full' duration='1s' timing-function="ease-slow")
 							template(#default='{ state, ...props }')
