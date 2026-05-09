@@ -13,8 +13,8 @@
 		"download": "Download resume"
 	},
 	"app": {
-		"description": "Curriculum Vitae",
-		"name": "Portfolio"
+		"name": "Portfolio",
+		"description": "Curriculum Vitae"
 	},
 	"back": {
 		"name": "Back",

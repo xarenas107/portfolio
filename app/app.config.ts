@@ -1,7 +1,7 @@
 import module from '@@/package.json'
 
 export default defineAppConfig({
-	name: 'Curriculum Vitae',
+	name: 'Portfolio',
 	version: module.version,
 	author: module.author,
 	ui: {
