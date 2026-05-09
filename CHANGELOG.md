@@ -1,6 +1,23 @@
 # Changelog
 
 
+## v1.18.0
+
+[compare changes](https://github.com/xarenas107/portfolio/compare/v1.17.16...v1.18.0)
+
+### 🚀 Enhancements
+
+- **nuxt-ui:** Add new layouts for dashboard, docs, editor, page, and theming ([46cafae](https://github.com/xarenas107/portfolio/commit/46cafae))
+
+### 🏡 Chore
+
+- Update dependencies and devDependencies in package.json; remove empty locale file ([ff0ae1f](https://github.com/xarenas107/portfolio/commit/ff0ae1f))
+- Update dependencies and devDependencies in package.json ([78e6954](https://github.com/xarenas107/portfolio/commit/78e6954))
+
+### ❤️ Contributors
+
+- Xavier ([@xarenas107](https://github.com/xarenas107))
+
 ## v1.17.16
 
 [compare changes](https://github.com/xarenas107/portfolio/compare/v1.17.15...v1.17.16)
